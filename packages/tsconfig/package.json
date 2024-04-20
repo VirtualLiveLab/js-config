@@ -20,5 +20,8 @@
   },
   "bugs": {
     "url": "https://github.com/VirtualLiveLab/js-toolchain/issues"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240419.0"
   }
 }
