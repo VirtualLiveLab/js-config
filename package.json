@@ -9,7 +9,7 @@
     "build:eslint": "pnpm --filter @virtual-live-lab/eslint-config build",
     "build:prettier": "pnpm --filter @virtual-live-lab/prettier-config build",
     "build": "pnpm run build:eslint && pnpm run build:prettier",
-    "publish": "pnpm run build && changeset publish && pnpm publish --access public --dry-run"
+    "release": "pnpm run build && changeset publish"
   },
   "files": [
     "dist"
