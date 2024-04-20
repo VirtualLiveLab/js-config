@@ -1,16 +1,19 @@
 {
   "name": "@virtual-live-lab/tsconfig",
   "version": "1.0.1",
-  "description": "",
+  "description": "TypeScript configuration for Virtual Live Lab",
+  "files": [
+    "*.json"
+  ],
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240419.0"
+  },
   "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "provenance": true
   },
-  "files": [
-    "*.json"
-  ],
   "keywords": [],
   "author": "sushi-chaaaan <mail@sushichan.live> (https://github.com/sushi-chaaaan)",
   "homepage": "https://github.com/VirtualLiveLab/js-toolchain/tree/main/#readme",
@@ -21,8 +24,5 @@
   },
   "bugs": {
     "url": "https://github.com/VirtualLiveLab/js-toolchain/issues"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240419.0"
   }
 }
