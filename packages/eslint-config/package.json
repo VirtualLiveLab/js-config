@@ -1,0 +1,77 @@
+{
+  "name": "@virtual-live-lab/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./js": {
+      "default": "./dist/js.js",
+      "types": "./dist/js.d.ts"
+    },
+    "./ts": {
+      "default": "./dist/ts.js",
+      "types": "./dist/ts.d.ts"
+    },
+    "./react": {
+      "default": "./dist/react.js",
+      "types": "./dist/react.d.ts"
+    },
+    "./addons/*": {
+      "default": "./dist/addons/*.js",
+      "types": "./dist/addons/*.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "peerDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "dependencies": {
+    "eslint": "^8.57.0"
+  },
+  "devDependencies": {
+    "@double-great/stylelint-a11y": "^3.0.2",
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^8.57.0",
+    "@types/eslint": "^8.56.7",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__eslintrc": "^2.1.1",
+    "@types/eslint__js": "^8",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/utils": "^7.7.0",
+    "@virtual-live-lab/tsconfig": "workspace:^",
+    "eslint": "^8.57.0",
+    "eslint-config-flat-gitignore": "^0.1.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-perfectionist": "^2.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-tailwindcss": "^3.15.1",
+    "globals": "^14.0.0",
+    "pkg-dir": "^8.0.0",
+    "tsup": "^8.0.2",
+    "typescript-eslint": "^7.5.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [],
+  "author": "sushi-chaaaan <mail@sushichan.live> (https://github.com/sushi-chaaaan)",
+  "homepage": "https://github.com/VirtualLiveLab/js-toolchain/tree/main/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VirtualLiveLab/js-toolchain.git",
+    "directory": "packages/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/VirtualLiveLab/js-toolchain/issues"
+  }
+}

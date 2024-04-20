@@ -1,0 +1,50 @@
+{
+  "name": "@virtual-live-lab/prettier-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/index.d.mts"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "peerDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@virtual-live-lab/eslint-config": "workspace:^",
+    "@virtual-live-lab/tsconfig": "workspace:^",
+    "tsup": "^8.0.2"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [],
+  "author": "sushi-chaaaan <mail@sushichan.live> (https://github.com/sushi-chaaaan)",
+  "homepage": "https://github.com/VirtualLiveLab/js-toolchain/tree/main/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VirtualLiveLab/js-toolchain.git",
+    "directory": "packages/prettier-config"
+  },
+  "bugs": {
+    "url": "https://github.com/VirtualLiveLab/js-toolchain/issues"
+  }
+}

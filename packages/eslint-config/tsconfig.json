@@ -1,0 +1,4 @@
+{
+  "extends": "@virtual-live-lab/tsconfig/base.json",
+  "exclude": ["dist"]
+}

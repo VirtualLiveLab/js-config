@@ -1,0 +1,34 @@
+{
+  "name": "@virtual-live-lab/js-config",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "build:eslint": "pnpm --filter @virtual-live-lab/eslint-config build",
+    "build:prettier": "pnpm --filter @virtual-live-lab/prettier-config build",
+    "build": "pnpm run build:eslint && pnpm run build:prettier"
+  },
+  "files": [
+    "dist"
+  ],
+  "packageManager": "pnpm@8.15.7",
+  "engines": {
+    "node": ">=18 <19"
+  },
+  "dependencies": {
+    "esbuild": "^0.20.2"
+  },
+  "author": "sushi-chaaaan <mail@sushichan.live> (https://github.com/sushi-chaaaan)",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "@virtual-live-lab/eslint-config": "workspace:^",
+    "@virtual-live-lab/prettier-config": "workspace:^",
+    "@virtual-live-lab/tsconfig": "workspace:^",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  }
+}

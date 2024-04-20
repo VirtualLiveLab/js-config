@@ -1,0 +1,24 @@
+{
+  "name": "@virtual-live-lab/tsconfig",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "*.json"
+  ],
+  "keywords": [],
+  "author": "sushi-chaaaan <mail@sushichan.live> (https://github.com/sushi-chaaaan)",
+  "homepage": "https://github.com/VirtualLiveLab/js-toolchain/tree/main/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VirtualLiveLab/js-toolchain.git",
+    "directory": "packages/tsconfig"
+  },
+  "bugs": {
+    "url": "https://github.com/VirtualLiveLab/js-toolchain/issues"
+  }
+}
