@@ -1,0 +1,58 @@
+{
+  "name": "@virtual-live-lab/stylelint-config",
+  "version": "1.0.0",
+  "description": "Stylelint configuration for Virtual Live Lab",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/*.d.mts"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "peerDependencies": {
+    "stylelint": "^16.3.1"
+  },
+  "dependencies": {
+    "stylelint": "^16.3.1"
+  },
+  "devDependencies": {
+    "@double-great/stylelint-a11y": "^3.0.2",
+    "@virtual-live-lab/eslint-config": "workspace:^",
+    "@virtual-live-lab/tsconfig": "workspace:^",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-recess-order": "^5.0.1",
+    "stylelint-config-sass-guidelines": "^11.1.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-value-no-unknown-custom-properties": "^6.0.1",
+    "tsup": "^8.0.2"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true
+  },
+  "keywords": [],
+  "author": "sushi-chaaaan <mail@sushichan.live> (https://github.com/sushi-chaaaan)",
+  "homepage": "https://github.com/VirtualLiveLab/js-config/tree/main/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VirtualLiveLab/js-config.git",
+    "directory": "packages/stylelint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/VirtualLiveLab/js-config/issues"
+  }
+}
