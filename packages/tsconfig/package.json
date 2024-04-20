@@ -16,13 +16,13 @@
   },
   "keywords": [],
   "author": "sushi-chaaaan <mail@sushichan.live> (https://github.com/sushi-chaaaan)",
-  "homepage": "https://github.com/VirtualLiveLab/js-toolchain/tree/main/#readme",
+  "homepage": "https://github.com/VirtualLiveLab/js-config/tree/main/#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/VirtualLiveLab/js-toolchain.git",
+    "url": "https://github.com/VirtualLiveLab/js-config.git",
     "directory": "packages/tsconfig"
   },
   "bugs": {
-    "url": "https://github.com/VirtualLiveLab/js-toolchain/issues"
+    "url": "https://github.com/VirtualLiveLab/js-config/issues"
   }
 }
