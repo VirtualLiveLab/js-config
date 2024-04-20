@@ -1,6 +1,6 @@
 {
   "name": "@virtual-live-lab/prettier-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prettier configuration for Virtual Live Lab",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
