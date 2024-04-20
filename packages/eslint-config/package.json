@@ -61,7 +61,8 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true
   },
   "keywords": [],
   "author": "sushi-chaaaan <mail@sushichan.live> (https://github.com/sushi-chaaaan)",
