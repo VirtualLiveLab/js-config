@@ -1,5 +1,11 @@
 # @virtual-live-lab/stylelint-config
 
+## 1.0.4
+
+### Patch Changes
+
+- [#20](https://github.com/VirtualLiveLab/js-config/pull/20) [`335a4ab`](https://github.com/VirtualLiveLab/js-config/commit/335a4ab42fe9a08d2b94a525138c9b7355673263) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Fix rules, add docs for installation
+
 ## 1.0.3
 
 ### Patch Changes
