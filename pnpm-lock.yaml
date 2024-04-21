@@ -137,6 +137,9 @@ importers:
       '@double-great/stylelint-a11y':
         specifier: ^3.0.2
         version: 3.0.2(stylelint@16.3.1)
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
       '@virtual-live-lab/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
@@ -146,9 +149,6 @@ importers:
       postcss-html:
         specifier: ^1.6.0
         version: 1.6.0
-      stylelint-a11y:
-        specifier: ^1.2.3
-        version: 1.2.3(stylelint@16.3.1)
       stylelint-config-html:
         specifier: ^1.1.0
         version: 1.1.0(postcss-html@1.6.0)(stylelint@16.3.1)
@@ -4228,15 +4228,6 @@ packages:
   /strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
-
-  /stylelint-a11y@1.2.3(stylelint@16.3.1):
-    resolution: {integrity: sha512-S/iiKFUsYBfa4suxP0pYQqoPB9R1+SnvxVuzHHlz9al0IWxLZzXlnZEqEez0zNOhVh5iO3rATUmDnbZE5wm/pQ==}
-    engines: {node: '>=8.7.0'}
-    peerDependencies:
-      stylelint: ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
-    dependencies:
-      stylelint: 16.3.1(typescript@5.4.5)
-    dev: true
 
   /stylelint-config-html@1.1.0(postcss-html@1.6.0)(stylelint@16.3.1):
     resolution: {integrity: sha512-IZv4IVESjKLumUGi+HWeb7skgO6/g4VMuAYrJdlqQFndgbj6WJAXPhaysvBiXefX79upBdQVumgYcdd17gCpjQ==}
