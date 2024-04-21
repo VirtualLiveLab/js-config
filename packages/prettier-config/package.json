@@ -10,11 +10,16 @@
       "import": "./dist/index.js",
       "require": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
+    },
+    "./astro": {
+      "import": "./dist/astro.js",
+      "require": "./dist/astro.mjs",
+      "types": "./dist/astro.d.ts"
     }
   },
   "files": [
     "dist",
-    "!dist/index.d.mts"
+    "!dist/*.d.mts"
   ],
   "scripts": {
     "build": "tsup"
@@ -29,6 +34,7 @@
     "@types/node": "^20.12.7",
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
+    "prettier-plugin-astro": "^0.13.0",
     "tsup": "^8.0.2"
   },
   "license": "MIT",
