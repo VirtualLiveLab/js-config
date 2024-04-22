@@ -1,5 +1,15 @@
 # @virtual-live-lab/prettier-config
 
+## 1.2.0
+
+### Minor Changes
+
+- [#56](https://github.com/VirtualLiveLab/js-config/pull/56) [`f3979a2`](https://github.com/VirtualLiveLab/js-config/commit/f3979a21cbfae2bd3cca34cbdb3b1475051b8251) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Release v1.2.0
+
+### Patch Changes
+
+- [#51](https://github.com/VirtualLiveLab/js-config/pull/51) [`c82270d`](https://github.com/VirtualLiveLab/js-config/commit/c82270dd72a89366fb071dff2edb3f04f0775528) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - fix build config
+
 ## 1.1.0
 
 ### Minor Changes
