@@ -4,23 +4,22 @@
   "description": "Prettier configuration for Virtual Live Lab",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.mts"
     },
     "./astro": {
       "import": "./dist/astro.mjs",
-      "types": "./dist/astro.d.ts"
+      "types": "./dist/astro.d.mts"
     }
   },
   "files": [
-    "dist",
-    "!dist/*.d.mts"
+    "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup-node"
   },
   "peerDependencies": {
     "prettier": "^3.2.5"
@@ -29,6 +28,7 @@
     "prettier": "^3.2.5"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.43.1",
     "@types/node": "^20.12.7",
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",

@@ -4,19 +4,19 @@
   "description": "Stylelint configuration for Virtual Live Lab",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.mts"
     },
     "./scss": {
       "import": "./dist/scss.mjs",
-      "types": "./dist/scss.d.ts"
+      "types": "./dist/scss.d.mts"
     },
     "./astro": {
       "import": "./dist/astro.mjs",
-      "types": "./dist/astro.d.ts"
+      "types": "./dist/astro.d.mts"
     }
   },
   "files": [
@@ -24,7 +24,7 @@
     "!dist/*.d.mts"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup-node"
   },
   "peerDependencies": {
     "postcss-html": "^1.6.0",
@@ -43,6 +43,7 @@
     "stylelint-value-no-unknown-custom-properties": "^6.0.1"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.43.1",
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "tsup": "^8.0.2"
