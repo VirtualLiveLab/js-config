@@ -4,7 +4,7 @@ import tseslint from "typescript-eslint"
 
 import { astroConfig } from "./bases/astro"
 import { reactConfig } from "./bases/react"
-import { ts } from "./ts"
+import ts from "./ts"
 
 const astro: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   ...ts,
@@ -12,4 +12,4 @@ const astro: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   ...reactConfig,
 )
 
-export { astro }
+export default astro

@@ -3,4 +3,4 @@ import { stylisticConfig } from "./bases/stylistic"
 
 const js = [...jsConfig, ...stylisticConfig]
 
-export { js }
+export default js
