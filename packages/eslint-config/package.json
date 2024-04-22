@@ -10,25 +10,13 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.mts"
     },
-    "./js": {
-      "import": "./dist/js.mjs",
-      "types": "./dist/js.d.mts"
+    "./preset/*": {
+      "import": "./dist/preset/*.mjs",
+      "types": "./dist/preset/*.d.mts"
     },
-    "./ts": {
-      "import": "./dist/ts.mjs",
-      "types": "./dist/ts.d.mts"
-    },
-    "./astro": {
-      "import": "./dist/astro.mjs",
-      "types": "./dist/astro.d.mts"
-    },
-    "./react": {
-      "import": "./dist/react.mjs",
-      "types": "./dist/react.d.mts"
-    },
-    "./addons/*": {
-      "import": "./dist/addons/*.mjs",
-      "types": "./dist/addons/*.d.mts"
+    "./addon/*": {
+      "import": "./dist/addon/*.mjs",
+      "types": "./dist/addon/*.d.mts"
     }
   },
   "files": [
