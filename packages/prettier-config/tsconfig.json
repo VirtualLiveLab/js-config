@@ -1,4 +1,8 @@
 {
   "extends": "@virtual-live-lab/tsconfig/base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  },
   "exclude": ["node_modules", "dist"]
 }
