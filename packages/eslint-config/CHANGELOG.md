@@ -1,5 +1,11 @@
 # @virtual-live-lab/eslint-config
 
+## 1.1.4
+
+### Patch Changes
+
+- [#49](https://github.com/VirtualLiveLab/js-config/pull/49) [`a67ed3d`](https://github.com/VirtualLiveLab/js-config/commit/a67ed3d3bced3defdc6d95788b8b5fbb4951196e) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - add extension for react recommended config import
+
 ## 1.1.3
 
 ### Patch Changes
