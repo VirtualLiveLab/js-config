@@ -2,31 +2,32 @@
   "name": "@virtual-live-lab/eslint-config",
   "version": "1.0.4",
   "description": "ESLint configuration for Virtual Live Lab",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "default": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
     "./js": {
-      "default": "./dist/js.js",
+      "import": "./dist/js.mjs",
       "types": "./dist/js.d.ts"
     },
     "./ts": {
-      "default": "./dist/ts.js",
+      "import": "./dist/ts.mjs",
       "types": "./dist/ts.d.ts"
     },
     "./astro": {
-      "default": "./dist/astro.js",
+      "import": "./dist/astro.mjs",
       "types": "./dist/astro.d.ts"
     },
     "./react": {
-      "default": "./dist/react.js",
+      "import": "./dist/react.mjs",
       "types": "./dist/react.d.ts"
     },
     "./addons/*": {
-      "default": "./dist/addons/*.js",
+      "import": "./dist/addons/*.mjs",
       "types": "./dist/addons/*.d.ts"
     }
   },
