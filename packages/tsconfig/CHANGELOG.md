@@ -1,5 +1,15 @@
 # @virtual-live-lab/tsconfig
 
+## 1.1.0
+
+### Minor Changes
+
+- [#56](https://github.com/VirtualLiveLab/js-config/pull/56) [`f3979a2`](https://github.com/VirtualLiveLab/js-config/commit/f3979a21cbfae2bd3cca34cbdb3b1475051b8251) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Release v1.2.0
+
+### Patch Changes
+
+- [#54](https://github.com/VirtualLiveLab/js-config/pull/54) [`3d01ed4`](https://github.com/VirtualLiveLab/js-config/commit/3d01ed47b2f6c4f2eeefb44113c526427248b399) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - add install docs
+
 ## 1.0.4
 
 ### Patch Changes
