@@ -1,11 +1,11 @@
 import type { Config } from "stylelint"
 
-import { baseConfig } from "./base"
-import { scssExtend } from "./extend"
+import { baseConfig } from "./bases/base"
+import { scssExtend } from "./bases/extend"
 
 const { rules: baseRules, ...base } = baseConfig
 
-const scssConfig: Config = {
+const scss: Config = {
   ...base,
   extends: scssExtend,
   rules: {
@@ -25,4 +25,4 @@ const scssConfig: Config = {
   },
 }
 
-export default scssConfig
+export default scss

@@ -10,6 +10,16 @@
       "require": "./dist/index.js",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
+    },
+    "./scss": {
+      "require": "./dist/scss.js",
+      "import": "./dist/scss.mjs",
+      "types": "./dist/scss.d.ts"
+    },
+    "./astro": {
+      "require": "./dist/astro.js",
+      "import": "./dist/astro.mjs",
+      "types": "./dist/astro.d.ts"
     }
   },
   "files": [
