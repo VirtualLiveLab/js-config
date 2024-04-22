@@ -1,5 +1,11 @@
 # @virtual-live-lab/tsconfig
 
+## 1.2.0
+
+### Minor Changes
+
+- [#68](https://github.com/VirtualLiveLab/js-config/pull/68) [`47458b0`](https://github.com/VirtualLiveLab/js-config/commit/47458b073d566bf4f331792a80b641ed1ce367af) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Stable at normal repo use, still experimental at monorepo use
+
 ## 1.1.1
 
 ### Patch Changes
