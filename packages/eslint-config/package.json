@@ -10,13 +10,13 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.mts"
     },
-    "./preset/*": {
-      "import": "./dist/preset/*.mjs",
-      "types": "./dist/preset/*.d.mts"
+    "./addons/*": {
+      "import": "./dist/addons/*.mjs",
+      "types": "./dist/addons/*.d.mts"
     },
-    "./addon/*": {
-      "import": "./dist/addon/*.mjs",
-      "types": "./dist/addon/*.d.mts"
+    "./presets/*": {
+      "import": "./dist/presets/*.mjs",
+      "types": "./dist/presets/*.d.mts"
     }
   },
   "files": [
