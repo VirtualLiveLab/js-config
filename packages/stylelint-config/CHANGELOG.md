@@ -1,5 +1,13 @@
 # @virtual-live-lab/stylelint-config
 
+## 1.0.5
+
+### Patch Changes
+
+- [#27](https://github.com/VirtualLiveLab/js-config/pull/27) [`a89222b`](https://github.com/VirtualLiveLab/js-config/commit/a89222b14086a4a1658197ff47b64b6072540329) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Use default export, improve install doc
+
+- [#23](https://github.com/VirtualLiveLab/js-config/pull/23) [`dc56452`](https://github.com/VirtualLiveLab/js-config/commit/dc564529cfcff1d8dd28beb3855ad53f95b481c8) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Add install doc
+
 ## 1.0.4
 
 ### Patch Changes

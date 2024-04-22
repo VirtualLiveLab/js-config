@@ -1,5 +1,11 @@
 # @virtual-live-lab/tsconfig
 
+## 1.0.4
+
+### Patch Changes
+
+- [#26](https://github.com/VirtualLiveLab/js-config/pull/26) [`e593338`](https://github.com/VirtualLiveLab/js-config/commit/e5933386ce1010ecd8778c014254a0f64952ecbe) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Add presets for experimental
+
 ## 1.0.3
 
 ### Patch Changes
