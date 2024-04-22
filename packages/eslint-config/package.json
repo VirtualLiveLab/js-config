@@ -1,6 +1,6 @@
 {
   "name": "@virtual-live-lab/eslint-config",
-  "version": "1.0.4",
+  "version": "0.0.0-20240422115501",
   "description": "ESLint configuration for Virtual Live Lab",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
