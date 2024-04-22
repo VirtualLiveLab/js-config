@@ -2,22 +2,19 @@
   "name": "@virtual-live-lab/stylelint-config",
   "version": "1.0.5",
   "description": "Stylelint configuration for Virtual Live Lab",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
     "./scss": {
-      "require": "./dist/scss.js",
       "import": "./dist/scss.mjs",
       "types": "./dist/scss.d.ts"
     },
     "./astro": {
-      "require": "./dist/astro.js",
       "import": "./dist/astro.mjs",
       "types": "./dist/astro.d.ts"
     }
