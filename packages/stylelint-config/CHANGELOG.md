@@ -1,5 +1,11 @@
 # @virtual-live-lab/stylelint-config
 
+## 1.2.1
+
+### Patch Changes
+
+- [#57](https://github.com/VirtualLiveLab/js-config/pull/57) [`9048228`](https://github.com/VirtualLiveLab/js-config/commit/90482288d4ecec9c4c2a98f75bcff5aaccdba1cb) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - fix files in package.json to include d.mts
+
 ## 1.2.0
 
 ### Minor Changes
