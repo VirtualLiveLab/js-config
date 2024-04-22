@@ -21,6 +21,11 @@ npm install stylelint \
   --save-dev
 ```
 
+```js
+// stylelint.config.mjs
+export { default } from "@virtual-live-lab/stylelint-config"
+```
+
 ### Use for scss
 
 ```bash
@@ -37,7 +42,19 @@ npm install stylelint \
   --save-dev
 ```
 
+```js
+// stylelint.config.mjs
+export { default } from "@virtual-live-lab/stylelint-config/scss"
+```
+
 ### Use for Astro
+
+> [!TIP]
+> If some syntax error occurred in Astro, you should install `postcss-html`.
+>
+> ```bash
+> npm install postcss-html --save-dev
+> ```
 
 ```bash
 npm install stylelint \
@@ -52,6 +69,11 @@ npm install stylelint \
   stylelint-config-sass-guidelines \
   stylelint-config-html \
   --save-dev
+```
+
+```js
+// stylelint.config.mjs
+export { default } from "@virtual-live-lab/stylelint-config/astro"
 ```
 
 ## License

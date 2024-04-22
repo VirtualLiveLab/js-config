@@ -1,11 +1,11 @@
 import type { Config } from "stylelint"
 
-import { baseConfig } from "./base"
-import { astroExtend } from "./extend"
+import { baseConfig } from "./bases/base"
+import { astroExtend } from "./bases/extend"
 
 const { rules: baseRules, ...base } = baseConfig
 
-const astroConfig: Config = {
+const astro: Config = {
   ...base,
   extends: astroExtend,
   rules: {
@@ -19,4 +19,4 @@ const astroConfig: Config = {
   },
 }
 
-export default astroConfig
+export default astro
