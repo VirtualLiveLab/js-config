@@ -2,31 +2,32 @@
   "name": "@virtual-live-lab/eslint-config",
   "version": "1.0.4",
   "description": "ESLint configuration for Virtual Live Lab",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "default": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
     "./js": {
-      "default": "./dist/js.js",
+      "import": "./dist/js.mjs",
       "types": "./dist/js.d.ts"
     },
     "./ts": {
-      "default": "./dist/ts.js",
+      "import": "./dist/ts.mjs",
       "types": "./dist/ts.d.ts"
     },
     "./astro": {
-      "default": "./dist/astro.js",
+      "import": "./dist/astro.mjs",
       "types": "./dist/astro.d.ts"
     },
     "./react": {
-      "default": "./dist/react.js",
+      "import": "./dist/react.mjs",
       "types": "./dist/react.d.ts"
     },
     "./addons/*": {
-      "default": "./dist/addons/*.js",
+      "import": "./dist/addons/*.mjs",
       "types": "./dist/addons/*.d.ts"
     }
   },
@@ -34,25 +35,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup-node"
   },
   "peerDependencies": {
     "eslint": "^8.57.0"
   },
   "dependencies": {
-    "eslint": "^8.57.0"
-  },
-  "devDependencies": {
     "@double-great/stylelint-a11y": "^3.0.2",
     "@eslint/eslintrc": "^3.0.2",
     "@eslint/js": "^8.57.0",
-    "@types/eslint": "^8.56.7",
-    "@types/eslint-config-prettier": "^6.11.3",
-    "@types/eslint__eslintrc": "^2.1.1",
-    "@types/eslint__js": "^8",
-    "@types/node": "^20.12.7",
-    "@typescript-eslint/utils": "^7.7.0",
-    "@virtual-live-lab/tsconfig": "workspace:^",
     "eslint": "^8.57.0",
     "eslint-config-flat-gitignore": "^0.1.5",
     "eslint-config-prettier": "^9.1.0",
@@ -64,8 +55,17 @@
     "eslint-plugin-tailwindcss": "^3.15.1",
     "globals": "^14.0.0",
     "pkg-dir": "^8.0.0",
-    "tsup": "^8.0.2",
     "typescript-eslint": "^7.5.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.7",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__eslintrc": "^2.1.1",
+    "@types/eslint__js": "^8",
+    "@typescript-eslint/utils": "^7.7.0",
+    "@types/node": "^20.12.7",
+    "@virtual-live-lab/tsconfig": "workspace:^",
+    "tsup": "^8.0.2"
   },
   "license": "MIT",
   "publishConfig": {
