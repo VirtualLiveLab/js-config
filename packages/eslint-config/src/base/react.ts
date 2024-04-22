@@ -3,7 +3,7 @@ import type { Linter } from "eslint"
 //@ts-expect-error no types
 import react from "eslint-plugin-react"
 //@ts-expect-error no types
-import reactRecommended from "eslint-plugin-react/configs/recommended"
+import reactRecommended from "eslint-plugin-react/configs/recommended.js"
 import globals from "globals"
 
 import { compat } from "../lib/compat"
