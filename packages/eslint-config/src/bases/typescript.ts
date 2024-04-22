@@ -8,6 +8,7 @@ const tsConfig = tseslint.config({
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
+    parser: tseslint.parser,
     parserOptions: {
       project: true,
       tsconfigRootDir: __dirname,
