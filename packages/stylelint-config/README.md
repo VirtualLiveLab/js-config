@@ -29,10 +29,11 @@ npm install stylelint \
   @double-great/stylelint-a11y \
   stylelint-declaration-block-no-ignored-properties \
   stylelint-value-no-unknown-custom-properties \
+  stylelint-config-recommended \
   stylelint-config-standard \
+  stylelint-config-recess-order \
   stylelint-config-standard-scss \
   stylelint-config-sass-guidelines \
-  stylelint-config-recess-order \
   --save-dev
 ```
 
@@ -47,6 +48,8 @@ npm install stylelint \
   stylelint-config-recommended \
   stylelint-config-standard \
   stylelint-config-recess-order \
+  stylelint-config-standard-scss \
+  stylelint-config-sass-guidelines \
   stylelint-config-html \
   --save-dev
 ```
