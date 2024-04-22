@@ -1,4 +1,4 @@
-import { compat } from "../../lib/compat"
+import { compat } from "../lib/compat"
 
 const jsxA11y = compat.extends("plugin:jsx-a11y/strict")
 

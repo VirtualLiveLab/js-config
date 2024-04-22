@@ -4,7 +4,7 @@ import type { Linter } from "eslint"
 import react from "eslint-plugin-react"
 import globals from "globals"
 
-import { compat } from "../../lib/compat"
+import { compat } from "../lib/compat"
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const reactConfig: Linter.FlatConfig[] = [
