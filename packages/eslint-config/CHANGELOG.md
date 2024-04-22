@@ -1,5 +1,11 @@
 # @virtual-live-lab/eslint-config
 
+## 1.1.3
+
+### Patch Changes
+
+- [#47](https://github.com/VirtualLiveLab/js-config/pull/47) [`fdbea4d`](https://github.com/VirtualLiveLab/js-config/commit/fdbea4dbde6dfd5443db115b4fb6e374826703f2) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - fix package.json exports field
+
 ## 1.1.2
 
 ### Patch Changes
