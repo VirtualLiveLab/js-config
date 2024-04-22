@@ -1,5 +1,5 @@
 import { compat } from "../../lib/compat"
 
-const jsxA11yConfig = compat.extends("plugin:jsx-a11y/strict")
+const jsxA11y = compat.extends("plugin:jsx-a11y/strict")
 
-export { jsxA11yConfig }
+export default jsxA11y

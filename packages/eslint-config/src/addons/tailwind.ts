@@ -1,6 +1,6 @@
 import { compat } from "../../lib/compat"
 
-const config = [
+const tailwind = [
   ...compat.extends("plugin:tailwindcss/recommended"),
   ...compat.config({
     rules: {
@@ -18,4 +18,4 @@ const config = [
   }),
 ]
 
-export default config
+export default tailwind
