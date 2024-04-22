@@ -2,7 +2,7 @@ import type { TSESLint } from "@typescript-eslint/utils"
 
 import tseslint from "typescript-eslint"
 
-import { tsConfig } from "./bases/typescript"
+import { tsConfig } from "../base/typescript"
 import js from "./js"
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
