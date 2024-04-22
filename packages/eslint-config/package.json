@@ -4,31 +4,31 @@
   "description": "ESLint configuration for Virtual Live Lab",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.mts"
     },
     "./js": {
       "import": "./dist/js.mjs",
-      "types": "./dist/js.d.ts"
+      "types": "./dist/js.d.mts"
     },
     "./ts": {
       "import": "./dist/ts.mjs",
-      "types": "./dist/ts.d.ts"
+      "types": "./dist/ts.d.mts"
     },
     "./astro": {
       "import": "./dist/astro.mjs",
-      "types": "./dist/astro.d.ts"
+      "types": "./dist/astro.d.mts"
     },
     "./react": {
       "import": "./dist/react.mjs",
-      "types": "./dist/react.d.ts"
+      "types": "./dist/react.d.mts"
     },
     "./addons/*": {
       "import": "./dist/addons/*.mjs",
-      "types": "./dist/addons/*.d.ts"
+      "types": "./dist/addons/*.d.mts"
     }
   },
   "files": [
@@ -41,7 +41,6 @@
     "eslint": "^8.57.0"
   },
   "dependencies": {
-    "@double-great/stylelint-a11y": "^3.0.2",
     "@eslint/eslintrc": "^3.0.2",
     "@eslint/js": "^8.57.0",
     "eslint": "^8.57.0",
@@ -58,12 +57,13 @@
     "typescript-eslint": "^7.5.0"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.43.1",
     "@types/eslint": "^8.56.7",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__eslintrc": "^2.1.1",
     "@types/eslint__js": "^8",
-    "@typescript-eslint/utils": "^7.7.0",
     "@types/node": "^20.12.7",
+    "@typescript-eslint/utils": "^7.7.0",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "tsup": "^8.0.2"
   },
