@@ -1,5 +1,12 @@
 # @virtual-live-lab/eslint-config
 
+## 1.1.1
+
+### Patch Changes
+
+- [#41](https://github.com/VirtualLiveLab/js-config/pull/41) [`7926aa7`](https://github.com/VirtualLiveLab/js-config/commit/7926aa7f42f89940996c8dee33eacc6d973b81e0) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - eslint export
+  Please enter a summary for your changes.
+
 ## 1.1.0
 
 ### Minor Changes
