@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Vite",
+  "compilerOptions": {
+    // https://vitejs.dev/guide/features.html#typescript-compiler-options
+    "useDefineForClassFields": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true
+  }
+}
