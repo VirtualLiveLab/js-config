@@ -1,6 +1,6 @@
 import tseslint from "typescript-eslint"
 
-import { __dirname } from "../../lib/dir"
+import { __dirname } from "../lib/dir"
 
 const tsConfig = tseslint.config({
   extends: [

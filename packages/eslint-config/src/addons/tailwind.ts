@@ -1,4 +1,4 @@
-import { compat } from "../../lib/compat"
+import { compat } from "../lib/compat"
 
 const tailwind = [
   ...compat.extends("plugin:tailwindcss/recommended"),
