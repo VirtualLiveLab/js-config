@@ -1,5 +1,11 @@
 # @virtual-live-lab/tsconfig
 
+## 1.1.1
+
+### Patch Changes
+
+- [#66](https://github.com/VirtualLiveLab/js-config/pull/66) [`0f82ba8`](https://github.com/VirtualLiveLab/js-config/commit/0f82ba8eda74deeca136a427d9ccdd57fddcf155) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Update vite, nextjs tsconfig
+
 ## 1.1.0
 
 ### Minor Changes

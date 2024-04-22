@@ -1,6 +1,6 @@
 {
   "name": "@virtual-live-lab/tsconfig",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "TypeScript configuration for Virtual Live Lab",
   "files": [
     "*.json"
