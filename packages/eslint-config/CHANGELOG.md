@@ -1,5 +1,11 @@
 # @virtual-live-lab/eslint-config
 
+## 1.0.4
+
+### Patch Changes
+
+- [#32](https://github.com/VirtualLiveLab/js-config/pull/32) [`6c80f56`](https://github.com/VirtualLiveLab/js-config/commit/6c80f56667b83511c331a20ad2cd3b8c075327e1) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - export compat function
+
 ## 1.0.3
 
 ### Patch Changes
