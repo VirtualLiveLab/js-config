@@ -1,1 +1,2 @@
-export { default } from "@virtual-live-lab/eslint-config/ts"
+//@ts-check
+export { default } from "@virtual-live-lab/eslint-config/presets/ts"
