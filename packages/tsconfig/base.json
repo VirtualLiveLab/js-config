@@ -4,14 +4,15 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noUncheckedIndexedAccess": true,
-    "module": "ES2022",
-    "moduleResolution": "Bundler"
+    "noUncheckedIndexedAccess": true
   },
-  "exclude": ["**/node_modules/**"]
+  "exclude": ["node_modules"]
 }
