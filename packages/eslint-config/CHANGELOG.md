@@ -1,5 +1,11 @@
 # @virtual-live-lab/eslint-config
 
+## 1.1.2
+
+### Patch Changes
+
+- [#45](https://github.com/VirtualLiveLab/js-config/pull/45) [`417428c`](https://github.com/VirtualLiveLab/js-config/commit/417428c5788fbe88da7e3db4b561d0609232644b) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - refator package structure
+
 ## 1.1.1
 
 ### Patch Changes
