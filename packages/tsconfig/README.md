@@ -21,6 +21,10 @@ TypeScript configuration for Virtual Live Lab.
 
 ## Installation
 
+```bash
+npm install @virtual-live-lab/tsconfig --save-dev
+```
+
 ### Use presets except Astro
 
 ```json
