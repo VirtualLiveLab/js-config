@@ -118,6 +118,9 @@ importers:
         specifier: ^3.2.5
         version: 3.2.5
     devDependencies:
+      '@microsoft/api-extractor':
+        specifier: ^7.43.1
+        version: 7.43.1(@types/node@20.12.7)
       '@types/node':
         specifier: ^20.12.7
         version: 20.12.7
