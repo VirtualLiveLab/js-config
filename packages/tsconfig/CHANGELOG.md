@@ -1,5 +1,11 @@
 # @virtual-live-lab/tsconfig
 
+## 1.2.1
+
+### Patch Changes
+
+- [#74](https://github.com/VirtualLiveLab/js-config/pull/74) [`03b74c0`](https://github.com/VirtualLiveLab/js-config/commit/03b74c0d4350e3c0d7923f1c34b5a200c8d31544) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Add Cloudflare Workers preset
+
 ## 1.2.0
 
 ### Minor Changes
