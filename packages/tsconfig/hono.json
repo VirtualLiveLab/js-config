@@ -1,14 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Hono",
-  "extends": "./base.json",
+  "extends": "./cloudflare-workers.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
-    "lib": ["ESNext"],
-    "types": ["@cloudflare/workers-types"]
+    "jsxImportSource": "hono/jsx"
   }
 }
