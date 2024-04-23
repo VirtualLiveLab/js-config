@@ -9,7 +9,8 @@ TypeScript configuration for Virtual Live Lab.
 
 - `astro`: Configuration for Astro.
 - `base`: Basic configuration.
-- `hono`: Configuration for Hono.
+- `cloudflare-workers`: Configuration for Cloudflare Workers.
+- `hono`: Configuration for Hono. Automatically extends `cloudflare-workers`.
 - `library`: Configuration for library.
 - `nextjs`: Configuration for Next.js.
 - `react`: Configuration for React.
@@ -22,10 +23,10 @@ TypeScript configuration for Virtual Live Lab.
 ## Installation
 
 ```bash
-npm install @virtual-live-lab/tsconfig --save-dev
+npm install typescript @virtual-live-lab/tsconfig --save-dev
 ```
 
-### Use presets except Astro
+### Use Normal presets
 
 ```json
 // tsconfig.json
@@ -38,11 +39,11 @@ npm install @virtual-live-lab/tsconfig --save-dev
 
 ### Use Astro preset
 
+> [!TIP]
+> TypeScript Plugin is required to worker properly outside of VSCode.
+
 ```bash
-npm install prettier \
-  @virtual-live-lab/tsconfig \
-  typescript \
-  @astrojs/ts-plugin \
+npm install @astrojs/ts-plugin \
   --save-dev
 ```
 
@@ -51,6 +52,22 @@ npm install prettier \
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@virtual-live-lab/tsconfig/astro",
+  // your configuration
+}
+```
+
+### Use Cloudflare Workers preset
+
+```bash
+npm install @cloudflare/workers-types \
+  --save-dev
+```
+
+```json
+// tsconfig.json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@virtual-live-lab/tsconfig/cloudflare-workers",
   // your configuration
 }
 ```
