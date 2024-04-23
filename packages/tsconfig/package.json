@@ -5,6 +5,14 @@
   "files": [
     "*.json"
   ],
+  "peerDependencies": {
+    "@cloudflare/workers-types": "^4.20240419.0"
+  },
+  "peerDependenciesMeta": {
+    "@cloudflare/workers-types": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240419.0"
   },
