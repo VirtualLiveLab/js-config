@@ -28,6 +28,7 @@ npm install eslint \
 npm install eslint \
   @virtual-live-lab/eslint-config \
   typescript \
+  typescript-eslint \
   --save-dev
 ```
 
