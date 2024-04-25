@@ -1,5 +1,11 @@
 # @virtual-live-lab/eslint-config
 
+## 2.0.0
+
+### Major Changes
+
+- [#79](https://github.com/VirtualLiveLab/js-config/pull/79) [`ff05161`](https://github.com/VirtualLiveLab/js-config/commit/ff0516155090b34ebcc8319b7f30e34aa68375a6) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Release v2, now all packages are stable!
+
 ## 1.3.1
 
 ### Patch Changes
