@@ -8,9 +8,13 @@
 現時点で以下のパッケージが含まれています。
 
 - ESLint: `@virtual-live-lab/eslint-config`
+  - Lint / error check for JavaScript / TypeScript
 - Prettier: `@virtual-live-lab/prettier-config`
+  - Code formatter for JavaScript / TypeScript / CSS and more
 - Stylelint: `@virtual-live-lab/stylelint-config`
+  - Lint / error check for CSS / SCSS
 - TypeScript: `@virtual-live-lab/tsconfig`
+  - TypeScript configuration presets
 
 今後JS / TSユーテリティライブラリを追加する可能性があります。
 
