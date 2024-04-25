@@ -28,6 +28,7 @@ npm install eslint \
 npm install eslint \
   @virtual-live-lab/eslint-config \
   typescript \
+  typescript-eslint \
   --save-dev
 ```
 
@@ -35,14 +36,11 @@ npm install eslint \
 
 This package has some presets to zero-config use.
 
-> [!WARNING]
-> Next.js is not supported by the preset because each version of the framework has a different version of the ESLint package.
-
 ### JavaScript Preset
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/js"
+export { default } from "@virtual-live-lab/eslint-config/presets/js"
 ```
 
 ### TypeScript Preset
@@ -51,7 +49,7 @@ Extends `js` preset.
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/ts"
+export { default } from "@virtual-live-lab/eslint-config/presets/ts"
 ```
 
 ### React Preset
@@ -60,7 +58,23 @@ Extends `ts` preset.
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/react"
+export { default } from "@virtual-live-lab/eslint-config/presets/react"
+```
+
+### Next.js Preset
+
+Extends `ts` and `react` preset.
+
+> [!TIP]
+> you need to install `eslint-config-next` package as devDependencies.
+> Normally, it will be installed automatically when use `create-next-app`.
+
+> [!WARNING]
+> This preset may be removed in the future. Please read the comments in `src/base/nextjs.ts` for more information.
+
+```js
+// eslint.config.mjs
+export { default } from "@virtual-live-lab/eslint-config/presets/nextjs"
 ```
 
 ### Astro Preset
@@ -69,7 +83,7 @@ Extends `ts` and `react` presets.
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/astro"
+export { default } from "@virtual-live-lab/eslint-config/presets/astro"
 ```
 
 ## Addons
@@ -81,11 +95,14 @@ This package has some addon configurations.
 ```js
 // eslint.config.mjs
 import jsxA11y from "@virtual-live-lab/eslint-config/addons/jsxA11y"
-import ts from "@virtual-live-lab/eslint-config/ts"
+import ts from "@virtual-live-lab/eslint-config/presets/ts"
 
-const config = [...ts, ...jsxA11y]
+import tseslint from "typescript-eslint"
 
-export default config
+export default tseslint.config(
+  ...ts,
+  ...jsxA11y
+)
 ```
 
 ### Tailwind CSS
@@ -93,11 +110,14 @@ export default config
 ```js
 // eslint.config.mjs
 import tailwind from "@virtual-live-lab/eslint-config/addons/tailwind"
-import ts from "@virtual-live-lab/eslint-config/ts"
+import ts from "@virtual-live-lab/eslint-config/presets/ts"
 
-const config = [...ts, ...jsxA11y]
+import tseslint from "typescript-eslint"
 
-export default config
+export default tseslint.config(
+  ...ts,
+  ...tailwind
+)
 ```
 
 ## License
