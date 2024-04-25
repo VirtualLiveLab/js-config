@@ -7,6 +7,9 @@ Stylelint configuration for Virtual Live Lab.
 
 ## Installation
 
+> [!WARNING]
+> monorepoを利用してる場合、利用するすべてのワークスペースでインストールしてください。
+
 ### Use for css
 
 ```bash
