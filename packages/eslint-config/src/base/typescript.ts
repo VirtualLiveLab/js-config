@@ -14,6 +14,7 @@ const tsConfig = tseslint.config({
     },
   },
   rules: {
+    // SEE: https://zenn.dev/cybozu_frontend/articles/ts-eslint-v6-guide
     // stylistic を有効にしたため v5 の recommended にないルールを無効化
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/ban-tslint-comment": "off",
