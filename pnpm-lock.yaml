@@ -75,8 +75,8 @@ importers:
         specifier: ^3.15.1
         version: 3.15.1(tailwindcss@3.4.3)
       globals:
-        specifier: ^14.0.0
-        version: 14.0.0
+        specifier: ^15.0.0
+        version: 15.0.0
       pkg-dir:
         specifier: ^8.0.0
         version: 8.0.0
@@ -2589,6 +2589,11 @@ packages:
 
   /globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+    dev: false
+
+  /globals@15.0.0:
+    resolution: {integrity: sha512-m/C/yR4mjO6pXDTm9/R/SpYTAIyaUB4EOzcaaMEl7mds7Mshct9GfejiJNQGjHHbdMPey13Kpu4TMbYi9ex1pw==}
     engines: {node: '>=18'}
     dev: false
 
