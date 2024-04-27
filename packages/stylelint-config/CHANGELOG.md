@@ -1,5 +1,13 @@
 # @virtual-live-lab/stylelint-config
 
+## 2.0.1
+
+### Patch Changes
+
+- [#86](https://github.com/VirtualLiveLab/js-config/pull/86) [`a5f07df`](https://github.com/VirtualLiveLab/js-config/commit/a5f07df04e3f47432243d8590ac0b28c80e542b3) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Stop using `expermientalDts` option in tsup
+
+- [#81](https://github.com/VirtualLiveLab/js-config/pull/81) [`a18ddf3`](https://github.com/VirtualLiveLab/js-config/commit/a18ddf3dc82b695dde8fe84fa0d0138283ae3d1f) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - patch packages
+
 ## 2.0.0
 
 ### Major Changes
