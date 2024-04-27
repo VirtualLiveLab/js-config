@@ -1,5 +1,11 @@
 # @virtual-live-lab/tsconfig
 
+## 2.0.1
+
+### Patch Changes
+
+- [#81](https://github.com/VirtualLiveLab/js-config/pull/81) [`a18ddf3`](https://github.com/VirtualLiveLab/js-config/commit/a18ddf3dc82b695dde8fe84fa0d0138283ae3d1f) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - patch packages
+
 ## 2.0.0
 
 ### Major Changes
