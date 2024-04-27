@@ -28,7 +28,6 @@
     "prettier": "^3.2.5"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.43.1",
     "@types/node": "^20.12.7",
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",

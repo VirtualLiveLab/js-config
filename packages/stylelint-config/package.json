@@ -42,7 +42,6 @@
     "stylelint-value-no-unknown-custom-properties": "^6.0.1"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.43.1",
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "tsup": "^8.0.2"
