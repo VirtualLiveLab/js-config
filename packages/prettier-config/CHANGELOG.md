@@ -1,5 +1,11 @@
 # @virtual-live-lab/prettier-config
 
+## 2.0.2
+
+### Patch Changes
+
+- [#91](https://github.com/VirtualLiveLab/js-config/pull/91) [`e527eb0`](https://github.com/VirtualLiveLab/js-config/commit/e527eb0f4e5500435ebb09d1e8532317d6d5fad2) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - insert semicolon by default
+
 ## 2.0.1
 
 ### Patch Changes
