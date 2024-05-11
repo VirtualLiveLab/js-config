@@ -5,7 +5,7 @@ const config: Config = {
   endOfLine: "lf",
   jsxSingleQuote: false,
   quoteProps: "consistent",
-  semi: false,
+  semi: true,
   singleQuote: false,
   tabWidth: 2,
   trailingComma: "all",
