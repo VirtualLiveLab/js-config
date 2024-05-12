@@ -145,3 +145,152 @@ interface GameSettings {
 **無効にする意味がないので`true`に設定する。**
 
 `strict: true`にともなって設定されるオプションはここでは述べない。
+
+## Modules
+
+### [Allow Arbitrary Extensions](https://www.typescriptlang.org/ja/tsconfig/#allowArbitraryExtensions)
+
+設定値: `false (default)`
+
+任意の拡張子のファイルをimportすることを許可するかどうかを設定する。
+
+主にWebフロントエンドでは、`.tsx`ファイルに`.css`ファイルをimportするなどが可能である。
+通常これらはバンドラが`global`NameSpaceに下のような型を定義することで型エラーが発生しない。
+
+```ts
+declare module '*.module.css' {
+  const classes: { readonly [key: string]: string }
+  export default classes
+}
+```
+
+稀にこのような型が提供されていない場合があり、その場合は`allowArbitraryExtensions`を有効にしないと型エラーが発生する。
+
+**基本的なバンドラやフレームワークにおいては、各パッケージが提供するドキュメントに従って適切にセットアップすれば問題ないため、デフォルト値のままとする。**
+
+### [Allow Importing TS Extensions](https://www.typescriptlang.org/ja/tsconfig/#allowImportingTsExtensions)
+
+設定値: `false (default)`
+
+`.ts`や`.tsx`の拡張子が付いたファイルをimportすることを許可するかどうかを設定する。
+
+このような書き方をするとJavaScriptとしてトランスパイル後に実行するときにエラーが発生するため、通常は設定しない。
+
+VLLにおいても、TypeScriptの拡張子をつけてimportすることはないため、デフォルト値のままとする。
+
+### [Allow Umd Global Access](https://www.typescriptlang.org/ja/tsconfig/#allowUmdGlobalAccess)
+
+設定値: `false (default)`
+
+常にアクセスできることが分かっているUMDモジュールにimport文なしでアクセスすることを許可するかどうかを設定する。
+
+**有効化するとコードベースの認知負荷が上昇することが予想されるため、デフォルト値のままとする。**
+
+### [Base URL](https://www.typescriptlang.org/ja/tsconfig/#baseUrl)
+
+設定値: `undefined (default)`
+
+相対パスを解決するための基準となるディレクトリを設定する。
+
+**各プロジェクトによって異なるため、baseではデフォルト値のままとする。**
+
+### [Custom Conditions](https://www.typescriptlang.org/ja/tsconfig/#customConditions)
+
+設定値: not set
+
+`package.json`の`exports`, `imports`フィールド内に特殊な条件を設定している場合に、TypeScript側にその条件を考慮する必要があることを伝える。
+
+特に使用しないので設定しない。
+
+### [Module](https://www.typescriptlang.org/ja/tsconfig/#module)
+
+魔境なので違うドキュメントに書く。
+
+### [Module Resolution](https://www.typescriptlang.org/ja/tsconfig/#moduleResolution)
+
+魔境なので違うドキュメントに書く。
+
+### [Module Suffixes](https://www.typescriptlang.org/ja/tsconfig/#moduleSuffixes)
+
+設定値: not set
+
+Module Suffixに指定したSuffixを考慮してモジュール解決を行うようにTypeScriptに指示する。
+
+例: `moduleSuffixes: ["css"]` とした場合、
+`import { foo } from "./foo"` と書くと`foo.css.ts`が考慮されるようになる。
+
+特に使用しないので設定しない。
+
+### [No Resolve](https://www.typescriptlang.org/ja/tsconfig/#noResolve)
+
+設定値: `false (default)`
+
+見たことも使ったこともないしドキュメントを読んでもわからない。
+
+**触らぬ神に祟りなし。**
+
+### [Paths](https://www.typescriptlang.org/ja/tsconfig/#paths)
+
+設定値: not set
+
+[Base Url](#base-url)と組み合わせてimport aliasを設定する。
+
+**各プロジェクトによって異なるため、baseでは設定しない。**
+
+### [Resolve JSON Module](https://www.typescriptlang.org/ja/tsconfig/#resolveJsonModule)
+
+設定値: `true`
+
+JSONファイルをimportすることを許可し、JSONの構造から型を生成することを許可するかどうかを設定する。
+
+基本的に`true`にしておいて問題ない。
+
+### [Resolve package.json Exports](https://www.typescriptlang.org/ja/tsconfig/#resolvePackageJsonExports)
+
+設定値: not set
+
+`node_modules`にあるパッケージをimportする場合、`package.json`の`exports`フィールドを見ることを強制するかどうかを設定する。
+
+詳しくはドキュメントにあるが、`moduleResolution`オプションによって挙動が変わるため、基本的にそちらに任せてここでは設定しない。
+
+### [Resolve package.json Imports](https://www.typescriptlang.org/ja/tsconfig/#resolvePackageJsonImports)
+
+設定値: not set
+
+[Resolve package.json Exports](#resolve-packagejson-exports)と同様。
+
+`moduleResolution`オプションによって挙動が変わるため、基本的にそちらに任せてここでは設定しない。
+
+### [Root Dir](https://www.typescriptlang.org/ja/tsconfig/#rootDir)
+
+設定値: not set
+
+設定しなければTypeScriptがいい感じに調べてくれるので設定しない。
+
+### [Root Dirs](https://www.typescriptlang.org/ja/tsconfig/#rootDirs)
+
+設定値: not set
+
+[Root Dir](#root-dir)と同様。
+
+設定しなければTypeScriptがいい感じに調べてくれるので設定しない。
+
+### [Type Roots](https://www.typescriptlang.org/ja/tsconfig/#typeRoots)
+
+設定値: not set
+
+自動的にincludeされる型定義ファイルのルートディレクトリを指定する。
+ここで指定しなければ、任意の`node_modules/@types`ディレクトリ内のものが探索される。
+
+特に設定する必要がないので設定しない。
+
+### [Types](https://www.typescriptlang.org/ja/tsconfig/#types)
+
+デフォルト値: not set
+
+自動的にincludeされる型定義ファイルを指定する。
+ここで指定しなければ、`node_modules/@types`ディレクトリ内のものが探索される。
+
+Node.jsランタイム以外のランタイムにデプロイするアプリケーションを開発する場合に、そのランタイムの型定義のみを自動でincludeしたいなどの際に使用する。
+
+**各プロジェクトによって異なるため、baseでは設定しない。**
