@@ -1,6 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    // type checking
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "ES2022",
@@ -10,9 +18,7 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noUncheckedIndexedAccess": true
+    "forceConsistentCasingInFileNames": true
   },
   "exclude": ["node_modules"]
 }
