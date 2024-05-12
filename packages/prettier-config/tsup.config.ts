@@ -5,7 +5,7 @@ export default defineConfig({
   dts: true,
   entry: ["./src/*.ts"], // バンドルするファイルを指定
   format: ["esm"], // 出力する形式を指定
-  minify: process.env.NODE_ENV === "production",
+  minify: process.env["NODE_ENV"] === "production",
   outDir: "dist",
   sourcemap: false, // soucemapを出力するか
   splitting: false, // バンドルしないで分割するか
