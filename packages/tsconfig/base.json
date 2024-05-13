@@ -15,13 +15,14 @@
     "resolveJsonModule": true,
     // js support
     "checkJs": true,
+    // interop
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "skipLibCheck": true,
     "target": "ES2022",
     "lib": ["ES2023"],
-    "moduleDetection": "force",
-    "isolatedModules": true,
-    "forceConsistentCasingInFileNames": true
+    "moduleDetection": "force"
   },
   "exclude": ["node_modules"]
 }

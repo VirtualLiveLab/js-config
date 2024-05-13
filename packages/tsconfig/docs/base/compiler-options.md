@@ -429,7 +429,7 @@ VLLでは基本的にES5以前へのトランスパイルを行わず、する�
 
 ### [Preserve Const Enums](https://www.typescriptlang.org/ja/tsconfig/#preserveConstEnums)
 
-設定値: `true (default)` ([Isolated Modules](#)を`true`に設定しているため)
+設定値: `true (default)` ([Isolated Modules](#isolated-modules)を`true`に設定しているため)
 
 `const enum`をトランスパイル後のJavaScriptに出力するかどうかを設定する。
 
@@ -521,3 +521,51 @@ TypeScriptが使用できるメモリの上限を無効にするかどうかを�
 エディタ上で動作させるLanguage Serviceのプラグインを指定する。
 
 プロジェクトによっては設定するが、ベースとなる設定では設定しない。
+
+## Interop Constraints
+
+### [Allow Synthetic Default Imports](https://www.typescriptlang.org/ja/tsconfig/#allowSyntheticDefaultImports)
+
+設定値: `true (default)` ([esModuleInterop](#es-module-interop)を`true`に設定しているため)
+
+### [ES Module Interop](https://www.typescriptlang.org/ja/tsconfig/#esModuleInterop)
+
+設定値: `true`
+
+CommonJSモジュールをimportする際に、NameSpaceオブジェクトを生成することでESModuleと同じように扱えるようになる。
+
+基本的には`true`にしておく。
+
+### [Force Consistent Casing In File Names](https://www.typescriptlang.org/ja/tsconfig/#forceConsistentCasingInFileNames)
+
+設定値: `true`
+
+ファイル名の大文字・小文字を厳密にチェックするかどうかを設定する。
+
+基本的には`true`にしておく。
+
+### [Isolated Modules](https://www.typescriptlang.org/ja/tsconfig/#isolatedModules)
+
+設定値: `true`
+
+単一ファイルだけの情報でトランスパイルするとき、正しく解釈されない可能性のあるコードに警告を出す。主に再exportや`declare const enum`の使用を警告する。
+
+基本的には`true`にしておく。
+
+### [Preserve Symlinks](https://www.typescriptlang.org/ja/tsconfig/#preserveSymlinks)
+
+設定値: `false (default)`
+
+一般的には設定されないオプション。あまりわからなかったのでドキュメントを読んで欲しい。
+
+### [Verbatim Module Syntax](https://www.typescriptlang.org/ja/tsconfig/#verbatimModuleSyntax)
+
+設定値: `false (default)`
+
+import文の処理が逐語的なトランスパイルになる。
+
+このため、`import type {}`文は丸ごと削除され、`import {a, type B}`のような文は`import {a}`に変換される。
+
+しかし、このオプションを有効にするとCommon JS向けにトランスパイルする際にもimport文がrequire文に変換されないため非常に面倒になる。
+
+これと同等のチェックをESLintのプリセットで行うように設定しているため、TypeScript側ではデフォルト値のままとする。
