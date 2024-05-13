@@ -504,4 +504,20 @@ JavaScriptファイルにおいてもTypeScriptと同等の型チェックをす
 
 ドキュメントにもあるが、基本的に0であるべきである。
 
+## Editor Support
 
+### [Disable Size Limit](https://www.typescriptlang.org/ja/tsconfig/#disableSizeLimit)
+
+設定値: `false (default)`
+
+TypeScriptが使用できるメモリの上限を無効にするかどうかを設定する。
+
+基本的には`false`にしておく。
+
+### [Plugins](https://www.typescriptlang.org/ja/tsconfig/#plugins)
+
+設定値: not set
+
+エディタ上で動作させるLanguage Serviceのプラグインを指定する。
+
+プロジェクトによっては設定するが、ベースとなる設定では設定しない。
