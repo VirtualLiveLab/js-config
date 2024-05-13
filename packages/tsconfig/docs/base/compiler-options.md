@@ -286,7 +286,7 @@ JSONファイルをimportすることを許可し、JSONの構造から型を生
 
 ### [Types](https://www.typescriptlang.org/ja/tsconfig/#types)
 
-デフォルト値: not set
+設定値: not set
 
 自動的にincludeされる型定義ファイルを指定する。
 ここで指定しなければ、`node_modules/@types`ディレクトリ内のものが探索される。
@@ -294,3 +294,184 @@ JSONファイルをimportすることを許可し、JSONの構造から型を生
 Node.jsランタイム以外のランタイムにデプロイするアプリケーションを開発する場合に、そのランタイムの型定義のみを自動でincludeしたいなどの際に使用する。
 
 **各プロジェクトによって異なるため、baseでは設定しない。**
+
+## Emit
+
+### [Declaration](https://www.typescriptlang.org/ja/tsconfig/#declaration)
+
+設定値: `false (default)`
+
+トランスパイル後のJavaScriptファイルと同時に、型定義ファイルを生成するかどうかを設定する。
+
+主にライブラリ向けの設定であるため、すべてのベースとなる設定では`false`にしておく。
+
+### [Declaration Dir](https://www.typescriptlang.org/ja/tsconfig/#declarationDir)
+
+設定値: not set
+
+[Declaration](#declaration)と同様の理由。
+
+### [Declaration Map](https://www.typescriptlang.org/ja/tsconfig/#declarationMap)
+
+設定値: `false (default)`
+
+[Declaration](#declaration)と同様の理由。
+
+### [Downlevel Iteration](https://www.typescriptlang.org/ja/tsconfig/#declarationMap)
+
+設定値: `false (default)`
+
+`tsc`でES5以前向けにトランスパイルをする場合に有効にすると、ES6以上で使えるIterator関連の構文をより正確にトランスパイルしようとする。
+
+VLLでは基本的にES5以前へのトランスパイルを行わず、するとしてもバンドラ・トランスパイラを使うので設定しない。
+
+### [Emit BOM](https://www.typescriptlang.org/ja/tsconfig/#emitBOM)
+
+設定値: `false (default)`
+
+見たことも使ったこともなく、ドキュメントでも`false`が一般的であると書いてあるので`false`にしておく。
+
+### [Emit Declaration Only](https://www.typescriptlang.org/ja/tsconfig/#emitDeclarationOnly)
+
+設定値: `false (default)`
+
+トランスパイルを行わず、型定義だけを出力するオプション。
+
+主にライブラリ向けの設定であるため、すべてのベースとなる設定では`false`にしておく。
+
+### [Import Helpers](https://www.typescriptlang.org/ja/tsconfig/#importHelpers)
+
+設定値: `false (default)`
+
+トランスパイルの際に、`tslib`からヘルパー関数をimportするかどうかを設定する。
+
+VLLでは基本的にES5以前へのトランスパイルを行わず、するとしてもバンドラ・トランスパイラを使うので設定しない。
+
+### [Imports Not Used As Values](https://www.typescriptlang.org/ja/tsconfig/#importsNotUsedAsValues)
+
+設定値: `remove (default)`
+
+値をして利用されず、型のみで利用されているimport文をトランスパイル後のJavaScriptでどう扱うかを指定する。
+
+`remove`に設定すると、型のみのimport文をトランスパイル後のJavaScriptに出力しない。
+`preserve`に設定すると、すべてのimport文が維持される。
+`error`に設定すると、型のimport文がトランスパイル後のJavaScriptに出力されるとエラーを出す。
+
+このようなケースの構文チェックは`typescript-eslint`を用いてESLintルールでチェックしており、TypeScript側でもErrorを出すのはtoo muchだと考えるため、デフォルト値のままとする。
+
+### [Inline Source Map](https://www.typescriptlang.org/ja/tsconfig/#inlineSourceMap)
+
+設定値: `false (default)`
+
+トランスパイル後のJavaScriptファイルにソースマップを埋め込むかどうかを設定する。
+
+基本的には別ファイルにして欲しいので`false`にしておく。
+
+### [Inline Sources](https://www.typescriptlang.org/ja/tsconfig/#inlineSources)
+
+設定値: `false (default)`
+
+トランスパイル後のJavaScriptファイルにTypeScriptのソースコード文字列を埋め込むかどうかを設定する。
+
+基本的には必要ないので`false`にしておく。
+
+### [Map Root](https://www.typescriptlang.org/ja/tsconfig/#mapRoot)
+
+設定値: not set
+
+外部のソースマップを参照する場合に指定する。
+
+基本的には必要ないので設定しない。
+
+### [New Line](https://www.typescriptlang.org/ja/tsconfig/#newLine)
+
+設定値: `LF (default)`
+
+標準的な実行環境は`LF`を使うため、`LF`に設定しておく。
+
+### [No Emit](https://www.typescriptlang.org/ja/tsconfig/#noEmit)
+
+設定値: `false (default)`
+
+この設定を`true`にすると、`tsc`を型チェックのみに用いるようになる。
+
+開発プロジェクトによっては`true`にするが、ベースとなる設定では`false`にしておく。
+
+### [No Emit Helpers](https://www.typescriptlang.org/ja/tsconfig/#noEmitHelpers)
+
+設定値: `false (default)`
+
+`importHelpers`が`true`の場合に、ヘルパー関数をimportする代わりに各ファイルにヘルパー関数を埋め込むかどうかを設定する。
+大量のJavaScriptが生成される。
+
+VLLでは基本的にES5以前へのトランスパイルを行わず、するとしてもバンドラ・トランスパイラを使うので設定しない。
+
+### [No Emit On Error](https://www.typescriptlang.org/ja/tsconfig/#noEmitOnError)
+
+設定値: `false (default)`
+
+エラーが発生した場合にトランスパイルを行わないようにするかどうかを設定する。
+
+### [Out Dir](https://www.typescriptlang.org/ja/tsconfig/#outDir)
+
+設定値: not set
+
+トランスパイル後のJavaScriptファイルを出力するディレクトリを指定する。
+
+`tsc`をトランスパイラとして使うプロジェクトで個別に設定する。
+
+### [Out File](https://www.typescriptlang.org/ja/tsconfig/#outFile)
+
+設定値: not set
+
+トランスパイル後のJavaScriptファイルを1つのファイルにまとめる。
+基本的にCommon JSおよびES Modules向けにTypeScriptを使うので、設定しない。
+
+### [Preserve Const Enums](https://www.typescriptlang.org/ja/tsconfig/#preserveConstEnums)
+
+設定値: `true (default)` ([Isolated Modules](#)を`true`に設定しているため)
+
+`const enum`をトランスパイル後のJavaScriptに出力するかどうかを設定する。
+
+基本的にIsolated Modules側で制御してよいと考えるため、ここではデフォルト値のままとする。
+
+### [Preserve Value Imports](https://www.typescriptlang.org/ja/tsconfig/#preserveValueImports)
+
+設定値: `false (default)`
+
+既に非推奨のオプションなので設定しない。
+
+### [Remove Comments](https://www.typescriptlang.org/ja/tsconfig/#removeComments)
+
+設定値: `false (default)`
+
+トランスパイル後のJavaScriptファイルからコメントを削除するかどうかを設定する。
+
+トランスパイル後のコードの解読は非常に難しい。
+コメントを残しておくとデバッグしやすいため、基本的には`false`にしておく。
+
+### [Source Map](https://www.typescriptlang.org/ja/tsconfig/#sourceMap)
+
+設定値: `false (default)`
+
+トランスパイル後のJavaScriptファイルにソースマップを出力するかどうかを設定する。
+
+有効にしておくと、トランスパイル後のコードをデバッグするのが簡単になる。
+
+プロジェクトによっては`true`にするが、ベースとなる設定では`false`にしておく。
+
+### [Source Root](https://www.typescriptlang.org/ja/tsconfig/#sourceRoot)
+
+設定値: not set
+
+外部のソースコードを参照する場合に指定する。
+
+基本的には必要ないので設定しない。
+
+### [Strip Internal](https://www.typescriptlang.org/ja/tsconfig/#stripInternal)
+
+設定値: `false (default)`
+
+`@internal`アノテーションが付いたメンバーをトランスパイル後のJavaScriptに出力するかどうかを設定する。
+
+プロジェクトによっては`true`にするが、ベースとなる設定では`false`にしておく。
