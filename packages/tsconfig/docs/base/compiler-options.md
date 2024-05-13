@@ -475,3 +475,23 @@ VLLでは基本的にES5以前へのトランスパイルを行わず、する�
 `@internal`アノテーションが付いたメンバーをトランスパイル後のJavaScriptに出力するかどうかを設定する。
 
 プロジェクトによっては`true`にするが、ベースとなる設定では`false`にしておく。
+
+## JavaScript Support
+
+### [Allow Js](https://www.typescriptlang.org/ja/tsconfig/#allowJs)
+
+設定値: `false (default)`
+
+JavaScriptファイルをTypeScriptファイルへimportすることを許可するかどうかを設定する。
+
+これにより、TypeScriptとJavaScriptが共存できる。基本的にソースコードにはTypeScriptのみを使うので`false`にしておく。
+
+プロジェクトによっては`.js`モジュールを書かざるを得ないことがあるため、その場合は`true`にする。
+
+### [Check Js](https://www.typescriptlang.org/ja/tsconfig/#checkJs)
+
+設定値: `true`
+
+JavaScriptファイルにおいてもTypeScriptと同等の型チェックをするかどうか設定する。
+
+基本的には`true`にしておく。
