@@ -495,3 +495,13 @@ JavaScriptファイルをTypeScriptファイルへimportすることを許可す
 JavaScriptファイルにおいてもTypeScriptと同等の型チェックをするかどうか設定する。
 
 基本的には`true`にしておく。
+
+### [Max Node Module JS Depth](https://www.typescriptlang.org/ja/tsconfig/#maxNodeModuleJsDepth)
+
+設定値: `0 (default)`
+
+`node_modules`内のJavaScriptファイルのうち、`d.ts`ファイルがないものを型推論する深さを指定する。
+
+ドキュメントにもあるが、基本的に0であるべきである。
+
+
