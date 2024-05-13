@@ -1,8 +1,8 @@
 
 # Compiler Optionsの設定
 
-このドキュメントでは、[base.json](../../base.json)の各オプションの設定意図を記録しています。
-[TSConfig Reference](https://www.typescriptlang.org/ja/tsconfig/)の項目を見て設定しています。
+このドキュメントでは、[base.json](../../base.json)の各オプションの設定意図を記録している。
+設定は[TSConfig Reference](https://www.typescriptlang.org/ja/tsconfig/)の項目を見て行っている。
 
 基本的には
 
@@ -12,6 +12,9 @@
 を設定している。
 
 それそのものがランタイムエラーなどを産まないようなものはESLint側に任せる方針を取る。
+
+> [!WARNING]
+> TypeScript5.4の時点で`deprecated`なものについては記載していないし、設定もしていない。
 
 ## Type Checking
 
@@ -435,12 +438,6 @@ VLLでは基本的にES5以前へのトランスパイルを行わず、する�
 
 基本的にIsolated Modules側で制御してよいと考えるため、ここではデフォルト値のままとする。
 
-### [Preserve Value Imports](https://www.typescriptlang.org/ja/tsconfig/#preserveValueImports)
-
-設定値: `false (default)`
-
-既に非推奨のオプションなので設定しない。
-
 ### [Remove Comments](https://www.typescriptlang.org/ja/tsconfig/#removeComments)
 
 設定値: `false (default)`
@@ -569,3 +566,37 @@ import文の処理が逐語的なトランスパイルになる。
 しかし、このオプションを有効にするとCommon JS向けにトランスパイルする際にもimport文がrequire文に変換されないため非常に面倒になる。
 
 これと同等のチェックをESLintのプリセットで行うように設定しているため、TypeScript側ではデフォルト値のままとする。
+
+## Backwards Compatibility
+
+### [No Implicit Use Strict](https://www.typescriptlang.org/ja/tsconfig/#noImplicitUseStrict)
+
+設定値: `false (default)`
+
+トランスパイル後のJavaScriptファイルに`"use strict";`を追加するかどうかを設定する。
+
+基本的には`false`にしておく。
+
+### [No Strict Generic Checks](https://www.typescriptlang.org/ja/tsconfig/#noStrictGenericChecks)
+
+設定値: `false (default)`
+
+有効にするとジェネリクスの型チェックが甘くなる。
+
+基本的には`false`にしておく。
+
+### [Suppress Excess Property Errors](https://www.typescriptlang.org/ja/tsconfig/#suppressExcessPropertyErrors)
+
+設定値: `false (default)`
+
+有効にすると、オブジェクトの型定義に存在しないプロパティを追加してもエラーを出さなくなる。
+
+基本的には`false`にしておく。
+
+### [Suppress Implicit Any Index Errors](https://www.typescriptlang.org/ja/tsconfig/#suppressImplicitAnyIndexErrors)
+
+設定値: `false (default)`
+
+有効にすると、オブジェクトの型定義に存在しないプロパティにindex accessした際の暗黙的なAny型のエラーを出さなくなる。
+
+基本的には`false`にしておく。
