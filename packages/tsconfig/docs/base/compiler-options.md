@@ -600,3 +600,21 @@ import文の処理が逐語的なトランスパイルになる。
 有効にすると、オブジェクトの型定義に存在しないプロパティにindex accessした際の暗黙的なAny型のエラーを出さなくなる。
 
 基本的には`false`にしておく。
+
+## Language and Environment
+
+### [Emit Decorator Metadata](https://www.typescriptlang.org/ja/tsconfig/#emitDecoratorMetadata)
+
+設定値: `false (default)`
+
+デコレータのメタデータを出力するかどうかを設定する。
+
+デコレータ自体が実験的な機能であることからベースとなる設定では`false`にしておく。
+
+### [Experimental Decorators](https://www.typescriptlang.org/ja/tsconfig/#experimentalDecorators)
+
+設定値: `false (default)`
+
+デコレータを有効にするかどうかを設定する。
+
+デコレータ自体が実験的な機能であることからベースとなる設定では`false`にしておく。
