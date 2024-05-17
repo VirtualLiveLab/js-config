@@ -1,4 +1,3 @@
-
 # Setup TypeScript with VSCode
 
 VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCodeにStylelintを統合してこのリポジトリのプリセットを動かすための設定を説明します。
@@ -22,6 +21,6 @@ VSCodeはもともとTypeScriptをサポートしているので特に拡張機�
 ```json
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
 ```

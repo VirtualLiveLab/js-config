@@ -1,12 +1,12 @@
-import type { Linter } from "eslint"
+import type { Linter } from "eslint";
 
 //@ts-expect-error no types
-import react from "eslint-plugin-react"
+import react from "eslint-plugin-react";
 //@ts-expect-error no types
-import reactRecommended from "eslint-plugin-react/configs/recommended.js"
-import globals from "globals"
+import reactRecommended from "eslint-plugin-react/configs/recommended.js";
+import globals from "globals";
 
-import { compat } from "../lib/compat"
+import { compat } from "../lib/compat";
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const reactConfig: Linter.FlatConfig[] = [
   ...compat.extends("plugin:react-hooks/recommended"),
@@ -33,6 +33,6 @@ const reactConfig: Linter.FlatConfig[] = [
       "react/jsx-curly-brace-presence": "error",
     },
   },
-]
+];
 
-export { reactConfig }
+export { reactConfig };

@@ -1,6 +1,6 @@
-import type { Config } from "prettier"
+import type { Config } from "prettier";
 
-import defaultConfig from "./index"
+import defaultConfig from "./index";
 
 const config: Config = {
   ...defaultConfig,
@@ -13,6 +13,6 @@ const config: Config = {
     },
   ],
   plugins: ["prettier-plugin-astro"],
-}
+};
 
-export default config
+export default config;

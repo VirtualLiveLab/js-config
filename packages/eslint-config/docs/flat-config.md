@@ -1,4 +1,3 @@
-
 # Flat Configについて
 
 Flat Configは、ESLint v9でデフォルトになった新しいESLintの設定ファイルの形式です。
@@ -47,10 +46,7 @@ import js from "@virtual-live-lab/eslint-config/presets/js";
 import hogehoge from "eslint-config-hogehoge";
 
 /* @type {import("eslint").Linter.FlatConfig[]} */
-export default [
-  ...js,
-  ...hoehoge.configs.recommended
-];
+export default [...js, ...hoehoge.configs.recommended];
 ```
 
 </details>
@@ -62,9 +58,7 @@ export default [
 ```js
 import { compat } from "@virtual-live-lab/eslint-config";
 
-export default [
-  ...compat.extends("plugin:hogehoge/recommended")
-];
+export default [...compat.extends("plugin:hogehoge/recommended")];
 ```
 
 のようにすることで`.eslintrc.js`形式のsyntaxのルールを利用できます。

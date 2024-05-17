@@ -1,4 +1,3 @@
-
 # @virtual-live-lab/tsconfig
 
 ![NPM Version](https://img.shields.io/npm/v/%40virtual-live-lab%2Ftsconfig)
@@ -17,8 +16,7 @@ TypeScript configuration for Virtual Live Lab.
 - `remix`: Configuration for Remix.
 - `vite`: Configuration for Vite.
 
-> [!WARNING]
-> `library`, `react`, and `vite` preset is basically for internal use.
+> [!WARNING] > `library`, `react`, and `vite` preset is basically for internal use.
 
 ## Installation
 
@@ -32,7 +30,7 @@ npm install typescript @virtual-live-lab/tsconfig --save-dev
 // tsconfig.json
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@virtual-live-lab/tsconfig/{preset}",
+  "extends": "@virtual-live-lab/tsconfig/{preset}"
   // your configuration
 }
 ```
@@ -51,7 +49,7 @@ npm install @astrojs/ts-plugin \
 // tsconfig.json
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@virtual-live-lab/tsconfig/astro",
+  "extends": "@virtual-live-lab/tsconfig/astro"
   // your configuration
 }
 ```
@@ -67,7 +65,7 @@ npm install @cloudflare/workers-types \
 // tsconfig.json
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@virtual-live-lab/tsconfig/cloudflare-workers",
+  "extends": "@virtual-live-lab/tsconfig/cloudflare-workers"
   // your configuration
 }
 ```

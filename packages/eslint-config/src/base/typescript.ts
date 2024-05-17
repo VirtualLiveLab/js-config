@@ -1,6 +1,6 @@
-import tseslint from "typescript-eslint"
+import tseslint from "typescript-eslint";
 
-import { __dirname } from "../lib/dir"
+import { __dirname } from "../lib/dir";
 
 const tsConfig = tseslint.config({
   extends: [
@@ -45,6 +45,6 @@ const tsConfig = tseslint.config({
     "@typescript-eslint/prefer-for-of": "off",
     "@typescript-eslint/prefer-function-type": "off",
   },
-})
+});
 
-export { tsConfig }
+export { tsConfig };

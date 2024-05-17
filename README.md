@@ -1,4 +1,3 @@
-
 # @virtual-live-lab/js-config
 
 このリポジトリは、バーチャルライブ研究会(VLL)内で利用されるJavaScript / TypeScript関連のツールチェインの設定を統一するためのライブラリリポジトリです。
