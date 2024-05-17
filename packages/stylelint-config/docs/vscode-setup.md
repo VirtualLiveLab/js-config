@@ -1,4 +1,3 @@
-
 # Setup Stylelint with VSCode
 
 VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCodeにStylelintを統合してこのリポジトリのプリセットを動かすための設定を説明します。
@@ -14,8 +13,7 @@ VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCod
 基本的にこのpackageのプリセットを使う場合以下の設定が必須となります。
 `<repository>/.vscode/settings.json`に追記してください。
 
-> [!TIP]
-> `stylelint.packageManager`をnpm, yarn, pnpmの中からリポジトリに合わせたものに変更してください。`bun`はないようです。
+> [!TIP] > `stylelint.packageManager`をnpm, yarn, pnpmの中からリポジトリに合わせたものに変更してください。`bun`はないようです。
 >
 > 設定しなかった場合、稀にStylelint VSCode Extensionがインストールされたstylelintの検出に失敗することがあります。
 
@@ -25,7 +23,7 @@ VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCod
     "source.fixAll.stylelint": "explicit"
   },
   "stylelint.validate": ["css", "postcss", "scss"],
-  "stylelint.packageManager": "PROJECT_PACKAGE_MANAGER",
+  "stylelint.packageManager": "PROJECT_PACKAGE_MANAGER"
 }
 ```
 
@@ -35,6 +33,6 @@ VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCod
 
 ```json
 {
-  "stylelint.validate": ["css", "postcss", "scss", "astro"],
+  "stylelint.validate": ["css", "postcss", "scss", "astro"]
 }
 ```

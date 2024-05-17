@@ -1,4 +1,3 @@
-
 # @virtual-live-lab/prettier-config
 
 ![NPM Version](https://img.shields.io/npm/v/%40virtual-live-lab%2Fprettier-config)
@@ -17,7 +16,7 @@ npm install prettier \
 
 ```js
 // prettier.config.mjs
-export { default } from "@virtual-live-lab/prettier-config"
+export { default } from "@virtual-live-lab/prettier-config";
 ```
 
 ### Use for Astro
@@ -31,7 +30,7 @@ npm install prettier \
 
 ```js
 // prettier.config.mjs
-export { default } from "@virtual-live-lab/prettier-config/astro"
+export { default } from "@virtual-live-lab/prettier-config/astro";
 ```
 
 ## License

@@ -1,9 +1,9 @@
-import type { Config } from "stylelint"
+import type { Config } from "stylelint";
 
-import { baseConfig } from "./bases/base"
-import { cssExtend } from "./bases/extend"
+import { baseConfig } from "./bases/base";
+import { cssExtend } from "./bases/extend";
 
-const { rules: baseRules, ...base } = baseConfig
+const { rules: baseRules, ...base } = baseConfig;
 
 const css: Config = {
   ...base,
@@ -17,6 +17,6 @@ const css: Config = {
       },
     ],
   },
-}
+};
 
-export default css
+export default css;

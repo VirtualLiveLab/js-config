@@ -1,4 +1,3 @@
-
 # Setup Prettier with VSCode
 
 VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCodeにPrettierを統合してこのリポジトリのプリセットを動かすための設定を説明します。
@@ -22,7 +21,7 @@ VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCod
 ```json
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": true
 }
 ```
 
@@ -34,3 +33,4 @@ VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCod
 {
   "prettier.documentSelectors": ["**/*.astro"]
 }
+```

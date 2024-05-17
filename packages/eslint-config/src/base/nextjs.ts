@@ -1,7 +1,7 @@
-import type { Linter } from "eslint"
+import type { Linter } from "eslint";
 
-import { compat } from "../lib/compat"
-import { reactConfig } from "./react"
+import { compat } from "../lib/compat";
+import { reactConfig } from "./react";
 
 const nextJsConfig: Linter.FlatConfig[] = [
   ...reactConfig,
@@ -13,6 +13,6 @@ const nextJsConfig: Linter.FlatConfig[] = [
   Next.jsプリセットを削除するBreaking Changeを行う可能性が高い
   */
   ...compat.extends("next/core-web-vitals"),
-]
+];
 
-export { nextJsConfig }
+export { nextJsConfig };
