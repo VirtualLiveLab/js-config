@@ -1,4 +1,3 @@
-
 # typescript-eslintについて
 
 VLLでは基本的にTypeScriptを利用しますが、ESLintは本来TypeScriptに対応していません。そこで、[typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)を利用します。

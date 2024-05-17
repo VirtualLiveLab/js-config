@@ -1,4 +1,3 @@
-
 # @virtual-live-lab/eslint-config
 
 ![NPM Version](https://img.shields.io/npm/v/%40virtual-live-lab%2Feslint-config)
@@ -40,7 +39,7 @@ This package has some presets to zero-config use.
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/presets/js"
+export { default } from "@virtual-live-lab/eslint-config/presets/js";
 ```
 
 ### TypeScript Preset
@@ -49,7 +48,7 @@ Extends `js` preset.
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/presets/ts"
+export { default } from "@virtual-live-lab/eslint-config/presets/ts";
 ```
 
 ### React Preset
@@ -58,7 +57,7 @@ Extends `ts` preset.
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/presets/react"
+export { default } from "@virtual-live-lab/eslint-config/presets/react";
 ```
 
 ### Next.js Preset
@@ -74,7 +73,7 @@ Extends `ts` and `react` preset.
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/presets/nextjs"
+export { default } from "@virtual-live-lab/eslint-config/presets/nextjs";
 ```
 
 ### Astro Preset
@@ -83,7 +82,7 @@ Extends `ts` and `react` presets.
 
 ```js
 // eslint.config.mjs
-export { default } from "@virtual-live-lab/eslint-config/presets/astro"
+export { default } from "@virtual-live-lab/eslint-config/presets/astro";
 ```
 
 ## Addons
@@ -94,30 +93,24 @@ This package has some addon configurations.
 
 ```js
 // eslint.config.mjs
-import jsxA11y from "@virtual-live-lab/eslint-config/addons/jsxA11y"
-import ts from "@virtual-live-lab/eslint-config/presets/ts"
+import jsxA11y from "@virtual-live-lab/eslint-config/addons/jsxA11y";
+import ts from "@virtual-live-lab/eslint-config/presets/ts";
 
-import tseslint from "typescript-eslint"
+import tseslint from "typescript-eslint";
 
-export default tseslint.config(
-  ...ts,
-  ...jsxA11y
-)
+export default tseslint.config(...ts, ...jsxA11y);
 ```
 
 ### Tailwind CSS
 
 ```js
 // eslint.config.mjs
-import tailwind from "@virtual-live-lab/eslint-config/addons/tailwind"
-import ts from "@virtual-live-lab/eslint-config/presets/ts"
+import tailwind from "@virtual-live-lab/eslint-config/addons/tailwind";
+import ts from "@virtual-live-lab/eslint-config/presets/ts";
 
-import tseslint from "typescript-eslint"
+import tseslint from "typescript-eslint";
 
-export default tseslint.config(
-  ...ts,
-  ...tailwind
-)
+export default tseslint.config(...ts, ...tailwind);
 ```
 
 ## License

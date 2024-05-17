@@ -1,21 +1,16 @@
-import type { Config } from "stylelint"
+import type { Config } from "stylelint";
 
-import { baseConfig } from "./bases/base"
-import { scssExtend } from "./bases/extend"
+import { baseConfig } from "./bases/base";
+import { scssExtend } from "./bases/extend";
 
-const { rules: baseRules, ...base } = baseConfig
+const { rules: baseRules, ...base } = baseConfig;
 
 const scss: Config = {
   ...base,
   extends: scssExtend,
   rules: {
     ...baseRules,
-    "at-rule-no-unknown": [
-      true,
-      {
-        ignoreAtRules: ["tailwind"],
-      },
-    ],
+    "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": [
       true,
       {
@@ -23,6 +18,6 @@ const scss: Config = {
       },
     ],
   },
-}
+};
 
-export default scss
+export default scss;

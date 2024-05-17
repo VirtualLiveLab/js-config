@@ -1,3 +1,3 @@
-import { packageDirectorySync } from "pkg-dir"
+import { packageDirectorySync } from "pkg-dir";
 
-export const __dirname = packageDirectorySync()
+export const __dirname = packageDirectorySync();
