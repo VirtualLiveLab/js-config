@@ -44,6 +44,13 @@ const tsConfig = tseslint.config({
     "@typescript-eslint/no-unsafe-declaration-merging": "off",
     "@typescript-eslint/prefer-for-of": "off",
     "@typescript-eslint/prefer-function-type": "off",
+    // #97
+    "@typescript-eslint/strict-boolean-expressions": [
+      "error",
+      {
+        allowNumber: false,
+      },
+    ],
   },
 });
 
