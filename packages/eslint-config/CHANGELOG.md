@@ -1,5 +1,13 @@
 # @virtual-live-lab/eslint-config
 
+## 2.0.2
+
+### Patch Changes
+
+- [#102](https://github.com/VirtualLiveLab/js-config/pull/102) [`d8fb332`](https://github.com/VirtualLiveLab/js-config/commit/d8fb3326dbd815f545d4d15819e9735e55a1fc61) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Enable tseslint/strict-boolean-expressions
+
+- [#104](https://github.com/VirtualLiveLab/js-config/pull/104) [`95fed8f`](https://github.com/VirtualLiveLab/js-config/commit/95fed8f90b57e77c83d595df3125296d0e92b969) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Ignore sort object rule with new line
+
 ## 2.0.1
 
 ### Patch Changes
