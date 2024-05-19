@@ -6,10 +6,10 @@
     "changeset": "changeset",
     "format": "prettier --write .",
     "lint": "eslint .",
+    "build": "pnpm run /^build:.*/",
     "build:eslint": "pnpm --filter @virtual-live-lab/eslint-config build",
     "build:prettier": "pnpm --filter @virtual-live-lab/prettier-config build",
     "build:stylelint": "pnpm --filter @virtual-live-lab/stylelint-config build",
-    "build": "pnpm run /^build:.*/",
     "release": "pnpm run build && changeset publish"
   },
   "packageManager": "pnpm@8.15.7",

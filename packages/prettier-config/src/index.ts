@@ -1,4 +1,4 @@
-import type { Config } from "prettier"
+import type { Config } from "prettier";
 
 const config: Config = {
   arrowParens: "always",
@@ -9,6 +9,6 @@ const config: Config = {
   singleQuote: false,
   tabWidth: 2,
   trailingComma: "all",
-}
+};
 
-export default config
+export default config;

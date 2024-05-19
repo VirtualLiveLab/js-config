@@ -1,4 +1,4 @@
-import { defineConfig } from "tsup"
+import { defineConfig } from "tsup";
 
 export default defineConfig({
   clean: true, // build前にディレクトリ内を削除するか
@@ -10,4 +10,4 @@ export default defineConfig({
   sourcemap: false, // soucemapを出力するか
   splitting: false, // バンドルしないで分割するか
   treeshake: true,
-})
+});

@@ -1,4 +1,3 @@
-
 # @virtual-live-lab/stylelint-config
 
 ![NPM Version](https://img.shields.io/npm/v/%40virtual-live-lab%2Fstylelint-config)
@@ -26,7 +25,7 @@ npm install stylelint \
 
 ```js
 // stylelint.config.mjs
-export { default } from "@virtual-live-lab/stylelint-config"
+export { default } from "@virtual-live-lab/stylelint-config";
 ```
 
 ### Use for scss
@@ -47,7 +46,7 @@ npm install stylelint \
 
 ```js
 // stylelint.config.mjs
-export { default } from "@virtual-live-lab/stylelint-config/scss"
+export { default } from "@virtual-live-lab/stylelint-config/scss";
 ```
 
 ### Use for Astro
@@ -76,7 +75,7 @@ npm install stylelint \
 
 ```js
 // stylelint.config.mjs
-export { default } from "@virtual-live-lab/stylelint-config/astro"
+export { default } from "@virtual-live-lab/stylelint-config/astro";
 ```
 
 ## License

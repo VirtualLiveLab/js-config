@@ -1,6 +1,6 @@
-import { jsConfig } from "../base/js"
-import { stylisticConfig } from "../base/stylistic"
+import { jsConfig } from "../base/js";
+import { stylisticConfig } from "../base/stylistic";
 
-const js = [...jsConfig, ...stylisticConfig]
+const js = [...jsConfig, ...stylisticConfig];
 
-export default js
+export default js;

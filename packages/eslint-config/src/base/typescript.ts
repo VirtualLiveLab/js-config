@@ -1,6 +1,6 @@
-import tseslint from "typescript-eslint"
+import tseslint from "typescript-eslint";
 
-import { __dirname } from "../lib/dir"
+import { __dirname } from "../lib/dir";
 
 const tsConfig = tseslint.config({
   extends: [
@@ -44,7 +44,14 @@ const tsConfig = tseslint.config({
     "@typescript-eslint/no-unsafe-declaration-merging": "off",
     "@typescript-eslint/prefer-for-of": "off",
     "@typescript-eslint/prefer-function-type": "off",
+    // #97
+    "@typescript-eslint/strict-boolean-expressions": [
+      "error",
+      {
+        allowNumber: false,
+      },
+    ],
   },
-})
+});
 
-export { tsConfig }
+export { tsConfig };

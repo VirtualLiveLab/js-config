@@ -1,5 +1,11 @@
 # @virtual-live-lab/stylelint-config
 
+## 2.0.2
+
+### Patch Changes
+
+- [#99](https://github.com/VirtualLiveLab/js-config/pull/99) [`c46191b`](https://github.com/VirtualLiveLab/js-config/commit/c46191b3585622e9c3749b011bb961c79afc69d4) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - fix at rule for scss
+
 ## 2.0.1
 
 ### Patch Changes

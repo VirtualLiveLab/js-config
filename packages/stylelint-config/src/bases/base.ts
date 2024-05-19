@@ -1,4 +1,4 @@
-import type { Config } from "stylelint"
+import type { Config } from "stylelint";
 
 const baseConfig: Config = {
   ignoreFiles: ["**/node_modules/**"],
@@ -17,6 +17,6 @@ const baseConfig: Config = {
     "csstools/value-no-unknown-custom-properties": true,
     "plugin/declaration-block-no-ignored-properties": true,
   },
-}
+};
 
-export { baseConfig }
+export { baseConfig };
