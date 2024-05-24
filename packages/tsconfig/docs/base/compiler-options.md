@@ -487,11 +487,15 @@ JavaScriptファイルをTypeScriptファイルへimportすることを許可す
 
 ### [Check Js](https://www.typescriptlang.org/ja/tsconfig/#checkJs)
 
-設定値: `true`
+設定値: `false (default)`
 
 JavaScriptファイルにおいてもTypeScriptと同等の型チェックをするかどうか設定する。
 
-基本的には`true`にしておく。
+~~基本的には`true`にしておく。~~
+
+\#105のように、`tsc`がJavaScriptファイルもトランスパイルしようとしてOverwriteエラーが発生してしまうので、`false`にしておく。
+
+なお、JavaScriptでも型チェックが必要な場合は`// @ts-check`をファイルの先頭に書くことで有効にできる。
 
 ### [Max Node Module JS Depth](https://www.typescriptlang.org/ja/tsconfig/#maxNodeModuleJsDepth)
 
