@@ -17,9 +17,11 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "skipLibCheck": true,
+    // language-and-environment
     "target": "ES2022",
     "lib": ["ES2023"],
+    // completeness
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }
