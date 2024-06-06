@@ -622,3 +622,75 @@ import文の処理が逐語的なトランスパイルになる。
 デコレータを有効にするかどうかを設定する。
 
 デコレータ自体が実験的な機能であることからベースとなる設定では`false`にしておく。
+
+### [JSX](https://www.typescriptlang.org/ja/tsconfig/#jsx)
+
+設定値: **プロジェクトによって異なるため注意が必要**
+
+JSXをどのJSX Runtimeに合わせたJavaScriptにトランスパイルするかを設定する。
+基本的には使用するライブラリまたはフレームワークの設定に準拠する。
+
+> [!NOTE]
+> このオプションの詳細な説明は英語版ドキュメントを参照してください。
+>
+> <https://www.typescriptlang.org/tsconfig#jsx>
+
+### [JSX Factory](https://www.typescriptlang.org/ja/tsconfig/#jsxFactory)
+
+設定値: `React.createElement (default)`
+
+JSXをトランスパイルする際に使用する関数を指定する。
+
+基本的には必要ないので設定しない。
+
+### [jsxImportSource](https://www.typescriptlang.org/ja/tsconfig/#jsxImportSource)
+
+設定値: `react (default)`
+
+[JSX](#jsx)を`react-jsx`や`react-jsxdev`に設定する場合に、`jsx()`や`jsxs()`のFactory関数をインポートする際のパッケージ名を指定する。
+
+### [Lib](https://www.typescriptlang.org/ja/tsconfig/#lib)
+
+設定値: **プロジェクトによって異なるため注意が必要**
+
+TypeScriptには特定のバージョンのECMA Scriptやブラウザ上のDOM APIの型定義が含まれている。
+ここで指定したものは、importなしでグローバルに使用できる型として認識される。
+
+何もしなくても[target](#target)で指定したECMA Scriptのバージョンに合わせた型定義は自動的に追加されるが、それ以外に追加の型定義をグローバルで使用したい場合に設定する。
+
+### [Module Detection](https://www.typescriptlang.org/ja/tsconfig/#moduleResolution)
+
+設定値: `auto (default)`
+
+TypeScriptがスクリプトとモジュールを区別する方法を指定する。
+デフォルトの値に設定しておくと他のオプションから自動的に最適な方法で判断されるので、基本的には設定しない。
+
+### [No Lib](https://www.typescriptlang.org/ja/tsconfig/#noLib)
+
+設定値: not set
+
+[Lib](#lib)とは逆に、TypeScriptが提供する標準ライブラリの型定義を無効にする。
+
+基本的には設定しない。
+
+### [Target](https://www.typescriptlang.org/ja/tsconfig/#target)
+
+設定値: **プロジェクトによって異なるため注意が必要**
+
+トランスパイル後のJavaScriptのバージョンを指定する。
+
+設定値より新しい構文のJavaScriptは、古いバージョンで解釈できる記法に変換される。
+
+> [!WARNING]
+> targetを`ESNext`に指定した場合、常に最新のJavaScript構文が使えると解釈される。
+> これは予期せぬ挙動を生む可能性があるため、使用には注意が必要である。
+>
+> とはいえ最新の構文をどんどん使うことはあまりなく、かなりのライブラリが`ESNext`を指定しているため、あまり気にしなくてよいのも事実である。
+
+### [Use Define For Class Fields](https://www.typescriptlang.org/ja/tsconfig/#useDefineForClassFields)
+
+設定値: デフォルト
+
+クラス宣言がどのようにトランスパイルされるかを指定する。`true`に設定すると、クラスフィールドを`Object.defineProperty`で定義するようになる。
+
+基本的にはデフォルト値のままとする。
