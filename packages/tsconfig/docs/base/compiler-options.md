@@ -727,3 +727,25 @@ TypeScriptがスクリプトとモジュールを区別する方法を指定す�
 エラーやメッセージを見やすくスタイリングしてくれる。
 
 基本的には`true`にしておく。
+
+## Completeness
+
+### [Skip Default Lib Check](https://www.typescriptlang.org/ja/tsconfig/#skipDefaultLibCheck)
+
+設定値: not set
+
+> [!CAUTION]
+> 代わりに[Skip Lib Check](#skip-lib-check)を使用する。
+
+### [Skip Lib Check](https://www.typescriptlang.org/ja/tsconfig/#skipLibCheck)
+
+設定値: `false (default)`
+
+TypeScriptが`d.ts`ファイルの型チェックをスキップするかどうかを設定する。
+基本的にはライブラリの型定義の不一致を封殺するために使用する。
+
+必要になったら有効にするが、基本的には`false`にしておく。
+
+## Watch Options
+
+後日書く。基本使わない。
