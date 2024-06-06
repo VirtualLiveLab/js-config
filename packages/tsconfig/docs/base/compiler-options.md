@@ -698,3 +698,32 @@ TypeScriptがスクリプトとモジュールを区別する方法を指定す�
 ## Compiler Diagnostics
 
 この章の設定はデバッグに用いるものであるため、設定しないし説明もしない。
+
+## Projects
+
+この章の設定は主に`tsc`でコンパイルするライブラリ開発に用いるものであるため、設定しないし説明もしない。
+
+## Output Formatting
+
+### [No Error Truncation](https://www.typescriptlang.org/ja/tsconfig/#noErrorTruncation)
+
+設定値: `false (default)`
+
+`true`に設定するとエラーメッセージが切り捨てられなくなる。
+
+複雑な型のエラーメッセージが非常に長くなるので、基本的には`false`にしておく。
+
+### [Preserve Watch Output](https://www.typescriptlang.org/ja/tsconfig/#preserveWatchOutput)
+
+設定値: not set
+
+> [!CAUTION]
+> このオプションはinternalなものであり、ユーザーが設定することを想定していない。
+
+### [Pretty](https://www.typescriptlang.org/ja/tsconfig/#pretty)
+
+設定値: `true (default)`
+
+エラーやメッセージを見やすくスタイリングしてくれる。
+
+基本的には`true`にしておく。
