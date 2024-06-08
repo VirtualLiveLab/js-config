@@ -207,11 +207,32 @@ VLLにおいても、TypeScriptの拡張子をつけてimportすることはな�
 
 ### [Module](https://www.typescriptlang.org/ja/tsconfig/#module)
 
-魔境なので違うドキュメントに書く。
+設定値: `node16`
+
+JavaScriptへトランスパイルする際に利用するモジュールシステムを指定する。
+ここでのモジュールシステムは主にCommonJSとES Moduleの2つがある。
+
+しかし、Node.jsはこれら2つの両方に対応しており、設定が困難だった。
+このため、TypeScript4.7で追加されたNode.js向け専用の`node16`を指定している。
+
+> [!IMPORTANT]
+> このオプションは最も難解なものの1つである。
+>
+> ぜひこの記事を読んで理解を深めて欲しい。
+> <https://zenn.dev/uhyo/articles/typescript-module-option>
 
 ### [Module Resolution](https://www.typescriptlang.org/ja/tsconfig/#moduleResolution)
 
-魔境なので違うドキュメントに書く。
+設定値: `node16`
+
+[module](#module)の設定値によって挙動が大きく変わるオプション。
+認知不可を下げるため、明示的に`node16`を指定している。
+
+> [!IMPORTANT]
+> 例によって、このオプションも難解なものの1つである。
+>
+> ぜひこの記事を読んで理解を深めて欲しい。
+> <https://zenn.dev/uhyo/articles/typescript-module-option>
 
 ### [Module Suffixes](https://www.typescriptlang.org/ja/tsconfig/#moduleSuffixes)
 
@@ -687,8 +708,11 @@ TypeScriptがスクリプトとモジュールを区別する方法を指定す�
 設定値: `ES2022`
 
 トランスパイル後のJavaScriptのバージョンを指定する。
-
 設定値より新しい構文のJavaScriptは、古いバージョンで解釈できる記法に変換される。
+
+> [!WARNING]
+> **[module](#module)と異なり、あくまでもJavaScriptの構文のバージョンを指定しているだけであることに注意**
+> 使用するモジュールシステムはtargetの設定値には影響されない、
 
 VLLで標準的な開発環境として使用するNode.jsのバージョンは20.x or 22.xであるが、
 [tsconfig/base](https://github.com/tsconfig/bases/blob/main/bases)ではnode20・node22ともに
