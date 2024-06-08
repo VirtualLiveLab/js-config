@@ -625,10 +625,12 @@ import文の処理が逐語的なトランスパイルになる。
 
 ### [JSX](https://www.typescriptlang.org/ja/tsconfig/#jsx)
 
-設定値: **プロジェクトによって異なるため注意が必要**
+設定値: not set
 
 JSXをどのJSX Runtimeに合わせたJavaScriptにトランスパイルするかを設定する。
 基本的には使用するライブラリまたはフレームワークの設定に準拠する。
+
+**各プロジェクトによって異なるため、baseでは設定しない。**
 
 > [!NOTE]
 > このオプションの詳細な説明は英語版ドキュメントを参照してください。
@@ -651,12 +653,19 @@ JSXをトランスパイルする際に使用する関数を指定する。
 
 ### [Lib](https://www.typescriptlang.org/ja/tsconfig/#lib)
 
-設定値: **プロジェクトによって異なるため注意が必要**
+設定値: `ES2023`
 
 TypeScriptには特定のバージョンのECMA Scriptやブラウザ上のDOM APIの型定義が含まれている。
 ここで指定したものは、importなしでグローバルに使用できる型として認識される。
-
 何もしなくても[target](#target)で指定したECMA Scriptのバージョンに合わせた型定義は自動的に追加されるが、それ以外に追加の型定義をグローバルで使用したい場合に設定する。
+**プロジェクトやFWによって推奨される設定値が異なるため注意が必要**
+
+VLLで標準的な開発環境として使用するNode.jsのバージョンは20.x or 22.xであり、両者ともES2023の構文まではほぼ完全に対応している。
+このため、ES2023を指定している。
+
+> [!TIP]
+> Node.jsの各ECMA Scriptへの対応状況は以下のページを参考にしている。
+> <https://node.green/>
 
 ### [Module Detection](https://www.typescriptlang.org/ja/tsconfig/#moduleResolution)
 
@@ -675,11 +684,15 @@ TypeScriptがスクリプトとモジュールを区別する方法を指定す�
 
 ### [Target](https://www.typescriptlang.org/ja/tsconfig/#target)
 
-設定値: **プロジェクトによって異なるため注意が必要**
+設定値: `ES2022`
 
 トランスパイル後のJavaScriptのバージョンを指定する。
 
 設定値より新しい構文のJavaScriptは、古いバージョンで解釈できる記法に変換される。
+
+VLLで標準的な開発環境として使用するNode.jsのバージョンは20.x or 22.xであるが、
+[tsconfig/base](https://github.com/tsconfig/bases/blob/main/bases)ではnode20・node22ともに
+targetに`ES2022`を指定している。 このため、baseでも`ES2022`を指定している。
 
 > [!WARNING]
 > targetを`ESNext`に指定した場合、常に最新のJavaScript構文が使えると解釈される。
