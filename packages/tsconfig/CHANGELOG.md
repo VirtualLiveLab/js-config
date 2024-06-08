@@ -1,5 +1,17 @@
 # @virtual-live-lab/tsconfig
 
+## 2.1.0
+
+### Minor Changes
+
+- [#95](https://github.com/VirtualLiveLab/js-config/pull/95) [`da150ca`](https://github.com/VirtualLiveLab/js-config/commit/da150ca823a6bf6c5d0d8ac0d9234e430dfbe5a3) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Refactor base config
+
+### Patch Changes
+
+- [#95](https://github.com/VirtualLiveLab/js-config/pull/95) [`da150ca`](https://github.com/VirtualLiveLab/js-config/commit/da150ca823a6bf6c5d0d8ac0d9234e430dfbe5a3) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - set moduleDetection to auto
+
+- [#95](https://github.com/VirtualLiveLab/js-config/pull/95) [`da150ca`](https://github.com/VirtualLiveLab/js-config/commit/da150ca823a6bf6c5d0d8ac0d9234e430dfbe5a3) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Disable allowJs and checkJs by default
+
 ## 2.0.1
 
 ### Patch Changes
