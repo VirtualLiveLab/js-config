@@ -1,7 +1,5 @@
 import tseslint from "typescript-eslint";
 
-import { __dirname } from "../lib/dir";
-
 const tsConfig = tseslint.config({
   extends: [
     ...tseslint.configs.recommendedTypeChecked,
@@ -9,8 +7,10 @@ const tsConfig = tseslint.config({
   ],
   languageOptions: {
     parserOptions: {
-      project: true,
-      tsconfigRootDir: __dirname,
+      // NOTICE: Remove EXPERIMENTAL_ prefix when typescript-eslint v7 is released
+      // SEE: https://typescript-eslint.io/packages/parser/#experimental_useprojectservice
+      // FEATURE PR: https://github.com/typescript-eslint/typescript-eslint/pull/6754
+      EXPERIMENTAL_useProjectService: true,
     },
   },
   rules: {
