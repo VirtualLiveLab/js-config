@@ -1,5 +1,11 @@
 # @virtual-live-lab/eslint-config
 
+## 2.0.3
+
+### Patch Changes
+
+- [#111](https://github.com/VirtualLiveLab/js-config/pull/111) [`4d53072`](https://github.com/VirtualLiveLab/js-config/commit/4d53072743915c98cbf281cedaadc3f744286a6e) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - Enable `EXPERIMENTAL_useProjectService` in typescript-eslint
+
 ## 2.0.2
 
 ### Patch Changes
