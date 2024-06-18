@@ -9,6 +9,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "strict": true,
+    "strictNullChecks": true,
     // modules
     "module": "Node16",
     "moduleResolution": "Node16",
