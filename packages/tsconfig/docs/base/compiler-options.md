@@ -147,7 +147,22 @@ interface GameSettings {
 
 **無効にする意味がないので`true`に設定する。**
 
-`strict: true`にともなって設定されるオプションはここでは述べない。
+`strict: true`にともなって設定されるオプションはここでは述べないが、
+`strictNullCheck`は明示的に設定しないとtypescript-eslintの一部ルールが使えないためこのあと触れる。
+
+### [Strict Null Checks](https://www.typescriptlang.org/ja/tsconfig/#strictNullChecks)
+
+設定値: `true`
+
+`null`と`undefined`を厳密にチェックするかどうかを設定する。
+例えば、nullableなオブジェクトが存在する前提でプロパティにアクセスしたりするとエラーになる。
+
+> [!IMPORTANT]
+> 本来このオプションは[stirct](#strict)を有効化すれば自動的に有効化されるが、
+> typescript-eslintの型情報を用いたLintではこのオプションを明示的に有効化しないと
+> 動作しないルールがある。
+>
+> このため、一見冗長ではあるが明示的に有効化している。
 
 ## Modules
 
