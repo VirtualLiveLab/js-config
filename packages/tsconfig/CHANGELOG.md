@@ -1,5 +1,11 @@
 # @virtual-live-lab/tsconfig
 
+## 2.1.1
+
+### Patch Changes
+
+- [#114](https://github.com/VirtualLiveLab/js-config/pull/114) [`0aa7850`](https://github.com/VirtualLiveLab/js-config/commit/0aa7850a722d5303203fd3351117de416097457d) Thanks [@sushi-chaaaan](https://github.com/sushi-chaaaan)! - enable `strictNullChecks` explicitly
+
 ## 2.1.0
 
 ### Minor Changes
