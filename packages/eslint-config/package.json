@@ -29,20 +29,20 @@
     "eslint": "^8.57.0"
   },
   "dependencies": {
-    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^8.57.0",
     "eslint": "^8.57.0",
     "eslint-config-flat-gitignore": "^0.1.5",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-astro": "^1.0.3",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-perfectionist": "^2.10.0",
-    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-astro": "^1.2.2",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-perfectionist": "^2.11.0",
+    "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-tailwindcss": "^3.15.1",
-    "globals": "^15.0.0",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "globals": "^15.6.0",
     "pkg-dir": "^8.0.0",
-    "typescript-eslint": "^7.7.1"
+    "typescript-eslint": "^7.13.1"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.7",
