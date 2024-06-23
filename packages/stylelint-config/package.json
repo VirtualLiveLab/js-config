@@ -26,8 +26,8 @@
     "build": "tsup-node"
   },
   "peerDependencies": {
-    "postcss-html": "^1.6.0",
-    "stylelint": "^16.3.1"
+    "postcss-html": "^1.7.0",
+    "stylelint": "^16.6.1"
   },
   "dependencies": {
     "@double-great/stylelint-a11y": "^3.0.2",
