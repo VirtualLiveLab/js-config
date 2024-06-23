@@ -44,7 +44,7 @@
   "devDependencies": {
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "tsup": "^8.0.2"
+    "tsup": "^8.1.0"
   },
   "license": "MIT",
   "publishConfig": {
