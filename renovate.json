@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/renovate.json",
+  "extends": ["config:base"],
+  "schedule": [
+    "before 10am on the first day of the month",
+    "every weekend",
+    "before 5:00am"
+  ],
+  "timezone": "Asia/Tokyo",
+  "prHourlyLimit": 0,
+  "automerge": false,
+  "rangeStrategy": "bump",
+  "branchConcurrentLimit": 0,
+  "enabledManagers": ["github-actions", "npm"],
+  "packageRules": [
+    {
+      "groupName": "eslint",
+      "matchPackageNames": ["globals", "pkg-dir", "typescript-eslint"],
+      "matchPackagePrefixes": [
+        "@typescript-eslint/",
+        "@types/eslint",
+        "eslint",
+        "@eslint/"
+      ]
+    },
+    {
+      "groupName": "prettier",
+      "matchPackagePrefixes": ["prettier"]
+    },
+    {
+      "groupName": "stylelint",
+      "matchPackageNames": ["@double-great/stylelint-a11y", "postcss-html"],
+      "matchPackagePrefixes": ["stylelint"]
+    },
+    {
+      "groupName": "dependencies",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "groupName": "devDependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major", "minor", "patch"]
+    },
+    {
+      "groupName": "monthly_maintenance",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "matchPackagePrefixes": ["@types/"],
+      "enabled": false
+    },
+    {
+      "groupName": "nodejs",
+      "matchPackageNames": ["node"],
+      "allowedVersions": "< 21.0"
+    },
+    {
+      "groupName": "pnpm",
+      "matchPackageNames": ["pnpm"],
+      "allowedVersions": "< 9.0.0"
+    }
+  ]
+}
