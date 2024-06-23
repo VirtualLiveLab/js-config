@@ -14,7 +14,7 @@
     }
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240423.0"
+    "@cloudflare/workers-types": "^4.20240620.0"
   },
   "license": "MIT",
   "publishConfig": {
