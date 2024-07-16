@@ -32,7 +32,7 @@
   "dependencies": {
     "@double-great/stylelint-a11y": "^3.0.2",
     "postcss-html": "^1.7.0",
-    "stylelint": "^16.6.1",
+    "stylelint": "^16.7.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-sass-guidelines": "^11.1.0",
