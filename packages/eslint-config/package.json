@@ -49,10 +49,10 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__eslintrc": "^2.1.1",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.14.11",
     "@typescript-eslint/utils": "^7.16.1",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "tsup": "^8.1.0"
+    "tsup": "^8.2.1"
   },
   "license": "MIT",
   "publishConfig": {

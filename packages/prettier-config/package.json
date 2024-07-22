@@ -28,11 +28,11 @@
     "prettier": "^3.3.3"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.14.11",
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "prettier-plugin-astro": "^0.14.0",
-    "tsup": "^8.1.0"
+    "prettier-plugin-astro": "^0.14.1",
+    "tsup": "^8.2.1"
   },
   "license": "MIT",
   "publishConfig": {
