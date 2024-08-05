@@ -50,7 +50,7 @@
     "@types/eslint__eslintrc": "^2.1.1",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.14.11",
-    "@typescript-eslint/utils": "^7.16.1",
+    "@typescript-eslint/utils": "^8.0.1",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "tsup": "^8.2.1"
   },
