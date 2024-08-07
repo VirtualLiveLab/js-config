@@ -40,19 +40,19 @@
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "globals": "^15.8.0",
+    "globals": "^15.9.0",
     "pkg-dir": "^8.0.0",
     "typescript-eslint": "^7.16.1"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.10",
-    "@types/eslint-config-prettier": "^6.11.3",
-    "@types/eslint__eslintrc": "^2.1.1",
+    "@types/eslint": "^8.56.11",
+    "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
+    "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^20.14.11",
     "@typescript-eslint/utils": "^7.16.1",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "tsup": "^8.2.1"
+    "tsup": "^8.2.4"
   },
   "license": "MIT",
   "publishConfig": {
