@@ -32,7 +32,7 @@
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "prettier-plugin-astro": "^0.14.1",
-    "tsup": "^8.2.1"
+    "tsup": "^8.2.4"
   },
   "license": "MIT",
   "publishConfig": {
