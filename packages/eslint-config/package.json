@@ -42,7 +42,7 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "globals": "^15.9.0",
     "pkg-dir": "^8.0.0",
-    "typescript-eslint": "^7.16.1"
+    "typescript-eslint": "^7.18.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.11",
