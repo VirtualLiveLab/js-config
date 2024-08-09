@@ -26,7 +26,7 @@
     "build": "tsup-node"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^9.9.0"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.1.0",
