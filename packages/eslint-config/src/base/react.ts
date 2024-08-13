@@ -1,38 +1,32 @@
-import type { Linter } from "eslint";
+import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
-//@ts-expect-error no types
-import react from "eslint-plugin-react";
-//@ts-expect-error no types
-import reactRecommended from "eslint-plugin-react/configs/recommended.js";
+import { fixupConfigRules } from "@eslint/compat";
 import globals from "globals";
 
 import { compat } from "../lib/compat";
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const reactConfig: Linter.FlatConfig[] = [
-  ...compat.extends("plugin:react-hooks/recommended"),
-  {
-    files: ["**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}"],
-    ...reactRecommended,
-    languageOptions: {
+
+const reactConfig = [
+  ...fixupConfigRules([
+    ...compat.extends(
+      "plugin:react/recommended",
+      "plugin:react/jsx-runtime",
+      "plugin:react-hooks/recommended",
+    ),
+    ...compat.config({
       globals: {
         ...globals.browser,
       },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
+      rules: {
+        "react/jsx-boolean-value": "warn",
+        "react/jsx-curly-brace-presence": "error",
+      },
+      settings: {
+        react: {
+          version: "detect",
         },
       },
-    },
-    plugins: {
-      // no types
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      react,
-    },
-    rules: {
-      "react/jsx-boolean-value": "warn",
-      "react/jsx-curly-brace-presence": "error",
-    },
-  },
-];
+    }),
+  ]),
+] satisfies FlatConfig.ConfigArray;
 
 export { reactConfig };
