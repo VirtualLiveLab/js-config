@@ -1,42 +1,38 @@
-import type { Linter } from "eslint";
+import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
 import prettierConfig from "eslint-config-prettier";
-// @ts-expect-error no types
-import perfectionistNatural from "eslint-plugin-perfectionist/configs/recommended-natural";
+import perfectionistPlugin from "eslint-plugin-perfectionist";
 
-// eslint-plugin-perfectionist has no types
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const stylisticConfig: Linter.FlatConfig[] = [
+const stylisticConfig = [
   prettierConfig,
-  perfectionistNatural,
+  perfectionistPlugin.configs["recommended-natural"],
   {
     rules: {
       "perfectionist/sort-object-types": [
         "error",
         {
-          "order": "asc",
-          "partition-by-new-line": true,
-          "type": "natural",
+          order: "asc",
+          partitionByNewLine: true,
+          type: "natural",
         },
       ],
       "perfectionist/sort-objects": [
         "error",
         {
-          "order": "asc",
-          "partition-by-new-line": true,
-          "type": "natural",
+          order: "asc",
+          partitionByNewLine: true,
+          type: "natural",
         },
       ],
       "perfectionist/sort-union-types": [
         "error",
         {
-          "nullable-last": true,
-          "order": "asc",
-          "type": "natural",
+          order: "asc",
+          type: "natural",
         },
       ],
     },
   },
-];
+] satisfies FlatConfig.ConfigArray;
 
 export { stylisticConfig };

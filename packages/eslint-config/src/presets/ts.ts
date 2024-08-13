@@ -1,11 +1,10 @@
-import type { TSESLint } from "@typescript-eslint/utils";
+import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
 import tseslint from "typescript-eslint";
 
 import { tsConfig } from "../base/typescript";
 import js from "./js";
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-const ts: TSESLint.FlatConfig.ConfigArray = tseslint.config(...js, ...tsConfig);
+const ts = tseslint.config(...js, ...tsConfig) satisfies FlatConfig.ConfigArray;
 
 export default ts;

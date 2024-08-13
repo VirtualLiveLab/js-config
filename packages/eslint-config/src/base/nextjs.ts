@@ -1,9 +1,11 @@
-import type { Linter } from "eslint";
+import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
+
+import { fixupConfigRules } from "@eslint/compat";
 
 import { compat } from "../lib/compat";
 import { reactConfig } from "./react";
 
-const nextJsConfig: Linter.FlatConfig[] = [
+const nextJsConfig = [
   ...reactConfig,
   /*
    この設定は、利用側のnode_modulesからnext/core-web-vitalsを探すので、
@@ -12,7 +14,7 @@ const nextJsConfig: Linter.FlatConfig[] = [
   Flat対応に際して、このpackageでeslint-config-nextを持ちたくないので、
   Next.jsプリセットを削除するBreaking Changeを行う可能性が高い
   */
-  ...compat.extends("next/core-web-vitals"),
-];
+  ...fixupConfigRules(compat.extends("next/core-web-vitals")),
+] satisfies FlatConfig.ConfigArray;
 
 export { nextJsConfig };

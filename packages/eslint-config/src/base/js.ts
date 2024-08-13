@@ -1,8 +1,11 @@
-import type { Linter } from "eslint";
+import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
 import js from "@eslint/js";
 import gitignore from "eslint-config-flat-gitignore";
 
-const jsConfig: Linter.FlatConfig[] = [gitignore(), js.configs.recommended];
+const jsConfig = [
+  gitignore(),
+  js.configs.recommended,
+] satisfies FlatConfig.ConfigArray;
 
 export { jsConfig };

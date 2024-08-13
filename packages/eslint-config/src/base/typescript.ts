@@ -1,20 +1,28 @@
+import stylisticTs from "@stylistic/eslint-plugin-ts";
+import gitignore from "eslint-config-flat-gitignore";
 import tseslint from "typescript-eslint";
-
-import { __dirname } from "../lib/dir";
 
 const tsConfig = tseslint.config({
   extends: [
+    gitignore(),
     ...tseslint.configs.recommendedTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
     parserOptions: {
-      project: true,
-      tsconfigRootDir: __dirname,
+      projectService: {
+        allowDefaultProject: ["*.js", "*.mjs", "*.cjs"],
+      },
+      tsconfigRootDir: import.meta.dirname,
     },
+  },
+  plugins: {
+    "@stylistic/ts": stylisticTs,
   },
   rules: {
     // SEE: https://zenn.dev/cybozu_frontend/articles/ts-eslint-v6-guide
+    // v6 で recommended から削除されたものを有効化
+    "@stylistic/ts/no-extra-semi": "error",
     // stylistic を有効にしたため v5 の recommended にないルールを無効化
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/ban-tslint-comment": "off",
@@ -27,8 +35,6 @@ const tsConfig = tseslint.config({
     "@typescript-eslint/no-confusing-non-null-assertion": "off",
     // v6 で recommended に追加されたルールを無効化
     "@typescript-eslint/no-duplicate-enum-values": "off",
-    // v6 で recommended から削除されたものを有効化
-    "@typescript-eslint/no-extra-semi": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
     // this is for react-hook-form
     "@typescript-eslint/no-misused-promises": [
