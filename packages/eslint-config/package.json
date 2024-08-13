@@ -49,8 +49,8 @@
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^20.14.11",
-    "@typescript-eslint/utils": "^7.16.1",
+    "@types/node": "^20.14.15",
+    "@typescript-eslint/utils": "^7.18.0",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "tsup": "^8.2.4"
   },
