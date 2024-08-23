@@ -19,6 +19,8 @@ const reactConfig = [
       rules: {
         "react/jsx-boolean-value": "warn",
         "react/jsx-curly-brace-presence": "error",
+        "react/prop-types": "off",
+        "react/jsx-no-target-blank": "warn",
       },
       settings: {
         react: {
