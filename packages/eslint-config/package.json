@@ -29,7 +29,7 @@
     "node": ">= 20.11.0 || >= 21.2.0 || >= 22.0.0"
   },
   "peerDependencies": {
-    "eslint": "^9.9.0"
+    "eslint": "^9.10.0"
   },
   "dependencies": {
     "@eslint/compat": "^1.1.1",
