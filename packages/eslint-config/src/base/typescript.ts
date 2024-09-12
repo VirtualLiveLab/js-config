@@ -2,6 +2,8 @@ import stylisticTs from "@stylistic/eslint-plugin-ts";
 import gitignore from "eslint-config-flat-gitignore";
 import tseslint from "typescript-eslint";
 
+import { __dirname } from "../lib/dir";
+
 const tsConfig = tseslint.config({
   extends: [
     gitignore(),
@@ -12,8 +14,9 @@ const tsConfig = tseslint.config({
     parserOptions: {
       projectService: {
         allowDefaultProject: ["*.js", "*.mjs", "*.cjs"],
+        defaultProject: `${__dirname}/tsconfig.json`,
       },
-      tsconfigRootDir: import.meta.dirname,
+      tsconfigRootDir: __dirname,
     },
   },
   plugins: {
