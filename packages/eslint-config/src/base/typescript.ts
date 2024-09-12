@@ -26,8 +26,13 @@ const tsConfig = tseslint.config({
     // SEE: https://zenn.dev/cybozu_frontend/articles/ts-eslint-v6-guide
     // v6 で recommended から削除されたものを有効化
     "@stylistic/ts/no-extra-semi": "error",
-    // stylistic を有効にしたため v5 の recommended にないルールを無効化
-    "@typescript-eslint/array-type": "off",
+    // #175
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        default: "array-simple",
+      },
+    ],
     "@typescript-eslint/ban-tslint-comment": "off",
     "@typescript-eslint/class-literal-property-style": "off",
     "@typescript-eslint/consistent-generic-constructors": "off",
