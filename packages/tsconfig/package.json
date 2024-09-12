@@ -6,6 +6,7 @@
     "*.json"
   ],
   "peerDependencies": {
+    "typescript": "^5.6.2",
     "@cloudflare/workers-types": "^4.20240806.0"
   },
   "peerDependenciesMeta": {
@@ -14,7 +15,8 @@
     }
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240806.0"
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "typescript": "^5.6.2"
   },
   "license": "MIT",
   "publishConfig": {
