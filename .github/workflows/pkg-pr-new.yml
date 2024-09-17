@@ -92,4 +92,7 @@ jobs:
 
       - if: ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' || needs.paths-filter.outputs.tsconfig == 'true' }}
         name: Publish Preview Package
-        run: pnpm run pkg-pr-new "$(jq -r 'map("./packages/" + .) | join(" ")' <<< '${{ needs.paths-filter.outputs.directory }}')"
+        shell: bash
+        run: |
+          read -ra PACKAGE_DIRS < <(jq -r 'map("./packages/" + .) | join(" ")' <<< '["eslint-config", "prettier-config", "stylelint-config", "tsconfig"]')
+          pnpm run pkg-pr-new "${PACKAGE_DIRS[@]}"
