@@ -11,6 +11,7 @@ on:
         - 'packages/**'
         - 'package.json'
         - 'pnpm-lock.yaml'
+        - '.github/workflows/pkg-pr-new.yml'
 
 jobs:
   paths-filter:
@@ -19,24 +20,25 @@ jobs:
       pull-requests: read
     timeout-minutes: 5
     outputs:
-      eslint: ${{ steps.filter.outputs.eslint }}
-      prettier: ${{ steps.filter.outputs.prettier }}
-      stylelint: ${{ steps.filter.outputs.stylelint }}
+      eslint: ${{ steps.filter.outputs.eslint-config }}
+      prettier: ${{ steps.filter.outputs.prettier-config }}
+      stylelint: ${{ steps.filter.outputs.stylelint-config }}
       tsconfig: ${{ steps.filter.outputs.tsconfig }}
+      directory: ${{ steps.filter.outputs.changes }}
     steps:
       - uses: dorny/paths-filter@v3
         id: filter
         with:
           filters: |
-            eslint:
+            eslint-config:
               - 'packages/eslint-config/**'
               - 'package.json'
               - 'pnpm-lock.yaml'
-            prettier:
+            prettier-config:
               - 'packages/prettier-config/**'
               - 'package.json'
               - 'pnpm-lock.yaml'
-            stylelint:
+            stylelint-config:
               - 'packages/stylelint-config/**'
               - 'package.json'
               - 'pnpm-lock.yaml'
@@ -72,17 +74,23 @@ jobs:
         run: pnpm install
 
       - if: ${{ needs.paths-filter.outputs.eslint == 'true' }}
-        name: Publish Preview ESLint Config Package
-        run: pnpm build:eslint && pnpm run pkg-pr-new:eslint
+        name: Build ESLint Config Package
+        run: pnpm build:eslint
 
       - if: ${{ needs.paths-filter.outputs.prettier == 'true' }}
-        name: Publish Preview Prettier Config Package
-        run: pnpm build:prettier && pnpm run pkg-pr-new:prettier
+        name: Build Prettier Config Package
+        run: pnpm build:prettier
 
       - if: ${{ needs.paths-filter.outputs.stylelint == 'true' }}
-        name: Publish Preview Stylelint Config Package
-        run: pnpm build:stylelint && pnpm run pkg-pr-new:stylelint
+        name: Build Stylelint Config Package
+        run: pnpm build:stylelint
 
-      - if: ${{ needs.paths-filter.outputs.tsconfig == 'true' }}
-        name: Publish Preview tsconfig Package
-        run: pnpm run pkg-pr-new:tsconfig
+      - if: ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' || needs.paths-filter.outputs.tsconfig == 'true' }}
+        name: Publish Preview Package
+        shell: bash
+        # needs.paths-filter.outputs.directory には eslint-config | prettier-config | stylelint-config | tsconfig を要素とするJSON配列の文字列が入っている
+        # が、"["eslint-config","prettier-config","stylelint-config","tsconfig"]" のようになっているため、無理やり文字列にして直したあとにjqでパースする
+        run: |
+          RAW_DIRS="${{ needs.paths-filter.outputs.directory }}"
+          read -ra PACKAGE_DIRS < <(jq -r -c 'split(",") | map("./packages/" + .) | join(" ")' <<<"\"${RAW_DIRS:1:-1}\"")
+          pnpm run pkg-pr-new "${PACKAGE_DIRS[@]}"
