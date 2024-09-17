@@ -93,6 +93,7 @@ jobs:
       - if: ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' || needs.paths-filter.outputs.tsconfig == 'true' }}
         name: Publish Preview Package
         shell: bash
+        # needs.paths-filter.outputs.directory には eslint-config | prettier-config | stylelint-config | tsconfig を要素とするJSON配列の文字列が入っている
         run: |
-          read -ra PACKAGE_DIRS < <(jq -r 'map("./packages/" + .) | join(" ")' <<< '["eslint-config", "prettier-config", "stylelint-config", "tsconfig"]')
+          read -ra PACKAGE_DIRS < <(jq -r 'map("./packages/" + .) | join(" ")' <<< "${{ needs.paths-filter.outputs.directory }}")
           pnpm run pkg-pr-new "${PACKAGE_DIRS[@]}"
