@@ -8,7 +8,7 @@ on:
       - synchronize
       - reopened
     paths:
-        - 'packages/stylelint-config'
+        - 'packages/stylelint-config/**'
 
 jobs:
   build:

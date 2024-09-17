@@ -8,7 +8,7 @@ on:
       - synchronize
       - reopened
     paths:
-        - 'packages/eslint-config'
+        - 'packages/eslint-config/**'
 
 jobs:
   build:
