@@ -1,0 +1,88 @@
+name: Publish Preview Package
+on:
+  pull_request:
+    branches:
+      - '**'
+    types:
+      - opened
+      - synchronize
+      - reopened
+    paths:
+        - 'packages/**'
+        - 'package.json'
+        - 'pnpm-lock.yaml'
+
+jobs:
+  paths-filter:
+    runs-on: ubuntu-22.04
+    permissions:
+      pull-requests: read
+    timeout-minutes: 5
+    outputs:
+      eslint: ${{ steps.filter.outputs.eslint }}
+      prettier: ${{ steps.filter.outputs.prettier }}
+      stylelint: ${{ steps.filter.outputs.stylelint }}
+      tsconfig: ${{ steps.filter.outputs.tsconfig }}
+    steps:
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            eslint:
+              - 'packages/eslint-config/**'
+              - 'package.json'
+              - 'pnpm-lock.yaml'
+            prettier:
+              - 'packages/prettier-config/**'
+              - 'package.json'
+              - 'pnpm-lock.yaml'
+            stylelint:
+              - 'packages/stylelint-config/**'
+              - 'package.json'
+              - 'pnpm-lock.yaml'
+            tsconfig:
+              - 'packages/tsconfig/**'
+              - 'package.json'
+              - 'pnpm-lock.yaml'
+
+  publish:
+    needs: paths-filter
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - if: ${{ needs.paths-filter.outputs.eslint == 'true' }}
+        name: Publish Preview ESLint Config Package
+        run: pnpm build:eslint && pnpm run pkg-pr-new:eslint
+
+      - if: ${{ needs.paths-filter.outputs.prettier == 'true' }}
+        name: Publish Preview Prettier Config Package
+        run: pnpm build:prettier && pnpm run pkg-pr-new:prettier
+
+      - if: ${{ needs.paths-filter.outputs.stylelint == 'true' }}
+        name: Publish Preview Stylelint Config Package
+        run: pnpm build:stylelint && pnpm run pkg-pr-new:stylelint
+
+      - if: ${{ needs.paths-filter.outputs.tsconfig == 'true' }}
+        name: Publish Preview tsconfig Package
+        run: pnpm run pkg-pr-new:tsconfig
