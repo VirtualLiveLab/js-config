@@ -23,7 +23,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup-node"
+    "build": "tsup-node",
+    "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm"
   },
   "engines": {
     "node": ">= 20.11.0 || >= 21.2.0 || >= 22.0.0"
@@ -51,12 +52,13 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
+    "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
-    "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^20.14.15",
     "@typescript-eslint/utils": "^8.5.0",
     "@virtual-live-lab/tsconfig": "workspace:^",
+    "pkg-pr-new": "^0.0.24",
     "tsup": "^8.2.4"
   },
   "license": "MIT",
