@@ -96,5 +96,5 @@ jobs:
         # needs.paths-filter.outputs.directory には eslint-config | prettier-config | stylelint-config | tsconfig を要素とするJSON配列の文字列が入っている
         run: |
           RAW_DIRS="${{ needs.paths-filter.outputs.directory }}"
-          read -ra PACKAGE_DIRS < <(jq -r 'map("./packages/" + .) | join(" ")' <<<"\"${RAW_DIRS:1:-1}\"")
+          read -ra PACKAGE_DIRS < <(jq -r -c 'split(",") | map("./packages/" + .) | join(" ")' <<<"\"${RAW_DIRS:1:-1}\"")
           pnpm run pkg-pr-new "${PACKAGE_DIRS[@]}"
