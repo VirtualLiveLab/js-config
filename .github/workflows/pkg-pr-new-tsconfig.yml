@@ -1,14 +1,19 @@
 name: Publish Preview tsconfig Package
 on:
   pull_request:
-    branches:
-      - '**'
     types:
       - opened
       - synchronize
       - reopened
     paths:
         - 'packages/tsconfig/**'
+        - 'package.json'
+        - 'pnpm-lock.yaml'
+        - '.github/workflows/pkg-pr-new-tsconfig.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
