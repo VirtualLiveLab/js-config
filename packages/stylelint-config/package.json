@@ -46,7 +46,7 @@
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "pkg-pr-new": "^0.0.24",
-    "tsup": "^8.2.4"
+    "tsup": "^8.3.0"
   },
   "license": "MIT",
   "publishConfig": {
