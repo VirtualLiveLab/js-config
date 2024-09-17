@@ -94,6 +94,8 @@ jobs:
         name: Publish Preview Package
         shell: bash
         # needs.paths-filter.outputs.directory には eslint-config | prettier-config | stylelint-config | tsconfig を要素とするJSON配列の文字列が入っている
+        # が、"["eslint-config","prettier-config","stylelint-config","tsconfig"]" のようになっているため、無理やり文字列にして直したあとにjqでパースする
+
         run: |
           RAW_DIRS="${{ needs.paths-filter.outputs.directory }}"
           read -ra PACKAGE_DIRS < <(jq -r -c 'split(",") | map("./packages/" + .) | join(" ")' <<<"\"${RAW_DIRS:1:-1}\"")
