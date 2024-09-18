@@ -10,4 +10,5 @@ export default defineConfig({
   sourcemap: false, // soucemapを出力するか
   splitting: false, // バンドルしないで分割するか
   treeshake: true,
+  tsconfig: "./tsconfig.build.json",
 });
