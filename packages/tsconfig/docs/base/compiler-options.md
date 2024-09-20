@@ -268,6 +268,14 @@ Module Suffixに指定したSuffixを考慮してモジュール解決を行う�
 
 **触らぬ神に祟りなし。**
 
+### [noUncheckedSideEffectImports](https://www.typescriptlang.org/ja/tsconfig/#noUncheckedSideEffectImports)
+
+設定値: `true`
+
+`.css`のimportなど、値をimportしないimport文について、ファイルまたはモジュール型定義が存在しない場合にエラーを出すかどうかを設定する。
+
+安全性が向上するため、有効にしておく。
+
 ### [Paths](https://www.typescriptlang.org/ja/tsconfig/#paths)
 
 設定値: not set
