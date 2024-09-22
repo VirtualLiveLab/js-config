@@ -29,7 +29,8 @@ const astro: Config = {
     "@stylistic/number-no-trailing-zeros": null,
     "@stylistic/selector-list-comma-newline-after": null,
     "@stylistic/string-quotes": null,
-    "at-rule-no-unknown": [
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": [
       true,
       {
         ignoreAtRules: ["tailwind"],
