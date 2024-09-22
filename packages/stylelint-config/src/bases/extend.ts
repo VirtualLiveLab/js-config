@@ -1,5 +1,7 @@
 const astroExtend = [
   "stylelint-config-standard",
+  "stylelint-config-standard-scss",
+  "stylelint-config-sass-guidelines",
   "stylelint-config-recess-order",
   "stylelint-config-html/html",
   "stylelint-config-html/astro",
