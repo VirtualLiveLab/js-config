@@ -10,13 +10,6 @@ const scss: Config = {
   extends: scssExtend,
   rules: {
     ...baseRules,
-    "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": [
-      true,
-      {
-        ignoreAtRules: ["tailwind"],
-      },
-    ],
     // see: https://github.com/VirtualLiveLab/js-config/issues/178
     "@stylistic/block-opening-brace-space-before": null,
     "@stylistic/color-hex-case": null,
@@ -36,6 +29,13 @@ const scss: Config = {
     "@stylistic/number-no-trailing-zeros": null,
     "@stylistic/selector-list-comma-newline-after": null,
     "@stylistic/string-quotes": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: ["tailwind"],
+      },
+    ],
   },
 };
 
