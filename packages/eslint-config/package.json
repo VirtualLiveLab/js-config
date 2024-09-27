@@ -55,11 +55,11 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.14.15",
-    "@typescript-eslint/utils": "^8.5.0",
+    "@types/node": "^20.16.10",
+    "@typescript-eslint/utils": "^8.7.0",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "pkg-pr-new": "^0.0.24",
-    "tsup": "^8.2.4"
+    "pkg-pr-new": "^0.0.28",
+    "tsup": "^8.3.0"
   },
   "license": "MIT",
   "publishConfig": {
