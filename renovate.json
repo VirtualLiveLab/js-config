@@ -15,6 +15,7 @@
   "packageRules": [
     {
       "groupName": "eslint",
+      "additionalBranchPrefix": "{{parentDir}}-",
       "commitMessageSuffix": "({{parentDir}})",
       "matchFileNames": ["packages/eslint-config/**"],
       "matchPackageNames": ["globals", "pkg-dir", "typescript-eslint"],
@@ -28,6 +29,7 @@
     },
     {
       "groupName": "prettier",
+      "additionalBranchPrefix": "{{parentDir}}-",
       "commitMessageSuffix": "({{parentDir}})",
       "matchFileNames": ["packages/prettier-config/**"],
       "matchPackagePrefixes": ["prettier"],
@@ -35,6 +37,7 @@
     },
     {
       "groupName": "stylelint",
+      "additionalBranchPrefix": "{{parentDir}}-",
       "commitMessageSuffix": "({{parentDir}})",
       "matchFileNames": ["packages/stylelint-config/**"],
       "matchPackageNames": ["@double-great/stylelint-a11y", "postcss-html"],
@@ -43,6 +46,7 @@
     },
     {
       "groupName": "tsconfig",
+      "additionalBranchPrefix": "{{parentDir}}-",
       "commitMessageSuffix": "({{parentDir}})",
       "matchFileNames": ["packages/tsconfig/**"],
       "matchPackageNames": ["typescript", "@cloudflare/workers-types"],
