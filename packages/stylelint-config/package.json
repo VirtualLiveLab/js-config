@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "postcss-html": "^1.7.0",
-    "stylelint": "^16.8.1"
+    "stylelint": "^16.9.0"
   },
   "dependencies": {
     "@double-great/stylelint-a11y": "^3.0.2",
