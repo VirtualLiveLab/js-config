@@ -23,7 +23,13 @@
     "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm"
   },
   "peerDependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
+  },
+  "peerDependenciesMeta": {
+    "prettier-plugin-astro": {
+      "optional": true
+    }
   },
   "dependencies": {
     "prettier": "^3.3.3"
