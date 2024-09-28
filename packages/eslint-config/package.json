@@ -37,6 +37,7 @@
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.11.1",
     "@stylistic/eslint-plugin-ts": "^2.8.0",
+    "@typescript-eslint/utils": "^8.7.0",
     "eslint": "^9.11.1",
     "eslint-config-flat-gitignore": "^0.3.0",
     "eslint-config-prettier": "^9.1.0",
@@ -56,7 +57,6 @@
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.14.15",
-    "@typescript-eslint/utils": "^8.7.0",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "pkg-pr-new": "^0.0.24",
     "tsup": "^8.2.4"

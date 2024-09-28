@@ -46,6 +46,10 @@
       "labels": ["tsconfig", "renovate"]
     },
     {
+      "groupName": "build-tools",
+      "matchPackageNames": ["pkg-pr-new", "tsup"]
+    },
+    {
       "groupName": "nodejs",
       "matchPackageNames": ["node"],
       "allowedVersions": "< 21.0"
