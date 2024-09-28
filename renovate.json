@@ -12,6 +12,7 @@
   "rangeStrategy": "bump",
   "branchConcurrentLimit": 0,
   "enabledManagers": ["github-actions", "npm"],
+  "additionalBranchPrefix": "{{parentDir}}-",
   "packageRules": [
     {
       "groupName": "eslint",
