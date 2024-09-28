@@ -12,10 +12,10 @@
   "rangeStrategy": "bump",
   "branchConcurrentLimit": 0,
   "enabledManagers": ["github-actions", "npm"],
-  "additionalBranchPrefix": "{{parentDir}}-",
   "packageRules": [
     {
       "groupName": "eslint",
+      "commitMessageSuffix": "({{parentDir}})",
       "matchFileNames": ["packages/eslint-config/**"],
       "matchPackageNames": ["globals", "pkg-dir", "typescript-eslint"],
       "matchPackagePrefixes": [
@@ -28,12 +28,14 @@
     },
     {
       "groupName": "prettier",
+      "commitMessageSuffix": "({{parentDir}})",
       "matchFileNames": ["packages/prettier-config/**"],
       "matchPackagePrefixes": ["prettier"],
       "labels": ["prettier", "renovate"]
     },
     {
       "groupName": "stylelint",
+      "commitMessageSuffix": "({{parentDir}})",
       "matchFileNames": ["packages/stylelint-config/**"],
       "matchPackageNames": ["@double-great/stylelint-a11y", "postcss-html"],
       "matchPackagePrefixes": ["stylelint"],
@@ -41,13 +43,15 @@
     },
     {
       "groupName": "tsconfig",
+      "commitMessageSuffix": "({{parentDir}})",
       "matchFileNames": ["packages/tsconfig/**"],
       "matchPackageNames": ["typescript", "@cloudflare/workers-types"],
       "labels": ["tsconfig", "renovate"]
     },
     {
       "groupName": "build-tools",
-      "matchPackageNames": ["pkg-pr-new", "tsup"]
+      "matchPackageNames": ["pkg-pr-new", "tsup"],
+      "labels": ["renovate"]
     },
     {
       "groupName": "nodejs",
