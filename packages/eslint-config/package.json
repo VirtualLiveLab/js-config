@@ -58,7 +58,7 @@
     "@types/node": "^20.14.15",
     "@typescript-eslint/utils": "^8.5.0",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "pkg-pr-new": "^0.0.24",
+    "pkg-pr-new": "^0.0.28",
     "tsup": "^8.2.4"
   },
   "license": "MIT",

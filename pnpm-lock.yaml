@@ -115,8 +115,8 @@ importers:
         specifier: workspace:^
         version: link:../tsconfig
       pkg-pr-new:
-        specifier: ^0.0.24
-        version: 0.0.24
+        specifier: ^0.0.28
+        version: 0.0.28
       tsup:
         specifier: ^8.2.4
         version: 8.2.4(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2)
