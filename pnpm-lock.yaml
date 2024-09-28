@@ -186,11 +186,11 @@ importers:
         specifier: workspace:^
         version: link:../tsconfig
       pkg-pr-new:
-        specifier: ^0.0.24
-        version: 0.0.24
+        specifier: ^0.0.28
+        version: 0.0.28
       tsup:
-        specifier: ^8.2.4
-        version: 8.2.4(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2)
+        specifier: ^8.3.0
+        version: 8.3.0(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2)
 
   packages/tsconfig:
     devDependencies:
@@ -2118,6 +2118,10 @@ packages:
     resolution: {integrity: sha512-jzHuU0HLHEh3jNHQD7yZhxXM8CV8W+qdR0Ii5cxwm+t73kAvyZ9DkcDP4X1ZarX6DGnoibuuSOgWKYtQbjWsRQ==}
     hasBin: true
 
+  pkg-pr-new@0.0.28:
+    resolution: {integrity: sha512-aPY6VAz60fIqee1i1kyMdI1ap+3xpVZBvnzMZ+1E1Lqz22XJEy9sgJTx62tzVpAWysDeVtfLAyX3JILDrp0TWg==}
+    hasBin: true
+
   pkg-types@1.2.0:
     resolution: {integrity: sha512-+ifYuSSqOQ8CqP4MbZA5hDpb97n3E8SVWdJe+Wms9kj745lmd3b7EZJiqvmLwAlmRfjrI7Hi5z3kdBJ93lFNPA==}
 
@@ -2664,6 +2668,25 @@ packages:
       typescript:
         optional: true
 
+  tsup@8.3.0:
+    resolution: {integrity: sha512-ALscEeyS03IomcuNdFdc0YWGVIkwH1Ws7nfTbAPuoILvEV2hpGQAY72LIOjglGo4ShWpZfpBqP/jpQVCzqYQag==}
+    engines: {node: '>=18'}
+    hasBin: true
+    peerDependencies:
+      '@microsoft/api-extractor': ^7.36.0
+      '@swc/core': ^1
+      postcss: ^8.4.12
+      typescript: '>=4.5.0'
+    peerDependenciesMeta:
+      '@microsoft/api-extractor':
+        optional: true
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
+      typescript:
+        optional: true
+
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -2822,7 +2845,7 @@ snapshots:
   '@babel/code-frame@7.24.2':
     dependencies:
       '@babel/highlight': 7.24.2
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   '@babel/helper-validator-identifier@7.22.20': {}
 
@@ -2831,7 +2854,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   '@babel/runtime@7.24.4':
     dependencies:
@@ -3379,7 +3402,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.5.0
       eslint: 9.10.0(jiti@1.21.0)
       graphemer: 1.4.0
-      ignore: 5.3.1
+      ignore: 5.3.2
       natural-compare: 1.4.0
       ts-api-utils: 1.3.0(typescript@5.6.2)
     optionalDependencies:
@@ -3609,7 +3632,7 @@ snapshots:
       '@typescript-eslint/types': 7.18.0
       '@typescript-eslint/typescript-estree': 7.18.0(typescript@5.6.2)
       astrojs-compiler-sync: 1.0.0(@astrojs/compiler@2.7.1)
-      debug: 4.3.5
+      debug: 4.3.6
       entities: 4.5.0
       eslint-scope: 8.0.1
       eslint-visitor-keys: 4.0.0
@@ -4368,7 +4391,7 @@ snapshots:
       array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.3.2
-      ignore: 5.3.1
+      ignore: 5.3.2
       merge2: 1.4.1
       slash: 3.0.0
 
@@ -4885,6 +4908,17 @@ snapshots:
       query-registry: 3.0.1
       tinyglobby: 0.2.6
 
+  pkg-pr-new@0.0.28:
+    dependencies:
+      '@jsdevtools/ez-spawn': 3.0.4
+      '@octokit/action': 6.1.0
+      ignore: 5.3.2
+      isbinaryfile: 5.0.2
+      package-manager-detector: 0.1.2
+      pkg-types: 1.2.0
+      query-registry: 3.0.1
+      tinyglobby: 0.2.6
+
   pkg-types@1.2.0:
     dependencies:
       confbox: 0.1.7
@@ -4966,13 +5000,13 @@ snapshots:
   postcss@8.4.38:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.1
+      picocolors: 1.1.0
       source-map-js: 1.2.0
 
   postcss@8.4.41:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.1
+      picocolors: 1.1.0
       source-map-js: 1.2.0
 
   prelude-ls@1.2.1: {}
@@ -5512,6 +5546,33 @@ snapshots:
       rollup: 4.19.0
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
+      tree-kill: 1.2.2
+    optionalDependencies:
+      postcss: 8.4.41
+      typescript: 5.6.2
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
+      - tsx
+      - yaml
+
+  tsup@8.3.0(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2):
+    dependencies:
+      bundle-require: 5.0.0(esbuild@0.23.0)
+      cac: 6.7.14
+      chokidar: 3.6.0
+      consola: 3.2.3
+      debug: 4.3.6
+      esbuild: 0.23.0
+      execa: 5.1.1
+      joycon: 3.1.1
+      picocolors: 1.1.0
+      postcss-load-config: 6.0.1(jiti@1.21.0)(postcss@8.4.41)
+      resolve-from: 5.0.0
+      rollup: 4.19.0
+      source-map: 0.8.0-beta.0
+      sucrase: 3.35.0
+      tinyglobby: 0.2.6
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.4.41
