@@ -195,11 +195,11 @@ importers:
   packages/tsconfig:
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^4.20240909.0
-        version: 4.20240909.0
+        specifier: ^4.20240925.0
+        version: 4.20240925.0
       pkg-pr-new:
-        specifier: ^0.0.24
-        version: 0.0.24
+        specifier: ^0.0.28
+        version: 0.0.28
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
@@ -297,8 +297,8 @@ packages:
   '@changesets/write@0.3.2':
     resolution: {integrity: sha512-kDxDrPNpUgsjDbWBvUo27PzKX4gqeKOlhibaOXDJA6kuBisGqNHv/HwGJrAu8U/dSf8ZEFIeHIPtvSlZI1kULw==}
 
-  '@cloudflare/workers-types@4.20240909.0':
-    resolution: {integrity: sha512-4knwtX6efxIsIxawdmPyynU9+S8A78wntU8eUIEldStWP4gNgxGkeWcfCMXulTx8oxr3DU4aevHyld9HGV8VKQ==}
+  '@cloudflare/workers-types@4.20240925.0':
+    resolution: {integrity: sha512-KpqyRWvanEuXgBTKYFzRp4NsWOEcswxjsPRSre1zYQcODmc8PUrraVHQUmgvkJgv3FzB+vI9xm7J6oE4MmZHCA==}
 
   '@csstools/css-parser-algorithms@2.7.1':
     resolution: {integrity: sha512-2SJS42gxmACHgikc1WGesXLIT8d/q2l0UFM7TaEeIzdFCE/FPMtTiizcPGGJtlPo2xuQzY09OhrLTzRxqJqwGw==}
@@ -2135,6 +2135,10 @@ packages:
     resolution: {integrity: sha512-jzHuU0HLHEh3jNHQD7yZhxXM8CV8W+qdR0Ii5cxwm+t73kAvyZ9DkcDP4X1ZarX6DGnoibuuSOgWKYtQbjWsRQ==}
     hasBin: true
 
+  pkg-pr-new@0.0.28:
+    resolution: {integrity: sha512-aPY6VAz60fIqee1i1kyMdI1ap+3xpVZBvnzMZ+1E1Lqz22XJEy9sgJTx62tzVpAWysDeVtfLAyX3JILDrp0TWg==}
+    hasBin: true
+
   pkg-types@1.2.0:
     resolution: {integrity: sha512-+ifYuSSqOQ8CqP4MbZA5hDpb97n3E8SVWdJe+Wms9kj745lmd3b7EZJiqvmLwAlmRfjrI7Hi5z3kdBJ93lFNPA==}
 
@@ -3020,7 +3024,7 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@cloudflare/workers-types@4.20240909.0': {}
+  '@cloudflare/workers-types@4.20240925.0': {}
 
   '@csstools/css-parser-algorithms@2.7.1(@csstools/css-tokenizer@2.4.1)':
     dependencies:
@@ -4910,6 +4914,17 @@ snapshots:
       find-up-simple: 1.0.0
 
   pkg-pr-new@0.0.24:
+    dependencies:
+      '@jsdevtools/ez-spawn': 3.0.4
+      '@octokit/action': 6.1.0
+      ignore: 5.3.2
+      isbinaryfile: 5.0.2
+      package-manager-detector: 0.1.2
+      pkg-types: 1.2.0
+      query-registry: 3.0.1
+      tinyglobby: 0.2.6
+
+  pkg-pr-new@0.0.28:
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
       '@octokit/action': 6.1.0
