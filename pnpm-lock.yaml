@@ -128,8 +128,8 @@ importers:
         version: 3.3.3
     devDependencies:
       '@types/node':
-        specifier: ^20.14.15
-        version: 20.14.15
+        specifier: ^20.16.10
+        version: 20.16.10
       '@virtual-live-lab/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
@@ -137,14 +137,14 @@ importers:
         specifier: workspace:^
         version: link:../tsconfig
       pkg-pr-new:
-        specifier: ^0.0.24
-        version: 0.0.24
+        specifier: ^0.0.28
+        version: 0.0.28
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
       tsup:
-        specifier: ^8.2.4
-        version: 8.2.4(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2)
+        specifier: ^8.3.0
+        version: 8.3.0(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2)
 
   packages/stylelint-config:
     dependencies:
@@ -741,6 +741,9 @@ packages:
 
   '@types/node@20.14.15':
     resolution: {integrity: sha512-Fz1xDMCF/B00/tYSVMlmK7hVeLh7jE5f3B7X1/hmV0MJBwE27KlS7EvD/Yp+z1lm8mVhwV5w+n8jOZG8AfTlKw==}
+
+  '@types/node@20.16.10':
+    resolution: {integrity: sha512-vQUKgWTjEIRFCvK6CyriPH3MZYiYlNy0fKiEYHWbcoWLEgs4opurGGKlebrTLqdSMIbXImH6XExNiIyNUv3WpA==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -2734,6 +2737,9 @@ packages:
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
   undici@6.19.8:
     resolution: {integrity: sha512-U8uCCl2x9TK3WANvmBavymRzxbfFYG+tAu+fgx3zxQy3qdagQqBLwJVrdyO1TBfUXvfKveMKJZhpvUYoOjM+4g==}
     engines: {node: '>=18.17'}
@@ -3389,6 +3395,10 @@ snapshots:
   '@types/node@20.14.15':
     dependencies:
       undici-types: 5.26.5
+
+  '@types/node@20.16.10':
+    dependencies:
+      undici-types: 6.19.8
 
   '@types/semver@7.5.8': {}
 
@@ -5644,6 +5654,8 @@ snapshots:
       which-boxed-primitive: 1.0.2
 
   undici-types@5.26.5: {}
+
+  undici-types@6.19.8: {}
 
   undici@6.19.8: {}
 
