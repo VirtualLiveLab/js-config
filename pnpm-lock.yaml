@@ -128,8 +128,8 @@ importers:
         version: 3.3.3
     devDependencies:
       '@types/node':
-        specifier: ^20.14.15
-        version: 20.14.15
+        specifier: ^20.16.10
+        version: 20.16.10
       '@virtual-live-lab/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
@@ -137,14 +137,14 @@ importers:
         specifier: workspace:^
         version: link:../tsconfig
       pkg-pr-new:
-        specifier: ^0.0.24
-        version: 0.0.24
+        specifier: ^0.0.28
+        version: 0.0.28
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
       tsup:
-        specifier: ^8.2.4
-        version: 8.2.4(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2)
+        specifier: ^8.3.0
+        version: 8.3.0(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2)
 
   packages/stylelint-config:
     dependencies:
@@ -758,6 +758,9 @@ packages:
 
   '@types/node@20.14.15':
     resolution: {integrity: sha512-Fz1xDMCF/B00/tYSVMlmK7hVeLh7jE5f3B7X1/hmV0MJBwE27KlS7EvD/Yp+z1lm8mVhwV5w+n8jOZG8AfTlKw==}
+
+  '@types/node@20.16.10':
+    resolution: {integrity: sha512-vQUKgWTjEIRFCvK6CyriPH3MZYiYlNy0fKiEYHWbcoWLEgs4opurGGKlebrTLqdSMIbXImH6XExNiIyNUv3WpA==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -2135,6 +2138,10 @@ packages:
     resolution: {integrity: sha512-jzHuU0HLHEh3jNHQD7yZhxXM8CV8W+qdR0Ii5cxwm+t73kAvyZ9DkcDP4X1ZarX6DGnoibuuSOgWKYtQbjWsRQ==}
     hasBin: true
 
+  pkg-pr-new@0.0.28:
+    resolution: {integrity: sha512-aPY6VAz60fIqee1i1kyMdI1ap+3xpVZBvnzMZ+1E1Lqz22XJEy9sgJTx62tzVpAWysDeVtfLAyX3JILDrp0TWg==}
+    hasBin: true
+
   pkg-types@1.2.0:
     resolution: {integrity: sha512-+ifYuSSqOQ8CqP4MbZA5hDpb97n3E8SVWdJe+Wms9kj745lmd3b7EZJiqvmLwAlmRfjrI7Hi5z3kdBJ93lFNPA==}
 
@@ -2688,6 +2695,25 @@ packages:
       typescript:
         optional: true
 
+  tsup@8.3.0:
+    resolution: {integrity: sha512-ALscEeyS03IomcuNdFdc0YWGVIkwH1Ws7nfTbAPuoILvEV2hpGQAY72LIOjglGo4ShWpZfpBqP/jpQVCzqYQag==}
+    engines: {node: '>=18'}
+    hasBin: true
+    peerDependencies:
+      '@microsoft/api-extractor': ^7.36.0
+      '@swc/core': ^1
+      postcss: ^8.4.12
+      typescript: '>=4.5.0'
+    peerDependenciesMeta:
+      '@microsoft/api-extractor':
+        optional: true
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
+      typescript:
+        optional: true
+
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -2734,6 +2760,9 @@ packages:
 
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
   undici@6.19.8:
     resolution: {integrity: sha512-U8uCCl2x9TK3WANvmBavymRzxbfFYG+tAu+fgx3zxQy3qdagQqBLwJVrdyO1TBfUXvfKveMKJZhpvUYoOjM+4g==}
@@ -2846,7 +2875,7 @@ snapshots:
   '@babel/code-frame@7.24.2':
     dependencies:
       '@babel/highlight': 7.24.2
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   '@babel/helper-validator-identifier@7.22.20': {}
 
@@ -2855,7 +2884,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   '@babel/runtime@7.24.4':
     dependencies:
@@ -3401,6 +3430,10 @@ snapshots:
   '@types/node@20.14.15':
     dependencies:
       undici-types: 5.26.5
+
+  '@types/node@20.16.10':
+    dependencies:
+      undici-types: 6.19.8
 
   '@types/semver@7.5.8': {}
 
@@ -4920,6 +4953,17 @@ snapshots:
       query-registry: 3.0.1
       tinyglobby: 0.2.6
 
+  pkg-pr-new@0.0.28:
+    dependencies:
+      '@jsdevtools/ez-spawn': 3.0.4
+      '@octokit/action': 6.1.0
+      ignore: 5.3.2
+      isbinaryfile: 5.0.2
+      package-manager-detector: 0.1.2
+      pkg-types: 1.2.0
+      query-registry: 3.0.1
+      tinyglobby: 0.2.6
+
   pkg-types@1.2.0:
     dependencies:
       confbox: 0.1.7
@@ -5564,6 +5608,33 @@ snapshots:
       - tsx
       - yaml
 
+  tsup@8.3.0(jiti@1.21.0)(postcss@8.4.41)(typescript@5.6.2):
+    dependencies:
+      bundle-require: 5.0.0(esbuild@0.23.0)
+      cac: 6.7.14
+      chokidar: 3.6.0
+      consola: 3.2.3
+      debug: 4.3.6
+      esbuild: 0.23.0
+      execa: 5.1.1
+      joycon: 3.1.1
+      picocolors: 1.1.0
+      postcss-load-config: 6.0.1(jiti@1.21.0)(postcss@8.4.41)
+      resolve-from: 5.0.0
+      rollup: 4.19.0
+      source-map: 0.8.0-beta.0
+      sucrase: 3.35.0
+      tinyglobby: 0.2.6
+      tree-kill: 1.2.2
+    optionalDependencies:
+      postcss: 8.4.41
+      typescript: 5.6.2
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
+      - tsx
+      - yaml
+
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
@@ -5625,6 +5696,8 @@ snapshots:
       which-boxed-primitive: 1.0.2
 
   undici-types@5.26.5: {}
+
+  undici-types@6.19.8: {}
 
   undici@6.19.8: {}
 
