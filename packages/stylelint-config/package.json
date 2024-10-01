@@ -23,8 +23,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup-node",
-    "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm"
+    "build": "tsup-node"
   },
   "peerDependencies": {
     "postcss-html": "^1.7.0",
@@ -45,7 +44,6 @@
   "devDependencies": {
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "pkg-pr-new": "^0.0.28",
     "tsup": "^8.3.0"
   },
   "license": "MIT",

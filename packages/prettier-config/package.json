@@ -19,8 +19,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup-node",
-    "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm"
+    "build": "tsup-node"
   },
   "peerDependencies": {
     "prettier": "^3.3.3",
@@ -38,7 +37,6 @@
     "@types/node": "^20.16.10",
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "pkg-pr-new": "^0.0.28",
     "prettier-plugin-astro": "^0.14.1",
     "tsup": "^8.3.0"
   },
