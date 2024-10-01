@@ -10,10 +10,7 @@
     "build:eslint": "pnpm --filter @virtual-live-lab/eslint-config build",
     "build:prettier": "pnpm --filter @virtual-live-lab/prettier-config build",
     "build:stylelint": "pnpm --filter @virtual-live-lab/stylelint-config build",
-    "pkg-pr-new:eslint": "pnpm --filter @virtual-live-lab/eslint-config pkg-pr-new",
-    "pkg-pr-new:prettier": "pnpm --filter @virtual-live-lab/prettier-config pkg-pr-new",
-    "pkg-pr-new:stylelint": "pnpm --filter @virtual-live-lab/stylelint-config pkg-pr-new",
-    "pkg-pr-new:tsconfig": "pnpm --filter @virtual-live-lab/tsconfig pkg-pr-new",
+    "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm",
     "release": "pnpm run build && changeset publish"
   },
   "packageManager": "pnpm@9.11.0",

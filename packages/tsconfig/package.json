@@ -16,12 +16,9 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240925.0",
-    "pkg-pr-new": "^0.0.28",
     "typescript": "^5.6.2"
   },
-  "scripts": {
-    "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm"
-  },
+  "scripts": {},
   "license": "MIT",
   "publishConfig": {
     "access": "public",
