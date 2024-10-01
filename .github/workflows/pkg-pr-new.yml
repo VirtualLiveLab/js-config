@@ -90,5 +90,5 @@ jobs:
           read -ra PACKAGE_DIRS < <(jq -r -c 'split(",") | map("./packages/" + .) | join(" ")' <<<"\"${RAW_DIRS:1:-1}\"")
           pnpm run pkg-pr-new "${PACKAGE_DIRS[@]}"
 
-          HOGE="${{toJson(fromJson(needs.paths-filter.outputs.directory))}}"
+          read -ra HOGE < <(jq -r 'map("./packages/" + .) | join(" ")' <<< "${{ toJson(fromJson(needs.paths-filter.outputs.directory)) }}")
           echo $HOGE
