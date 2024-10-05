@@ -55,19 +55,16 @@
       "addLabels": ["tsconfig"]
     },
     {
-      "groupName": "build-tools",
-      "matchDatasources": ["npm"],
-      "matchPackageNames": ["pkg-pr-new", "tsup"]
-    },
-    {
-      "groupName": "nodejs",
-      "matchPackageNames": ["node"],
-      "allowedVersions": "< 21.0"
-    },
-    {
-      "groupName": "pnpm",
-      "matchPackageNames": ["pnpm"],
-      "allowedVersions": "< 10.0.0"
+      "groupName": "environment",
+      "matchPackageNames": [
+        "pkg-pr-new",
+        "tsup",
+        "/@changesets/",
+        "node",
+        "pnpm"
+      ],
+      "matchUpdateTypes": ["minor", "patch"],
+      "addLabels": ["environment"]
     }
   ]
 }
