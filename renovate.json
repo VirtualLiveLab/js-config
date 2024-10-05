@@ -21,7 +21,7 @@
       "matchDatasources": ["npm"],
       "matchFileNames": ["packages/eslint-config/**"],
       "matchPackageNames": ["globals", "pkg-dir", "/eslint/"],
-      "labels": ["eslint"]
+      "addLabels": ["eslint"]
     },
     {
       "groupName": "prettier",
@@ -30,7 +30,7 @@
       "matchDatasources": ["npm"],
       "matchFileNames": ["packages/prettier-config/**"],
       "matchPackageNames": ["/^prettier/"],
-      "labels": ["prettier"]
+      "addLabels": ["prettier"]
     },
     {
       "groupName": "stylelint",
@@ -43,7 +43,7 @@
         "@double-great/stylelint-a11y",
         "postcss-html"
       ],
-      "labels": ["stylelint"]
+      "addLabels": ["stylelint"]
     },
     {
       "groupName": "tsconfig",
@@ -52,7 +52,7 @@
       "matchDatasources": ["npm"],
       "matchFileNames": ["packages/tsconfig/**"],
       "matchPackageNames": ["typescript", "@cloudflare/workers-types"],
-      "labels": ["tsconfig"]
+      "addLabels": ["tsconfig"]
     },
     {
       "groupName": "build-tools",
