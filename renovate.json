@@ -12,50 +12,52 @@
   "rangeStrategy": "bump",
   "branchConcurrentLimit": 0,
   "enabledManagers": ["github-actions", "npm"],
+  "labels": ["renovate"],
   "packageRules": [
     {
       "groupName": "eslint",
       "additionalBranchPrefix": "{{parentDir}}-",
       "commitMessageSuffix": "({{parentDir}})",
+      "matchDatasources": ["npm"],
       "matchFileNames": ["packages/eslint-config/**"],
-      "matchPackageNames": ["globals", "pkg-dir", "typescript-eslint"],
-      "matchPackagePrefixes": [
-        "@typescript-eslint/",
-        "@types/eslint",
-        "eslint",
-        "@eslint/"
-      ],
-      "labels": ["eslint", "renovate"]
+      "matchPackageNames": ["globals", "pkg-dir", "/eslint/"],
+      "labels": ["eslint"]
     },
     {
       "groupName": "prettier",
       "additionalBranchPrefix": "{{parentDir}}-",
       "commitMessageSuffix": "({{parentDir}})",
+      "matchDatasources": ["npm"],
       "matchFileNames": ["packages/prettier-config/**"],
-      "matchPackagePrefixes": ["prettier"],
-      "labels": ["prettier", "renovate"]
+      "matchPackageNames": ["/^prettier/"],
+      "labels": ["prettier"]
     },
     {
       "groupName": "stylelint",
       "additionalBranchPrefix": "{{parentDir}}-",
       "commitMessageSuffix": "({{parentDir}})",
+      "matchDatasources": ["npm"],
       "matchFileNames": ["packages/stylelint-config/**"],
-      "matchPackageNames": ["@double-great/stylelint-a11y", "postcss-html"],
-      "matchPackagePrefixes": ["stylelint"],
-      "labels": ["stylelint", "renovate"]
+      "matchPackageNames": [
+        "/^stylelint/",
+        "@double-great/stylelint-a11y",
+        "postcss-html"
+      ],
+      "labels": ["stylelint"]
     },
     {
       "groupName": "tsconfig",
       "additionalBranchPrefix": "{{parentDir}}-",
       "commitMessageSuffix": "({{parentDir}})",
+      "matchDatasources": ["npm"],
       "matchFileNames": ["packages/tsconfig/**"],
       "matchPackageNames": ["typescript", "@cloudflare/workers-types"],
-      "labels": ["tsconfig", "renovate"]
+      "labels": ["tsconfig"]
     },
     {
       "groupName": "build-tools",
-      "matchPackageNames": ["pkg-pr-new", "tsup"],
-      "labels": ["renovate"]
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["pkg-pr-new", "tsup"]
     },
     {
       "groupName": "nodejs",
