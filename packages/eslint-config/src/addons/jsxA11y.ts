@@ -1,11 +1,7 @@
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
-import { fixupConfigRules } from "@eslint/compat";
+// @ts-expect-error - eslint-plugin-jsx-a11y does not have types
+import jsx from "eslint-plugin-jsx-a11y";
 
-import { compat } from "../lib/compat";
-
-const jsxA11y = fixupConfigRules(
-  compat.extends("plugin:jsx-a11y/strict"),
-) satisfies FlatConfig.ConfigArray;
-
-export default jsxA11y;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+export default [jsx.flatConfigs.recommended as FlatConfig.Config];
