@@ -7,7 +7,7 @@
   ],
   "peerDependencies": {
     "@cloudflare/workers-types": "^4.20241004.0",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
   "peerDependenciesMeta": {
     "@cloudflare/workers-types": {
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241004.0",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
   "scripts": {},
   "license": "MIT",
