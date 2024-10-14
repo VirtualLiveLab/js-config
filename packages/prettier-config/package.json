@@ -34,7 +34,7 @@
     "prettier": "^3.3.3"
   },
   "devDependencies": {
-    "@types/node": "^20.16.10",
+    "@types/node": "^20.16.11",
     "@virtual-live-lab/eslint-config": "workspace:^",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "prettier-plugin-astro": "^0.14.1",
