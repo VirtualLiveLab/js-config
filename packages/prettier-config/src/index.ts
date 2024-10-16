@@ -1,14 +1,9 @@
 import type { Config } from "prettier";
 
+import { defaultOptions } from "./option";
+
 const config: Config = {
-  arrowParens: "always",
-  endOfLine: "lf",
-  jsxSingleQuote: false,
-  quoteProps: "consistent",
-  semi: true,
-  singleQuote: false,
-  tabWidth: 2,
-  trailingComma: "all",
+  ...defaultOptions,
 };
 
 export default config;

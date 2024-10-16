@@ -1,6 +1,7 @@
 import type { Config } from "prettier";
 
 import defaultConfig from "./index";
+import { defaultOptions } from "./option";
 
 const config: Config = {
   ...defaultConfig,
@@ -8,6 +9,7 @@ const config: Config = {
     {
       files: "*.astro",
       options: {
+        ...defaultOptions,
         parser: "astro",
       },
     },
