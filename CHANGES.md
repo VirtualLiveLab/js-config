@@ -2,3 +2,5 @@
 - ESLint
 - Prettier
 - Stylelint
+## 🚚 Updated snapshots
+- ESLint
