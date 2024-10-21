@@ -167,6 +167,7 @@ jobs:
         run: |
           set -eu
           git add .
+          git reset -- CHANGES.md
           git commit -m "chore: update snapshot (github-actions)"
           git push
 
