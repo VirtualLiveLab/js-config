@@ -205,7 +205,7 @@ jobs:
         run: |
           # Edit the last comment if it exists
           if [ ! -f COMMENT.md ]; then
-            echo "::warn::comment body not found."
+            echo "::warning::comment body not found."
             exit 0
           fi
 

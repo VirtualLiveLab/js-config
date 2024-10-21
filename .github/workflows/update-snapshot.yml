@@ -165,6 +165,13 @@ jobs:
         if: needs.check-target-packages.outputs.stylelint == 'true'
         run: pnpm run build:stylelint && pnpm run test --project stylelint-config -u
 
+      - name: Commit and Push Changes
+        run: |
+          set -eu
+          git add .
+          git commit -m "chore: update snapshot (github-actions)"
+          git push origin HEAD
+
       - name: Create change summary markdown
         run: |
           set -eu
@@ -180,20 +187,12 @@ jobs:
               echo "- Stylelint" >> CHANGES.md
           fi
 
-      - name: Commit and Push Changes
-        run: |
-          set -eu
-          git add .
-          git reset -- CHANGES.md
-          git commit -m "chore: update snapshot (github-actions)"
-          git push origin HEAD
-
       - name: Comment to PR (Issue Comment)
         if: github.event_name == 'issue_comment'
         run: |
           set -eu
           if [ ! -f CHANGES.md ]; then
-            echo "::warn::comment body not found."
+            echo "::warning::comment body not found."
             exit 0
           fi
 
@@ -207,7 +206,7 @@ jobs:
         run: |
           set -eu
           if [ ! -f CHANGES.md ]; then
-            echo "::warn::comment body not found."
+            echo "::warning::comment body not found."
             exit 0
           fi
 
