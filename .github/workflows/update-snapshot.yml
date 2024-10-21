@@ -133,10 +133,27 @@ jobs:
         with:
           ref: ${{ needs.check-target-packages.outputs.head_ref }}
 
+      - uses: actions/create-github-app-token@5d869da34e18e7287c1daad50e0b8ea0f506ce69 # v1.11.0
+        id: app-token
+        with:
+          app-id: ${{ vars.ACTIONS_MIKU_APP_ID }}
+          private-key: ${{ secrets.ACTIONS_MIKU_PRIVATE_KEY }}
+
+      - name: Get GitHub App User ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.app-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+
       - name: Configure Git Identity
         run: |
-          git config --global user.name ${{ secrets.PAT_USERNAME }}
-          git config --global user.email ${{ secrets.PAT_EMAIL }}
+          git config --global user.name '${{ steps.app-token.outputs.app-slug }}[bot]'
+          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com>'
+
+      - name: Configure Git Identity
+        run: |
+          git config --global user.name '${{ steps.app-token.outputs.app-slug }}[bot]'
+          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com>'
 
           if [ ${{ github.event_name }} == 'workflow_dispatch' ]; then
             git switch -c "bot/update-snapshot-$(TZ=UTC-9 date +'%Y%m')-${SHA:0:7}"
@@ -199,7 +216,7 @@ jobs:
           gh pr comment ${{ github.event.issue.number }} --body-file CHANGES.md --edit-last \
             || gh pr comment ${{ github.event.issue.number}} --body-file CHANGES.md
         env:
-          GH_TOKEN: ${{ secrets.PAT_GITHUB_ACTIONS_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
 
       - name: Create Pull Request (Workflow Dispatch)
         if: github.event_name == 'workflow_dispatch'
@@ -212,4 +229,4 @@ jobs:
 
           gh pr create --base "main" --body-file CHANGES.md --title "update snapshot (github-actions)"
         env:
-          GH_TOKEN: ${{ secrets.PAT_GITHUB_ACTIONS_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
