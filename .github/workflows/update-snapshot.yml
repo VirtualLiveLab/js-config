@@ -120,7 +120,7 @@ jobs:
   update-snapshot:
     name: Update Snapshot
     needs: check-target-packages
-    if: needs.check-target-packages.outputs.eslint == 'true' || needs.check-target-packages.outputs.prettier == 'true' || needs.check-target-packages.outputs.stylelint == 'true'
+    if: always() && needs.check-target-packages.outputs.eslint == 'true' || needs.check-target-packages.outputs.prettier == 'true' || needs.check-target-packages.outputs.stylelint == 'true'
     runs-on: ubuntu-24.04
     permissions:
       contents: write
