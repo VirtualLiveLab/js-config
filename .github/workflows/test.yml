@@ -32,6 +32,8 @@ jobs:
       eslint: ${{ steps.filter.outputs.eslint-config }}
       prettier: ${{ steps.filter.outputs.prettier-config }}
       stylelint: ${{ steps.filter.outputs.stylelint-config }}
+      head_ref: ${{ steps.head-ref.outputs.head_ref }}
+      pr_number: ${{ steps.pr-number.outputs.pr_number }}
 
     steps:
       - name: Get PR information (issue_comment)
@@ -43,7 +45,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
-      - name: Exit if invalid PR (issue_comment)
+      - name: Check PR (issue_comment)
+        id: check-pr
         if: github.event_name == 'event_name'
         run: |
           if [ "${{ fromJson(steps.pr-request.outputs.data).base.ref }}" != 'main' ]; then
@@ -61,13 +64,27 @@ jobs:
             exit 1
           fi
 
+          echo "head_ref=${{ fromJson(steps.pr-request.outputs.data).head.ref }}" >> $GITHUB_ENV
+
       - name: Define head ref
         id: head-ref
         run: |
           if [ "${{ github.event_name }}" == 'pull_request' ]; then
-            echo "head_ref=ref::${{ github.head_ref }}" >> $GITHUB_OUTPUT
+            echo "head_ref=${{ github.head_ref }}" >> $GITHUB_OUTPUT
           elif [ "${{ github.event_name }}" == 'issue_comment' ]; then
-            echo "head_ref=ref::${{ fromJson(steps.pr-request.outputs.data).head.ref }}" >> $GITHUB_OUTPUT
+            echo "head_ref=${{ env.head_ref }}" >> $GITHUB_OUTPUT
+          else
+            echo "::error::Unexpected event name: ${{ github.event_name }}"
+            exit 1
+          fi
+
+      - name: Define PR Number
+        id: pr-number
+        run: |
+          if [ "${{ github.event_name }}" == 'pull_request' ]; then
+            echo "pr_number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" == 'issue_comment' ]; then
+            echo "pr_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
           else
             echo "::error::Unexpected event name: ${{ github.event_name }}"
             exit 1
@@ -107,6 +124,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+        with:
+          ref: ${{ needs.paths-filter.outputs.head_ref }}
 
       - run: corepack enable pnpm
 
@@ -145,14 +164,12 @@ jobs:
           # Create a comment body
           cat << EOF > COMMENT.md
           ## 🚨 Snapshot test failed
-          See the details in the [workflow run details](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
-
-          If these changes are expected, please update the snapshots by \`/update-snapshot\`.
-          If this failure is unexpected, please retry the workflow by \`/run-snapshot\`.
+          See the details in the [workflow run details](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
           ### Errors
           EOF
 
+          # Append the error message to the comment body
           if [ ${{ steps.eslint.outcome }} == 'failure' ]; then
               echo "- ESLint" >> COMMENT.md
           fi
@@ -163,9 +180,18 @@ jobs:
               echo "- Stylelint" >> COMMENT.md
           fi
 
+          # Append the next steps to the comment body
+          cat << EOF >> COMMENT.md
+          ---
+          ### ⏭️ Next Steps
+          If snap shot changes are expected: update the snapshots by \`/update-snapshot\`
+
+          If snap shot changes are unexpected: retry the workflow by \`/run-snapshot\`
+          EOF
+
           # Edit the last comment if it exists
-          gh pr comment ${{ github.event.pull_request.number }} --body-file COMMENT.md --edit-last \
-            || gh pr comment ${{ github.event.pull_request.number }} --body-file COMMENT.md
+          gh pr comment ${{ needs.paths-filter.outputs.pr_number }} --body-file COMMENT.md --edit-last \
+            || gh pr comment ${{ needs.paths-filter.outputs.pr_number }} --body-file COMMENT.md
         env:
           GH_TOKEN: ${{ github.token }}
 
