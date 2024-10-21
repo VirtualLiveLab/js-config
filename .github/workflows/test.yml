@@ -4,6 +4,10 @@ on:
   pull_request:
     branches:
       - "**"
+    types:
+      - opened
+      - synchronize
+      - reopened
     paths:
       - "packages/**"
       - "package.json"
