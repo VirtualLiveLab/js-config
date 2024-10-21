@@ -37,7 +37,7 @@ jobs:
 
     steps:
       - name: Get PR information (issue_comment)
-        if: github.event_name == 'event_name'
+        if: github.event_name == 'issue_comment'
         id: pr-request
         uses: octokit/request-action@dad4362715b7fb2ddedf9772c8670824af564f0d # v2.4.0
         with:
@@ -46,8 +46,8 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Check PR (issue_comment)
-        id: check-pr
-        if: github.event_name == 'event_name'
+      - name: Exit if invalid PR (issue_comment)
+        if: github.event_name == 'issue_comment'
         run: |
           if [ "${{ fromJson(steps.pr-request.outputs.data).base.ref }}" != 'main' ]; then
             echo "::error::PR base branch is not main."
