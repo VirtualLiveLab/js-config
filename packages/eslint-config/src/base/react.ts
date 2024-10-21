@@ -21,10 +21,13 @@ const reactConfig = tseslint.config({
   },
   name: "@virtual-live-lab/eslint-config/react",
   rules: {
-    "react/jsx-boolean-value": "warn",
-    "react/jsx-curly-brace-presence": "error",
-    "react/jsx-no-target-blank": "warn",
+    "react/button-has-type": "error",
+    "react/iframe-missing-sandbox": "error",
+    "react/jsx-boolean-value": "error",
+    "react/jsx-curly-brace-presence": ["error", "never"],
+    "react/jsx-no-target-blank": ["error", { allowReferer: true }],
     "react/prop-types": "off",
+    "react/self-closing-comp": "error",
   },
   settings: {
     react: {
