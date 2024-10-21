@@ -1,0 +1,81 @@
+name: Test Package
+
+on:
+  pull_request:
+    branches:
+      - "**"
+    types:
+      - opened
+      - synchronize
+      - reopened
+    paths:
+      - "packages/**"
+      - "package.json"
+      - ".github/workflows/test.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  paths-filter:
+    runs-on: ubuntu-24.04
+    permissions:
+      pull-requests: read
+    timeout-minutes: 5
+    outputs:
+      eslint: ${{ steps.filter.outputs.eslint-config }}
+      prettier: ${{ steps.filter.outputs.prettier-config }}
+      stylelint: ${{ steps.filter.outputs.stylelint-config }}
+      directory: ${{ steps.filter.outputs.changes }}
+
+    steps:
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          # package.json を含めているのはｌ、ビルド環境が変わった場合にすべてのパッケージをビルドするようにするため
+          filters: |
+            eslint-config:
+              - 'packages/eslint-config/**'
+              - 'package.json'
+            prettier-config:
+              - 'packages/prettier-config/**'
+              - 'package.json'
+            stylelint-config:
+              - 'packages/stylelint-config/**'
+              - 'package.json'
+
+  test:
+    needs: paths-filter
+    if: ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+
+      - run: corepack enable pnpm
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v4.0.4
+        with:
+          node-version-file: "package.json"
+          cache: "pnpm"
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Test ESLint Config
+        if: ${{ needs.paths-filter.outputs.eslint == 'true' }}
+        run: pnpm run test --project eslint-config
+
+      - name: Test Prettier Config
+        if: ${{ needs.paths-filter.outputs.prettier == 'true' }}
+        run: pnpm run build:prettier && pnpm run test --project prettier-config
+
+      - name: Test Stylelint Config
+        if: ${{ needs.paths-filter.outputs.stylelint == 'true' }}
+        run: pnpm run test --project stylelint-config
