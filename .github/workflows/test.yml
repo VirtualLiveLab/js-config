@@ -191,7 +191,7 @@ jobs:
           EOF
 
       - name: Comment if success
-        if: steps.eslint.outcome == 'success' && steps.prettier.outcome == 'success' && steps.stylelint.outcome == 'success'
+        if: steps.eslint.outcome != 'failure' && steps.prettier.outcome != 'failure' && steps.stylelint.outcome != 'failure'
         run: |
           set -eu
 
