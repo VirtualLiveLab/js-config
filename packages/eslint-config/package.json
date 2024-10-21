@@ -1,6 +1,6 @@
 {
   "name": "@virtual-live-lab/eslint-config",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "ESLint configuration for Virtual Live Lab",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
