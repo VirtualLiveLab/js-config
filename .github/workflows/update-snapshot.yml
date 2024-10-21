@@ -99,15 +99,15 @@ jobs:
 
       - name: Update ESLint Config Snapshot
         if: needs.check-target-packages.outputs.eslint == 'true'
-        run: pnpm run build:eslint && pnpm run test --project eslint-config -- -u
+        run: pnpm run build:eslint && pnpm run test --project eslint-config -u
 
       - name: Update Prettier Config Snapshot
         if: needs.check-target-packages.outputs.prettier == 'true'
-        run: pnpm run build:prettier && pnpm run test --project prettier-config -- -u
+        run: pnpm run build:prettier && pnpm run test --project prettier-config -u
 
       - name: Update Stylelint Config Snapshot
         if: needs.check-target-packages.outputs.stylelint == 'true'
-        run: pnpm run build:stylelint && pnpm run test --project stylelint-config -- -u
+        run: pnpm run build:stylelint && pnpm run test --project stylelint-config -u
 
       - name: Create change summary markdown
         run: |
