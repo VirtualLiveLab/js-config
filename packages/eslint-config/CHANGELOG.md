@@ -1,6 +1,6 @@
 # @virtual-live-lab/eslint-config
 
-## 2.2.1
+## 2.2.2
 
 ### Patch Changes
 
