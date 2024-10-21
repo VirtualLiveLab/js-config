@@ -19,6 +19,7 @@ concurrency:
 
 jobs:
   paths-filter:
+    name: Filter Changed Packages
     runs-on: ubuntu-24.04
     permissions:
       pull-requests: read
@@ -47,6 +48,7 @@ jobs:
 
   test:
     needs: paths-filter
+    name: Vitest
     if: ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10

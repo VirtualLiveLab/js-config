@@ -22,7 +22,8 @@ on:
     types: [created]
 
 jobs:
-  filter-pr:
+  filter-packages:
+    name: Check Changed Packages
     runs-on: ubuntu-24.04
     outputs:
       eslint: ${{ false || steps.filter.outputs.eslint }}
@@ -44,7 +45,8 @@ jobs:
               - 'packages/stylelint-config/**'
 
   check-target-packages:
-    needs: filter-pr
+    name: Check target packages
+    needs: filter-packages
     runs-on: ubuntu-24.04
     outputs:
       eslint: ${{ steps.check.outputs.eslint }}
@@ -52,7 +54,7 @@ jobs:
       stylelint: ${{ steps.check.outputs.stylelint }}
 
     steps:
-      - name: Check changed packages
+      - name: Check target packages
         id: check
         run: |
           if [ ${{ github.event_name == 'workflow_dispatch' }} ]; then
@@ -69,6 +71,7 @@ jobs:
           fi
 
   update-snapshot:
+    name: Update Snapshot
     needs: check-target-packages
     if: needs.check-target-packages.outputs.eslint == 'true' || needs.check-target-packages.outputs.prettier == 'true' || needs.check-target-packages.outputs.stylelint == 'true'
     runs-on: ubuntu-24.04
@@ -99,15 +102,15 @@ jobs:
 
       - name: Update ESLint Config Snapshot
         if: needs.check-target-packages.outputs.eslint == 'true'
-        run: pnpm run build:eslint && pnpm run test --project eslint-config -- -u
+        run: pnpm run build:eslint && pnpm run test --project eslint-config -u
 
       - name: Update Prettier Config Snapshot
         if: needs.check-target-packages.outputs.prettier == 'true'
-        run: pnpm run build:prettier && pnpm run test --project prettier-config -- -u
+        run: pnpm run build:prettier && pnpm run test --project prettier-config -u
 
       - name: Update Stylelint Config Snapshot
         if: needs.check-target-packages.outputs.stylelint == 'true'
-        run: pnpm run build:stylelint && pnpm run test --project stylelint-config -- -u
+        run: pnpm run build:stylelint && pnpm run test --project stylelint-config -u
 
       - name: Create change summary markdown
         run: |
