@@ -119,3 +119,9 @@ jobs:
             || gh pr comment ${{ github.event.pull_request.number }} --body-file COMMENT.md
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: Mark as failure if any Error
+        if: steps.eslint.outcome == 'failure' || steps.prettier.outcome == 'failure' || steps.stylelint.outcome == 'failure'
+        run: |
+          echo "::error::Snapshot test failed."
+          exit 1
