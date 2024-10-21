@@ -46,7 +46,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Check PR (issue_comment)
-      - name: Exit if invalid PR (issue_comment)
         if: github.event_name == 'issue_comment'
         run: |
           if [ "${{ fromJson(steps.pr-request.outputs.data).base.ref }}" != 'main' ]; then
