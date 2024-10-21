@@ -23,15 +23,15 @@ on:
 
 jobs:
   filter-pr:
-    if: github.event_name == 'issue_comment' && github.event.issue.pull_request && github.event.comment.body == '/update-snapshot'
     runs-on: ubuntu-24.04
     outputs:
-      eslint: ${{ steps.filter.outputs.eslint }}
-      prettier: ${{ steps.filter.outputs.prettier }}
-      stylelint: ${{ steps.filter.outputs.stylelint }}
+      eslint: ${{ false || steps.filter.outputs.eslint }}
+      prettier: ${{ false || steps.filter.outputs.prettier }}
+      stylelint: ${{ false || steps.filter.outputs.stylelint }}
 
     steps:
       - name: Check changed packages (PR Comment)
+        if: github.event_name == 'issue_comment' && github.event.issue.pull_request && github.event.comment.body == '/update-snapshot'
         uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         id: filter
         with:
@@ -59,7 +59,7 @@ jobs:
             echo "eslint=${{ github.event.inputs.eslint }}" >> $GITHUB_OUTPUT
             echo "prettier=${{ github.event.inputs.prettier }}" >> $GITHUB_OUTPUT
             echo "stylelint=${{ github.event.inputs.stylelint }}" >> $GITHUB_OUTPUT
-          else if [ ${{ github.event_name == 'issue_comment' }} ]; then
+          elif [ ${{ github.event_name == 'issue_comment' }} ]; then
             echo "eslint=${{ needs.filter-pr.outputs.eslint }}" >> $GITHUB_OUTPUT
             echo "prettier=${{ needs.filter-pr.outputs.prettier }}" >> $GITHUB_OUTPUT
             echo "stylelint=${{ needs.filter-pr.outputs.stylelint }}" >> $GITHUB_OUTPUT
@@ -99,15 +99,15 @@ jobs:
 
       - name: Update ESLint Config Snapshot
         if: needs.check-target-packages.outputs.eslint == 'true'
-        run: pnpm run test --project eslint-config -- -u
+        run: pnpm run build:eslint && pnpm run test --project eslint-config -- -u
 
       - name: Update Prettier Config Snapshot
         if: needs.check-target-packages.outputs.prettier == 'true'
-        run: pnpm run test --project prettier-config -- -u
+        run: pnpm run build:prettier && pnpm run test --project prettier-config -- -u
 
       - name: Update Stylelint Config Snapshot
         if: needs.check-target-packages.outputs.stylelint == 'true'
-        run: pnpm run test --project stylelint-config -- -u
+        run: pnpm run build:stylelint && pnpm run test --project stylelint-config -- -u
 
       - name: Create change summary markdown
         run: |
