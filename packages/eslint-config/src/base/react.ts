@@ -1,34 +1,33 @@
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
-
-import { fixupConfigRules } from "@eslint/compat";
+import react from "eslint-plugin-react";
 import globals from "globals";
+import tseslint from "typescript-eslint";
 
 import { compat } from "../lib/compat";
 
-const reactConfig = [
-  ...fixupConfigRules([
-    ...compat.extends(
-      "plugin:react/recommended",
-      "plugin:react/jsx-runtime",
-      "plugin:react-hooks/recommended",
-    ),
-    ...compat.config({
-      globals: {
-        ...globals.browser,
-      },
-      rules: {
-        "react/jsx-boolean-value": "warn",
-        "react/jsx-curly-brace-presence": "error",
-        "react/prop-types": "off",
-        "react/jsx-no-target-blank": "warn",
-      },
-      settings: {
-        react: {
-          version: "detect",
-        },
-      },
-    }),
-  ]),
-] satisfies FlatConfig.ConfigArray;
+const reactConfig = tseslint.config({
+  extends: [
+    // @ts-expect-error 型が合わない
+    react.configs.flat.recommended,
+    // @ts-expect-error 型が合わない
+    react.configs.flat["jsx-runtime"],
+    ...compat.extends("plugin:react-hooks/recommended"),
+  ],
+  languageOptions: {
+    globals: {
+      ...globals.browser,
+    },
+  },
+  rules: {
+    "react/jsx-boolean-value": "warn",
+    "react/jsx-curly-brace-presence": "error",
+    "react/jsx-no-target-blank": "warn",
+    "react/prop-types": "off",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+});
 
 export { reactConfig };
