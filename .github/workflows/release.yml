@@ -12,6 +12,7 @@ concurrency:
 jobs:
   release:
     name: Test and Release (Release)
+    if: github.repository == 'VirtualLiveLab/js-config'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
