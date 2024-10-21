@@ -828,9 +828,7 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     "perfectionist/sort-object-types": [
       2,
       {
-        "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -838,9 +836,7 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     "perfectionist/sort-objects": [
       2,
       {
-        "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -862,20 +858,6 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     "perfectionist/sort-union-types": [
       2,
       {
-        "groups": [
-          "conditional",
-          "function",
-          "import",
-          "intersection",
-          "keyword",
-          "literal",
-          "named",
-          "object",
-          "operator",
-          "tuple",
-          "union",
-          "nullish",
-        ],
         "order": "asc",
         "type": "natural",
       },
@@ -2331,7 +2313,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       2,
     ],
     "@typescript-eslint/adjacent-overload-signatures": [
-      0,
+      2,
     ],
     "@typescript-eslint/array-type": [
       2,
@@ -3210,9 +3192,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     "perfectionist/sort-object-types": [
       2,
       {
-        "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -3220,9 +3200,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     "perfectionist/sort-objects": [
       2,
       {
-        "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -3244,20 +3222,6 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     "perfectionist/sort-union-types": [
       2,
       {
-        "groups": [
-          "conditional",
-          "function",
-          "import",
-          "intersection",
-          "keyword",
-          "literal",
-          "named",
-          "object",
-          "operator",
-          "tuple",
-          "union",
-          "nullish",
-        ],
         "order": "asc",
         "type": "natural",
       },
@@ -3293,17 +3257,11 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     "react-hooks/rules-of-hooks": [
       2,
     ],
-    "react/button-has-type": [
-      2,
-    ],
     "react/display-name": [
       2,
     ],
-    "react/iframe-missing-sandbox": [
-      2,
-    ],
     "react/jsx-boolean-value": [
-      2,
+      1,
     ],
     "react/jsx-child-element-spacing": [
       0,
@@ -3316,7 +3274,6 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     ],
     "react/jsx-curly-brace-presence": [
       2,
-      "never",
     ],
     "react/jsx-curly-newline": [
       0,
@@ -3352,12 +3309,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       2,
     ],
     "react/jsx-no-target-blank": [
-      2,
-      {
-        "allowReferrer": true,
-        "forms": false,
-        "links": true,
-      },
+      1,
     ],
     "react/jsx-no-undef": [
       2,
@@ -3423,9 +3375,6 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       0,
     ],
     "react/require-render-return": [
-      2,
-    ],
-    "react/self-closing-comp": [
       2,
     ],
     "require-await": [
@@ -3684,7 +3633,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
       2,
     ],
     "@typescript-eslint/adjacent-overload-signatures": [
-      0,
+      2,
     ],
     "@typescript-eslint/array-type": [
       2,
@@ -4323,9 +4272,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
     "perfectionist/sort-object-types": [
       2,
       {
-        "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -4333,9 +4280,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
     "perfectionist/sort-objects": [
       2,
       {
-        "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -4357,20 +4302,6 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
     "perfectionist/sort-union-types": [
       2,
       {
-        "groups": [
-          "conditional",
-          "function",
-          "import",
-          "intersection",
-          "keyword",
-          "literal",
-          "named",
-          "object",
-          "operator",
-          "tuple",
-          "union",
-          "nullish",
-        ],
         "order": "asc",
         "type": "natural",
       },
