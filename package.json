@@ -12,7 +12,7 @@
     "build:stylelint": "pnpm --filter @virtual-live-lab/stylelint-config build",
     "test": "vitest",
     "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm",
-    "release": "pnpm run build && changeset publish"
+    "release": "pnpm run build && pnpm run test && changeset publish"
   },
   "packageManager": "pnpm@9.12.2",
   "devDependencies": {
