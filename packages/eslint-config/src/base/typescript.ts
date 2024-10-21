@@ -1,15 +1,15 @@
 import stylisticTs from "@stylistic/eslint-plugin-ts";
-import gitignore from "eslint-config-flat-gitignore";
 import tseslint from "typescript-eslint";
 
 import { __dirname } from "../lib/dir";
+import { tsFiles } from "../utils/files";
 
 const tsConfig = tseslint.config({
   extends: [
-    gitignore(),
     ...tseslint.configs.recommendedTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
   ],
+  files: [tsFiles],
   languageOptions: {
     parserOptions: {
       projectService: {
@@ -19,6 +19,7 @@ const tsConfig = tseslint.config({
       tsconfigRootDir: __dirname,
     },
   },
+  name: "@virtual-live-lab/eslint-config/typescript",
   plugins: {
     "@stylistic/ts": stylisticTs,
   },

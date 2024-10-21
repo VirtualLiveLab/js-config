@@ -23,7 +23,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup-node"
+    "build": "tsup-node",
+    "inspect": "eslint --inspect-config"
   },
   "engines": {
     "node": ">= 20.11.0 || >= 21.2.0 || >= 22.0.0"
