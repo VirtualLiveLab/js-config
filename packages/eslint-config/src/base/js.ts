@@ -1,11 +1,14 @@
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
 import js from "@eslint/js";
-import gitignore from "eslint-config-flat-gitignore";
+
+import { jsFiles } from "../utils/files";
 
 const jsConfig = [
-  gitignore(),
-  js.configs.recommended,
+  {
+    files: [jsFiles],
+    ...js.configs.recommended,
+  },
 ] satisfies FlatConfig.ConfigArray;
 
 export { jsConfig };

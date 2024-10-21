@@ -3,6 +3,7 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 import { compat } from "../lib/compat";
+import { jsxFiles } from "../utils/files";
 
 const reactConfig = tseslint.config({
   extends: [
@@ -12,11 +13,13 @@ const reactConfig = tseslint.config({
     react.configs.flat["jsx-runtime"],
     ...compat.extends("plugin:react-hooks/recommended"),
   ],
+  files: [jsxFiles],
   languageOptions: {
     globals: {
       ...globals.browser,
     },
   },
+  name: "@virtual-live-lab/eslint-config/react",
   rules: {
     "react/jsx-boolean-value": "warn",
     "react/jsx-curly-brace-presence": "error",

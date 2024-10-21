@@ -15,8 +15,6 @@
 - TypeScript: `@virtual-live-lab/tsconfig`
   - TypeScript configuration presets
 
-今後JS / TSユーテリティライブラリを追加する可能性があります。
-
 ## パッケージごとの詳細
 
 ### インストール方法
