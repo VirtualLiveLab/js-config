@@ -14,6 +14,7 @@ on:
 
 jobs:
   paths-filter:
+    name: Filter Changed Packages (Publish Preview Package)
     runs-on: ubuntu-24.04
     permissions:
       pull-requests: read
@@ -43,6 +44,7 @@ jobs:
               - 'packages/tsconfig/**'
               - 'package.json'
   publish:
+    name: Publish to pkg-pr-new (Publish Preview Package)
     needs: paths-filter
     runs-on: ubuntu-24.04
     timeout-minutes: 10

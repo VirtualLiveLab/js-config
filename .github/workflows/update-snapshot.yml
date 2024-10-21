@@ -23,7 +23,7 @@ on:
 
 jobs:
   filter-packages:
-    name: Check Changed Packages
+    name: Check Changed Packages (Update Snapshot)
     runs-on: ubuntu-24.04
     if: github.event_name == 'issue_comment' && github.event.issue.pull_request && !contains(github.event.comment.user.name, 'bot') && contains(github.event.comment.body, '/update-snapshot')
     outputs:
@@ -78,7 +78,7 @@ jobs:
               - 'packages/stylelint-config/**'
 
   check-target-packages:
-    name: Check target packages
+    name: Check target packages (Update Snapshot)
     if: always()
     needs: filter-packages
     runs-on: ubuntu-24.04
@@ -118,7 +118,7 @@ jobs:
           fi
 
   update-snapshot:
-    name: Update Snapshot
+    name: Update Snapshot (Update Snapshot)
     needs: check-target-packages
     if: always() && needs.check-target-packages.outputs.eslint == 'true' || needs.check-target-packages.outputs.prettier == 'true' || needs.check-target-packages.outputs.stylelint == 'true'
     runs-on: ubuntu-24.04

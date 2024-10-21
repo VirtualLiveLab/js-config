@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   paths-filter:
-    name: Filter Changed Packages
+    name: Filter Changed Packages (Test Package)
     runs-on: ubuntu-24.04
     if: github.event_name == 'pull_request' || (github.event_name == 'issue_comment' && github.event.issue.pull_request && !contains(github.event.comment.user.name, 'bot') && contains(github.event.comment.body, '/run-snapshot'))
     permissions:
@@ -112,7 +112,7 @@ jobs:
 
   test:
     needs: paths-filter
-    name: Vitest
+    name: Vitest (Test Package)
     if: ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10
