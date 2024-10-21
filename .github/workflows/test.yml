@@ -112,7 +112,7 @@ jobs:
               echo "- Stylelint" >> COMMENT.md
           fi
 
-          echo "---\nIf these changes are expected, please update the snapshots by `/update-snapshot`." >> COMMENT.md
+          echo -e "---\nIf these changes are expected, please update the snapshots by \`/update-snapshot\`." >> COMMENT.md
 
           # Edit the last comment if it exists
           gh pr comment ${{ github.event.pull_request.number }} --body-file COMMENT.md --edit-last \

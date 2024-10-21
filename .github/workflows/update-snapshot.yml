@@ -29,6 +29,8 @@ jobs:
       eslint: ${{ false || steps.filter.outputs.eslint }}
       prettier: ${{ false || steps.filter.outputs.prettier }}
       stylelint: ${{ false || steps.filter.outputs.stylelint }}
+    permissions:
+      pull-requests: read
 
     steps:
       - name: Check changed packages (PR Comment)
@@ -62,9 +64,9 @@ jobs:
             echo "prettier=${{ github.event.inputs.prettier }}" >> $GITHUB_OUTPUT
             echo "stylelint=${{ github.event.inputs.stylelint }}" >> $GITHUB_OUTPUT
           elif [ ${{ github.event_name == 'issue_comment' }} ]; then
-            echo "eslint=${{ needs.filter-pr.outputs.eslint }}" >> $GITHUB_OUTPUT
-            echo "prettier=${{ needs.filter-pr.outputs.prettier }}" >> $GITHUB_OUTPUT
-            echo "stylelint=${{ needs.filter-pr.outputs.stylelint }}" >> $GITHUB_OUTPUT
+            echo "eslint=${{ needs.filter-packages.outputs.eslint }}" >> $GITHUB_OUTPUT
+            echo "prettier=${{ needs.filter-packages.outputs.prettier }}" >> $GITHUB_OUTPUT
+            echo "stylelint=${{ needs.filter-packages.outputs.stylelint }}" >> $GITHUB_OUTPUT
           else
             echo "::error::Workflow called by unexpected event."
             exit 1
