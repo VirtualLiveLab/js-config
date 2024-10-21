@@ -25,7 +25,7 @@ const reactConfig = tseslint.config({
     "react/iframe-missing-sandbox": "error",
     "react/jsx-boolean-value": "error",
     "react/jsx-curly-brace-presence": ["error", "never"],
-    "react/jsx-no-target-blank": ["error", { allowReferer: true }],
+    "react/jsx-no-target-blank": ["error", { allowReferrer: true }],
     "react/prop-types": "off",
     "react/self-closing-comp": "error",
   },
