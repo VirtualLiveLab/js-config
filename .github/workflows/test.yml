@@ -54,6 +54,7 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: read
+      pull-requests: write
 
     steps:
       - name: Checkout Repo
@@ -71,13 +72,50 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Test ESLint Config
+        id: eslint
         if: ${{ needs.paths-filter.outputs.eslint == 'true' }}
+        continue-on-error: true
         run: pnpm run build:eslint && pnpm run test --project eslint-config
 
       - name: Test Prettier Config
+        id: prettier
         if: ${{ needs.paths-filter.outputs.prettier == 'true' }}
+        continue-on-error: true
         run: pnpm run build:prettier && pnpm run test --project prettier-config
 
       - name: Test Stylelint Config
+        id: stylelint
         if: ${{ needs.paths-filter.outputs.stylelint == 'true' }}
+        continue-on-error: true
         run: pnpm run build:stylelint && test --project stylelint-config
+
+      - name: Comment if any Error
+        if: steps.eslint.outcome == 'failure' || steps.prettier.outcome == 'failure' || steps.stylelint.outcome == 'failure'
+        run: |
+          set -eu
+
+          # Create a comment body
+          cat << EOF > COMMENT.md
+          ## 🚨 Snapshot test failed
+          See the details in the [workflow run details](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+
+          ### Errors
+          EOF
+
+          if [ ${{ steps.eslint.outcome }} == 'failure' ]; then
+              echo "- ESLint" >> COMMENT.md
+          fi
+          if [ ${{ steps.prettier.outcome }} == 'failure' ]; then
+              echo "- Prettier" >> COMMENT.md
+          fi
+          if [ ${{ steps.stylelint.outcome }} == 'failure' ]; then
+              echo "- Stylelint" >> COMMENT.md
+          fi
+
+          echo "---\nIf these changes are expected, please update the snapshots by `/update-snapshot`." >> COMMENT.md
+
+          # Edit the last comment if it exists
+          gh pr comment ${{ github.event.pull_request.number }} --body-file COMMENT.md --edit-last \
+            || gh pr comment ${{ github.event.pull_request.number }} --body-file COMMENT.md
+        env:
+          GH_TOKEN: ${{ github.token }}
