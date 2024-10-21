@@ -190,7 +190,25 @@ jobs:
           **unexpected**: retry the workflow by \`/run-snapshot\`
           EOF
 
+      - name: Comment if success
+        if: steps.eslint.outcome == 'success' && steps.prettier.outcome == 'success' && steps.stylelint.outcome == 'success'
+        run: |
+          set -eu
+
+          # Create a comment body
+          cat << EOF > COMMENT.md
+          ## ✅ Snapshot test success
+          See the details in the [workflow run details](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          EOF
+
+      - name: Comment to PR
+        run: |
           # Edit the last comment if it exists
+          if [ ! -f COMMENT.md ]; then
+            echo "::warn::comment body not found."
+            exit 0
+          fi
+
           gh pr comment ${{ needs.paths-filter.outputs.pr_number }} --body-file COMMENT.md --edit-last \
             || gh pr comment ${{ needs.paths-filter.outputs.pr_number }} --body-file COMMENT.md
         env:
