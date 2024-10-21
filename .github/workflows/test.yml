@@ -12,6 +12,8 @@ on:
       - "packages/**"
       - "package.json"
       - ".github/workflows/test.yml"
+  issue_comment:
+    types: [created]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -21,19 +23,65 @@ jobs:
   paths-filter:
     name: Filter Changed Packages
     runs-on: ubuntu-24.04
+    if: github.event_name == 'pull_request' || (github.event_name == 'issue_comment' && github.event.issue.pull_request && !contains(github.event.comment.user.name, 'bot') && contains(github.event.comment.body, '/run-snapshot'))
     permissions:
+      contents: read
       pull-requests: read
     timeout-minutes: 5
     outputs:
       eslint: ${{ steps.filter.outputs.eslint-config }}
       prettier: ${{ steps.filter.outputs.prettier-config }}
       stylelint: ${{ steps.filter.outputs.stylelint-config }}
-      directory: ${{ steps.filter.outputs.changes }}
 
     steps:
+      - name: Get PR information (issue_comment)
+        if: github.event_name == 'event_name'
+        id: pr-request
+        uses: octokit/request-action@dad4362715b7fb2ddedf9772c8670824af564f0d # v2.4.0
+        with:
+          route: ${{ github.event.issue.pull_request.url }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Exit if invalid PR (issue_comment)
+        if: github.event_name == 'event_name'
+        run: |
+          if [ "${{ fromJson(steps.pr-request.outputs.data).base.ref }}" != 'main' ]; then
+            echo "::error::PR base branch is not main."
+            exit 1
+          fi
+
+          if [ "${{ fromJson(steps.pr-request.outputs.data).state }}" != 'open' ]; then
+            echo "::error::PR is not open."
+            exit 1
+          fi
+
+          if [ "${{ fromJson(steps.pr-request.outputs.data).draft }}" == 'true' ]; then
+            echo "::error::Cannot update snapshot for draft PR."
+            exit 1
+          fi
+
+      - name: Define head ref
+        id: head-ref
+        run: |
+          if [ "${{ github.event_name }}" == 'pull_request' ]; then
+            echo "head_ref=ref::${{ github.head_ref }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" == 'issue_comment' ]; then
+            echo "head_ref=ref::${{ fromJson(steps.pr-request.outputs.data).head.ref }}" >> $GITHUB_OUTPUT
+          else
+            echo "::error::Unexpected event name: ${{ github.event_name }}"
+            exit 1
+          fi
+
+      - name: Checkout Repo
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+        with:
+          ref: ${{ steps.head-ref.outputs.head_ref }}
+
       - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         id: filter
         with:
+          ref: ${{ steps.head-ref.outputs.head_ref }}
           # package.json を含めているのはｌ、ビルド環境が変わった場合にすべてのパッケージをビルドするようにするため
           filters: |
             eslint-config:
@@ -49,7 +97,7 @@ jobs:
   test:
     needs: paths-filter
     name: Vitest
-    if: always() && ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' }}
+    if: ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
@@ -99,6 +147,9 @@ jobs:
           ## 🚨 Snapshot test failed
           See the details in the [workflow run details](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
 
+          If these changes are expected, please update the snapshots by \`/update-snapshot\`.
+          If this failure is unexpected, please retry the workflow by \`/run-snapshot\`.
+
           ### Errors
           EOF
 
@@ -111,8 +162,6 @@ jobs:
           if [ ${{ steps.stylelint.outcome }} == 'failure' ]; then
               echo "- Stylelint" >> COMMENT.md
           fi
-
-          echo -e "---\nIf these changes are expected, please update the snapshots by \`/update-snapshot\`." >> COMMENT.md
 
           # Edit the last comment if it exists
           gh pr comment ${{ github.event.pull_request.number }} --body-file COMMENT.md --edit-last \
