@@ -184,9 +184,11 @@ jobs:
           cat << EOF >> COMMENT.md
           ---
           ### ⏭️ Next Steps
-          If snap shot changes are expected: update the snapshots by \`/update-snapshot\`
+          If snapshot changes are...
 
-          If snap shot changes are unexpected: retry the workflow by \`/run-snapshot\`
+          **expected**: update the snapshots by \`/update-snapshot\`
+
+          **unexpected**: retry the workflow by \`/run-snapshot\`
           EOF
 
           # Edit the last comment if it exists
