@@ -30,14 +30,44 @@ jobs:
       prettier: ${{ false || steps.filter.outputs.prettier }}
       stylelint: ${{ false || steps.filter.outputs.stylelint }}
     permissions:
-      pull-requests: read
+      contents: read
 
     steps:
+      - name: Get PR information
+        id: pr-request
+        uses: octokit/request-action@dad4362715b7fb2ddedf9772c8670824af564f0d # v2.4.0
+        with:
+          route: ${{ github.event.issue.pull_request.url }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Exit if invalid PR
+        run: |
+          if [ "${{ fromJson(steps.pr-request.outputs.data).base.ref }}" != 'main' ]; then
+            echo "::error::PR base branch is not main."
+            exit 1
+          fi
+
+          if [ "${{ fromJson(steps.pr-request.outputs.data).state }}" != 'open' ]; then
+            echo "::error::PR is not open."
+            exit 1
+          fi
+
+          if [ "${{ fromJson(steps.pr-request.outputs.data).draft }}" == 'true' ]; then
+            echo "::error::Cannot update snapshot for draft PR."
+            exit 1
+          fi
+
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+        with:
+          ref: ${{ fromJson(steps.pr-request.outputs.data).head.ref }}
+
       - name: Check changed packages (PR Comment)
-        if: github.event_name == 'issue_comment' && github.event.issue.pull_request && github.event.comment.body == '/update-snapshot'
+        if: github.event_name == 'issue_comment' && github.event.issue.pull_request && !contains(github.event.comment.user.name, 'bot') && contains(github.event.comment.body, '/update-snapshot')
         uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         id: filter
         with:
+          ref: ${{ fromJson(steps.pr-request.outputs.data).head.ref }}
           filters: |
             eslint:
               - 'packages/eslint-config/**'
@@ -59,11 +89,11 @@ jobs:
       - name: Check target packages
         id: check
         run: |
-          if [ ${{ github.event_name == 'workflow_dispatch' }} ]; then
+          if [ ${{ github.event_name }} == 'workflow_dispatch' ]; then
             echo "eslint=${{ github.event.inputs.eslint }}" >> $GITHUB_OUTPUT
             echo "prettier=${{ github.event.inputs.prettier }}" >> $GITHUB_OUTPUT
             echo "stylelint=${{ github.event.inputs.stylelint }}" >> $GITHUB_OUTPUT
-          elif [ ${{ github.event_name == 'issue_comment' }} ]; then
+          elif [ ${{ github.event_name }} == 'issue_comment'  ]; then
             echo "eslint=${{ needs.filter-packages.outputs.eslint }}" >> $GITHUB_OUTPUT
             echo "prettier=${{ needs.filter-packages.outputs.prettier }}" >> $GITHUB_OUTPUT
             echo "stylelint=${{ needs.filter-packages.outputs.stylelint }}" >> $GITHUB_OUTPUT
