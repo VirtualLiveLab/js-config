@@ -26,6 +26,7 @@ jobs:
     name: Check Changed Packages
     runs-on: ubuntu-24.04
     outputs:
+      head_ref: ${{ fromJson(steps.pr-request.outputs.data).head.ref }}
       eslint: ${{ false || steps.filter.outputs.eslint }}
       prettier: ${{ false || steps.filter.outputs.prettier }}
       stylelint: ${{ false || steps.filter.outputs.stylelint }}
@@ -104,7 +105,7 @@ jobs:
 
   update-snapshot:
     name: Update Snapshot
-    needs: check-target-packages
+    needs: [check-target-packages, filter-packages]
     if: needs.check-target-packages.outputs.eslint == 'true' || needs.check-target-packages.outputs.prettier == 'true' || needs.check-target-packages.outputs.stylelint == 'true'
     runs-on: ubuntu-24.04
     permissions:
@@ -115,6 +116,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+        with:
+          ref: ${{ needs.filter-packages.outputs.head_ref}}
 
       - name: Configure Git Identity
         run: |
