@@ -27,6 +27,7 @@ const tsConfig = tseslint.config({
     // SEE: https://zenn.dev/cybozu_frontend/articles/ts-eslint-v6-guide
     // v6 で recommended から削除されたものを有効化
     "@stylistic/ts/no-extra-semi": "error",
+    "@typescript-eslint/adjacent-overload-signatures": "off",
     // #175
     "@typescript-eslint/array-type": [
       "error",

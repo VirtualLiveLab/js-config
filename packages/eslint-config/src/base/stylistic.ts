@@ -12,7 +12,9 @@ const stylisticConfig = tseslint.config({
     "perfectionist/sort-object-types": [
       "error",
       {
+        ignoreCase: true,
         order: "asc",
+        partitionByComment: true,
         partitionByNewLine: true,
         type: "natural",
       },
@@ -20,7 +22,9 @@ const stylisticConfig = tseslint.config({
     "perfectionist/sort-objects": [
       "error",
       {
+        ignoreCase: true,
         order: "asc",
+        partitionByComment: true,
         partitionByNewLine: true,
         type: "natural",
       },
@@ -28,6 +32,20 @@ const stylisticConfig = tseslint.config({
     "perfectionist/sort-union-types": [
       "error",
       {
+        groups: [
+          "conditional",
+          "function",
+          "import",
+          "intersection",
+          "keyword",
+          "literal",
+          "named",
+          "object",
+          "operator",
+          "tuple",
+          "union",
+          "nullish",
+        ],
         order: "asc",
         type: "natural",
       },
