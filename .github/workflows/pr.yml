@@ -1,0 +1,40 @@
+name: PR Helper
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  label:
+    name: Auto PR Label
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/labeler@8558fd74291d67161a8a78ce36a881fa63b766a9 # v5.0.0
+
+  assign:
+    name: Auto PR Assign
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+      repository-projects: read
+    if: endsWith(github.actor, '[bot]') == false && github.event.pull_request.assignee == null
+    steps:
+      - name: Assign Author to PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh pr edit ${{ github.event.number }} --add-assignee ${{ github.actor }}
