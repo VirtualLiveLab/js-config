@@ -1,0 +1,15 @@
+eslint:
+  - changed-files:
+      - any-glob-to-any-file: "packages/eslint-config/**"
+
+prettier:
+  - changed-files:
+      - any-glob-to-any-file: "packages/prettier-config/**"
+
+stylelint:
+  - changed-files:
+      - any-glob-to-any-file: "packages/stylelint-config/**"
+
+tsconfig:
+  - changed-files:
+      - any-glob-to-any-file: "packages/tsconfig/**"

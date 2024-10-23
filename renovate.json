@@ -1,16 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/renovate.json",
-  "extends": ["config:base"],
-  "schedule": [
-    "before 10am on the first day of the month",
-    "every weekend",
-    "before 5:00am"
-  ],
+  "extends": ["config:best-practices"],
+  "schedule": ["before 8:00am"],
   "timezone": "Asia/Tokyo",
   "prHourlyLimit": 0,
   "automerge": false,
   "rangeStrategy": "bump",
   "branchConcurrentLimit": 0,
+  "gitIgnoredAuthors": ["185786754+actions-miku[bot]@users.noreply.github.com"],
   "enabledManagers": ["github-actions", "npm"],
   "labels": ["renovate"],
   "packageRules": [
@@ -20,8 +17,7 @@
       "commitMessageSuffix": "({{parentDir}})",
       "matchDatasources": ["npm"],
       "matchFileNames": ["packages/eslint-config/**"],
-      "matchPackageNames": ["globals", "pkg-dir", "/eslint/"],
-      "addLabels": ["eslint"]
+      "matchPackageNames": ["globals", "pkg-dir", "/eslint/"]
     },
     {
       "groupName": "prettier",
@@ -29,8 +25,7 @@
       "commitMessageSuffix": "({{parentDir}})",
       "matchDatasources": ["npm"],
       "matchFileNames": ["packages/prettier-config/**"],
-      "matchPackageNames": ["/^prettier/"],
-      "addLabels": ["prettier"]
+      "matchPackageNames": ["/^prettier/"]
     },
     {
       "groupName": "stylelint",
@@ -42,8 +37,7 @@
         "/^stylelint/",
         "@double-great/stylelint-a11y",
         "postcss-html"
-      ],
-      "addLabels": ["stylelint"]
+      ]
     },
     {
       "groupName": "tsconfig",
@@ -51,8 +45,7 @@
       "commitMessageSuffix": "({{parentDir}})",
       "matchDatasources": ["npm"],
       "matchFileNames": ["packages/tsconfig/**"],
-      "matchPackageNames": ["typescript", "@cloudflare/workers-types"],
-      "addLabels": ["tsconfig"]
+      "matchPackageNames": ["typescript", "@cloudflare/workers-types"]
     },
     {
       "groupName": "environment",
@@ -65,6 +58,10 @@
       ],
       "matchUpdateTypes": ["minor", "patch"],
       "addLabels": ["environment"]
+    },
+    {
+      "groupName": "root dependencies",
+      "matchFileNames": ["package.json"]
     }
   ]
 }
