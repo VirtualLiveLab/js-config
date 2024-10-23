@@ -59,3 +59,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Label PR if not published
+        if: steps.changesets.outputs.published != 'true'
+        run: gh pr edit ${{ steps.changesets.outputs.pullRequestNumber }} --add-label "release"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
