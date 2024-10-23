@@ -1,16 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/renovate.json",
-  "extends": ["config:base"],
-  "schedule": [
-    "before 10am on the first day of the month",
-    "every weekend",
-    "before 5:00am"
-  ],
+  "extends": ["config:best-practices"],
+  "schedule": ["before 8:00am"],
   "timezone": "Asia/Tokyo",
   "prHourlyLimit": 0,
   "automerge": false,
   "rangeStrategy": "bump",
   "branchConcurrentLimit": 0,
+  "gitIgnoredAuthors": ["185786754+actions-miku[bot]@users.noreply.github.com"],
   "enabledManagers": ["github-actions", "npm"],
   "labels": ["renovate"],
   "packageRules": [
@@ -61,6 +58,10 @@
       ],
       "matchUpdateTypes": ["minor", "patch"],
       "addLabels": ["environment"]
+    },
+    {
+      "groupName": "root dependencies",
+      "matchFileNames": ["package.json"]
     }
   ]
 }

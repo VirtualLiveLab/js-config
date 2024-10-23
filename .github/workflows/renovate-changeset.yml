@@ -1,0 +1,46 @@
+name: Renovate Changeset
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - labeled
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  renovate:
+    name: Update Renovate PR
+    runs-on: ubuntu-24.04
+    if: github.actor == 'renovate[bot]' && contains(github.event.pull_request.labels.*.name, 'renovate')
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/create-github-app-token@5d869da34e18e7287c1daad50e0b8ea0f506ce69 # v1.11.0
+        id: app-token
+        with:
+          app-id: ${{ vars.ACTIONS_MIKU_APP_ID }}
+          private-key: ${{ secrets.ACTIONS_MIKU_PRIVATE_KEY }}
+
+      - name: Get GitHub App User ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.app-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+
+      - name: Checkout Repo
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+
+      - name: Update PR
+        uses: mscharley/dependency-changesets-action@b73462eb4c2cf1fe16a8d9d681932fd05eea5c9f # v1.1.1
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          author-name: "${{ steps.app-token.outputs.app-slug }}[bot]"
+          author-email: "${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com"
