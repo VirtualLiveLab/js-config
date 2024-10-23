@@ -31,10 +31,10 @@ jobs:
     permissions:
       pull-requests: write
       repository-projects: read
-    if: endsWith(github.actor, '[bot]') == false && github.event.pull_request.assignee == null
+    if: endsWith(github.event.pull_request.user.login, '[bot]') == false && github.event.pull_request.assignee == null
     steps:
       - name: Assign Author to PR
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-        run: gh pr edit ${{ github.event.number }} --add-assignee ${{ github.actor }}
+        run: gh pr edit ${{ github.event.number }} --add-assignee ${{ github.event.pull_request.user.login }}
