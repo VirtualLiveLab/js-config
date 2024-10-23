@@ -2370,10 +2370,13 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       0,
     ],
     "@typescript-eslint/consistent-type-assertions": [
-      0,
+      2,
     ],
     "@typescript-eslint/consistent-type-definitions": [
       0,
+    ],
+    "@typescript-eslint/consistent-type-exports": [
+      2,
     ],
     "@typescript-eslint/consistent-type-imports": [
       2,
@@ -2410,6 +2413,9 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     ],
     "@typescript-eslint/no-confusing-non-null-assertion": [
       0,
+    ],
+    "@typescript-eslint/no-deprecated": [
+      1,
     ],
     "@typescript-eslint/no-duplicate-enum-values": [
       0,
@@ -2561,6 +2567,9 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       2,
     ],
     "@typescript-eslint/prefer-string-starts-ends-with": [
+      2,
+    ],
+    "@typescript-eslint/promise-function-async": [
       2,
     ],
     "@typescript-eslint/quotes": [
@@ -3723,10 +3732,13 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
       0,
     ],
     "@typescript-eslint/consistent-type-assertions": [
-      0,
+      2,
     ],
     "@typescript-eslint/consistent-type-definitions": [
       0,
+    ],
+    "@typescript-eslint/consistent-type-exports": [
+      2,
     ],
     "@typescript-eslint/consistent-type-imports": [
       2,
@@ -3763,6 +3775,9 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
     ],
     "@typescript-eslint/no-confusing-non-null-assertion": [
       0,
+    ],
+    "@typescript-eslint/no-deprecated": [
+      1,
     ],
     "@typescript-eslint/no-duplicate-enum-values": [
       0,
@@ -3914,6 +3929,9 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
       2,
     ],
     "@typescript-eslint/prefer-string-starts-ends-with": [
+      2,
+    ],
+    "@typescript-eslint/promise-function-async": [
       2,
     ],
     "@typescript-eslint/quotes": [
