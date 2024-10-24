@@ -60,6 +60,11 @@
       "addLabels": ["environment"]
     },
     {
+      "groupName": "devDependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchDatasources": ["npm"]
+    },
+    {
       "groupName": "root dependencies",
       "matchFileNames": ["package.json"]
     }
