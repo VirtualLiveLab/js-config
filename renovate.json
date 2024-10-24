@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/renovate.json",
   "extends": ["config:best-practices"],
-  "schedule": ["before 8:00am"],
+  "schedule": ["before 4:00am on Monday"],
   "timezone": "Asia/Tokyo",
   "prHourlyLimit": 0,
   "automerge": false,
