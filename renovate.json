@@ -67,6 +67,10 @@
     {
       "groupName": "root dependencies",
       "matchFileNames": ["package.json"]
+    },
+    {
+      "groupName": "GitHub Actions",
+      "matchDatasources": ["github-actions"]
     }
   ]
 }
