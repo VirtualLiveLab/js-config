@@ -1,13 +1,8 @@
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
-
 import tseslint from "typescript-eslint";
 
 import { astroConfig } from "../base/astro";
-import react from "./react";
+import ts from "./ts";
 
-const astro = tseslint.config(
-  ...react,
-  ...astroConfig,
-) satisfies FlatConfig.ConfigArray;
+const astro = tseslint.config(...ts, ...astroConfig);
 
 export default astro;
