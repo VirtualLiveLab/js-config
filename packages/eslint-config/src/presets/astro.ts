@@ -1,8 +1,8 @@
 import tseslint from "typescript-eslint";
 
 import { astroConfig } from "../base/astro";
-import react from "./react";
+import ts from "./ts";
 
-const astro = tseslint.config(...react, ...astroConfig);
+const astro = tseslint.config(...ts, ...astroConfig);
 
 export default astro;
