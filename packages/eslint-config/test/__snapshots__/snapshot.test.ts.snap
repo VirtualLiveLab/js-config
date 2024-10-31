@@ -4526,6 +4526,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     "@stylistic/ts",
     "react",
     "react-hooks",
+    "react-refresh",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
   ],
   "processor": undefined,
@@ -5510,6 +5511,9 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     ],
     "react-hooks/rules-of-hooks": [
       2,
+    ],
+    "react-refresh/only-export-components": [
+      1,
     ],
     "react/button-has-type": [
       2,
