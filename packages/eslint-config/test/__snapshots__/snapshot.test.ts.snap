@@ -1148,7 +1148,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "extraFileExtensions": {
         "0": ".astro",
       },
-      "parser": "typescript-eslint-parser-for-extra-files@8.11.0",
+      "parser": "typescript-eslint-parser-for-extra-files@8.12.2",
       "project": true,
       "projectService": false,
       "tsconfigRootDir": "/home/runner/work/js-config/js-config",
@@ -1161,7 +1161,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
   "plugins": [
     "@",
     "perfectionist:perfectionist",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.11.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.12.2",
     "@stylistic/ts",
     "astro:eslint-plugin-astro@1.3.0",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
@@ -2497,7 +2497,7 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
   "language": "@/js",
   "languageOptions": {
     "ecmaVersion": "latest",
-    "parser": "espree@10.2.0",
+    "parser": "espree@10.3.0",
     "parserOptions": {},
     "sourceType": "module",
   },
@@ -4498,7 +4498,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "visualViewport": false,
       "window": false,
     },
-    "parser": "typescript-eslint/parser@8.11.0",
+    "parser": "typescript-eslint/parser@8.12.2",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true,
@@ -4522,7 +4522,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
   "plugins": [
     "@",
     "perfectionist:perfectionist",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.11.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.12.2",
     "@stylistic/ts",
     "react",
     "react-hooks",
@@ -5871,7 +5871,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   "language": "@/js",
   "languageOptions": {
     "ecmaVersion": "latest",
-    "parser": "typescript-eslint/parser@8.11.0",
+    "parser": "typescript-eslint/parser@8.12.2",
     "parserOptions": {
       "projectService": {
         "allowDefaultProject": {
@@ -5891,7 +5891,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   "plugins": [
     "@",
     "perfectionist:perfectionist",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.11.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.12.2",
     "@stylistic/ts",
   ],
   "processor": undefined,
