@@ -61,7 +61,7 @@
     "@types/eslint-config-prettier": "6.11.3",
     "@types/eslint__eslintrc": "2.1.2",
     "@types/eslint__js": "8.42.3",
-    "@types/node": "22.8.7",
+    "@types/node": "22.9.0",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "@vitest/coverage-istanbul": "2.1.4",
     "tsup": "8.3.5",
