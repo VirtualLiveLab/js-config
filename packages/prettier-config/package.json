@@ -31,12 +31,12 @@
     }
   },
   "dependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "3.3.3"
   },
   "devDependencies": {
     "@types/node": "22.9.0",
-    "@virtual-live-lab/eslint-config": "workspace:^",
-    "@virtual-live-lab/tsconfig": "workspace:^",
+    "@virtual-live-lab/eslint-config": "workspace:*",
+    "@virtual-live-lab/tsconfig": "workspace:*",
     "@vitest/coverage-istanbul": "2.1.5",
     "prettier-plugin-astro": "0.14.1",
     "tsup": "8.3.5",
