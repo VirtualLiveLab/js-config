@@ -30,20 +30,20 @@
     "stylelint": "^16.10.0"
   },
   "dependencies": {
-    "@double-great/stylelint-a11y": "^3.0.2",
-    "postcss-html": "^1.7.0",
-    "stylelint": "^16.10.0",
-    "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^5.1.1",
-    "stylelint-config-sass-guidelines": "^12.1.0",
-    "stylelint-config-standard": "^36.0.1",
-    "stylelint-config-standard-scss": "^13.1.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
-    "stylelint-value-no-unknown-custom-properties": "^6.0.1"
+    "@double-great/stylelint-a11y": "3.0.2",
+    "postcss-html": "1.7.0",
+    "stylelint": "16.10.0",
+    "stylelint-config-html": "1.1.0",
+    "stylelint-config-recess-order": "5.1.1",
+    "stylelint-config-sass-guidelines": "12.1.0",
+    "stylelint-config-standard": "36.0.1",
+    "stylelint-config-standard-scss": "13.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.8.0",
+    "stylelint-value-no-unknown-custom-properties": "6.0.1"
   },
   "devDependencies": {
-    "@virtual-live-lab/eslint-config": "workspace:^",
-    "@virtual-live-lab/tsconfig": "workspace:^",
+    "@virtual-live-lab/eslint-config": "workspace:*",
+    "@virtual-live-lab/tsconfig": "workspace:*",
     "@vitest/coverage-istanbul": "2.1.5",
     "tsup": "8.3.5",
     "vitest": "2.1.5"

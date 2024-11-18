@@ -18,9 +18,9 @@
   "devDependencies": {
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.9",
-    "@virtual-live-lab/eslint-config": "workspace:^",
-    "@virtual-live-lab/prettier-config": "workspace:^",
-    "@virtual-live-lab/stylelint-config": "workspace:^",
+    "@virtual-live-lab/eslint-config": "workspace:*",
+    "@virtual-live-lab/prettier-config": "workspace:*",
+    "@virtual-live-lab/stylelint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:^",
     "@vitest/coverage-istanbul": "2.1.5",
     "eslint": "9.15.0",
