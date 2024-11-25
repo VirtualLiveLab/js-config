@@ -226,4 +226,4 @@ jobs:
           gh pr create --base ${{ github.ref }} --body-file CHANGES.md --title "update snapshot (github-actions)"
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
-          WARN_BECAUSE_REF_IS_TAG: ${{ contains(github.ref, 'refs/heads') }}
+          WARN_BECAUSE_REF_IS_TAG: ${{ contains(github.ref, 'refs/tags') }}
