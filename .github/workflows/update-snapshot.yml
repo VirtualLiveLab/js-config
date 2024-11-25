@@ -208,13 +208,22 @@ jobs:
 
       - name: Create Pull Request (Workflow Dispatch)
         if: github.event_name == 'workflow_dispatch'
+        # tag 上で実行した場合は warning を出して PR は作成しない
+        # 本当は filter-packages より前段階にチェック用の job を作ったほうが
+        # workflow_dispatch と issue_comment の差分吸収もできて良い
         run: |
           set -eu
+          if [ $WARN_BECAUSE_REF_IS_TAG == 'true' ]; then
+            echo "::warning::Cannot create PR to tag."
+            exit 0
+          fi
+
           if [ ! -f CHANGES.md ]; then
             echo "::warning::comment body not found."
             exit 0
           fi
 
-          gh pr create --base "main" --body-file CHANGES.md --title "update snapshot (github-actions)"
+          gh pr create --base ${{ github.ref }} --body-file CHANGES.md --title "update snapshot (github-actions)"
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          WARN_BECAUSE_REF_IS_TAG: ${{ contains(github.ref, 'refs/heads') }}
