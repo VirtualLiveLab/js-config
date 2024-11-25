@@ -215,6 +215,6 @@ jobs:
             exit 0
           fi
 
-          gh pr create --base "main" --body-file CHANGES.md --title "update snapshot (github-actions)"
+          gh pr create --base ${{ github.ref }} --body-file CHANGES.md --title "update snapshot (github-actions)"
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
