@@ -152,7 +152,7 @@ jobs:
           git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com'
 
           if [ ${{ github.event_name }} == 'workflow_dispatch' ]; then
-            git switch -c "bot/update-snapshot-$(TZ=UTC-9 date +'%Y%m')-${SHA:0:7}"
+            git switch -c "bot/update-snapshot-$(TZ=UTC-9 date +'%Y%m')-${{ github.run_id }}-${{ github.run_attempt }}"
           fi
 
       - name: Setup Node.js and pnpm
