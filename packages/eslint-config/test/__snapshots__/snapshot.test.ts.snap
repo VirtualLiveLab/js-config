@@ -2141,6 +2141,13 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
         "type": "natural",
       },
     ],
+    "perfectionist/sort-decorators": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-enums": [
       2,
       {
@@ -2149,6 +2156,13 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       },
     ],
     "perfectionist/sort-exports": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-heritage-clauses": [
       2,
       {
         "order": "asc",
@@ -2185,6 +2199,13 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "perfectionist/sort-maps": [
       2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-modules": [
+      0,
       {
         "order": "asc",
         "type": "natural",
@@ -3082,6 +3103,13 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
         "type": "natural",
       },
     ],
+    "perfectionist/sort-decorators": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-enums": [
       2,
       {
@@ -3090,6 +3118,13 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
       },
     ],
     "perfectionist/sort-exports": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-heritage-clauses": [
       2,
       {
         "order": "asc",
@@ -3126,6 +3161,13 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     ],
     "perfectionist/sort-maps": [
       2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-modules": [
+      0,
       {
         "order": "asc",
         "type": "natural",
@@ -5519,6 +5561,13 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
         "type": "natural",
       },
     ],
+    "perfectionist/sort-decorators": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-enums": [
       2,
       {
@@ -5527,6 +5576,13 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       },
     ],
     "perfectionist/sort-exports": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-heritage-clauses": [
       2,
       {
         "order": "asc",
@@ -5563,6 +5619,13 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     ],
     "perfectionist/sort-maps": [
       2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-modules": [
+      0,
       {
         "order": "asc",
         "type": "natural",
@@ -6686,6 +6749,13 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
         "type": "natural",
       },
     ],
+    "perfectionist/sort-decorators": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-enums": [
       2,
       {
@@ -6694,6 +6764,13 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
       },
     ],
     "perfectionist/sort-exports": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-heritage-clauses": [
       2,
       {
         "order": "asc",
@@ -6730,6 +6807,13 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
     ],
     "perfectionist/sort-maps": [
       2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-modules": [
+      0,
       {
         "order": "asc",
         "type": "natural",
