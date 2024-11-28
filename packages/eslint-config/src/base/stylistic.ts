@@ -9,6 +9,7 @@ const stylisticConfig = tseslint.config({
   files: [tsFiles, jsFiles],
   name: "@virtual-live-lab/eslint-config/stylistic",
   rules: {
+    "perfectionist/sort-modules": "off",
     "perfectionist/sort-object-types": [
       "error",
       {
