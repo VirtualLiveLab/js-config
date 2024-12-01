@@ -148,8 +148,8 @@ importers:
   packages/prettier-config:
     dependencies:
       prettier:
-        specifier: 3.3.3
-        version: 3.3.3
+        specifier: 3.4.1
+        version: 3.4.1
     devDependencies:
       '@types/node':
         specifier: 22.9.3
@@ -5905,7 +5905,7 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.10.3
-      prettier: 3.3.3
+      prettier: 3.4.1
       sass-formatter: 0.7.9
 
   prettier@2.8.8: {}
