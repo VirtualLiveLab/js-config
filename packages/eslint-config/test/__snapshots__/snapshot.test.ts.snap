@@ -1148,7 +1148,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "extraFileExtensions": {
         "0": ".astro",
       },
-      "parser": "typescript-eslint-parser-for-extra-files@8.15.0",
+      "parser": "typescript-eslint-parser-for-extra-files@8.16.0",
       "project": true,
       "projectService": false,
       "tsconfigRootDir": "/home/runner/work/js-config/js-config",
@@ -1161,7 +1161,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
   "plugins": [
     "@",
     "perfectionist:perfectionist",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.15.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.16.0",
     "@stylistic/ts",
     "astro:eslint-plugin-astro@1.3.1",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
@@ -1786,7 +1786,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "getter-return": [
       0,
-      {},
+      {
+        "allowImplicit": false,
+      },
     ],
     "implicit-arrow-linebreak": [
       0,
@@ -1908,7 +1910,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "no-empty-pattern": [
       2,
-      {},
+      {
+        "allowObjectPatternsAsParameters": false,
+      },
     ],
     "no-empty-static-block": [
       2,
@@ -2048,7 +2052,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "no-undef": [
       0,
-      {},
+      {
+        "typeof": false,
+      },
     ],
     "no-unexpected-multiline": [
       0,
@@ -2061,11 +2067,15 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "no-unsafe-negation": [
       0,
-      {},
+      {
+        "enforceForOrderingRelations": false,
+      },
     ],
     "no-unsafe-optional-chaining": [
       2,
-      {},
+      {
+        "disallowArithmeticOperators": false,
+      },
     ],
     "no-unused-expressions": [
       0,
@@ -2291,11 +2301,14 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       2,
       {
         "destructuring": "any",
+        "ignoreReadBeforeAssign": false,
       },
     ],
     "prefer-promise-reject-errors": [
       0,
-      {},
+      {
+        "allowEmptyReject": false,
+      },
     ],
     "prefer-rest-params": [
       2,
@@ -2778,7 +2791,9 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     ],
     "getter-return": [
       2,
-      {},
+      {
+        "allowImplicit": false,
+      },
     ],
     "implicit-arrow-linebreak": [
       0,
@@ -2891,7 +2906,9 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     ],
     "no-empty-pattern": [
       2,
-      {},
+      {
+        "allowObjectPatternsAsParameters": false,
+      },
     ],
     "no-empty-static-block": [
       2,
@@ -3022,7 +3039,9 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     ],
     "no-undef": [
       2,
-      {},
+      {
+        "typeof": false,
+      },
     ],
     "no-unexpected-multiline": [
       0,
@@ -3035,11 +3054,15 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     ],
     "no-unsafe-negation": [
       2,
-      {},
+      {
+        "enforceForOrderingRelations": false,
+      },
     ],
     "no-unsafe-optional-chaining": [
       2,
-      {},
+      {
+        "disallowArithmeticOperators": false,
+      },
     ],
     "no-unused-labels": [
       2,
@@ -4658,7 +4681,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "visualViewport": false,
       "window": false,
     },
-    "parser": "typescript-eslint/parser@8.15.0",
+    "parser": "typescript-eslint/parser@8.16.0",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true,
@@ -4682,7 +4705,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
   "plugins": [
     "@",
     "perfectionist:perfectionist",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.15.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.16.0",
     "@stylistic/ts",
     "react",
     "react-hooks",
@@ -5108,7 +5131,9 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     ],
     "getter-return": [
       0,
-      {},
+      {
+        "allowImplicit": false,
+      },
     ],
     "implicit-arrow-linebreak": [
       0,
@@ -5493,7 +5518,9 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     ],
     "no-undef": [
       0,
-      {},
+      {
+        "typeof": false,
+      },
     ],
     "no-unexpected-multiline": [
       0,
@@ -5503,7 +5530,9 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     ],
     "no-unsafe-negation": [
       0,
-      {},
+      {
+        "enforceForOrderingRelations": false,
+      },
     ],
     "no-unused-expressions": [
       0,
@@ -5711,11 +5740,14 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       2,
       {
         "destructuring": "any",
+        "ignoreReadBeforeAssign": false,
       },
     ],
     "prefer-promise-reject-errors": [
       0,
-      {},
+      {
+        "allowEmptyReject": false,
+      },
     ],
     "prefer-rest-params": [
       2,
@@ -6094,7 +6126,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   "language": "@/js",
   "languageOptions": {
     "ecmaVersion": 2025,
-    "parser": "typescript-eslint/parser@8.15.0",
+    "parser": "typescript-eslint/parser@8.16.0",
     "parserOptions": {
       "projectService": {
         "allowDefaultProject": {
@@ -6114,7 +6146,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   "plugins": [
     "@",
     "perfectionist:perfectionist",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.15.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.16.0",
     "@stylistic/ts",
   ],
   "processor": undefined,
@@ -6536,7 +6568,9 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
     ],
     "getter-return": [
       0,
-      {},
+      {
+        "allowImplicit": false,
+      },
     ],
     "implicit-arrow-linebreak": [
       0,
@@ -6681,7 +6715,9 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
     ],
     "no-undef": [
       0,
-      {},
+      {
+        "typeof": false,
+      },
     ],
     "no-unexpected-multiline": [
       0,
@@ -6691,7 +6727,9 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
     ],
     "no-unsafe-negation": [
       0,
-      {},
+      {
+        "enforceForOrderingRelations": false,
+      },
     ],
     "no-unused-expressions": [
       0,
@@ -6899,11 +6937,14 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
       2,
       {
         "destructuring": "any",
+        "ignoreReadBeforeAssign": false,
       },
     ],
     "prefer-promise-reject-errors": [
       0,
-      {},
+      {
+        "allowEmptyReject": false,
+      },
     ],
     "prefer-rest-params": [
       2,
