@@ -37,10 +37,10 @@
     "@types/node": "22.10.1",
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
-    "@vitest/coverage-istanbul": "2.1.6",
+    "@vitest/coverage-istanbul": "2.1.8",
     "prettier-plugin-astro": "0.14.1",
     "tsup": "8.3.5",
-    "vitest": "2.1.6"
+    "vitest": "2.1.8"
   },
   "license": "MIT",
   "publishConfig": {
