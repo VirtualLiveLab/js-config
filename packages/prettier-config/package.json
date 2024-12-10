@@ -22,7 +22,7 @@
     "build": "tsup-node"
   },
   "peerDependencies": {
-    "prettier": "^3.4.1",
+    "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1"
   },
   "peerDependenciesMeta": {
@@ -31,7 +31,7 @@
     }
   },
   "dependencies": {
-    "prettier": "3.4.1"
+    "prettier": "3.4.2"
   },
   "devDependencies": {
     "@types/node": "22.10.1",
