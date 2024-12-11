@@ -7,7 +7,7 @@
   "automerge": false,
   "rangeStrategy": "bump",
   "branchConcurrentLimit": 0,
-  "gitIgnoredAuthors": ["185786754+actions-miku[bot]@users.noreply.github.com"],
+  "gitIgnoredAuthors": ["185786754+robo-miku[bot]@users.noreply.github.com"],
   "enabledManagers": ["github-actions", "npm"],
   "labels": ["renovate"],
   "packageRules": [
