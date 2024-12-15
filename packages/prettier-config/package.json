@@ -34,7 +34,7 @@
     "prettier": "3.4.2"
   },
   "devDependencies": {
-    "@types/node": "22.10.1",
+    "@types/node": "22.10.2",
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "@vitest/coverage-istanbul": "2.1.8",
