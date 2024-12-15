@@ -69,26 +69,29 @@ jobs:
       - name: Test ESLint Config
         id: eslint
         if: ${{ needs.paths-filter.outputs.eslint == 'true' }}
-        continue-on-error: true
         run: pnpm run build:eslint && pnpm run test --project eslint-config
 
       - name: Test Prettier Config
         id: prettier
         if: ${{ needs.paths-filter.outputs.prettier == 'true' }}
-        continue-on-error: true
         run: pnpm run build:prettier && pnpm run test --project prettier-config
 
       - name: Test Stylelint Config
         id: stylelint
         if: ${{ needs.paths-filter.outputs.stylelint == 'true' }}
-        continue-on-error: true
         run: pnpm run build:stylelint && pnpm run test --project stylelint-config
 
-      - name: Comment if any Error
-        if: steps.eslint.outcome == 'failure' || steps.prettier.outcome == 'failure' || steps.stylelint.outcome == 'failure'
+      - name: Comment if success
         run: |
-          set -eu
+          # Create a comment body
+          cat << EOF > COMMENT.md
+          ## ✅ Snapshot test success
+          See the details: [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          EOF
 
+      - name: Comment if any Error
+        if: ${{ always() && (steps.eslint.outcome == 'failure' || steps.prettier.outcome == 'failure' || steps.stylelint.outcome == 'failure') }}
+        run: |
           # Create a comment body
           cat << EOF > COMMENT.md
           ## 🚨 Snapshot test failed
@@ -114,25 +117,14 @@ jobs:
           ### ⏭️ Next Steps
           If snapshot changes are...
 
-          **expected**: update the snapshots by \`/update-snapshot\`
+          **expected**: update the snapshots by adding \`update-snapshot\` label
 
           **unexpected**: check diff and fix rules
           EOF
 
-      - name: Comment if success
-        if: steps.eslint.outcome != 'failure' && steps.prettier.outcome != 'failure' && steps.stylelint.outcome != 'failure'
-        run: |
-          set -eu
-
-          # Create a comment body
-          cat << EOF > COMMENT.md
-          ## ✅ Snapshot test success
-          See the details: [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
-          EOF
-
       - name: Comment to PR
+        if: always()
         run: |
-          # Edit the last comment if it exists
           if [ ! -f COMMENT.md ]; then
             echo "::warning::comment body not found."
             exit 0
@@ -142,9 +134,3 @@ jobs:
             || gh pr comment ${{ github.event.number }} --body-file COMMENT.md
         env:
           GH_TOKEN: ${{ github.token }}
-
-      - name: Mark as failure if any Error
-        if: steps.eslint.outcome == 'failure' || steps.prettier.outcome == 'failure' || steps.stylelint.outcome == 'failure'
-        run: |
-          echo "::error::Snapshot test failed."
-          exit 1
