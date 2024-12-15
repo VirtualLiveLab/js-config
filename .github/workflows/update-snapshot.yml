@@ -22,6 +22,10 @@ on:
     types: [labeled]
     branches:
       - "main"
+    paths:
+      - "packages/**"
+      - "package.json"
+      - ".github/workflows/update-snapshot.yml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
