@@ -46,7 +46,7 @@ jobs:
       stylelint: ${{ steps.target-packages.outputs.stylelint }}
 
     steps:
-      - name: Exit if triggered from invalid PR
+      - name: Fail if triggered from invalid PR (Pull Request)
         if: github.event_name == 'pull_request'
         run: |
           if [ "${{ github.event.pull_request.state }}" != 'open' ]; then
@@ -56,6 +56,14 @@ jobs:
 
           if [ "${{ github.event.pull_request.draft }}" == 'true' ]; then
             echo "::error::Cannot update snapshot for draft PR."
+            exit 1
+          fi
+
+      - name: Fail if triggered from invalid Tag (Workflow Dispatch)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [ ${{ contains(github.ref, 'refs/tags') }} == 'true' ]; then
+            echo "::error::Cannot update snapshot for tag."
             exit 1
           fi
 
@@ -188,15 +196,7 @@ jobs:
 
       - name: Create Pull Request (Workflow Dispatch)
         if: github.event_name == 'workflow_dispatch'
-        # tag 上で実行した場合は warning を出して PR は作成しない
-        # env で定義される WARN_BECAUSE_REF_IS_TAG を参照するので set -u して未定義の場合はエラーにする
         run: |
-          set -u
-          if [ $WARN_BECAUSE_REF_IS_TAG == 'true' ]; then
-            echo "::warning::Cannot create PR to tag."
-            exit 0
-          fi
-
           if [ ! -f CHANGES.md ]; then
             echo "::warning::comment body not found."
             exit 0
@@ -205,4 +205,3 @@ jobs:
           gh pr create --base ${{ github.ref }} --body-file CHANGES.md --title "update snapshot (github-actions)"
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
-          WARN_BECAUSE_REF_IS_TAG: ${{ contains(github.ref, 'refs/tags') }}
