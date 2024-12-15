@@ -12,6 +12,14 @@ on:
       - "package.json"
       - ".github/workflows/pkg-pr-new.yml"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   paths-filter:
     name: Filter Changed Packages (Publish Preview Package)
