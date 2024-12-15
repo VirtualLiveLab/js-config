@@ -14,7 +14,6 @@
     "module": "Node16",
     "moduleResolution": "Node16",
     "resolveJsonModule": true,
-    "noUncheckedSideEffectImports": true,
     // interop
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
