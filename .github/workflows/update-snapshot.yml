@@ -142,9 +142,7 @@ jobs:
       - name: Create Branch (Workflow Dispatch)
         if: github.event_name == 'workflow_dispatch'
         run: |
-          if [ ${{ github.event_name }} == 'workflow_dispatch' ]; then
-            git switch -c "bot/update-snapshot-$(TZ=UTC-9 date +'%Y%m%d')-${{ github.run_id }}-${{ github.run_attempt }}"
-          fi
+          git switch -c "bot/update-snapshot-$(TZ=UTC-9 date +'%Y%m%d')-${{ github.run_id }}-${{ github.run_attempt }}"
 
       - name: Setup Node.js and pnpm
         uses: ./.github/common/setup-node-pnpm
