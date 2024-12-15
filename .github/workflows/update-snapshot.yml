@@ -42,7 +42,6 @@ jobs:
       stylelint: ${{ steps.target-packages.outputs.stylelint }}
 
     steps:
-      # PR の
       - name: Exit if triggered from invalid PR
         if: github.event_name == 'pull_request'
         run: |
@@ -152,14 +151,12 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          set -eu
           git add .
           git commit -m "chore: update snapshot (github-actions)"
           git push origin HEAD
 
       - name: Create change summary markdown
         run: |
-          set -eu
           echo "## 🚚 Updated snapshots" >> CHANGES.md
 
           if [ ${{ needs.check-target-packages.outputs.eslint }} == 'true' ]; then
@@ -175,7 +172,6 @@ jobs:
       - name: Comment to PR (Pull Request)
         if: github.event_name == 'pull_request'
         run: |
-          set -eu
           if [ ! -f CHANGES.md ]; then
             echo "::warning::comment body not found."
             exit 0
@@ -189,8 +185,9 @@ jobs:
       - name: Create Pull Request (Workflow Dispatch)
         if: github.event_name == 'workflow_dispatch'
         # tag 上で実行した場合は warning を出して PR は作成しない
+        # env で定義される WARN_BECAUSE_REF_IS_TAG を参照するので set -u して未定義の場合はエラーにする
         run: |
-          set -eu
+          set -u
           if [ $WARN_BECAUSE_REF_IS_TAG == 'true' ]; then
             echo "::warning::Cannot create PR to tag."
             exit 0
