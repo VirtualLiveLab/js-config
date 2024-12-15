@@ -65,6 +65,12 @@
       "matchDatasources": ["npm"]
     },
     {
+      "groupName": "peerDependencies",
+      "matchDepTypes": ["peerDependencies"],
+      "matchDatasources": ["npm"],
+      "enabled": false
+    },
+    {
       "groupName": "root dependencies",
       "matchFileNames": ["package.json"]
     },
