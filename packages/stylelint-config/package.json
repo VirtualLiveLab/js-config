@@ -31,8 +31,8 @@
   },
   "dependencies": {
     "@double-great/stylelint-a11y": "3.0.2",
-    "postcss-html": "1.7.0",
-    "stylelint": "16.12.0",
+    "postcss-html": "1.8.0",
+    "stylelint": "16.13.1",
     "stylelint-config-html": "1.1.0",
     "stylelint-config-recess-order": "5.1.1",
     "stylelint-config-sass-guidelines": "12.1.0",
