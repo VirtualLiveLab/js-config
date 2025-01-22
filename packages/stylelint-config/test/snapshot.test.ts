@@ -1,13 +1,13 @@
 import stylelint from "stylelint";
 import { describe, expect, it } from "vitest";
 
-import css from "../src";
+import createConfig from "../src";
 
 describe("Test stylelint preset with snapshot", () => {
   describe("normal preset", () => {
     it("should match snapshot", async () => {
       const config = await stylelint.resolveConfig("index.css", {
-        config: css,
+        config: createConfig(),
       });
 
       expect(config).toMatchSnapshot();
@@ -17,7 +17,7 @@ describe("Test stylelint preset with snapshot", () => {
   describe("scss preset", () => {
     it("should match snapshot with css", async () => {
       const config = await stylelint.resolveConfig("index.css", {
-        config: css,
+        config: createConfig({ sass: true }),
       });
 
       expect(config).toMatchSnapshot();
@@ -25,7 +25,7 @@ describe("Test stylelint preset with snapshot", () => {
 
     it("should match snapshot with scss", async () => {
       const config = await stylelint.resolveConfig("index.scss", {
-        config: css,
+        config: createConfig({ sass: true }),
       });
 
       expect(config).toMatchSnapshot();
@@ -35,7 +35,7 @@ describe("Test stylelint preset with snapshot", () => {
   describe("astro preset", () => {
     it("should match snapshot with css", async () => {
       const config = await stylelint.resolveConfig("index.css", {
-        config: css,
+        config: createConfig({ astro: true }),
       });
 
       expect(config).toMatchSnapshot();
@@ -43,15 +43,7 @@ describe("Test stylelint preset with snapshot", () => {
 
     it("should match snapshot with scss", async () => {
       const config = await stylelint.resolveConfig("index.scss", {
-        config: css,
-      });
-
-      expect(config).toMatchSnapshot();
-    });
-
-    it("should match snapshot with html", async () => {
-      const config = await stylelint.resolveConfig("index.html", {
-        config: css,
+        config: createConfig({ astro: true, sass: true }),
       });
 
       expect(config).toMatchSnapshot();
@@ -59,7 +51,7 @@ describe("Test stylelint preset with snapshot", () => {
 
     it("should match snapshot with astro", async () => {
       const config = await stylelint.resolveConfig("index.astro", {
-        config: css,
+        config: createConfig({ astro: true }),
       });
 
       expect(config).toMatchSnapshot();

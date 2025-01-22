@@ -1,0 +1,158 @@
+import type { Config } from "stylelint";
+
+import { astroFiles, sassFiles } from "./files";
+import { mergeConfigs } from "./util";
+
+type PresetOptions = {
+  /**
+   * Enable the a11y rules.
+   *
+   * @default true
+   */
+  a11y?: boolean;
+  /**
+   * Enable astro rules.
+   *
+   * @default false
+   */
+  astro?: boolean;
+  /**
+   * Enable sass / scss rules.
+   *
+   * @default false
+   */
+  sass?: boolean;
+};
+
+/**
+ * Create an opinionated stylelint config.
+ *
+ * @param options
+ * The options for the stylelint config.
+ * @param userConfigs
+ * Additional stylelint configs to merge.
+ * @returns {Config}
+ * The merged stylelint config. you can default export this from your config file.
+ */
+export const createConfig = (
+  options: Partial<PresetOptions> = {},
+  ...userConfigs: Config[]
+): Config => {
+  const { a11y = true, astro = false, sass = false } = options;
+
+  const configs: Config[] = [];
+
+  configs.push({
+    // Base config
+    extends: ["stylelint-config-standard", "stylelint-config-recess-order"],
+    plugins: [
+      "stylelint-declaration-block-no-ignored-properties",
+      "stylelint-value-no-unknown-custom-properties",
+    ],
+    rules: {
+      "color-named": "never",
+      "csstools/value-no-unknown-custom-properties": true,
+      "plugin/declaration-block-no-ignored-properties": true,
+    },
+  });
+
+  if (a11y) {
+    configs.push({
+      plugins: ["@double-great/stylelint-a11y"],
+      rules: {
+        "a11y/font-size-is-readable": true,
+        "a11y/media-prefers-reduced-motion": true,
+        "a11y/no-obsolete-attribute": true,
+        "a11y/no-obsolete-element": true,
+        "a11y/no-outline-none": true,
+        "a11y/selector-pseudo-class-focus": true,
+      },
+    });
+  }
+
+  if (sass) {
+    configs.push({
+      overrides: [
+        {
+          extends: [
+            "stylelint-config-standard-scss",
+            "stylelint-config-sass-guidelines",
+          ],
+          files: sassFiles,
+          name: "@virtual-live-lab/stylelint-config/sass",
+          rules: {
+            // see: https://github.com/VirtualLiveLab/js-config/issues/178
+            "@stylistic/block-opening-brace-space-before": null,
+            "@stylistic/color-hex-case": null,
+            "@stylistic/declaration-bang-space-after": null,
+            "@stylistic/declaration-bang-space-before": null,
+            "@stylistic/declaration-block-semicolon-newline-after": null,
+            "@stylistic/declaration-block-semicolon-space-before": null,
+            "@stylistic/declaration-block-trailing-semicolon": null,
+            "@stylistic/declaration-colon-space-after": null,
+            "@stylistic/declaration-colon-space-before": null,
+            "@stylistic/function-comma-space-after": null,
+            "@stylistic/function-parentheses-space-inside": null,
+            "@stylistic/indentation": null,
+            "@stylistic/media-feature-parentheses-space-inside": null,
+            "@stylistic/no-missing-end-of-source-newline": null,
+            "@stylistic/number-leading-zero": null,
+            "@stylistic/number-no-trailing-zeros": null,
+            "@stylistic/selector-list-comma-newline-after": null,
+            "@stylistic/string-quotes": null,
+          },
+        },
+      ],
+    });
+  }
+
+  if (astro) {
+    configs.push({
+      overrides: [
+        {
+          extends: ["stylelint-config-html/astro"],
+          files: astroFiles,
+          name: "@virtual-live-lab/stylelint-config/astro",
+        },
+      ],
+    });
+  }
+
+  if (astro && sass) {
+    configs.push({
+      overrides: [
+        {
+          extends: [
+            "stylelint-config-standard-scss",
+            "stylelint-config-sass-guidelines",
+          ],
+          files: astroFiles,
+          name: "@virtual-live-lab/stylelint-config/astro-sass",
+          rules: {
+            // see: https://github.com/VirtualLiveLab/js-config/issues/178
+            "@stylistic/block-opening-brace-space-before": null,
+            "@stylistic/color-hex-case": null,
+            "@stylistic/declaration-bang-space-after": null,
+            "@stylistic/declaration-bang-space-before": null,
+            "@stylistic/declaration-block-semicolon-newline-after": null,
+            "@stylistic/declaration-block-semicolon-space-before": null,
+            "@stylistic/declaration-block-trailing-semicolon": null,
+            "@stylistic/declaration-colon-space-after": null,
+            "@stylistic/declaration-colon-space-before": null,
+            "@stylistic/function-comma-space-after": null,
+            "@stylistic/function-parentheses-space-inside": null,
+            "@stylistic/indentation": null,
+            "@stylistic/media-feature-parentheses-space-inside": null,
+            "@stylistic/no-missing-end-of-source-newline": null,
+            "@stylistic/number-leading-zero": null,
+            "@stylistic/number-no-trailing-zeros": null,
+            "@stylistic/selector-list-comma-newline-after": null,
+            "@stylistic/string-quotes": null,
+          },
+        },
+      ],
+    });
+  }
+
+  return mergeConfigs(...configs, ...userConfigs);
+};
