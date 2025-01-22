@@ -25,10 +25,12 @@ npm install stylelint \
 
 ```js
 // stylelint.config.mjs
-export { default } from "@virtual-live-lab/stylelint-config";
+import createConfig from "@virtual-live-lab/stylelint-config";
+
+export default createConfig();
 ```
 
-### Use for scss
+### Use for sass / scss
 
 ```bash
 npm install stylelint \
@@ -46,7 +48,9 @@ npm install stylelint \
 
 ```js
 // stylelint.config.mjs
-export { default } from "@virtual-live-lab/stylelint-config/scss";
+import createConfig from "@virtual-live-lab/stylelint-config";
+
+export default createConfig({ sass: true });
 ```
 
 ### Use for Astro
@@ -75,7 +79,61 @@ npm install stylelint \
 
 ```js
 // stylelint.config.mjs
-export { default } from "@virtual-live-lab/stylelint-config/astro";
+import createConfig from "@virtual-live-lab/stylelint-config";
+
+export default createConfig({
+  astro: true,
+  // enable sass if you use sass / scss
+  sass: true,
+});
+```
+
+### a11y rules
+a11y rules are enabled by default. If you **do not** want to use a11y rules, you can disable it.
+
+```js
+// stylelint.config.mjs
+import createConfig from "@virtual-live-lab/stylelint-config";
+
+export default createConfig({ a11y: false });
+```
+
+### tailwindcss rules
+If you use tailwindcss, you can enable tailwindcss rules.
+
+```js
+// stylelint.config.mjs
+import createConfig from "@virtual-live-lab/stylelint-config";
+
+export default createConfig({ tailwindcss: true });
+```
+
+## Customization
+
+You can simply pass additional configs to `createConfig`.
+
+Configs will be merged deeply.
+
+```js
+// stylelint.config.mjs
+import createConfig from "@virtual-live-lab/stylelint-config";
+
+export default createConfig({
+  tailwindcss: true,
+  sass: true,
+  astro: true,
+},
+{
+  // for example
+  overrides: [
+    {
+      files: ["*.css", "**/*.css"],
+      rules: {
+        "at-rule-no-unknown": null,
+      },
+    },
+  ],
+});
 ```
 
 ## License
