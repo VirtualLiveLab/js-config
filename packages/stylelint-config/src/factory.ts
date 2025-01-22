@@ -1,5 +1,6 @@
 import type { Config } from "stylelint";
 
+import { tailwindConfig } from "./config/tailwind";
 import { astroFiles, sassFiles } from "./files";
 import { mergeConfigs } from "./util";
 
@@ -22,6 +23,12 @@ type PresetOptions = {
    * @default false
    */
   sass?: boolean;
+  /**
+   * Enable tailwindcss rules.
+   *
+   * @default false
+   */
+  tailwindcss?: boolean;
 };
 
 /**
@@ -38,7 +45,12 @@ export const createConfig = (
   options: Partial<PresetOptions> = {},
   ...userConfigs: Config[]
 ): Config => {
-  const { a11y = true, astro = false, sass = false } = options;
+  const {
+    a11y = true,
+    astro = false,
+    sass = false,
+    tailwindcss = false,
+  } = options;
 
   const configs: Config[] = [];
 
@@ -152,6 +164,10 @@ export const createConfig = (
         },
       ],
     });
+  }
+
+  if (tailwindcss) {
+    configs.push(tailwindConfig({ astro, sass }));
   }
 
   return mergeConfigs(...configs, ...userConfigs);
