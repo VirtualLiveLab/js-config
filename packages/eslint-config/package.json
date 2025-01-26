@@ -52,6 +52,7 @@
     "eslint-plugin-react-refresh": "0.4.18",
     "eslint-plugin-tailwindcss": "3.17.5",
     "globals": "15.14.0",
+    "local-pkg": "1.0.0",
     "pkg-dir": "8.0.0",
     "typescript-eslint": "8.20.0",
     "typescript-eslint-parser-for-extra-files": "0.7.0"
