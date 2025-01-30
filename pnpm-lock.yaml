@@ -63,8 +63,8 @@ importers:
         specifier: 9.18.0
         version: 9.18.0
       '@stylistic/eslint-plugin-ts':
-        specifier: 2.13.0
-        version: 2.13.0(eslint@9.18.0(jiti@1.21.0))(typescript@5.7.3)
+        specifier: 3.0.1
+        version: 3.0.1(eslint@9.18.0(jiti@1.21.0))(typescript@5.7.3)
       '@typescript-eslint/utils':
         specifier: 8.20.0
         version: 8.20.0(eslint@9.18.0(jiti@1.21.0))(typescript@5.7.3)
@@ -78,8 +78,8 @@ importers:
         specifier: 9.18.0
         version: 9.18.0(jiti@1.21.0)
       eslint-config-flat-gitignore:
-        specifier: 1.0.0
-        version: 1.0.0(eslint@9.18.0(jiti@1.21.0))
+        specifier: 2.0.0
+        version: 2.0.0(eslint@9.18.0(jiti@1.21.0))
       eslint-config-prettier:
         specifier: 10.0.1
         version: 10.0.1(eslint@9.18.0(jiti@1.21.0))
@@ -969,8 +969,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@stylistic/eslint-plugin-ts@2.13.0':
-    resolution: {integrity: sha512-nooe1oTwz60T4wQhZ+5u0/GAu3ygkKF9vPPZeRn/meG71ntQ0EZXVOKEonluAYl/+CV2T+nN0dknHa4evAW13Q==}
+  '@stylistic/eslint-plugin-ts@3.0.1':
+    resolution: {integrity: sha512-fBPKvYhp3KPlww9lZVe2htMwQZ/uh1v1Een6G2jnRpHWoQZfZ/qIhhWge7ovBtnK0z9QBa/DhBaBqcm7ZcLYKw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -1623,8 +1623,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-flat-gitignore@1.0.0:
-    resolution: {integrity: sha512-EWpSLrAP80IdcYK5sIhq/qAY0pmUdBnbzqzpE3QAn6H6wLBN26cMRoMNU9Di8upTzUSL6TXeYRxWhTYuz8+UQA==}
+  eslint-config-flat-gitignore@2.0.0:
+    resolution: {integrity: sha512-9iH+DZO94uxsw5iFjzqa9GfahA5oK3nA1GoJK/6u8evAtooYJMwuSWiLcGDfrdLoqdQ5/kqFJKKuMY/+SAasvg==}
     peerDependencies:
       eslint: ^9.5.0
 
@@ -4178,7 +4178,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.24.0':
     optional: true
 
-  '@stylistic/eslint-plugin-ts@2.13.0(eslint@9.18.0(jiti@1.21.0))(typescript@5.7.3)':
+  '@stylistic/eslint-plugin-ts@3.0.1(eslint@9.18.0(jiti@1.21.0))(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/utils': 8.20.0(eslint@9.18.0(jiti@1.21.0))(typescript@5.7.3)
       eslint: 9.18.0(jiti@1.21.0)
@@ -5075,11 +5075,10 @@ snapshots:
       eslint: 9.18.0(jiti@1.21.0)
       semver: 7.6.0
 
-  eslint-config-flat-gitignore@1.0.0(eslint@9.18.0(jiti@1.21.0)):
+  eslint-config-flat-gitignore@2.0.0(eslint@9.18.0(jiti@1.21.0)):
     dependencies:
       '@eslint/compat': 1.2.5(eslint@9.18.0(jiti@1.21.0))
       eslint: 9.18.0(jiti@1.21.0)
-      find-up-simple: 1.0.0
 
   eslint-config-prettier@10.0.1(eslint@9.18.0(jiti@1.21.0)):
     dependencies:
