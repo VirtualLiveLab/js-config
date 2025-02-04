@@ -40,7 +40,7 @@
     "@vitest/coverage-istanbul": "3.0.4",
     "prettier-plugin-astro": "0.14.1",
     "tsup": "8.3.6",
-    "vitest": "3.0.4"
+    "vitest": "3.0.5"
   },
   "license": "MIT",
   "publishConfig": {
