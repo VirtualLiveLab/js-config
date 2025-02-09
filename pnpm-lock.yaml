@@ -176,8 +176,8 @@ importers:
   packages/stylelint-config:
     dependencies:
       '@double-great/stylelint-a11y':
-        specifier: 3.0.3
-        version: 3.0.3(stylelint@16.14.1(typescript@5.7.3))
+        specifier: 3.0.4
+        version: 3.0.4(stylelint@16.14.1(typescript@5.7.3))
       es-toolkit:
         specifier: 1.31.0
         version: 1.31.0
@@ -420,8 +420,8 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.0.0
 
-  '@double-great/stylelint-a11y@3.0.3':
-    resolution: {integrity: sha512-4LJ5fVK+Vb79ZyYxerYXra07nqB2oRKnhZaTSK9nGs4IrgFE9Gg9U0AbfweHdwVuhk9cJe0dJVZtssgGLMlfvg==}
+  '@double-great/stylelint-a11y@3.0.4':
+    resolution: {integrity: sha512-a+cFkT7XRLSh90kv3PPl1sqP2u5I0kvNMTDclEsMRPLexlI9mqdPwN2IzF+79TUpRG3+scsopMT108E772fDMg==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: '>=16.0.0'
@@ -3772,9 +3772,9 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.0.0
 
-  '@double-great/stylelint-a11y@3.0.3(stylelint@16.14.1(typescript@5.7.3))':
+  '@double-great/stylelint-a11y@3.0.4(stylelint@16.14.1(typescript@5.7.3))':
     dependencies:
-      postcss: 8.5.0
+      postcss: 8.5.1
       stylelint: 16.14.1(typescript@5.7.3)
 
   '@dual-bundle/import-meta-resolve@4.1.0': {}
