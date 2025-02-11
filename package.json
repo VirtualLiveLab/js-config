@@ -33,5 +33,10 @@
   },
   "engines": {
     "node": ">=20 <23"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
