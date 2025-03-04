@@ -34,13 +34,13 @@
     "prettier": "3.4.2"
   },
   "devDependencies": {
-    "@types/node": "22.12.0",
+    "@types/node": "22.13.9",
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
-    "@vitest/coverage-istanbul": "3.0.4",
+    "@vitest/coverage-istanbul": "3.0.7",
     "prettier-plugin-astro": "0.14.1",
-    "tsup": "8.3.6",
-    "vitest": "3.0.5"
+    "tsup": "8.4.0",
+    "vitest": "3.0.7"
   },
   "license": "MIT",
   "publishConfig": {

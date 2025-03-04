@@ -45,9 +45,9 @@
   "devDependencies": {
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
-    "@vitest/coverage-istanbul": "3.0.4",
-    "tsup": "8.3.6",
-    "vitest": "3.0.5"
+    "@vitest/coverage-istanbul": "3.0.7",
+    "tsup": "8.4.0",
+    "vitest": "3.0.7"
   },
   "license": "MIT",
   "publishConfig": {
