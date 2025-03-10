@@ -15,7 +15,6 @@ const stylisticConfig = tseslint.config({
       {
         ignoreCase: true,
         order: "asc",
-        partitionByComment: true,
         partitionByNewLine: true,
         type: "natural",
       },
@@ -25,7 +24,6 @@ const stylisticConfig = tseslint.config({
       {
         ignoreCase: true,
         order: "asc",
-        partitionByComment: true,
         partitionByNewLine: true,
         type: "natural",
       },

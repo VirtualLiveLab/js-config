@@ -2781,7 +2781,6 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       {
         "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -2791,7 +2790,6 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       {
         "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -4296,7 +4294,6 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
       {
         "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -4306,7 +4303,6 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
       {
         "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -7301,7 +7297,6 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       {
         "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -7311,7 +7306,6 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       {
         "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -9035,7 +9029,6 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
       {
         "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
@@ -9045,7 +9038,6 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
       {
         "ignoreCase": true,
         "order": "asc",
-        "partitionByComment": true,
         "partitionByNewLine": true,
         "type": "natural",
       },
