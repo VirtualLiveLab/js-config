@@ -1,4 +1,4 @@
-import prettierConfig from "eslint-config-prettier";
+import prettierConfig from "eslint-config-prettier/flat";
 import perfectionistPlugin from "eslint-plugin-perfectionist";
 import tseslint from "typescript-eslint";
 
