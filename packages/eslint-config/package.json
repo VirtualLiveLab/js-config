@@ -58,9 +58,6 @@
   },
   "devDependencies": {
     "@types/eslint": "9.6.1",
-    "@types/eslint-config-prettier": "6.11.3",
-    "@types/eslint__eslintrc": "2.1.2",
-    "@types/eslint__js": "8.42.3",
     "@types/node": "22.13.10",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "@vitest/coverage-istanbul": "3.0.8",
