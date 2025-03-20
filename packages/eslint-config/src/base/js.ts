@@ -4,11 +4,11 @@ import js from "@eslint/js";
 
 import { jsFiles } from "../utils/files";
 
-const jsConfig = [
+const jsConfig: FlatConfig.ConfigArray = [
   {
     files: [jsFiles],
     ...js.configs.recommended,
   },
-] satisfies FlatConfig.ConfigArray;
+];
 
 export { jsConfig };
