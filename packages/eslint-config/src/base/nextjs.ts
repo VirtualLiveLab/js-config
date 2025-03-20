@@ -6,7 +6,7 @@ import { compat } from "../lib/compat";
 import { jsFiles, tsFiles } from "../utils/files";
 import { reactConfig } from "./react";
 
-const nextJsConfig = [
+const nextJsConfig: FlatConfig.ConfigArray = [
   ...reactConfig,
   {
     files: [jsFiles, tsFiles],
@@ -20,6 +20,6 @@ const nextJsConfig = [
      */
     ...fixupConfigRules(compat.extends("next/core-web-vitals")),
   },
-] satisfies FlatConfig.ConfigArray;
+];
 
 export { nextJsConfig };
