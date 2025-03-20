@@ -66,8 +66,8 @@ importers:
         specifier: 9.22.0
         version: 9.22.0
       '@stylistic/eslint-plugin-ts':
-        specifier: 3.1.0
-        version: 3.1.0(eslint@9.22.0(jiti@1.21.0))(typescript@5.8.2)
+        specifier: 4.2.0
+        version: 4.2.0(eslint@9.22.0(jiti@1.21.0))(typescript@5.8.2)
       '@typescript-eslint/utils':
         specifier: 8.26.0
         version: 8.26.0(eslint@9.22.0(jiti@1.21.0))(typescript@5.8.2)
@@ -108,8 +108,8 @@ importers:
         specifier: 3.18.0
         version: 3.18.0(tailwindcss@3.4.3)
       globals:
-        specifier: 15.15.0
-        version: 15.15.0
+        specifier: 16.0.0
+        version: 16.0.0
       pkg-dir:
         specifier: 8.0.0
         version: 8.0.0
@@ -1003,11 +1003,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@stylistic/eslint-plugin-ts@3.1.0':
-    resolution: {integrity: sha512-ExsbaLmPTt3Y9bWN64nw+hpsnLAScLH25ncPxrV16FG2Lvg5wn6aRfMqldUGpu+YdqVmFFU1zehgFh6RIHT6YA==}
+  '@stylistic/eslint-plugin-ts@4.2.0':
+    resolution: {integrity: sha512-j2o2GvOx9v66x8hmp/HJ+0T+nOppiO5ycGsCkifh7JPGgjxEhpkGmIGx3RWsoxpWbad3VCX8e8/T8n3+7ze1Zg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
-      eslint: '>=8.40.0'
+      eslint: '>=9.0.0'
 
   '@stylistic/stylelint-plugin@3.1.0':
     resolution: {integrity: sha512-NU2XR6i1x163KdyDj3zqblA13890fBzHNZYqZ13aor/sB3Yq8kU/0NKCudv5pfl9Kb/UAteo/D7vKMHtaror/A==}
@@ -1929,6 +1929,10 @@ packages:
 
   globals@15.15.0:
     resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
+    engines: {node: '>=18'}
+
+  globals@16.0.0:
+    resolution: {integrity: sha512-iInW14XItCXET01CQFqudPOWP2jYMl7T+QRQT+UNcR/iQncN/F0UNpgd76iFkBPgNQb4+X3LV9tLJYzwh+Gl3A==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -4243,7 +4247,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.34.9':
     optional: true
 
-  '@stylistic/eslint-plugin-ts@3.1.0(eslint@9.22.0(jiti@1.21.0))(typescript@5.8.2)':
+  '@stylistic/eslint-plugin-ts@4.2.0(eslint@9.22.0(jiti@1.21.0))(typescript@5.8.2)':
     dependencies:
       '@typescript-eslint/utils': 8.26.0(eslint@9.22.0(jiti@1.21.0))(typescript@5.8.2)
       eslint: 9.22.0(jiti@1.21.0)
@@ -5484,6 +5488,8 @@ snapshots:
   globals@14.0.0: {}
 
   globals@15.15.0: {}
+
+  globals@16.0.0: {}
 
   globalthis@1.0.4:
     dependencies:
