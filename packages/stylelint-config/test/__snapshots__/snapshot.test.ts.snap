@@ -24,10 +24,10 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "plugin/declaration-block-no-ignored-properties": [Function],
   },
   "plugins": [
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
   ],
   "rules": {
     "a11y/font-size-is-readable": [
@@ -945,10 +945,10 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "plugin/declaration-block-no-ignored-properties": [Function],
   },
   "plugins": [
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
   ],
   "rules": {
     "a11y/font-size-is-readable": [
@@ -2018,13 +2018,13 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "scss/selector-no-union-class-name": [Function],
   },
   "plugins": [
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.10.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-scss/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.2.1_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-scss/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@stylistic+stylelint-plugin@3.1.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/@stylistic/stylelint-plugin/lib/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.10.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-scss/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.2.1_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-scss/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@stylistic+stylelint-plugin@3.1.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/@stylistic/stylelint-plugin/lib/index.js",
   ],
   "rules": {
     "@stylistic/block-opening-brace-space-before": null,
@@ -3128,10 +3128,10 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
     "plugin/declaration-block-no-ignored-properties": [Function],
   },
   "plugins": [
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
   ],
   "rules": {
     "a11y/font-size-is-readable": [
@@ -4049,10 +4049,10 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "plugin/declaration-block-no-ignored-properties": [Function],
   },
   "plugins": [
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
   ],
   "rules": {
     "a11y/font-size-is-readable": [
@@ -5122,13 +5122,13 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "scss/selector-no-union-class-name": [Function],
   },
   "plugins": [
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.10.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-scss/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.2.1_stylelint@16.15.0_typescript@5.8.2_/node_modules/stylelint-scss/src/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@stylistic+stylelint-plugin@3.1.0_stylelint@16.15.0_typescript@5.8.2_/node_modules/@stylistic/stylelint-plugin/lib/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/@double-great/stylelint-a11y/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-order/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.10.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-scss/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.2.1_stylelint@16.16.0_typescript@5.8.2_/node_modules/stylelint-scss/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/@stylistic+stylelint-plugin@3.1.0_stylelint@16.16.0_typescript@5.8.2_/node_modules/@stylistic/stylelint-plugin/lib/index.js",
   ],
   "rules": {
     "@stylistic/block-opening-brace-space-before": null,
