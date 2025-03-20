@@ -14,7 +14,7 @@
     "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm",
     "release": "pnpm run build && pnpm run test && changeset publish"
   },
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.6.5",
   "devDependencies": {
     "@changesets/changelog-github": "0.5.1",
     "@changesets/cli": "2.28.1",
@@ -22,14 +22,14 @@
     "@virtual-live-lab/prettier-config": "workspace:*",
     "@virtual-live-lab/stylelint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "@vitest/coverage-istanbul": "3.0.8",
+    "@vitest/coverage-istanbul": "3.0.9",
     "eslint": "9.22.0",
-    "pkg-pr-new": "0.0.40",
-    "pnpm": "10.6.2",
+    "pkg-pr-new": "0.0.41",
+    "pnpm": "10.6.5",
     "prettier": "3.5.3",
-    "stylelint": "16.15.0",
+    "stylelint": "16.16.0",
     "typescript": "5.8.2",
-    "vitest": "3.0.8"
+    "vitest": "3.0.9"
   },
   "engines": {
     "node": ">=20 <23"
