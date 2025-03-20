@@ -31,6 +31,7 @@
     }
   },
   "dependencies": {
+    "defu": "6.1.4",
     "prettier": "3.5.3"
   },
   "devDependencies": {
