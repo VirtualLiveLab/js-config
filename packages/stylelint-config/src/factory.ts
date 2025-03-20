@@ -172,5 +172,5 @@ export const createConfig = (
     configs.push(tailwindConfig({ astro, sass }));
   }
 
-  return mergeConfigs(...configs, ...userConfigs);
+  return mergeConfigs(configs.at(0), ...configs.slice(1), ...userConfigs);
 };

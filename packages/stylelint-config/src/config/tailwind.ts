@@ -111,7 +111,7 @@ export const tailwindConfig = (options: TailwindOptions): Config => {
     }
   }
 
-  return mergeConfigs(...configs);
+  return mergeConfigs(configs.at(0), ...configs.slice(1));
 };
 
 const tailwindAtRules = [
