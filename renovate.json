@@ -12,52 +12,8 @@
   "labels": ["renovate"],
   "packageRules": [
     {
-      "groupName": "eslint",
-      "additionalBranchPrefix": "{{parentDir}}-",
-      "commitMessageSuffix": "({{parentDir}})",
-      "matchDatasources": ["npm"],
-      "matchFileNames": ["packages/eslint-config/**"],
-      "matchPackageNames": ["globals", "pkg-dir", "/eslint/"]
-    },
-    {
-      "groupName": "prettier",
-      "additionalBranchPrefix": "{{parentDir}}-",
-      "commitMessageSuffix": "({{parentDir}})",
-      "matchDatasources": ["npm"],
-      "matchFileNames": ["packages/prettier-config/**"],
-      "matchPackageNames": ["/^prettier/"]
-    },
-    {
-      "groupName": "stylelint",
-      "additionalBranchPrefix": "{{parentDir}}-",
-      "commitMessageSuffix": "({{parentDir}})",
-      "matchDatasources": ["npm"],
-      "matchFileNames": ["packages/stylelint-config/**"],
-      "matchPackageNames": [
-        "/^stylelint/",
-        "@double-great/stylelint-a11y",
-        "postcss-html"
-      ]
-    },
-    {
-      "groupName": "tsconfig",
-      "additionalBranchPrefix": "{{parentDir}}-",
-      "commitMessageSuffix": "({{parentDir}})",
-      "matchDatasources": ["npm"],
-      "matchFileNames": ["packages/tsconfig/**"],
-      "matchPackageNames": ["typescript", "@cloudflare/workers-types"]
-    },
-    {
-      "groupName": "environment",
-      "matchPackageNames": [
-        "pkg-pr-new",
-        "tsup",
-        "/@changesets/",
-        "node",
-        "pnpm"
-      ],
-      "matchUpdateTypes": ["minor", "patch"],
-      "addLabels": ["environment"]
+      "groupName": "GitHub Actions",
+      "matchDatasources": ["github-actions"]
     },
     {
       "groupName": "devDependencies",
@@ -65,18 +21,32 @@
       "matchDatasources": ["npm"]
     },
     {
-      "groupName": "peerDependencies",
+      "groupName": "Disable peerDependencies",
       "matchDepTypes": ["peerDependencies"],
       "matchDatasources": ["npm"],
       "enabled": false
     },
     {
-      "groupName": "root dependencies",
-      "matchFileNames": ["package.json"]
+      "groupName": "pnpm catalog",
+      "matchDepTypes": ["pnpm.catalog.default"]
     },
     {
-      "groupName": "GitHub Actions",
-      "matchDatasources": ["github-actions"]
+      "groupName": "eslint",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchFileNames": ["packages/eslint-config/**"]
+    },
+    {
+      "groupName": "prettier",
+      "matchManagers": ["npm"],
+      "matchFileNames": ["packages/prettier-config/**"],
+      "matchDepTypes": ["dependencies"]
+    },
+    {
+      "groupName": "stylelint",
+      "matchManagers": ["npm"],
+      "matchFileNames": ["packages/stylelint-config/**"],
+      "matchDepTypes": ["dependencies"]
     }
   ]
 }
