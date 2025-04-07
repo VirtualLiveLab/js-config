@@ -4,26 +4,26 @@
   "description": "Stylelint configuration for Virtual Live Lab",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "types": "./dist/index.d.ts"
     },
     "./scss": {
       "import": "./dist/scss.mjs",
-      "types": "./dist/scss.d.mts"
+      "types": "./dist/scss.d.ts"
     },
     "./astro": {
       "import": "./dist/astro.mjs",
-      "types": "./dist/astro.d.mts"
+      "types": "./dist/astro.d.ts"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup-node"
+    "build": "unbuild"
   },
   "peerDependencies": {
     "postcss-html": "^1.0.0",
@@ -47,8 +47,8 @@
     "@virtual-live-lab/tsconfig": "workspace:*",
     "postcss-html": "1.8.0",
     "stylelint": "16.17.0",
-    "tsup": "catalog:",
     "typescript": "catalog:",
+    "unbuild": "catalog:",
     "vitest": "catalog:"
   },
   "license": "MIT",

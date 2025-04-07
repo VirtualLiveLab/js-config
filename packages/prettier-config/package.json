@@ -2,24 +2,23 @@
   "name": "@virtual-live-lab/prettier-config",
   "version": "2.0.18",
   "description": "Prettier configuration for Virtual Live Lab",
-  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "types": "./dist/index.d.ts"
     },
     "./astro": {
       "import": "./dist/astro.mjs",
-      "types": "./dist/astro.d.mts"
+      "types": "./dist/astro.d.ts"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup-node"
+    "build": "unbuild"
   },
   "peerDependencies": {
     "prettier": "^3.0.0",
@@ -39,8 +38,8 @@
     "@virtual-live-lab/tsconfig": "workspace:*",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
-    "tsup": "catalog:",
     "typescript": "catalog:",
+    "unbuild": "catalog:",
     "vitest": "catalog:"
   },
   "license": "MIT",

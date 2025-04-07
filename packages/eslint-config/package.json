@@ -2,28 +2,27 @@
   "name": "@virtual-live-lab/eslint-config",
   "version": "2.2.19",
   "description": "ESLint configuration for Virtual Live Lab",
-  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "types": "./dist/index.d.ts"
     },
     "./addons/*": {
       "import": "./dist/addons/*.mjs",
-      "types": "./dist/addons/*.d.mts"
+      "types": "./dist/addons/*.d.ts"
     },
     "./presets/*": {
       "import": "./dist/presets/*.mjs",
-      "types": "./dist/presets/*.d.mts"
+      "types": "./dist/presets/*.d.ts"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup-node",
+    "build": "unbuild",
     "inspect": "eslint --inspect-config"
   },
   "engines": {
@@ -59,8 +58,8 @@
     "@types/node": "catalog:",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "eslint": "9.23.0",
-    "tsup": "catalog:",
     "typescript": "catalog:",
+    "unbuild": "catalog:",
     "vitest": "catalog:"
   },
   "license": "MIT",
