@@ -37,6 +37,16 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
-    ]
+    ],
+    "overrides": {
+      "@babel/runtime": "7.26.10",
+      "@octokit/endpoint": "9.0.6",
+      "@octokit/plugin-paginate-rest": "9.2.2",
+      "@octokit/request": "8.4.1",
+      "@octokit/request-error": "5.1.1",
+      "nanoid": "3.3.8",
+      "undici": "6.21.1",
+      "vite": "5.4.17"
+    }
   }
 }
