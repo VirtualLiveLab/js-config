@@ -2,6 +2,7 @@
   "name": "@virtual-live-lab/stylelint-config",
   "version": "3.0.3",
   "description": "Stylelint configuration for Virtual Live Lab",
+  "type": "module",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

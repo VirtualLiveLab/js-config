@@ -2,6 +2,7 @@
   "name": "@virtual-live-lab/eslint-config",
   "version": "2.2.19",
   "description": "ESLint configuration for Virtual Live Lab",
+  "type": "module",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {

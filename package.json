@@ -2,6 +2,7 @@
   "name": "@virtual-live-lab/js-config",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "changeset": "changeset",
     "format": "prettier --write .",
