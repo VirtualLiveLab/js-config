@@ -6,7 +6,7 @@
     "changeset": "changeset",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "build": "pnpm run /^build:.*/",
+    "build": "pnpm run -r build",
     "build:eslint": "pnpm --filter @virtual-live-lab/eslint-config build",
     "build:prettier": "pnpm --filter @virtual-live-lab/prettier-config build",
     "build:stylelint": "pnpm --filter @virtual-live-lab/stylelint-config build",
