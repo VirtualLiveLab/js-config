@@ -26,7 +26,7 @@ overrides:
   '@octokit/request': 8.4.1
   '@octokit/request-error': 5.1.1
   nanoid: 3.3.8
-  undici: 6.21.1
+  undici: 6.21.2
   vite: 5.4.17
 
 importers:
@@ -3692,8 +3692,8 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
-  undici@6.21.1:
-    resolution: {integrity: sha512-q/1rj5D0/zayJB2FraXdaWxbhWiNKDvu8naDT2dl1yTlvJp4BLtOcp2a5BvgGNQpYYJzau7tf1WgKv3b+7mqpQ==}
+  undici@6.21.2:
+    resolution: {integrity: sha512-uROZWze0R0itiAKVPsYhFov9LxrPMHLMEQFszeI2gCN6bnIIZ8twzBCJcN2LJrBBLfrP0t1FW0g+JmKVl8Vk1g==}
     engines: {node: '>=18.17'}
 
   universal-user-agent@6.0.1:
@@ -4440,7 +4440,7 @@ snapshots:
       '@octokit/plugin-paginate-rest': 9.2.2(@octokit/core@5.2.0)
       '@octokit/plugin-rest-endpoint-methods': 10.4.1(@octokit/core@5.2.0)
       '@octokit/types': 12.6.0
-      undici: 6.21.1
+      undici: 6.21.2
 
   '@octokit/auth-action@4.1.0':
     dependencies:
@@ -7625,7 +7625,7 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  undici@6.21.1: {}
+  undici@6.21.2: {}
 
   universal-user-agent@6.0.1: {}
 
