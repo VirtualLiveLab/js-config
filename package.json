@@ -46,7 +46,7 @@
       "@octokit/request": "8.4.1",
       "@octokit/request-error": "5.1.1",
       "nanoid": "3.3.11",
-      "undici": "6.21.2",
+      "undici": "7.8.0",
       "vite": "6.3.3"
     }
   }
