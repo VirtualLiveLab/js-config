@@ -101,6 +101,9 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "block-no-empty": [
       true,
     ],
+    "color-function-alias-notation": [
+      "without-alpha",
+    ],
     "color-function-notation": [
       "modern",
     ],
@@ -126,6 +129,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     ],
     "comment-whitespace-inside": [
       "always",
+    ],
+    "container-name-pattern": [
+      "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
     ],
     "csstools/value-no-unknown-custom-properties": [
       true,
@@ -231,6 +240,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
       "percentage-unless-within-keyword-only-block",
     ],
     "keyframes-name-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
+    ],
+    "layer-name-pattern": [
       "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
         "message": [Function],
@@ -906,6 +921,9 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
           "declaration-values",
         ],
       },
+    ],
+    "syntax-string-no-invalid": [
+      true,
     ],
     "value-keyword-case": [
       "lower",
@@ -1022,6 +1040,9 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "block-no-empty": [
       true,
     ],
+    "color-function-alias-notation": [
+      "without-alpha",
+    ],
     "color-function-notation": [
       "modern",
     ],
@@ -1047,6 +1068,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     ],
     "comment-whitespace-inside": [
       "always",
+    ],
+    "container-name-pattern": [
+      "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
     ],
     "csstools/value-no-unknown-custom-properties": [
       true,
@@ -1152,6 +1179,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
       "percentage-unless-within-keyword-only-block",
     ],
     "keyframes-name-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
+    ],
+    "layer-name-pattern": [
       "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
         "message": [Function],
@@ -1827,6 +1860,9 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
           "declaration-values",
         ],
       },
+    ],
+    "syntax-string-no-invalid": [
+      true,
     ],
     "value-keyword-case": [
       "lower",
@@ -2120,6 +2156,9 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "block-no-empty": [
       true,
     ],
+    "color-function-alias-notation": [
+      "without-alpha",
+    ],
     "color-function-notation": [
       "modern",
     ],
@@ -2146,6 +2185,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "comment-no-empty": null,
     "comment-whitespace-inside": [
       "always",
+    ],
+    "container-name-pattern": [
+      "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
     ],
     "csstools/value-no-unknown-custom-properties": [
       true,
@@ -2274,6 +2319,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
       "percentage-unless-within-keyword-only-block",
     ],
     "keyframes-name-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
+    ],
+    "layer-name-pattern": [
       "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
         "message": [Function],
@@ -3093,6 +3144,9 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "string-no-newline": [
       true,
     ],
+    "syntax-string-no-invalid": [
+      true,
+    ],
     "unit-no-unknown": [
       true,
     ],
@@ -3205,6 +3259,9 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
     "block-no-empty": [
       true,
     ],
+    "color-function-alias-notation": [
+      "without-alpha",
+    ],
     "color-function-notation": [
       "modern",
     ],
@@ -3230,6 +3287,12 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
     ],
     "comment-whitespace-inside": [
       "always",
+    ],
+    "container-name-pattern": [
+      "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
     ],
     "csstools/value-no-unknown-custom-properties": [
       true,
@@ -3335,6 +3398,12 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
       "percentage-unless-within-keyword-only-block",
     ],
     "keyframes-name-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
+    ],
+    "layer-name-pattern": [
       "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
         "message": [Function],
@@ -4010,6 +4079,9 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
           "declaration-values",
         ],
       },
+    ],
+    "syntax-string-no-invalid": [
+      true,
     ],
     "value-keyword-case": [
       "lower",
@@ -4126,6 +4198,9 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "block-no-empty": [
       true,
     ],
+    "color-function-alias-notation": [
+      "without-alpha",
+    ],
     "color-function-notation": [
       "modern",
     ],
@@ -4151,6 +4226,12 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     ],
     "comment-whitespace-inside": [
       "always",
+    ],
+    "container-name-pattern": [
+      "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
     ],
     "csstools/value-no-unknown-custom-properties": [
       true,
@@ -4256,6 +4337,12 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
       "percentage-unless-within-keyword-only-block",
     ],
     "keyframes-name-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
+    ],
+    "layer-name-pattern": [
       "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
         "message": [Function],
@@ -4931,6 +5018,9 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
           "declaration-values",
         ],
       },
+    ],
+    "syntax-string-no-invalid": [
+      true,
     ],
     "value-keyword-case": [
       "lower",
@@ -5224,6 +5314,9 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "block-no-empty": [
       true,
     ],
+    "color-function-alias-notation": [
+      "without-alpha",
+    ],
     "color-function-notation": [
       "modern",
     ],
@@ -5250,6 +5343,12 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "comment-no-empty": null,
     "comment-whitespace-inside": [
       "always",
+    ],
+    "container-name-pattern": [
+      "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
     ],
     "csstools/value-no-unknown-custom-properties": [
       true,
@@ -5378,6 +5477,12 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
       "percentage-unless-within-keyword-only-block",
     ],
     "keyframes-name-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
+    ],
+    "layer-name-pattern": [
       "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
         "message": [Function],
@@ -6195,6 +6300,9 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
       true,
     ],
     "string-no-newline": [
+      true,
+    ],
+    "syntax-string-no-invalid": [
       true,
     ],
     "unit-no-unknown": [
