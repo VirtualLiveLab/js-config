@@ -2,8 +2,8 @@ packages:
   - "packages/*"
 
 catalog:
-  '@types/node': 22.15.3
+  '@types/node': 22.15.29
   # tsconfig の peerDependencies 内の typescript はここの設定値とは関係ありません
   typescript: 5.8.3
   unbuild: 3.5.0
-  vitest: 3.1.2
+  vitest: 3.2.1
