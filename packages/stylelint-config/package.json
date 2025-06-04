@@ -46,7 +46,7 @@
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "postcss-html": "1.8.0",
-    "stylelint": "16.19.1",
+    "stylelint": "16.20.0",
     "typescript": "catalog:",
     "unbuild": "catalog:",
     "vitest": "catalog:"
