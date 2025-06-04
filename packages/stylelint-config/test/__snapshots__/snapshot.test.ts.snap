@@ -2040,6 +2040,7 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "scss/media-feature-value-dollar-variable": [Function],
     "scss/no-dollar-variables": [Function],
     "scss/no-duplicate-dollar-variables": [Function],
+    "scss/no-duplicate-load-rules": [Function],
     "scss/no-duplicate-mixins": [Function],
     "scss/no-global-function-names": [Function],
     "scss/no-unused-private-members": [Function],
@@ -2058,7 +2059,7 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.19.1_typescript@5.8.3_/node_modules/@double-great/stylelint-a11y/src/index.js",
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-order/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.10.0_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-scss/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.12.0_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-scss/src/index.js",
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.2.1_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-scss/src/index.js",
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/@stylistic+stylelint-plugin@3.1.0_stylelint@16.19.1_typescript@5.8.3_/node_modules/@stylistic/stylelint-plugin/lib/index.js",
   ],
@@ -2112,12 +2113,8 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
       },
     ],
     "annotation-no-unknown": null,
-    "at-rule-descriptor-no-unknown": [
-      true,
-    ],
-    "at-rule-descriptor-value-no-unknown": [
-      true,
-    ],
+    "at-rule-descriptor-no-unknown": null,
+    "at-rule-descriptor-value-no-unknown": null,
     "at-rule-disallowed-list": [
       [
         "debug",
@@ -2145,14 +2142,7 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "at-rule-no-vendor-prefix": [
       true,
     ],
-    "at-rule-prelude-no-invalid": [
-      true,
-      {
-        "ignoreAtRules": [
-          "media",
-        ],
-      },
-    ],
+    "at-rule-prelude-no-invalid": null,
     "block-no-empty": [
       true,
     ],
@@ -2278,9 +2268,7 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "declaration-property-value-keyword-no-deprecated": [
       true,
     ],
-    "declaration-property-value-no-unknown": [
-      true,
-    ],
+    "declaration-property-value-no-unknown": null,
     "font-family-name-quotes": [
       "always-where-recommended",
     ],
@@ -2353,9 +2341,7 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
     "media-feature-name-no-vendor-prefix": [
       true,
     ],
-    "media-feature-name-value-no-unknown": [
-      true,
-    ],
+    "media-feature-name-value-no-unknown": null,
     "media-feature-range-notation": [
       "context",
     ],
@@ -5198,6 +5184,7 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "scss/media-feature-value-dollar-variable": [Function],
     "scss/no-dollar-variables": [Function],
     "scss/no-duplicate-dollar-variables": [Function],
+    "scss/no-duplicate-load-rules": [Function],
     "scss/no-duplicate-mixins": [Function],
     "scss/no-global-function-names": [Function],
     "scss/no-unused-private-members": [Function],
@@ -5216,7 +5203,7 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-value-no-unknown-custom-properties@6.0.1_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-value-no-unknown-custom-properties/src/index.mjs",
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/@double-great+stylelint-a11y@3.0.4_stylelint@16.19.1_typescript@5.8.3_/node_modules/@double-great/stylelint-a11y/src/index.js",
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-order@6.0.4_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-order/index.js",
-    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.10.0_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-scss/src/index.js",
+    "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.12.0_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-scss/src/index.js",
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/stylelint-scss@6.2.1_stylelint@16.19.1_typescript@5.8.3_/node_modules/stylelint-scss/src/index.js",
     "/home/runner/work/js-config/js-config/node_modules/.pnpm/@stylistic+stylelint-plugin@3.1.0_stylelint@16.19.1_typescript@5.8.3_/node_modules/@stylistic/stylelint-plugin/lib/index.js",
   ],
@@ -5270,12 +5257,8 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
       },
     ],
     "annotation-no-unknown": null,
-    "at-rule-descriptor-no-unknown": [
-      true,
-    ],
-    "at-rule-descriptor-value-no-unknown": [
-      true,
-    ],
+    "at-rule-descriptor-no-unknown": null,
+    "at-rule-descriptor-value-no-unknown": null,
     "at-rule-disallowed-list": [
       [
         "debug",
@@ -5303,14 +5286,7 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "at-rule-no-vendor-prefix": [
       true,
     ],
-    "at-rule-prelude-no-invalid": [
-      true,
-      {
-        "ignoreAtRules": [
-          "media",
-        ],
-      },
-    ],
+    "at-rule-prelude-no-invalid": null,
     "block-no-empty": [
       true,
     ],
@@ -5436,9 +5412,7 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "declaration-property-value-keyword-no-deprecated": [
       true,
     ],
-    "declaration-property-value-no-unknown": [
-      true,
-    ],
+    "declaration-property-value-no-unknown": null,
     "font-family-name-quotes": [
       "always-where-recommended",
     ],
@@ -5511,9 +5485,7 @@ exports[`Test stylelint preset with snapshot > scss preset > should match snapsh
     "media-feature-name-no-vendor-prefix": [
       true,
     ],
-    "media-feature-name-value-no-unknown": [
-      true,
-    ],
+    "media-feature-name-value-no-unknown": null,
     "media-feature-range-notation": [
       "context",
     ],
