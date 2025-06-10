@@ -2569,6 +2569,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "no-shadow-restricted-names": [
       2,
+      {
+        "reportGlobalThis": false,
+      },
     ],
     "no-space-before-semi": [
       0,
@@ -2625,6 +2628,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
         "allowTaggedTemplates": false,
         "allowTernary": false,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-labels": [
@@ -2644,6 +2648,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-var": [
       2,
@@ -4097,6 +4104,9 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     ],
     "no-shadow-restricted-names": [
       2,
+      {
+        "reportGlobalThis": false,
+      },
     ],
     "no-space-before-semi": [
       0,
@@ -4160,6 +4170,9 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-whitespace-before-property": [
       0,
@@ -6938,6 +6951,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
         "allowTaggedTemplates": false,
         "allowTernary": false,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-vars": [
@@ -8673,6 +8687,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
         "allowTaggedTemplates": false,
         "allowTernary": false,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-vars": [

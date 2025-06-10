@@ -1,6 +1,6 @@
 {
   "name": "@virtual-live-lab/stylelint-config",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Stylelint configuration for Virtual Live Lab",
   "type": "module",
   "main": "./dist/index.mjs",
@@ -37,7 +37,7 @@
     "stylelint-config-recess-order": "6.0.0",
     "stylelint-config-sass-guidelines": "12.1.0",
     "stylelint-config-standard": "38.0.0",
-    "stylelint-config-standard-scss": "14.0.0",
+    "stylelint-config-standard-scss": "15.0.1",
     "stylelint-declaration-block-no-ignored-properties": "2.8.0",
     "stylelint-value-no-unknown-custom-properties": "6.0.1"
   },
@@ -46,7 +46,7 @@
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "postcss-html": "1.8.0",
-    "stylelint": "16.19.1",
+    "stylelint": "16.20.0",
     "typescript": "catalog:",
     "unbuild": "catalog:",
     "vitest": "catalog:"

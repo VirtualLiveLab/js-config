@@ -1,6 +1,6 @@
 {
   "name": "@virtual-live-lab/eslint-config",
-  "version": "2.2.21",
+  "version": "2.2.22",
   "description": "ESLint configuration for Virtual Live Lab",
   "type": "module",
   "module": "./dist/index.mjs",
@@ -58,7 +58,7 @@
   "devDependencies": {
     "@types/node": "catalog:",
     "@virtual-live-lab/tsconfig": "workspace:*",
-    "eslint": "9.25.1",
+    "eslint": "9.28.0",
     "typescript": "catalog:",
     "unbuild": "catalog:",
     "vitest": "catalog:"
