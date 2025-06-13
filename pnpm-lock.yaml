@@ -51,8 +51,8 @@ importers:
         specifier: 0.0.51
         version: 0.0.51
       pnpm:
-        specifier: 10.11.1
-        version: 10.11.1
+        specifier: 10.12.1
+        version: 10.12.1
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -2696,8 +2696,8 @@ packages:
   pkg-types@2.1.0:
     resolution: {integrity: sha512-wmJwA+8ihJixSoHKxZJRBQG1oY8Yr9pGLzRmSsNms0iNWyHHAlZCa7mmKiFR10YPZuz/2k169JiS/inOjBCZ2A==}
 
-  pnpm@10.11.1:
-    resolution: {integrity: sha512-5Rm592OYadyNXDxd/vc7PwkQlLCgBtcxc1PHKxJOgOGv1ClzLihwWta/oe6HnB/ORsEozOvTGSEB9D3WfGZ5Eg==}
+  pnpm@10.12.1:
+    resolution: {integrity: sha512-8N2oWA8O6UgcXHmh2Se5Fk8sR46QmSrSaLuyRlpzaYQ5HWMz0sMnkTV4soBK8zR0ylVLopwEqLEwYKcXZ1rjrA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -6368,7 +6368,7 @@ snapshots:
       exsolve: 1.0.4
       pathe: 2.0.3
 
-  pnpm@10.11.1: {}
+  pnpm@10.12.1: {}
 
   possible-typed-array-names@1.0.0: {}
 
