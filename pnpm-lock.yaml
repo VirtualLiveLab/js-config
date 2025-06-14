@@ -123,8 +123,8 @@ importers:
         specifier: 16.2.0
         version: 16.2.0
       pkg-dir:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 9.0.0
+        version: 9.0.0
       typescript-eslint:
         specifier: 8.34.0
         version: 8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
@@ -2682,9 +2682,10 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
 
-  pkg-dir@8.0.0:
-    resolution: {integrity: sha512-4peoBq4Wks0riS0z8741NVv+/8IiTvqnZAr8QGgtdifrtpdXbNw/FxRS1l6NFqm4EMzuS0EDqNNx4XGaz8cuyQ==}
+  pkg-dir@9.0.0:
+    resolution: {integrity: sha512-BMmxOuokumBehLGYwCKMBJxpAGSBbvGTtDn1yUV9UpCAvC4F7UWHoPTGSDGPV8eQPkYq/G8b0g1W5vIc5K/EhA==}
     engines: {node: '>=18'}
+    deprecated: Renamed to `package-directory`.
 
   pkg-pr-new@0.0.51:
     resolution: {integrity: sha512-jilf8dCTUE/iXaJSaNw5iPrNcSWd0s1b2deVXaTJVY3r610TBiio3uWjkmFIs2okThyPq8O+H55KcBcc+baBIQ==}
@@ -6342,7 +6343,7 @@ snapshots:
 
   pirates@4.0.6: {}
 
-  pkg-dir@8.0.0:
+  pkg-dir@9.0.0:
     dependencies:
       find-up-simple: 1.0.0
 
