@@ -194,17 +194,17 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(postcss-html@1.8.0)(stylelint@16.20.0(typescript@5.8.3))
       stylelint-config-recess-order:
-        specifier: 6.0.0
-        version: 6.0.0(stylelint@16.20.0(typescript@5.8.3))
+        specifier: 6.1.0
+        version: 6.1.0(stylelint@16.20.0(typescript@5.8.3))
       stylelint-config-sass-guidelines:
         specifier: 12.1.0
-        version: 12.1.0(postcss@8.5.1)(stylelint@16.20.0(typescript@5.8.3))
+        version: 12.1.0(postcss@8.5.3)(stylelint@16.20.0(typescript@5.8.3))
       stylelint-config-standard:
         specifier: 38.0.0
         version: 38.0.0(stylelint@16.20.0(typescript@5.8.3))
       stylelint-config-standard-scss:
         specifier: 15.0.1
-        version: 15.0.1(postcss@8.5.1)(stylelint@16.20.0(typescript@5.8.3))
+        version: 15.0.1(postcss@8.5.3)(stylelint@16.20.0(typescript@5.8.3))
       stylelint-declaration-block-no-ignored-properties:
         specifier: 2.8.0
         version: 2.8.0(stylelint@16.20.0(typescript@5.8.3))
@@ -3264,8 +3264,8 @@ packages:
       postcss-html: ^1.0.0
       stylelint: '>=14.0.0'
 
-  stylelint-config-recess-order@6.0.0:
-    resolution: {integrity: sha512-1KqrttqpIrCYFAVQ1/bbgXo7EvvcjmkxxmnzVr+U66Xr2OlrNZqQ5+44Tmct6grCWY6wGTIBh2tSANqcmwIM2g==}
+  stylelint-config-recess-order@6.1.0:
+    resolution: {integrity: sha512-0rGZgJQjUKqv1PXZnRJxr13f3hb3i2snx2nIL6luDWUf4nD3BAweB8noS7jdfBQ56HQG3RKSF0a+MAHfBGFxgw==}
     peerDependencies:
       stylelint: '>=16'
 
@@ -6569,9 +6569,9 @@ snapshots:
     dependencies:
       postcss: 8.5.3
 
-  postcss-scss@4.0.9(postcss@8.5.1):
+  postcss-scss@4.0.9(postcss@8.5.3):
     dependencies:
-      postcss: 8.5.1
+      postcss: 8.5.3
 
   postcss-selector-parser@6.1.2:
     dependencies:
@@ -6588,9 +6588,9 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@8.0.2(postcss@8.5.1):
+  postcss-sorting@8.0.2(postcss@8.5.3):
     dependencies:
-      postcss: 8.5.1
+      postcss: 8.5.3
 
   postcss-svgo@7.0.1(postcss@8.5.3):
     dependencies:
@@ -6985,39 +6985,39 @@ snapshots:
       postcss-html: 1.8.0
       stylelint: 16.20.0(typescript@5.8.3)
 
-  stylelint-config-recess-order@6.0.0(stylelint@16.20.0(typescript@5.8.3)):
+  stylelint-config-recess-order@6.1.0(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
       stylelint: 16.20.0(typescript@5.8.3)
       stylelint-order: 6.0.4(stylelint@16.20.0(typescript@5.8.3))
 
-  stylelint-config-recommended-scss@15.0.1(postcss@8.5.1)(stylelint@16.20.0(typescript@5.8.3)):
+  stylelint-config-recommended-scss@15.0.1(postcss@8.5.3)(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
-      postcss-scss: 4.0.9(postcss@8.5.1)
+      postcss-scss: 4.0.9(postcss@8.5.3)
       stylelint: 16.20.0(typescript@5.8.3)
       stylelint-config-recommended: 16.0.0(stylelint@16.20.0(typescript@5.8.3))
       stylelint-scss: 6.12.0(stylelint@16.20.0(typescript@5.8.3))
     optionalDependencies:
-      postcss: 8.5.1
+      postcss: 8.5.3
 
   stylelint-config-recommended@16.0.0(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
       stylelint: 16.20.0(typescript@5.8.3)
 
-  stylelint-config-sass-guidelines@12.1.0(postcss@8.5.1)(stylelint@16.20.0(typescript@5.8.3)):
+  stylelint-config-sass-guidelines@12.1.0(postcss@8.5.3)(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
       '@stylistic/stylelint-plugin': 3.1.0(stylelint@16.20.0(typescript@5.8.3))
-      postcss: 8.5.1
-      postcss-scss: 4.0.9(postcss@8.5.1)
+      postcss: 8.5.3
+      postcss-scss: 4.0.9(postcss@8.5.3)
       stylelint: 16.20.0(typescript@5.8.3)
       stylelint-scss: 6.2.1(stylelint@16.20.0(typescript@5.8.3))
 
-  stylelint-config-standard-scss@15.0.1(postcss@8.5.1)(stylelint@16.20.0(typescript@5.8.3)):
+  stylelint-config-standard-scss@15.0.1(postcss@8.5.3)(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
       stylelint: 16.20.0(typescript@5.8.3)
-      stylelint-config-recommended-scss: 15.0.1(postcss@8.5.1)(stylelint@16.20.0(typescript@5.8.3))
+      stylelint-config-recommended-scss: 15.0.1(postcss@8.5.3)(stylelint@16.20.0(typescript@5.8.3))
       stylelint-config-standard: 38.0.0(stylelint@16.20.0(typescript@5.8.3))
     optionalDependencies:
-      postcss: 8.5.1
+      postcss: 8.5.3
 
   stylelint-config-standard@38.0.0(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
@@ -7030,8 +7030,8 @@ snapshots:
 
   stylelint-order@6.0.4(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
-      postcss: 8.5.1
-      postcss-sorting: 8.0.2(postcss@8.5.1)
+      postcss: 8.5.3
+      postcss-sorting: 8.0.2(postcss@8.5.3)
       stylelint: 16.20.0(typescript@5.8.3)
 
   stylelint-scss@6.12.0(stylelint@16.20.0(typescript@5.8.3)):
