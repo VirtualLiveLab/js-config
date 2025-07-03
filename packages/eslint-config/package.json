@@ -58,7 +58,7 @@
   "devDependencies": {
     "@types/node": "catalog:",
     "@virtual-live-lab/tsconfig": "workspace:*",
-    "eslint": "9.28.0",
+    "eslint": "9.30.1",
     "typescript": "catalog:",
     "unbuild": "catalog:",
     "vitest": "catalog:"
