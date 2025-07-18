@@ -1,7 +1,6 @@
 import type { Linter } from "eslint";
 
 import { defineConfig } from "@eslint/config-helpers";
-import stylisticTs from "@stylistic/eslint-plugin-ts";
 import { defu } from "defu";
 import tseslint from "typescript-eslint";
 import * as typescriptESLintParserForExtraFiles from "typescript-eslint-parser-for-extra-files";
@@ -31,11 +30,7 @@ export const tsConfig = (params: Partial<TSConfigParams> = {}) => {
       extraFiles: resolvedParams.extraFiles,
     }),
     name: "@virtual-live-lab/eslint-config/typescript",
-    plugins: {
-      "@stylistic/ts": stylisticTs,
-    },
     rules: {
-      "@stylistic/ts/no-extra-semi": "error",
       "@typescript-eslint/adjacent-overload-signatures": "off",
       // #175
       "@typescript-eslint/array-type": [
