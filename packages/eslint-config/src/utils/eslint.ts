@@ -8,9 +8,7 @@ import type {
  * which does not inherit the files property. @eslint/config-helpers extends will
  * inherit files, but typescript-eslint does not, so this function sets files to an empty array.
  */
-export const prepareForExtend = <T extends ConfigWithExtendsArray>(
-  ...configs: T
-) => {
+export const prepareForExtend = (...configs: ConfigWithExtendsArray) => {
   return stripFiles(configs);
 };
 
