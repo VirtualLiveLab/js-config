@@ -30,6 +30,11 @@
     "postcss-html": "^1.0.0",
     "stylelint": "^16.0.0"
   },
+  "peerDependenciesMeta": {
+    "postcss-html": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@double-great/stylelint-a11y": "3.0.4",
     "defu": "6.1.4",
@@ -45,7 +50,6 @@
     "@types/node": "catalog:",
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
-    "postcss-html": "1.8.0",
     "publint": "catalog:",
     "stylelint": "16.20.0",
     "tsdown": "catalog:",
