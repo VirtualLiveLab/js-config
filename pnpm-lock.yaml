@@ -215,8 +215,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(postcss-html@1.8.0)(stylelint@16.20.0(typescript@5.8.3))
       stylelint-config-recess-order:
-        specifier: 6.0.0
-        version: 6.0.0(stylelint@16.20.0(typescript@5.8.3))
+        specifier: 7.1.0
+        version: 7.1.0(stylelint-order@6.0.4(stylelint@16.20.0(typescript@5.8.3)))(stylelint@16.20.0(typescript@5.8.3))
       stylelint-config-sass-guidelines:
         specifier: 12.1.0
         version: 12.1.0(postcss@8.5.3)(stylelint@16.20.0(typescript@5.8.3))
@@ -2942,10 +2942,11 @@ packages:
       postcss-html: ^1.0.0
       stylelint: '>=14.0.0'
 
-  stylelint-config-recess-order@6.0.0:
-    resolution: {integrity: sha512-1KqrttqpIrCYFAVQ1/bbgXo7EvvcjmkxxmnzVr+U66Xr2OlrNZqQ5+44Tmct6grCWY6wGTIBh2tSANqcmwIM2g==}
+  stylelint-config-recess-order@7.1.0:
+    resolution: {integrity: sha512-rFc4Z6SCGgEohr1khsmAZ83X56Tdi2dHY/GB7VT3qJkpKU1V2w+mYlK+b7Za5gpsxEng3jnb4FzWyIl/KTH0AQ==}
     peerDependencies:
-      stylelint: '>=16'
+      stylelint: '>=16.18'
+      stylelint-order: '>=7'
 
   stylelint-config-recommended-scss@15.0.1:
     resolution: {integrity: sha512-V24bxkNkFGggqPVJlP9iXaBabwSGEG7QTz+PyxrRtjPkcF+/NsWtB3tKYvFYEmczRkWiIEfuFMhGpJFj9Fxe6Q==}
@@ -6360,7 +6361,7 @@ snapshots:
       postcss-html: 1.8.0
       stylelint: 16.20.0(typescript@5.8.3)
 
-  stylelint-config-recess-order@6.0.0(stylelint@16.20.0(typescript@5.8.3)):
+  stylelint-config-recess-order@7.1.0(stylelint-order@6.0.4(stylelint@16.20.0(typescript@5.8.3)))(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
       stylelint: 16.20.0(typescript@5.8.3)
       stylelint-order: 6.0.4(stylelint@16.20.0(typescript@5.8.3))
