@@ -7,6 +7,7 @@ import tseslint from "typescript-eslint";
 import * as typescriptESLintParserForExtraFiles from "typescript-eslint-parser-for-extra-files";
 
 import { __dirname } from "../lib/dir";
+import { prepareForExtend } from "../utils/eslint";
 import { tsFiles } from "../utils/files";
 
 type TSConfigParams = {
@@ -21,10 +22,10 @@ export const tsConfig = (params: Partial<TSConfigParams> = {}) => {
   const resolvedParams = defu(params, DEFAULT_PARAMS);
 
   return defineConfig({
-    extends: [
-      ...(tseslint.configs.recommendedTypeChecked as Linter.Config[]),
-      ...(tseslint.configs.stylisticTypeChecked as Linter.Config[]),
-    ],
+    extends: prepareForExtend(
+      tseslint.configs.recommendedTypeChecked as unknown as Linter.Config[],
+      tseslint.configs.stylisticTypeChecked as unknown as Linter.Config[],
+    ),
     files: [tsFiles],
     languageOptions: getLanguageOptions({
       extraFiles: resolvedParams.extraFiles,

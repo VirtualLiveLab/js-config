@@ -2,10 +2,14 @@ import { defineConfig } from "@eslint/config-helpers";
 import prettierConfig from "eslint-config-prettier/flat";
 import perfectionistPlugin from "eslint-plugin-perfectionist";
 
+import { prepareForExtend } from "../utils/eslint";
 import { jsFiles, tsFiles } from "../utils/files";
 
 export const stylisticConfig = defineConfig({
-  extends: [prettierConfig, perfectionistPlugin.configs["recommended-natural"]],
+  extends: prepareForExtend(
+    prettierConfig,
+    perfectionistPlugin.configs["recommended-natural"],
+  ),
   files: [tsFiles, jsFiles],
   name: "@virtual-live-lab/eslint-config/stylistic",
   rules: {

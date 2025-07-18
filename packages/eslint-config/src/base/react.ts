@@ -4,16 +4,16 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 
 import { compat } from "../lib/compat";
+import { prepareForExtend } from "../utils/eslint";
 import { jsxFiles } from "../utils/files";
 
 const reactConfig = defineConfig({
-  extends: [
-    // @ts-expect-error 型が合わない
-    react.configs.flat.recommended,
-    // @ts-expect-error 型が合わない
+  extends: prepareForExtend(
+    // @ts-expect-error type mismatch
+    react.configs.flat["recommended"],
     react.configs.flat["jsx-runtime"],
     ...compat.extends("plugin:react-hooks/recommended"),
-  ],
+  ),
   files: [jsxFiles],
   languageOptions: {
     globals: {
