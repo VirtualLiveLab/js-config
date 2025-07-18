@@ -3,28 +3,28 @@
   "version": "3.0.5",
   "description": "Stylelint configuration for Virtual Live Lab",
   "type": "module",
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./scss": {
-      "import": "./dist/scss.mjs",
-      "types": "./dist/scss.d.ts"
+      "types": "./dist/scss.d.ts",
+      "import": "./dist/scss.js"
     },
     "./astro": {
-      "import": "./dist/astro.mjs",
-      "types": "./dist/astro.d.ts"
+      "types": "./dist/astro.d.ts",
+      "import": "./dist/astro.js"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild"
+    "build": "tsdown"
   },
   "peerDependencies": {
     "postcss-html": "^1.0.0",
@@ -46,9 +46,11 @@
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "postcss-html": "1.8.0",
+    "publint": "catalog:",
     "stylelint": "16.20.0",
+    "tsdown": "catalog:",
     "typescript": "catalog:",
-    "unbuild": "catalog:",
+    "unplugin-unused": "catalog:",
     "vitest": "catalog:"
   },
   "license": "MIT",
