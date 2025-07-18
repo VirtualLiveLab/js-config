@@ -1,7 +1,5 @@
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
+import { Linter } from "eslint";
 
 import gitignore from "eslint-config-flat-gitignore";
 
-const baseConfig: FlatConfig.ConfigArray = [gitignore()];
-
-export { baseConfig };
+export const baseConfig: Linter.Config[] = [gitignore()];

@@ -1,6 +1,6 @@
+import { defineConfig } from "@eslint/config-helpers";
 import * as astroESLintParser from "astro-eslint-parser";
 import astroPlugin from "eslint-plugin-astro";
-import tseslint from "typescript-eslint";
 import * as typescriptESLintParserForExtraFiles from "typescript-eslint-parser-for-extra-files";
 
 import { __dirname } from "../lib/dir";
@@ -9,10 +9,11 @@ import { jsConfig } from "./js";
 import { stylisticConfig } from "./stylistic";
 import { tsConfig } from "./typescript";
 
-export const astroConfig = tseslint.config(
+export const astroConfig = defineConfig(
   {
     files: [tsFiles],
     languageOptions: {
+      // @ts-expect-error type mismatch, but works
       parser: typescriptESLintParserForExtraFiles,
       parserOptions: {
         project: true,

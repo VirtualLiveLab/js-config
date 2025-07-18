@@ -1,13 +1,16 @@
+import type { Linter } from "eslint";
+
+import { defineConfig } from "@eslint/config-helpers";
 import stylisticTs from "@stylistic/eslint-plugin-ts";
 import tseslint from "typescript-eslint";
 
 import { __dirname } from "../lib/dir";
 import { tsFiles } from "../utils/files";
 
-const tsConfig = tseslint.config({
+export const tsConfig = defineConfig({
   extends: [
-    ...tseslint.configs.recommendedTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
+    ...(tseslint.configs.recommendedTypeChecked as Linter.Config[]),
+    ...(tseslint.configs.stylisticTypeChecked as Linter.Config[]),
   ],
   files: [tsFiles],
   languageOptions: {
@@ -68,5 +71,3 @@ const tsConfig = tseslint.config({
     ],
   },
 });
-
-export { tsConfig };

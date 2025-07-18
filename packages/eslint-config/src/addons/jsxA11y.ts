@@ -1,12 +1,14 @@
 import type { Linter } from "eslint";
 
+import { defineConfig } from "@eslint/config-helpers";
 // @ts-expect-error - eslint-plugin-jsx-a11y does not have types
 import jsx from "eslint-plugin-jsx-a11y";
-import tseslint from "typescript-eslint";
 
 import { jsxFiles } from "../utils/files";
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-export default tseslint.config(jsx.flatConfigs.recommended as Linter.Config[], {
+export default defineConfig({
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  extends: [jsx.flatConfigs.recommended as Linter.Config[]],
   files: [jsxFiles],
+  name: "@virtual-live-lab/eslint-config/jsx-a11y",
 });

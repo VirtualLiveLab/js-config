@@ -1,12 +1,12 @@
+import { defineConfig } from "@eslint/config-helpers";
 import react from "eslint-plugin-react";
 import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
-import tseslint from "typescript-eslint";
 
 import { compat } from "../lib/compat";
 import { jsxFiles } from "../utils/files";
 
-const reactConfig = tseslint.config({
+const reactConfig = defineConfig({
   extends: [
     // @ts-expect-error 型が合わない
     react.configs.flat.recommended,
