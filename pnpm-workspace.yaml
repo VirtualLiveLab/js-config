@@ -2,7 +2,7 @@ packages:
   - "packages/*"
 
 catalog:
-  '@types/node': 22.15.33
+  '@types/node': 22.16.4
   # tsconfig の peerDependencies 内の typescript はここの設定値とは関係ありません
   typescript: 5.8.3
   unbuild: 3.5.0
