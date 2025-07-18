@@ -95,7 +95,7 @@ jobs:
           # Create a comment body
           cat << EOF > COMMENT.md
           ## 🚨 Snapshot test failed
-          See the details: [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/job/${{ github.job }})
+          See the details: [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
           ### Errors
           EOF
