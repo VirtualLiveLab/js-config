@@ -1,4 +1,4 @@
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
+import type { Linter } from "eslint";
 
 import { fixupConfigRules } from "@eslint/compat";
 
@@ -6,7 +6,7 @@ import { compat } from "../lib/compat";
 import { jsFiles, tsFiles } from "../utils/files";
 import { reactConfig } from "./react";
 
-const nextJsConfig: FlatConfig.ConfigArray = [
+export const nextJsConfig: Linter.Config[] = [
   ...reactConfig,
   {
     files: [jsFiles, tsFiles],
@@ -21,5 +21,3 @@ const nextJsConfig: FlatConfig.ConfigArray = [
     ...fixupConfigRules(compat.extends("next/core-web-vitals")),
   },
 ];
-
-export { nextJsConfig };

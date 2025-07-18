@@ -1,14 +1,11 @@
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
-
+import { defineConfig } from "@eslint/config-helpers";
 import js from "@eslint/js";
 
+import { prepareForExtend } from "../utils/eslint";
 import { jsFiles } from "../utils/files";
 
-const jsConfig: FlatConfig.ConfigArray = [
-  {
-    files: [jsFiles],
-    ...js.configs.recommended,
-  },
-];
-
-export { jsConfig };
+export const jsConfig = defineConfig({
+  extends: prepareForExtend(js.configs.recommended),
+  files: [jsFiles],
+  name: "@virtual-live-lab/eslint-config/javascript",
+});

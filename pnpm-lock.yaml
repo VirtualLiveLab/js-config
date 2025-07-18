@@ -74,6 +74,9 @@ importers:
       '@eslint/compat':
         specifier: 1.3.1
         version: 1.3.1(eslint@9.28.0(jiti@2.4.2))
+      '@eslint/config-helpers':
+        specifier: 0.3.0
+        version: 0.3.0
       '@eslint/eslintrc':
         specifier: 3.3.1
         version: 3.3.1
@@ -92,6 +95,9 @@ importers:
       astrojs-compiler-sync:
         specifier: 1.1.1
         version: 1.1.1(@astrojs/compiler@2.12.2)
+      defu:
+        specifier: 6.1.4
+        version: 6.1.4
       eslint-config-flat-gitignore:
         specifier: 2.1.0
         version: 2.1.0(eslint@9.28.0(jiti@2.4.2))
@@ -699,6 +705,10 @@ packages:
 
   '@eslint/config-helpers@0.2.1':
     resolution: {integrity: sha512-RI17tsD2frtDu/3dmI7QRrD4bedNKPM08ziRYaC5AhkGrzIAJelm9kJU1TznK+apx6V+cqRz8tfpEeG3oIyjxw==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/config-helpers@0.3.0':
+    resolution: {integrity: sha512-ViuymvFmcJi04qdZeDc2whTHryouGcDlaxPqarTD0ZE10ISpxGUVZGZDx4w01upyIynL3iu6IXH2bS1NhclQMw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/core@0.14.0':
@@ -4104,6 +4114,8 @@ snapshots:
       - supports-color
 
   '@eslint/config-helpers@0.2.1': {}
+
+  '@eslint/config-helpers@0.3.0': {}
 
   '@eslint/core@0.14.0':
     dependencies:

@@ -1,7 +1,7 @@
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
-
+import { defineConfig } from "@eslint/config-helpers";
 import gitignore from "eslint-config-flat-gitignore";
 
-const baseConfig: FlatConfig.ConfigArray = [gitignore()];
-
-export { baseConfig };
+export const baseConfig = defineConfig({
+  extends: [gitignore()],
+  name: "@virtual-live-lab/eslint-config/base",
+});
