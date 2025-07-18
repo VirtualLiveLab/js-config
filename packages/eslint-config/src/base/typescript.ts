@@ -23,8 +23,8 @@ export const tsConfig = (params: Partial<TSConfigParams> = {}) => {
 
   return defineConfig({
     extends: prepareForExtend(
-      tseslint.configs.recommendedTypeChecked as unknown as Linter.Config[],
-      tseslint.configs.stylisticTypeChecked as unknown as Linter.Config[],
+      tseslint.configs.recommendedTypeChecked as Linter.Config[],
+      tseslint.configs.stylisticTypeChecked as Linter.Config[],
     ),
     files: [tsFiles],
     languageOptions: getLanguageOptions({
