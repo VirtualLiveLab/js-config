@@ -95,6 +95,9 @@ importers:
       astrojs-compiler-sync:
         specifier: 1.1.1
         version: 1.1.1(@astrojs/compiler@2.12.2)
+      defu:
+        specifier: 6.1.4
+        version: 6.1.4
       eslint-config-flat-gitignore:
         specifier: 2.1.0
         version: 2.1.0(eslint@9.28.0(jiti@2.4.2))
