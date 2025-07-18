@@ -1,9 +1,11 @@
 packages:
-  - "packages/*"
+  - packages/*
 
 catalog:
-  '@types/node': 22.16.4
-  # tsconfig の peerDependencies 内の typescript はここの設定値とは関係ありません
+  "@types/node": 22.16.4
   typescript: 5.8.3
-  unbuild: 3.5.0
   vitest: 3.2.4
+  # build tools
+  publint: 0.3.12
+  tsdown: 0.12.9
+  unplugin-unused: 0.5.1

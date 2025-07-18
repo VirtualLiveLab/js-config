@@ -3,27 +3,28 @@
   "version": "2.2.22",
   "description": "ESLint configuration for Virtual Live Lab",
   "type": "module",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./addons/*": {
-      "import": "./dist/addons/*.mjs",
-      "types": "./dist/addons/*.d.ts"
+      "types": "./dist/addons/*.d.ts",
+      "import": "./dist/addons/*.js"
     },
     "./presets/*": {
-      "import": "./dist/presets/*.mjs",
-      "types": "./dist/presets/*.d.ts"
+      "types": "./dist/presets/*.d.ts",
+      "import": "./dist/presets/*.js"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsdown",
     "inspect": "eslint --inspect-config"
   },
   "engines": {
@@ -61,8 +62,10 @@
     "@types/node": "catalog:",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "eslint": "9.28.0",
+    "publint": "catalog:",
+    "tsdown": "catalog:",
     "typescript": "catalog:",
-    "unbuild": "catalog:",
+    "unplugin-unused": "catalog:",
     "vitest": "catalog:"
   },
   "license": "MIT",
@@ -76,7 +79,7 @@
   "homepage": "https://github.com/VirtualLiveLab/js-config/tree/main/#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/VirtualLiveLab/js-config.git",
+    "url": "git+https://github.com/VirtualLiveLab/js-config.git",
     "directory": "packages/eslint-config"
   },
   "bugs": {
