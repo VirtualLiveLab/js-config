@@ -607,15 +607,17 @@ CommonJSモジュールをimportする際に、NameSpaceオブジェクトを生
 
 ### [Verbatim Module Syntax](https://www.typescriptlang.org/ja/tsconfig/#verbatimModuleSyntax)
 
-設定値: `false (default)`
+設定値: `true`
 
 import文の処理が逐語的なトランスパイルになる。
 
 このため、`import type {}`文は丸ごと削除され、`import {a, type B}`のような文は`import {a}`に変換される。
 
-しかし、このオプションを有効にするとCommon JS向けにトランスパイルする際にもimport文がrequire文に変換されないため非常に面倒になる。
+~~しかし、このオプションを有効にするとCommon JS向けにトランスパイルする際にもimport文がrequire文に変換されないため非常に面倒になる。~~
 
-これと同等のチェックをESLintのプリセットで行うように設定しているため、TypeScript側ではデフォルト値のままとする。
+~~これと同等のチェックをESLintのプリセットで行うように設定しているため、TypeScript側ではデフォルト値のままとする。~~
+
+この設定は TS 5.9 以降、`tsc --init` で生成される推奨設定に含まれていており、CJS 向けのトランスパイルも基本行わない情勢になっているので有効化する。<https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-rc/>
 
 ## Backwards Compatibility
 
