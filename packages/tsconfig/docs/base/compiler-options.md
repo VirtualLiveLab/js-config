@@ -46,13 +46,15 @@
 
 ### [Exact Optional Property Types](https://www.typescriptlang.org/ja/tsconfig/#exactOptionalPropertyTypes)
 
-設定値: `false (default)`
+設定値: `true`
 
 オプショナルなプロパティの型を厳密にチェックするかどうかを設定する。例についてはドキュメントを見たほうが早い。
 `?`をつけたプロパティであっても、明示的に許可しない限り`undefined`を渡せなくなる。
 この点に関しては非常に良いルールであると考える。実際TypeScript公式も有効化を推奨している。
 
-**ただし、実際に有効にすると様々な関数、特に外部ライブラリの関数に`option`のような設定オブジェクトを渡す場合にエラーが発生する。これらにすべてts-expect-errorをつけるまでして有効化すべきでないと判断したため、デフォルト値のままとする。**
+~~ただし、実際に有効にすると様々な関数、特に外部ライブラリの関数に`option`のような設定オブジェクトを渡す場合にエラーが発生する。これらにすべてts-expect-errorをつけるまでして有効化すべきでないと判断したため、デフォルト値のままとする。~~
+
+TypeScript 5.9 以降この設定は `tsc --init` で生成される推奨設定に含まれていており、このオプションを有効にして問題ないほどエコシステムが成熟したと考えられるため有効化した。<https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-rc/>
 
 ### [No Fallthrough Cases In Switch](https://www.typescriptlang.org/ja/tsconfig/#noFallthroughCasesInSwitch)
 
