@@ -9,6 +9,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "noUncheckedSideEffectImports": true,
     "strict": true,
     "strictNullChecks": true,
     // modules

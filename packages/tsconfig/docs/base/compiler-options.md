@@ -278,6 +278,8 @@ Module Suffixに指定したSuffixを考慮してモジュール解決を行う�
 
 安全性が向上するため、有効にしておく。
 
+補足: 一度 <https://github.com/VirtualLiveLab/js-config/pull/345> のような事情により無効化されていたが、 TS 5.9 以降この設定は `tsc --init` で生成される推奨設定に含まれていており、十分一般的な設定になっていると判断したため有効化する。<https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-rc/>
+
 ### [Paths](https://www.typescriptlang.org/ja/tsconfig/#paths)
 
 設定値: not set
