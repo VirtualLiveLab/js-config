@@ -1,9 +1,9 @@
 import { defineConfig } from "@eslint/config-helpers";
 import react from "eslint-plugin-react";
+import * as reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 
-import { compat } from "../lib/compat";
 import { prepareForExtend } from "../utils/eslint";
 import { jsxFiles } from "../utils/files";
 
@@ -12,7 +12,7 @@ const reactConfig = defineConfig({
     // @ts-expect-error type mismatch
     react.configs.flat["recommended"],
     react.configs.flat["jsx-runtime"],
-    ...compat.extends("plugin:react-hooks/recommended"),
+    reactHooks.configs.recommended,
   ),
   files: [jsxFiles],
   languageOptions: {
