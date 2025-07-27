@@ -3150,7 +3150,7 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
   "language": "@/js",
   "languageOptions": {
     "ecmaVersion": 2025,
-    "parser": "espree@10.3.0",
+    "parser": "espree@10.4.0",
     "parserOptions": {
       "sourceType": "module",
     },
