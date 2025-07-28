@@ -4,4 +4,4 @@
 
 feat!: enable noUncheckedSideEffectImports
 
-Now all presets require TypeScript 5.6 or later.
+BREAKING CHANGE: Now all presets require TypeScript 5.6 or later.
