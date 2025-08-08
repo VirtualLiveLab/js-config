@@ -4,7 +4,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
 {
   "language": "@/js",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "AI": false,
       "AITextSession": false,
@@ -3149,7 +3149,7 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
 {
   "language": "@/js",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "parser": "espree@10.4.0",
     "parserOptions": {
       "sourceType": "module",
@@ -4643,7 +4643,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
 {
   "language": "@/js",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "AI": false,
       "AICreateMonitor": false,
@@ -7543,7 +7543,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
 {
   "language": "@/js",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "parser": "typescript-eslint/parser@8.37.0",
     "parserOptions": {
       "projectService": {
