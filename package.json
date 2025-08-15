@@ -24,7 +24,7 @@
     "@virtual-live-lab/prettier-config": "workspace:*",
     "@virtual-live-lab/stylelint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:^",
-    "eslint": "9.32.0",
+    "eslint": "9.33.0",
     "pkg-pr-new": "0.0.54",
     "pnpm": "10.14.0",
     "prettier": "3.6.2",
