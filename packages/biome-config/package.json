@@ -1,0 +1,33 @@
+{
+  "name": "@virtual-live-lab/biome-config",
+  "version": "0.0.0",
+  "description": "Biome configuration for Virtual Live Lab",
+  "type": "module",
+  "keywords": [],
+  "author": "VLL39 <vll39.tech@gmail.com> (https://github.com/vll39)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VirtualLiveLab/js-config.git",
+    "directory": "packages/biome-config"
+  },
+  "bugs": {
+    "url": "https://github.com/VirtualLiveLab/js-config/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true
+  },
+  "homepage": "https://github.com/VirtualLiveLab/js-config/tree/main/#readme",
+  "exports": {
+    "./css": "./css.json"
+  },
+  "files": [
+    "*.json"
+  ],
+  "packageManager": "pnpm@10.14.0",
+  "peerDependencies": {
+    "@biomejs/biome": "^2.0.0"
+  }
+}
