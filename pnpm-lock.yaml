@@ -206,8 +206,8 @@ importers:
   packages/stylelint-config:
     dependencies:
       '@double-great/stylelint-a11y':
-        specifier: 3.0.4
-        version: 3.0.4(stylelint@16.23.1(typescript@5.9.2))
+        specifier: 3.4.0
+        version: 3.4.0(stylelint@16.23.1(typescript@5.9.2))
       defu:
         specifier: 6.1.4
         version: 6.1.4
@@ -218,8 +218,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(postcss-html@1.8.0)(stylelint@16.23.1(typescript@5.9.2))
       stylelint-config-recess-order:
-        specifier: 6.0.0
-        version: 6.0.0(stylelint@16.23.1(typescript@5.9.2))
+        specifier: 6.1.0
+        version: 6.1.0(stylelint@16.23.1(typescript@5.9.2))
       stylelint-config-sass-guidelines:
         specifier: 12.1.0
         version: 12.1.0(postcss@8.5.6)(stylelint@16.23.1(typescript@5.9.2))
@@ -492,8 +492,8 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.0.0
 
-  '@double-great/stylelint-a11y@3.0.4':
-    resolution: {integrity: sha512-a+cFkT7XRLSh90kv3PPl1sqP2u5I0kvNMTDclEsMRPLexlI9mqdPwN2IzF+79TUpRG3+scsopMT108E772fDMg==}
+  '@double-great/stylelint-a11y@3.4.0':
+    resolution: {integrity: sha512-guNrEzPN3/29nKONIEy1c5LjBhhvSIkX+g69e5ZuHHMSzClhBE0XFtY8rrjy0q71ARcKn7d7jsHMdXUvaLZKUQ==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: '>=16.0.0'
@@ -2883,8 +2883,8 @@ packages:
       postcss-html: ^1.0.0
       stylelint: '>=14.0.0'
 
-  stylelint-config-recess-order@6.0.0:
-    resolution: {integrity: sha512-1KqrttqpIrCYFAVQ1/bbgXo7EvvcjmkxxmnzVr+U66Xr2OlrNZqQ5+44Tmct6grCWY6wGTIBh2tSANqcmwIM2g==}
+  stylelint-config-recess-order@6.1.0:
+    resolution: {integrity: sha512-0rGZgJQjUKqv1PXZnRJxr13f3hb3i2snx2nIL6luDWUf4nD3BAweB8noS7jdfBQ56HQG3RKSF0a+MAHfBGFxgw==}
     peerDependencies:
       stylelint: '>=16'
 
@@ -3695,7 +3695,7 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.1.0
 
-  '@double-great/stylelint-a11y@3.0.4(stylelint@16.23.1(typescript@5.9.2))':
+  '@double-great/stylelint-a11y@3.4.0(stylelint@16.23.1(typescript@5.9.2))':
     dependencies:
       postcss: 8.5.6
       stylelint: 16.23.1(typescript@5.9.2)
@@ -6215,7 +6215,7 @@ snapshots:
       postcss-html: 1.8.0
       stylelint: 16.23.1(typescript@5.9.2)
 
-  stylelint-config-recess-order@6.0.0(stylelint@16.23.1(typescript@5.9.2)):
+  stylelint-config-recess-order@6.1.0(stylelint@16.23.1(typescript@5.9.2)):
     dependencies:
       stylelint: 16.23.1(typescript@5.9.2)
       stylelint-order: 6.0.4(stylelint@16.23.1(typescript@5.9.2))
