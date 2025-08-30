@@ -6,7 +6,7 @@ import createConfig from "../src";
 describe("stylelint-config", () => {
   it("has compatibility with css-modules-kit", async () => {
     const config = await stylelint.resolveConfig("index.module.css", {
-      config: createConfig(),
+      config: createConfig({ cssModulesKit: true }),
     });
 
     const selectorPattern = new RegExp(
