@@ -18,6 +18,12 @@ type PresetOptions = {
    */
   astro?: boolean;
   /**
+   * Enable integration with {@link https://github.com/mizdra/css-modules-kit mizdra/css-modules-kit}.
+   *
+   * @default false
+   */
+  cssModulesKit?: boolean;
+  /**
    * Enable sass / scss rules.
    *
    * @default false
@@ -48,6 +54,7 @@ export const createConfig = (
   const {
     a11y = true,
     astro = false,
+    cssModulesKit = false,
     sass = false,
     tailwindcss = false,
   } = options;
@@ -66,23 +73,6 @@ export const createConfig = (
       "csstools/value-no-unknown-custom-properties": true,
       "plugin/declaration-block-no-ignored-properties": true,
     },
-
-    overrides: [
-      {
-        files: ["**/*.module.css"],
-        rules: {
-          "selector-class-pattern": [
-            // css-modules-kit cannot handle kebab-case, so enforcing lowerCamelCase
-            // https://github.com/stylelint/stylelint-config-standard/blob/b2f6e1a9c2a53c09021a0794181ef99814397317/index.js#L109-L114
-            "^[a-z]+(?:[A-Z][a-z0-9]*)*$",
-            {
-              message: (selector: string) =>
-                `Expected class selector "${selector}" to be lowerCamelCase`,
-            },
-          ],
-        },
-      },
-    ],
   });
 
   if (a11y) {
@@ -187,6 +177,27 @@ export const createConfig = (
 
   if (tailwindcss) {
     configs.push(tailwindConfig({ astro, sass }));
+  }
+
+  if (cssModulesKit) {
+    configs.push({
+      overrides: [
+        {
+          files: ["**/*.module.css"],
+          rules: {
+            "selector-class-pattern": [
+              // css-modules-kit cannot handle kebab-case, so enforcing lowerCamelCase
+              // https://github.com/stylelint/stylelint-config-standard/blob/b2f6e1a9c2a53c09021a0794181ef99814397317/index.js#L109-L114
+              "^[a-z]+(?:[A-Z][a-z0-9]*)*$",
+              {
+                message: (selector: string) =>
+                  `Expected class selector "${selector}" to be lowerCamelCase`,
+              },
+            ],
+          },
+        },
+      ],
+    });
   }
 
   return mergeConfigs(configs.at(0), ...configs.slice(1), ...userConfigs);
