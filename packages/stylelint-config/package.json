@@ -1,6 +1,6 @@
 {
   "name": "@virtual-live-lab/stylelint-config",
-  "version": "3.0.7",
+  "version": "3.1.0",
   "description": "Stylelint configuration for Virtual Live Lab",
   "type": "module",
   "main": "./dist/index.js",
