@@ -1,6 +1,6 @@
 import { defineConfig } from "@eslint/config-helpers";
 import react from "eslint-plugin-react";
-import * as reactHooks from "eslint-plugin-react-hooks";
+import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 
@@ -12,7 +12,9 @@ const reactConfig = defineConfig({
     // @ts-expect-error type mismatch
     react.configs.flat["recommended"],
     react.configs.flat["jsx-runtime"],
-    reactHooks.configs.recommended,
+    // @ts-expect-error type does not exists
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
+    reactHooks.configs["flat/recommended"],
   ),
   files: [jsxFiles],
   languageOptions: {
