@@ -66,6 +66,23 @@ export const createConfig = (
       "csstools/value-no-unknown-custom-properties": true,
       "plugin/declaration-block-no-ignored-properties": true,
     },
+
+    overrides: [
+      {
+        files: ["**/*.module.css"],
+        rules: {
+          "selector-class-pattern": [
+            // css-modules-kit cannot handle kebab-case, so enforcing lowerCamelCase
+            // https://github.com/stylelint/stylelint-config-standard/blob/b2f6e1a9c2a53c09021a0794181ef99814397317/index.js#L109-L114
+            "^[a-z]+(?:[A-Z][a-z0-9]*)*$",
+            {
+              message: (selector: string) =>
+                `Expected class selector "${selector}" to be lowerCamelCase`,
+            },
+          ],
+        },
+      },
+    ],
   });
 
   if (a11y) {
