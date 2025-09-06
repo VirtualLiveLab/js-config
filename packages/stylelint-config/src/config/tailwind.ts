@@ -1,15 +1,14 @@
 import type { Config } from "stylelint";
 
-import { astroFiles, cssFiles, sassFiles } from "../files";
+import { astroFiles, cssFiles } from "../files";
 import { mergeConfigs } from "../util";
 
 type TailwindOptions = {
   astro: boolean;
-  sass: boolean;
 };
 
 export const tailwindConfig = (options: TailwindOptions): Config => {
-  const { astro, sass } = options;
+  const { astro } = options;
 
   const configs: Config[] = [];
 
@@ -36,12 +35,12 @@ export const tailwindConfig = (options: TailwindOptions): Config => {
     ],
   });
 
-  if (sass) {
-    // enable for sass
+  if (astro) {
+    // enable for astro with css
     configs.push({
       overrides: [
         {
-          files: sassFiles,
+          files: astroFiles,
           rules: {
             "at-rule-no-deprecated": [
               true,
@@ -49,7 +48,7 @@ export const tailwindConfig = (options: TailwindOptions): Config => {
                 ignoreAtRules: tailwindDeprecatedAtRules,
               },
             ],
-            "scss/at-rule-no-unknown": [
+            "at-rule-no-unknown": [
               true,
               {
                 ignoreAtRules: tailwindAtRules,
@@ -59,56 +58,6 @@ export const tailwindConfig = (options: TailwindOptions): Config => {
         },
       ],
     });
-  }
-
-  if (astro) {
-    if (sass) {
-      // enable for astro with sass
-      configs.push({
-        overrides: [
-          {
-            files: astroFiles,
-            rules: {
-              "at-rule-no-deprecated": [
-                true,
-                {
-                  ignoreAtRules: tailwindDeprecatedAtRules,
-                },
-              ],
-              "scss/at-rule-no-unknown": [
-                true,
-                {
-                  ignoreAtRules: tailwindAtRules,
-                },
-              ],
-            },
-          },
-        ],
-      });
-    } else {
-      // enable for astro with css
-      configs.push({
-        overrides: [
-          {
-            files: astroFiles,
-            rules: {
-              "at-rule-no-deprecated": [
-                true,
-                {
-                  ignoreAtRules: tailwindDeprecatedAtRules,
-                },
-              ],
-              "at-rule-no-unknown": [
-                true,
-                {
-                  ignoreAtRules: tailwindAtRules,
-                },
-              ],
-            },
-          },
-        ],
-      });
-    }
   }
 
   return mergeConfigs(configs.at(0), ...configs.slice(1));

@@ -14,36 +14,10 @@ describe("Test stylelint preset with snapshot", () => {
     });
   });
 
-  describe("scss preset", () => {
-    it("should match snapshot with css", async () => {
-      const config = await stylelint.resolveConfig("index.css", {
-        config: createConfig({ sass: true }),
-      });
-
-      expect(config).toMatchSnapshot();
-    });
-
-    it("should match snapshot with scss", async () => {
-      const config = await stylelint.resolveConfig("index.scss", {
-        config: createConfig({ sass: true }),
-      });
-
-      expect(config).toMatchSnapshot();
-    });
-  });
-
   describe("astro preset", () => {
     it("should match snapshot with css", async () => {
       const config = await stylelint.resolveConfig("index.css", {
         config: createConfig({ astro: true }),
-      });
-
-      expect(config).toMatchSnapshot();
-    });
-
-    it("should match snapshot with scss", async () => {
-      const config = await stylelint.resolveConfig("index.scss", {
-        config: createConfig({ astro: true, sass: true }),
       });
 
       expect(config).toMatchSnapshot();

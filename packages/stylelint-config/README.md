@@ -30,29 +30,6 @@ import createConfig from "@virtual-live-lab/stylelint-config";
 export default createConfig();
 ```
 
-### Use for sass / scss
-
-```bash
-npm install stylelint \
-  @virtual-live-lab/stylelint-config \
-  @double-great/stylelint-a11y \
-  stylelint-declaration-block-no-ignored-properties \
-  stylelint-value-no-unknown-custom-properties \
-  stylelint-config-recommended \
-  stylelint-config-standard \
-  stylelint-config-recess-order \
-  stylelint-config-standard-scss \
-  stylelint-config-sass-guidelines \
-  --save-dev
-```
-
-```js
-// stylelint.config.mjs
-import createConfig from "@virtual-live-lab/stylelint-config";
-
-export default createConfig({ sass: true });
-```
-
 ### Use for Astro
 
 > [!TIP]
@@ -71,8 +48,6 @@ npm install stylelint \
   stylelint-config-recommended \
   stylelint-config-standard \
   stylelint-config-recess-order \
-  stylelint-config-standard-scss \
-  stylelint-config-sass-guidelines \
   stylelint-config-html \
   --save-dev
 ```
@@ -83,12 +58,11 @@ import createConfig from "@virtual-live-lab/stylelint-config";
 
 export default createConfig({
   astro: true,
-  // enable sass if you use sass / scss
-  sass: true,
 });
 ```
 
 ### a11y rules
+
 a11y rules are enabled by default. If you **do not** want to use a11y rules, you can disable it.
 
 ```js
@@ -99,6 +73,7 @@ export default createConfig({ a11y: false });
 ```
 
 ### tailwindcss rules
+
 If you use tailwindcss, you can enable tailwindcss rules.
 
 ```js
@@ -120,7 +95,6 @@ import createConfig from "@virtual-live-lab/stylelint-config";
 
 export default createConfig({
   tailwindcss: true,
-  sass: true,
   astro: true,
 },
 {

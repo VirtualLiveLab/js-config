@@ -11,7 +11,7 @@
 - Prettier: `@virtual-live-lab/prettier-config`
   - Code formatter for JavaScript / TypeScript / CSS and more
 - Stylelint: `@virtual-live-lab/stylelint-config`
-  - Lint / error check for CSS / SCSS
+  - Lint / error check for CSS
 - TypeScript: `@virtual-live-lab/tsconfig`
   - TypeScript configuration presets
 
