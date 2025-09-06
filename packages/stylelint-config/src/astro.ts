@@ -4,6 +4,6 @@ import type { Config } from "stylelint";
 
 import { createConfig } from "./factory";
 
-const config: Config = createConfig({ astro: true, sass: true });
+const config: Config = createConfig({ astro: true });
 
 export default config;

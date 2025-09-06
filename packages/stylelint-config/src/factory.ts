@@ -1,7 +1,7 @@
 import type { Config } from "stylelint";
 
 import { tailwindConfig } from "./config/tailwind";
-import { astroFiles, sassFiles } from "./files";
+import { astroFiles } from "./files";
 import { mergeConfigs } from "./util";
 
 type PresetOptions = {
@@ -23,12 +23,6 @@ type PresetOptions = {
    * @default false
    */
   cssModulesKit?: boolean;
-  /**
-   * Enable sass / scss rules.
-   *
-   * @default false
-   */
-  sass?: boolean;
   /**
    * Enable tailwindcss rules.
    *
@@ -55,7 +49,6 @@ export const createConfig = (
     a11y = true,
     astro = false,
     cssModulesKit = false,
-    sass = false,
     tailwindcss = false,
   } = options;
 
@@ -89,80 +82,7 @@ export const createConfig = (
     });
   }
 
-  if (sass) {
-    configs.push({
-      overrides: [
-        {
-          extends: [
-            "stylelint-config-standard-scss",
-            "stylelint-config-sass-guidelines",
-          ],
-          files: sassFiles,
-          name: "@virtual-live-lab/stylelint-config/sass",
-          rules: {
-            // see: https://github.com/VirtualLiveLab/js-config/issues/178
-            "@stylistic/block-opening-brace-space-before": null,
-            "@stylistic/color-hex-case": null,
-            "@stylistic/declaration-bang-space-after": null,
-            "@stylistic/declaration-bang-space-before": null,
-            "@stylistic/declaration-block-semicolon-newline-after": null,
-            "@stylistic/declaration-block-semicolon-space-before": null,
-            "@stylistic/declaration-block-trailing-semicolon": null,
-            "@stylistic/declaration-colon-space-after": null,
-            "@stylistic/declaration-colon-space-before": null,
-            "@stylistic/function-comma-space-after": null,
-            "@stylistic/function-parentheses-space-inside": null,
-            "@stylistic/indentation": null,
-            "@stylistic/media-feature-parentheses-space-inside": null,
-            "@stylistic/no-missing-end-of-source-newline": null,
-            "@stylistic/number-leading-zero": null,
-            "@stylistic/number-no-trailing-zeros": null,
-            "@stylistic/selector-list-comma-newline-after": null,
-            "@stylistic/string-quotes": null,
-          },
-        },
-      ],
-    });
-  }
-
   if (astro) {
-    // extends: ["stylelint-config-html/astro"] は最後に override に追加しないとパーサーの設定が壊れる
-    if (sass) {
-      configs.push({
-        overrides: [
-          {
-            extends: [
-              "stylelint-config-standard-scss",
-              "stylelint-config-sass-guidelines",
-            ],
-            files: astroFiles,
-            name: "@virtual-live-lab/stylelint-config/astro/sass",
-            rules: {
-              // see: https://github.com/VirtualLiveLab/js-config/issues/178
-              "@stylistic/block-opening-brace-space-before": null,
-              "@stylistic/color-hex-case": null,
-              "@stylistic/declaration-bang-space-after": null,
-              "@stylistic/declaration-bang-space-before": null,
-              "@stylistic/declaration-block-semicolon-newline-after": null,
-              "@stylistic/declaration-block-semicolon-space-before": null,
-              "@stylistic/declaration-block-trailing-semicolon": null,
-              "@stylistic/declaration-colon-space-after": null,
-              "@stylistic/declaration-colon-space-before": null,
-              "@stylistic/function-comma-space-after": null,
-              "@stylistic/function-parentheses-space-inside": null,
-              "@stylistic/indentation": null,
-              "@stylistic/media-feature-parentheses-space-inside": null,
-              "@stylistic/no-missing-end-of-source-newline": null,
-              "@stylistic/number-leading-zero": null,
-              "@stylistic/number-no-trailing-zeros": null,
-              "@stylistic/selector-list-comma-newline-after": null,
-              "@stylistic/string-quotes": null,
-            },
-          },
-        ],
-      });
-    }
-
     // この push が astro 向け override の最後であることを確認すること
     configs.push({
       overrides: [
@@ -176,7 +96,7 @@ export const createConfig = (
   }
 
   if (tailwindcss) {
-    configs.push(tailwindConfig({ astro, sass }));
+    configs.push(tailwindConfig({ astro }));
   }
 
   if (cssModulesKit) {

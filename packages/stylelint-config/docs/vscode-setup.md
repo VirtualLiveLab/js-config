@@ -22,7 +22,7 @@ VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCod
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": "explicit"
   },
-  "stylelint.validate": ["css", "postcss", "scss"],
+  "stylelint.validate": ["css", "postcss"],
   "stylelint.packageManager": "PROJECT_PACKAGE_MANAGER"
 }
 ```
@@ -33,6 +33,6 @@ VLLでは基本的にVSCodeの利用を推奨しています。ここではVSCod
 
 ```json
 {
-  "stylelint.validate": ["css", "postcss", "scss", "astro"]
+  "stylelint.validate": ["css", "postcss", "astro"]
 }
 ```
