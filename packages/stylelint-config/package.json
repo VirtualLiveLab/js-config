@@ -41,7 +41,7 @@
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "publint": "catalog:",
-    "stylelint": "16.23.1",
+    "stylelint": "16.24.0",
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "unplugin-unused": "catalog:",
