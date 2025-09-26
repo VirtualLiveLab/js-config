@@ -2514,6 +2514,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-mixed-operators": [
       0,
@@ -4052,6 +4055,9 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-mixed-operators": [
       0,
