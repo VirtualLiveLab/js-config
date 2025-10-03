@@ -577,6 +577,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
         },
         {
           "properties": [
+            "ruby-position",
+            "ruby-align",
+          ],
+        },
+        {
+          "properties": [
             "src",
             "font-display",
             "unicode-range",
@@ -614,6 +620,8 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
         {
           "properties": [
             "color-scheme",
+            "forced-color-adjust",
+            "print-color-adjust",
           ],
         },
         {
@@ -867,6 +875,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
         },
         {
           "properties": [
+            "view-transition-name",
+            "view-transition-class",
+          ],
+        },
+        {
+          "properties": [
             "animation",
             "animation-name",
             "animation-duration",
@@ -877,6 +891,16 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
             "animation-fill-mode",
             "animation-play-state",
             "animation-composition",
+          ],
+        },
+        {
+          "properties": [
+            "offset",
+            "offset-position",
+            "offset-path",
+            "offset-distance",
+            "offset-rotate",
+            "offset-anchor",
           ],
         },
         {
@@ -1568,6 +1592,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
         },
         {
           "properties": [
+            "ruby-position",
+            "ruby-align",
+          ],
+        },
+        {
+          "properties": [
             "src",
             "font-display",
             "unicode-range",
@@ -1605,6 +1635,8 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
         {
           "properties": [
             "color-scheme",
+            "forced-color-adjust",
+            "print-color-adjust",
           ],
         },
         {
@@ -1858,6 +1890,12 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
         },
         {
           "properties": [
+            "view-transition-name",
+            "view-transition-class",
+          ],
+        },
+        {
+          "properties": [
             "animation",
             "animation-name",
             "animation-duration",
@@ -1868,6 +1906,16 @@ exports[`Test stylelint preset with snapshot > astro preset > should match snaps
             "animation-fill-mode",
             "animation-play-state",
             "animation-composition",
+          ],
+        },
+        {
+          "properties": [
+            "offset",
+            "offset-position",
+            "offset-path",
+            "offset-distance",
+            "offset-rotate",
+            "offset-anchor",
           ],
         },
         {
@@ -2559,6 +2607,12 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
         },
         {
           "properties": [
+            "ruby-position",
+            "ruby-align",
+          ],
+        },
+        {
+          "properties": [
             "src",
             "font-display",
             "unicode-range",
@@ -2596,6 +2650,8 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
         {
           "properties": [
             "color-scheme",
+            "forced-color-adjust",
+            "print-color-adjust",
           ],
         },
         {
@@ -2849,6 +2905,12 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
         },
         {
           "properties": [
+            "view-transition-name",
+            "view-transition-class",
+          ],
+        },
+        {
+          "properties": [
             "animation",
             "animation-name",
             "animation-duration",
@@ -2859,6 +2921,16 @@ exports[`Test stylelint preset with snapshot > normal preset > should match snap
             "animation-fill-mode",
             "animation-play-state",
             "animation-composition",
+          ],
+        },
+        {
+          "properties": [
+            "offset",
+            "offset-position",
+            "offset-path",
+            "offset-distance",
+            "offset-rotate",
+            "offset-anchor",
           ],
         },
         {
