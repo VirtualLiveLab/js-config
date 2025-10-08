@@ -5,7 +5,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 
 import { prepareForExtend } from "../utils/eslint";
-import { jsxFiles } from "../utils/files";
+import { jsFiles, tsFiles } from "../utils/files";
 
 const reactConfig = defineConfig({
   extends: prepareForExtend(
@@ -16,7 +16,7 @@ const reactConfig = defineConfig({
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
     reactHooks.configs["flat/recommended"],
   ),
-  files: [jsxFiles],
+  files: [jsFiles, tsFiles],
   languageOptions: {
     globals: {
       ...globals.browser,
