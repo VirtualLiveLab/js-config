@@ -2,10 +2,10 @@ packages:
   - packages/*
 
 catalog:
-  "@types/node": 22.18.8
+  "@types/node": 22.18.9
   typescript: 5.9.3
   vitest: 3.2.4
   # build tools
-  publint: 0.3.13
+  publint: 0.3.14
   tsdown: 0.15.6
-  unplugin-unused: 0.5.3
+  unplugin-unused: 0.5.4
