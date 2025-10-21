@@ -15,7 +15,7 @@
     "pkg-pr-new": "pkg-pr-new publish --compact --comment=update --pnpm",
     "release": "pnpm run build && pnpm run test && changeset publish"
   },
-  "packageManager": "pnpm@10.18.0",
+  "packageManager": "pnpm@10.19.0",
   "devDependencies": {
     "@changesets/changelog-github": "0.5.1",
     "@changesets/cli": "2.29.7",
