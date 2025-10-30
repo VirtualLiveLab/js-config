@@ -2,6 +2,7 @@ import { defineConfig } from "@eslint/config-helpers";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import reactYouMightNotNeedAnEffect from "eslint-plugin-react-you-might-not-need-an-effect";
 import globals from "globals";
 
 import { prepareForExtend } from "../utils/eslint";
@@ -15,6 +16,7 @@ const reactConfig = defineConfig({
     // @ts-expect-error type does not exists
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
     reactHooks.configs["flat/recommended"],
+    reactYouMightNotNeedAnEffect.configs.recommended,
   ),
   files: [jsFiles, tsFiles],
   languageOptions: {
