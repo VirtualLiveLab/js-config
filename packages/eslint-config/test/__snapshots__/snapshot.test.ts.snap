@@ -7,6 +7,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     "ecmaVersion": 2026,
     "globals": {
       "AI": false,
+      "AICreateMonitor": false,
       "AITextSession": false,
       "AbortController": false,
       "AbortSignal": false,
@@ -20,6 +21,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "AnimationPlaybackEvent": false,
       "AnimationTimeline": false,
       "Astro": false,
+      "AsyncDisposableStack": false,
       "Attr": false,
       "Audio": false,
       "AudioBuffer": false,
@@ -67,6 +69,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "Buffer": false,
       "ByteLengthQueuingStrategy": false,
       "CDATASection": false,
+      "CSPViolationReportBody": false,
       "CSS": false,
       "CSSAnimation": false,
       "CSSConditionRule": false,
@@ -75,6 +78,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "CSSFontFaceRule": false,
       "CSSFontFeatureValuesRule": false,
       "CSSFontPaletteValuesRule": false,
+      "CSSFunctionDeclarations": false,
+      "CSSFunctionDescriptors": false,
+      "CSSFunctionRule": false,
       "CSSGroupingRule": false,
       "CSSImageValue": false,
       "CSSImportRule": false,
@@ -142,10 +148,12 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "CharacterBoundsUpdateEvent": false,
       "CharacterData": false,
       "Clipboard": false,
+      "ClipboardChangeEvent": false,
       "ClipboardEvent": false,
       "ClipboardItem": false,
       "CloseEvent": false,
       "CloseWatcher": false,
+      "CommandEvent": false,
       "Comment": false,
       "CompositionEvent": false,
       "CompressionStream": false,
@@ -157,6 +165,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "CookieStore": false,
       "CookieStoreManager": false,
       "CountQueuingStrategy": false,
+      "CreateMonitor": false,
       "Credential": false,
       "CredentialsContainer": false,
       "CropTarget": false,
@@ -190,6 +199,8 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "DeviceMotionEventAcceleration": false,
       "DeviceMotionEventRotationRate": false,
       "DeviceOrientationEvent": false,
+      "DevicePosture": false,
+      "DisposableStack": false,
       "Document": false,
       "DocumentFragment": false,
       "DocumentPictureInPicture": false,
@@ -226,8 +237,8 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "FileSystemFileEntry": false,
       "FileSystemFileHandle": false,
       "FileSystemHandle": false,
+      "FileSystemObserver": false,
       "FileSystemWritableFileStream": false,
-      "Float16Array": false,
       "FocusEvent": false,
       "FontData": false,
       "FontFace": false,
@@ -354,6 +365,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "HTMLQuoteElement": false,
       "HTMLScriptElement": false,
       "HTMLSelectElement": false,
+      "HTMLSelectedContentElement": false,
       "HTMLSlotElement": false,
       "HTMLSourceElement": false,
       "HTMLSpanElement": false,
@@ -406,12 +418,14 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "InputDeviceCapabilities": false,
       "InputDeviceInfo": false,
       "InputEvent": false,
+      "IntegrityViolationReportBody": false,
       "IntersectionObserver": false,
       "IntersectionObserverEntry": false,
       "Keyboard": false,
       "KeyboardEvent": false,
       "KeyboardLayoutMap": false,
       "KeyframeEffect": false,
+      "LanguageDetector": false,
       "LargestContentfulPaint": false,
       "LaunchParams": false,
       "LaunchQueue": false,
@@ -497,6 +511,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "Notification": false,
       "NotifyPaintEvent": false,
       "OTPCredential": false,
+      "Observable": false,
       "OfflineAudioCompletionEvent": false,
       "OfflineAudioContext": false,
       "OffscreenCanvas": false,
@@ -564,6 +579,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "PushManager": false,
       "PushSubscription": false,
       "PushSubscriptionOptions": false,
+      "QuotaExceededError": false,
       "RTCCertificate": false,
       "RTCDTMFSender": false,
       "RTCDTMFToneChangeEvent": false,
@@ -597,12 +613,14 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "ReadableStreamDefaultReader": false,
       "RelativeOrientationSensor": false,
       "RemotePlayback": false,
+      "ReportBody": false,
       "ReportingObserver": false,
       "Request": false,
       "ResizeObserver": false,
       "ResizeObserverEntry": false,
       "ResizeObserverSize": false,
       "Response": false,
+      "RestrictionTarget": false,
       "SVGAElement": false,
       "SVGAngle": false,
       "SVGAnimateElement": false,
@@ -719,11 +737,21 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "ServiceWorkerRegistration": false,
       "ShadowRoot": false,
       "SharedStorage": false,
+      "SharedStorageAppendMethod": false,
+      "SharedStorageClearMethod": false,
+      "SharedStorageDeleteMethod": false,
+      "SharedStorageModifierMethod": false,
+      "SharedStorageSetMethod": false,
       "SharedStorageWorklet": false,
       "SharedWorker": false,
       "SnapEvent": false,
       "SourceBuffer": false,
       "SourceBufferList": false,
+      "SpeechGrammar": false,
+      "SpeechGrammarList": false,
+      "SpeechRecognition": false,
+      "SpeechRecognitionErrorEvent": false,
+      "SpeechRecognitionEvent": false,
       "SpeechSynthesis": false,
       "SpeechSynthesisErrorEvent": false,
       "SpeechSynthesisEvent": false,
@@ -741,7 +769,10 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "StyleSheet": false,
       "StyleSheetList": false,
       "SubmitEvent": false,
+      "Subscriber": false,
       "SubtleCrypto": false,
+      "Summarizer": false,
+      "SuppressedError": false,
       "SyncManager": false,
       "TEMPORARY": false,
       "TaskAttributionTiming": false,
@@ -772,6 +803,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "TransformStream": false,
       "TransformStreamDefaultController": false,
       "TransitionEvent": false,
+      "Translator": false,
       "TreeWalker": false,
       "TrustedHTML": false,
       "TrustedScript": false,
@@ -807,6 +839,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "ViewTimeline": false,
       "ViewTransition": false,
       "ViewTransitionTypeSet": false,
+      "Viewport": false,
       "VirtualKeyboard": false,
       "VirtualKeyboardGeometryChangeEvent": false,
       "VisibilityStateEntry": false,
@@ -987,6 +1020,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "onchange": true,
       "onclick": true,
       "onclose": true,
+      "oncommand": true,
       "oncontentvisibilityautostatechange": true,
       "oncontextlost": true,
       "oncontextmenu": true,
@@ -1144,7 +1178,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "toolbar": false,
       "top": false,
       "trustedTypes": false,
+      "viewport": false,
       "visualViewport": false,
+      "when": false,
       "window": false,
     },
     "parser": "astro-eslint-parser@1.2.2",
@@ -1152,7 +1188,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "extraFileExtensions": {
         "0": ".astro",
       },
-      "parser": "typescript-eslint-parser-for-extra-files@8.40.0",
+      "parser": "typescript-eslint-parser-for-extra-files@8.46.2",
       "project": true,
       "projectService": false,
       "tsconfigRootDir": "/home/runner/work/js-config/js-config",
@@ -1164,9 +1200,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
   },
   "plugins": [
     "@",
-    "perfectionist:eslint-plugin-perfectionist@4.15.0",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.40.0",
-    "astro:eslint-plugin-astro@1.3.1",
+    "perfectionist:eslint-plugin-perfectionist@4.15.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.46.2",
+    "astro:eslint-plugin-astro@1.4.0",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
   ],
   "processor": "astro/client-side-ts",
@@ -3164,7 +3200,7 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
   },
   "plugins": [
     "@",
-    "perfectionist:eslint-plugin-perfectionist@4.15.0",
+    "perfectionist:eslint-plugin-perfectionist@4.15.1",
   ],
   "processor": undefined,
   "rules": {
@@ -4721,6 +4757,9 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "CSSFontFaceRule": false,
       "CSSFontFeatureValuesRule": false,
       "CSSFontPaletteValuesRule": false,
+      "CSSFunctionDeclarations": false,
+      "CSSFunctionDescriptors": false,
+      "CSSFunctionRule": false,
       "CSSGroupingRule": false,
       "CSSImageValue": false,
       "CSSImportRule": false,
@@ -5386,6 +5425,11 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "SnapEvent": false,
       "SourceBuffer": false,
       "SourceBufferList": false,
+      "SpeechGrammar": false,
+      "SpeechGrammarList": false,
+      "SpeechRecognition": false,
+      "SpeechRecognitionErrorEvent": false,
+      "SpeechRecognitionEvent": false,
       "SpeechSynthesis": false,
       "SpeechSynthesisErrorEvent": false,
       "SpeechSynthesisEvent": false,
@@ -5808,7 +5852,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "when": false,
       "window": false,
     },
-    "parser": "typescript-eslint/parser@8.40.0",
+    "parser": "typescript-eslint/parser@8.46.2",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true,
@@ -5831,10 +5875,10 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
   },
   "plugins": [
     "@",
-    "perfectionist:eslint-plugin-perfectionist@4.15.0",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.40.0",
+    "perfectionist:eslint-plugin-perfectionist@4.15.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.46.2",
     "react",
-    "react-hooks:eslint-plugin-react-hooks",
+    "react-you-might-not-need-an-effect:react-you-might-not-need-an-effect",
     "react-refresh",
   ],
   "processor": undefined,
@@ -7185,58 +7229,40 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
     "quotes": [
       0,
     ],
-    "react-hooks/component-hook-factories": [
-      2,
-    ],
-    "react-hooks/config": [
-      2,
-    ],
-    "react-hooks/error-boundaries": [
-      2,
-    ],
-    "react-hooks/exhaustive-deps": [
+    "react-refresh/only-export-components": [
       1,
     ],
-    "react-hooks/gating": [
-      2,
+    "react-you-might-not-need-an-effect/no-adjust-state-on-prop-change": [
+      1,
     ],
-    "react-hooks/globals": [
-      2,
+    "react-you-might-not-need-an-effect/no-chain-state-updates": [
+      1,
     ],
-    "react-hooks/immutability": [
-      2,
+    "react-you-might-not-need-an-effect/no-derived-state": [
+      1,
     ],
-    "react-hooks/no-unused-directives": [
-      2,
+    "react-you-might-not-need-an-effect/no-empty-effect": [
+      1,
     ],
-    "react-hooks/preserve-manual-memoization": [
-      2,
+    "react-you-might-not-need-an-effect/no-event-handler": [
+      1,
     ],
-    "react-hooks/purity": [
-      2,
+    "react-you-might-not-need-an-effect/no-initialize-state": [
+      1,
     ],
-    "react-hooks/refs": [
-      2,
+    "react-you-might-not-need-an-effect/no-manage-parent": [
+      1,
     ],
-    "react-hooks/rules-of-hooks": [
-      2,
+    "react-you-might-not-need-an-effect/no-pass-data-to-parent": [
+      1,
     ],
-    "react-hooks/set-state-in-effect": [
-      2,
+    "react-you-might-not-need-an-effect/no-pass-live-state-to-parent": [
+      1,
     ],
-    "react-hooks/set-state-in-render": [
-      2,
+    "react-you-might-not-need-an-effect/no-pass-ref-to-parent": [
+      1,
     ],
-    "react-hooks/static-components": [
-      2,
-    ],
-    "react-hooks/unsupported-syntax": [
-      2,
-    ],
-    "react-hooks/use-memo": [
-      2,
-    ],
-    "react-refresh/only-export-components": [
+    "react-you-might-not-need-an-effect/no-reset-all-state-on-prop-change": [
       1,
     ],
     "react/button-has-type": [
@@ -7595,7 +7621,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   "language": "@/js",
   "languageOptions": {
     "ecmaVersion": 2026,
-    "parser": "typescript-eslint/parser@8.40.0",
+    "parser": "typescript-eslint/parser@8.46.2",
     "parserOptions": {
       "projectService": {
         "allowDefaultProject": {
@@ -7614,8 +7640,8 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   },
   "plugins": [
     "@",
-    "perfectionist:eslint-plugin-perfectionist@4.15.0",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.40.0",
+    "perfectionist:eslint-plugin-perfectionist@4.15.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.46.2",
   ],
   "processor": undefined,
   "rules": {
