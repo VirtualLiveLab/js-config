@@ -149,33 +149,65 @@ jobs:
 
       - name: Update ESLint Config Snapshot
         if: needs.check-target-packages.outputs.eslint == 'true'
-        run: pnpm run build:eslint && pnpm run test --project eslint-config -u
+        id: update-eslint
+        run: |
+          pnpm run build:eslint && pnpm run test --project eslint-config -u
+          if ! git diff --quiet; then
+            echo "updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "updated=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Update Prettier Config Snapshot
         if: needs.check-target-packages.outputs.prettier == 'true'
-        run: pnpm run build:prettier && pnpm run test --project prettier-config -u
+        id: update-prettier
+        run: |
+          pnpm run build:prettier && pnpm run test --project prettier-config -u
+          if ! git diff --quiet; then
+            echo "updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "updated=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Update Stylelint Config Snapshot
         if: needs.check-target-packages.outputs.stylelint == 'true'
-        run: pnpm run build:stylelint && pnpm run test --project stylelint-config -u
+        id: update-stylelint
+        run: |
+          pnpm run build:stylelint && pnpm run test --project stylelint-config -u
+          if ! git diff --quiet; then
+            echo "updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "updated=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check if there are changes
+        id: check-changes
+        run: |
+          if ! git diff --quiet; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Commit and Push Changes
+        if: steps.check-changes.outputs.has_changes == 'true'
         run: |
           git add .
           git commit -m "chore: update snapshot (github-actions)"
           git push origin HEAD
 
       - name: Create change summary markdown
+        if: steps.check-changes.outputs.has_changes == 'true'
         run: |
           echo "## 🚚 Updated snapshots" >> CHANGES.md
 
-          if [ ${{ needs.check-target-packages.outputs.eslint }} == 'true' ]; then
+          if [ "${{ steps.update-eslint.outputs.updated }}" == "true" ]; then
               echo "- ESLint" >> CHANGES.md
           fi
-          if [ ${{ needs.check-target-packages.outputs.prettier }} == 'true' ]; then
+          if [ "${{ steps.update-prettier.outputs.updated }}" == "true" ]; then
               echo "- Prettier" >> CHANGES.md
           fi
-          if [ ${{ needs.check-target-packages.outputs.stylelint }} == 'true' ]; then
+          if [ "${{ steps.update-stylelint.outputs.updated }}" == "true" ]; then
               echo "- Stylelint" >> CHANGES.md
           fi
 
