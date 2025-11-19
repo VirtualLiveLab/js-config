@@ -8,6 +8,7 @@ export default defineConfig({
   minify: "dce-only",
   nodeProtocol: true,
   outDir: "dist",
+  fixedExtension: true,
   publint: true,
   unused: true,
 });

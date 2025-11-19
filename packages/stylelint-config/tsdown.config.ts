@@ -6,8 +6,12 @@ export default defineConfig({
   entry: ["./src/index.ts", "./src/astro.ts"],
   format: "esm",
   minify: "dce-only",
+  fixedExtension: true,
   nodeProtocol: true,
   outDir: "dist",
   publint: true,
-  unused: true,
+  unused: {
+    // Required by stylelint-config-html
+    ignore: ["postcss-html"],
+  },
 });
