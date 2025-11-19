@@ -7,5 +7,5 @@ catalog:
   vitest: 3.2.4
   # build tools
   publint: 0.3.15
-  tsdown: 0.15.10
+  tsdown: 0.16.4
   unplugin-unused: 0.5.4
