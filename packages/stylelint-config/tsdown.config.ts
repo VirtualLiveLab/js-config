@@ -10,5 +10,8 @@ export default defineConfig({
   nodeProtocol: true,
   outDir: "dist",
   publint: true,
-  unused: true,
+  unused: {
+    // Required by stylelint-config-html
+    ignore: ["postcss-html"],
+  },
 });
