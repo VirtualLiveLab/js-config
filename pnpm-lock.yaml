@@ -78,8 +78,8 @@ importers:
         specifier: 2.13.0
         version: 2.13.0
       '@eslint/compat':
-        specifier: 1.4.1
-        version: 1.4.1(eslint@9.39.1(jiti@2.5.1))
+        specifier: 2.0.0
+        version: 2.0.0(eslint@9.39.1(jiti@2.5.1))
       '@eslint/config-helpers':
         specifier: 0.5.0
         version: 0.5.0
@@ -650,6 +650,15 @@ packages:
   '@eslint/compat@1.4.1':
     resolution: {integrity: sha512-cfO82V9zxxGBxcQDr1lfaYB7wykTa0b00mGa36FrJl7iTFd0Z2cHfEYuxcBRP/iNijCsWsEkA+jzT8hGYmv33w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^8.40 || 9
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+
+  '@eslint/compat@2.0.0':
+    resolution: {integrity: sha512-T9AfE1G1uv4wwq94ozgTGio5EUQBqAVe1X9qsQtSNVEYW6j3hvtZVm8Smr4qL1qDPFg+lOB2cL5RxTRMzq4CTA==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       eslint: ^8.40 || 9
     peerDependenciesMeta:
@@ -3896,6 +3905,12 @@ snapshots:
   '@eslint/compat@1.4.1(eslint@9.39.1(jiti@2.5.1))':
     dependencies:
       '@eslint/core': 0.17.0
+    optionalDependencies:
+      eslint: 9.39.1(jiti@2.5.1)
+
+  '@eslint/compat@2.0.0(eslint@9.39.1(jiti@2.5.1))':
+    dependencies:
+      '@eslint/core': 1.0.0
     optionalDependencies:
       eslint: 9.39.1(jiti@2.5.1)
 
