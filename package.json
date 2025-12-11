@@ -26,8 +26,8 @@
     "@virtual-live-lab/tsconfig": "workspace:^",
     "eslint": "9.39.1",
     "pkg-pr-new": "0.0.62",
-    "pnpm": "10.24.0",
-    "prettier": "3.7.3",
+    "pnpm": "10.25.0",
+    "prettier": "3.7.4",
     "stylelint": "16.26.1",
     "typescript": "catalog:",
     "vitest": "catalog:"
