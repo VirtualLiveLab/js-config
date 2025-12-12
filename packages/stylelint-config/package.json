@@ -28,7 +28,7 @@
     }
   },
   "dependencies": {
-    "@double-great/stylelint-a11y": "3.4.0",
+    "@double-great/stylelint-a11y": "3.4.1",
     "defu": "6.1.4",
     "stylelint-config-html": "1.1.0",
     "stylelint-config-recess-order": "7.4.0",
