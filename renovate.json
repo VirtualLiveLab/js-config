@@ -47,6 +47,31 @@
       "matchManagers": ["npm"],
       "matchFileNames": ["packages/stylelint-config/**"],
       "matchDepTypes": ["dependencies"]
+    },
+    {
+      "groupName": "eslint-patch",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchFileNames": ["packages/eslint-config/**"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "groupName": "prettier-patch",
+      "matchManagers": ["npm"],
+      "matchFileNames": ["packages/prettier-config/**"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "groupName": "stylelint-patch",
+      "matchManagers": ["npm"],
+      "matchFileNames": ["packages/stylelint-config/**"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
     }
+
   ]
 }
