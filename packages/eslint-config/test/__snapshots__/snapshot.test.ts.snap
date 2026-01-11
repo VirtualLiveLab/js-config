@@ -1193,7 +1193,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "extraFileExtensions": {
         "0": ".astro",
       },
-      "parser": "typescript-eslint-parser-for-extra-files@8.51.0",
+      "parser": "typescript-eslint-parser-for-extra-files@8.52.0",
       "project": true,
       "projectService": false,
       "tsconfigRootDir": "/home/runner/work/js-config/js-config",
@@ -1206,7 +1206,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
   "plugins": [
     "@",
     "perfectionist:eslint-plugin-perfectionist@4.15.1",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.51.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.52.0",
     "astro:eslint-plugin-astro@1.5.0",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
   ],
@@ -5862,7 +5862,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "when": false,
       "window": false,
     },
-    "parser": "typescript-eslint/parser@8.51.0",
+    "parser": "typescript-eslint/parser@8.52.0",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true,
@@ -5886,7 +5886,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
   "plugins": [
     "@",
     "perfectionist:eslint-plugin-perfectionist@4.15.1",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.51.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.52.0",
     "react",
     "react-you-might-not-need-an-effect:react-you-might-not-need-an-effect",
     "react-refresh",
@@ -7628,7 +7628,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   "language": "@/js",
   "languageOptions": {
     "ecmaVersion": 2026,
-    "parser": "typescript-eslint/parser@8.51.0",
+    "parser": "typescript-eslint/parser@8.52.0",
     "parserOptions": {
       "projectService": {
         "allowDefaultProject": {
@@ -7648,7 +7648,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   "plugins": [
     "@",
     "perfectionist:eslint-plugin-perfectionist@4.15.1",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.51.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.52.0",
   ],
   "processor": undefined,
   "rules": {
