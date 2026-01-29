@@ -221,8 +221,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(postcss-html@1.8.0)(stylelint@16.26.1(typescript@5.9.3))
       stylelint-config-recess-order:
-        specifier: 7.4.0
-        version: 7.4.0(stylelint-order@6.0.4(stylelint@16.26.1(typescript@5.9.3)))(stylelint@16.26.1(typescript@5.9.3))
+        specifier: 7.6.0
+        version: 7.6.0(stylelint-order@6.0.4(stylelint@16.26.1(typescript@5.9.3)))(stylelint@16.26.1(typescript@5.9.3))
       stylelint-config-standard:
         specifier: 39.0.1
         version: 39.0.1(stylelint@16.26.1(typescript@5.9.3))
@@ -230,8 +230,8 @@ importers:
         specifier: 2.8.0
         version: 2.8.0(stylelint@16.26.1(typescript@5.9.3))
       stylelint-value-no-unknown-custom-properties:
-        specifier: 6.1.0
-        version: 6.1.0(stylelint@16.26.1(typescript@5.9.3))
+        specifier: 6.1.1
+        version: 6.1.1(stylelint@16.26.1(typescript@5.9.3))
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -3013,11 +3013,11 @@ packages:
       postcss-html: ^1.0.0
       stylelint: '>=14.0.0'
 
-  stylelint-config-recess-order@7.4.0:
-    resolution: {integrity: sha512-W3G517cBaMDYRX5Fzhro4fhRkkLafLgVSPfQnhxbiLyMnbLq47RMF/NRaOJ4OQsKWYhsIHOIc2Q3VL0X3Q7oPg==}
+  stylelint-config-recess-order@7.6.0:
+    resolution: {integrity: sha512-c3LXX4a8UEtrMD/KigK4I7LFexbM2p/eSTqnix5dmmvydEqX3dzrRt981h8giSEhA51vxdCEefQc3umH60i2bA==}
     peerDependencies:
-      stylelint: '>=16.18'
-      stylelint-order: '>=7'
+      stylelint: ^16.18.0 || ^17.0.0
+      stylelint-order: ^7.0.0
 
   stylelint-config-recommended@17.0.0:
     resolution: {integrity: sha512-WaMSdEiPfZTSFVoYmJbxorJfA610O0tlYuU2aEwY33UQhSPgFbClrVJYWvy3jGJx+XW37O+LyNLiZOEXhKhJmA==}
@@ -3042,8 +3042,8 @@ packages:
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
 
-  stylelint-value-no-unknown-custom-properties@6.1.0:
-    resolution: {integrity: sha512-fzc1ckeQZAlksMRzmWuyLywSRfaF9ys04qNg8+kTstUnZT0z8ajdMLjiPKtlcm4Nc5oDZE8tPVAcfFJB6E/1/A==}
+  stylelint-value-no-unknown-custom-properties@6.1.1:
+    resolution: {integrity: sha512-eQ1zidKD5t9zMEaskjGUY4W47lH76qMlmsDSmCAPEwtaGzB4Ls7ORTfysC1D6hamp2zFC+vN1vpQ+GFz3Tw3lw==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: '>=16'
@@ -6405,7 +6405,7 @@ snapshots:
       postcss-html: 1.8.0
       stylelint: 16.26.1(typescript@5.9.3)
 
-  stylelint-config-recess-order@7.4.0(stylelint-order@6.0.4(stylelint@16.26.1(typescript@5.9.3)))(stylelint@16.26.1(typescript@5.9.3)):
+  stylelint-config-recess-order@7.6.0(stylelint-order@6.0.4(stylelint@16.26.1(typescript@5.9.3)))(stylelint@16.26.1(typescript@5.9.3)):
     dependencies:
       stylelint: 16.26.1(typescript@5.9.3)
       stylelint-order: 6.0.4(stylelint@16.26.1(typescript@5.9.3))
@@ -6429,7 +6429,7 @@ snapshots:
       postcss-sorting: 8.0.2(postcss@8.5.6)
       stylelint: 16.26.1(typescript@5.9.3)
 
-  stylelint-value-no-unknown-custom-properties@6.1.0(stylelint@16.26.1(typescript@5.9.3)):
+  stylelint-value-no-unknown-custom-properties@6.1.1(stylelint@16.26.1(typescript@5.9.3)):
     dependencies:
       postcss-value-parser: 4.2.0
       resolve: 1.22.10
