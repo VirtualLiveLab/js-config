@@ -20,7 +20,7 @@ runs:
         node-version-file: package.json
 
     - name: Restore pnpm cache
-      uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
       with:
         path: ${{ steps.pnpm-store.outputs.store_path }}
         key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -34,7 +34,7 @@ runs:
     - name: Save pnpm cache if main branch
       if: github.ref_name == 'main'
       id: save-pnpm-cache
-      uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      uses: actions/cache/save@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
       with:
         path: ${{ steps.pnpm-store.outputs.store_path }}
         key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
