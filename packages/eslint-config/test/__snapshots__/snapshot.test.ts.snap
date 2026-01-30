@@ -1193,7 +1193,7 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       "extraFileExtensions": {
         "0": ".astro",
       },
-      "parser": "typescript-eslint-parser-for-extra-files@8.48.0",
+      "parser": "typescript-eslint-parser-for-extra-files@8.53.0",
       "project": true,
       "projectService": false,
       "tsconfigRootDir": "/home/runner/work/js-config/js-config",
@@ -1205,8 +1205,8 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
   },
   "plugins": [
     "@",
-    "perfectionist:eslint-plugin-perfectionist@4.15.1",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.48.0",
+    "perfectionist:eslint-plugin-perfectionist@5.3.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.53.0",
     "astro:eslint-plugin-astro@1.5.0",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
   ],
@@ -2756,6 +2756,13 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
         "type": "natural",
       },
     ],
+    "perfectionist/sort-export-attributes": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-exports": [
       2,
       {
@@ -2764,6 +2771,13 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
       },
     ],
     "perfectionist/sort-heritage-clauses": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-import-attributes": [
       2,
       {
         "order": "asc",
@@ -3205,7 +3219,7 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
   },
   "plugins": [
     "@",
-    "perfectionist:eslint-plugin-perfectionist@4.15.1",
+    "perfectionist:eslint-plugin-perfectionist@5.3.1",
   ],
   "processor": undefined,
   "rules": {
@@ -4278,6 +4292,13 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
         "type": "natural",
       },
     ],
+    "perfectionist/sort-export-attributes": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-exports": [
       2,
       {
@@ -4286,6 +4307,13 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
       },
     ],
     "perfectionist/sort-heritage-clauses": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-import-attributes": [
       2,
       {
         "order": "asc",
@@ -4805,6 +4833,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "CSSSkewY": false,
       "CSSStartingStyleRule": false,
       "CSSStyleDeclaration": false,
+      "CSSStyleProperties": false,
       "CSSStyleRule": false,
       "CSSStyleSheet": false,
       "CSSStyleValue": false,
@@ -5467,6 +5496,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "TaskController": false,
       "TaskPriorityChangeEvent": false,
       "TaskSignal": false,
+      "Temporal": false,
       "Text": false,
       "TextDecoder": false,
       "TextDecoderStream": false,
@@ -5862,7 +5892,7 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       "when": false,
       "window": false,
     },
-    "parser": "typescript-eslint/parser@8.48.0",
+    "parser": "typescript-eslint/parser@8.53.0",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true,
@@ -5885,8 +5915,8 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
   },
   "plugins": [
     "@",
-    "perfectionist:eslint-plugin-perfectionist@4.15.1",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.48.0",
+    "perfectionist:eslint-plugin-perfectionist@5.3.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.53.0",
     "react",
     "react-you-might-not-need-an-effect:react-you-might-not-need-an-effect",
     "react-refresh",
@@ -7084,6 +7114,13 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
         "type": "natural",
       },
     ],
+    "perfectionist/sort-export-attributes": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-exports": [
       2,
       {
@@ -7092,6 +7129,13 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       },
     ],
     "perfectionist/sort-heritage-clauses": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-import-attributes": [
       2,
       {
         "order": "asc",
@@ -7258,9 +7302,6 @@ exports[`Test ESLint config with snapshot > react preset > matches snapshot 1`] 
       1,
     ],
     "react-you-might-not-need-an-effect/no-initialize-state": [
-      1,
-    ],
-    "react-you-might-not-need-an-effect/no-manage-parent": [
       1,
     ],
     "react-you-might-not-need-an-effect/no-pass-data-to-parent": [
@@ -7631,7 +7672,7 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   "language": "@/js",
   "languageOptions": {
     "ecmaVersion": 2026,
-    "parser": "typescript-eslint/parser@8.48.0",
+    "parser": "typescript-eslint/parser@8.53.0",
     "parserOptions": {
       "projectService": {
         "allowDefaultProject": {
@@ -7650,8 +7691,8 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
   },
   "plugins": [
     "@",
-    "perfectionist:eslint-plugin-perfectionist@4.15.1",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.48.0",
+    "perfectionist:eslint-plugin-perfectionist@5.3.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.53.0",
   ],
   "processor": undefined,
   "rules": {
@@ -8846,6 +8887,13 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
         "type": "natural",
       },
     ],
+    "perfectionist/sort-export-attributes": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-exports": [
       2,
       {
@@ -8854,6 +8902,13 @@ exports[`Test ESLint config with snapshot > ts preset > matches snapshot 1`] = `
       },
     ],
     "perfectionist/sort-heritage-clauses": [
+      2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-import-attributes": [
       2,
       {
         "order": "asc",

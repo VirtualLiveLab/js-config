@@ -2,4 +2,4 @@
 "@virtual-live-lab/eslint-config": patch
 ---
 
-chore(deps): update devdependencies
+fix(deps): update eslint to v8.52.0
