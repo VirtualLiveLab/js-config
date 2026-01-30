@@ -45,7 +45,7 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
 
       - name: Update PR
-        uses: mscharley/dependency-changesets-action@f25d784f13eb09227429cebd880ade75d19d6283 # v1.1.9
+        uses: mscharley/dependency-changesets-action@e704c89dbc4e284d055aa520308291690f645a4f # v1.2.2
         with:
           use-conventional-commits: false
           token: ${{ steps.app-token.outputs.token }}
