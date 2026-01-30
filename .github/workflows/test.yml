@@ -8,10 +8,6 @@ on:
       - opened
       - synchronize
       - reopened
-    paths:
-      - "packages/**"
-      - "package.json"
-      - ".github/workflows/test.yml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
