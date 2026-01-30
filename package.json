@@ -27,7 +27,7 @@
     "eslint": "9.39.2",
     "pkg-pr-new": "0.0.62",
     "pnpm": "10.28.2",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "stylelint": "16.26.1",
     "typescript": "catalog:",
     "vitest": "catalog:"
