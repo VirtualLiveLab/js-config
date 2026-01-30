@@ -52,7 +52,6 @@ jobs:
   test:
     needs: paths-filter
     name: Vitest (Test Package)
-    if: ${{ needs.paths-filter.outputs.eslint == 'true' || needs.paths-filter.outputs.prettier == 'true' || needs.paths-filter.outputs.stylelint == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
