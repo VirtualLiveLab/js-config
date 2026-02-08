@@ -114,8 +114,8 @@ importers:
         specifier: 6.10.2
         version: 6.10.2(eslint@9.39.2(jiti@2.5.1))
       eslint-plugin-perfectionist:
-        specifier: 5.4.0
-        version: 5.4.0(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3)
+        specifier: 5.5.0
+        version: 5.5.0(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3)
       eslint-plugin-react:
         specifier: 7.37.5
         version: 7.37.5(eslint@9.39.2(jiti@2.5.1))
@@ -123,8 +123,8 @@ importers:
         specifier: 7.0.1
         version: 7.0.1(eslint@9.39.2(jiti@2.5.1))
       eslint-plugin-react-refresh:
-        specifier: 0.4.26
-        version: 0.4.26(eslint@9.39.2(jiti@2.5.1))
+        specifier: 0.5.0
+        version: 0.5.0(eslint@9.39.2(jiti@2.5.1))
       eslint-plugin-react-you-might-not-need-an-effect:
         specifier: 0.8.5
         version: 0.8.5(eslint@9.39.2(jiti@2.5.1))
@@ -132,11 +132,11 @@ importers:
         specifier: 3.18.2
         version: 3.18.2(tailwindcss@3.4.17)
       globals:
-        specifier: 17.2.0
-        version: 17.2.0
+        specifier: 17.3.0
+        version: 17.3.0
       package-directory:
-        specifier: 8.1.0
-        version: 8.1.0
+        specifier: 8.2.0
+        version: 8.2.0
       typescript-eslint:
         specifier: 8.54.0
         version: 8.54.0(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3)
@@ -1707,8 +1707,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
-  eslint-plugin-perfectionist@5.4.0:
-    resolution: {integrity: sha512-XxpUMpeVaSJF5rpF6NHmhj3xavHZrflKcRbDssAUWrHUU/+l3l7PPYnVJ6IOpR2KjQ1Blucaeb0cFL3LIBis0A==}
+  eslint-plugin-perfectionist@5.5.0:
+    resolution: {integrity: sha512-lZX2KUpwOQf7J27gAg/6vt8ugdPULOLmelM8oDJPMbaN7P2zNNeyS9yxGSmJcKX0SF9qR/962l9RWM2Z5jpPzg==}
     engines: {node: ^20.0.0 || >=22.0.0}
     peerDependencies:
       eslint: '>=8.45.0'
@@ -1719,10 +1719,10 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
-  eslint-plugin-react-refresh@0.4.26:
-    resolution: {integrity: sha512-1RETEylht2O6FM/MvgnyvT+8K21wLqDNg4qD51Zj3guhjt433XbnnkVttHMyaVyAFD03QSV4LPS5iE3VQmO7XQ==}
+  eslint-plugin-react-refresh@0.5.0:
+    resolution: {integrity: sha512-ZYvmh7VfVgqR/7wR71I3Zl6hK/C5CcxdWYKZSpHawS5JCNgE4efhQWg/+/WPpgGAp9Ngp/rRZYyaIwmPQBq/lA==}
     peerDependencies:
-      eslint: '>=8.40'
+      eslint: '>=9'
 
   eslint-plugin-react-you-might-not-need-an-effect@0.8.5:
     resolution: {integrity: sha512-U5t99XQhDZUs1HE2ipQsLP5i26b4TQ9bPIui931gz2UAO0o0MKS8Wz/gIfPS+THbCQ80AhJ8T9SJz4Bh5k1iQg==}
@@ -1955,8 +1955,8 @@ packages:
     resolution: {integrity: sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==}
     engines: {node: '>=18'}
 
-  globals@17.2.0:
-    resolution: {integrity: sha512-tovnCz/fEq+Ripoq+p/gN1u7l6A7wwkoBT9pRCzTHzsD/LvADIzXZdjmRymh5Ztf0DYC3Rwg5cZRYjxzBmzbWg==}
+  globals@17.3.0:
+    resolution: {integrity: sha512-yMqGUQVVCkD4tqjOJf3TnrvaaHDMYp4VlUSObbkIiuCPe/ofdMBFIAcBbCSRFWOnos6qRiTVStDwqPLUclaxIw==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -2474,8 +2474,8 @@ packages:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
 
-  package-directory@8.1.0:
-    resolution: {integrity: sha512-qHKRW0pw3lYdZMQVkjDBqh8HlamH/LCww2PH7OWEp4Qrt3SFeYMNpnJrQzlSnGrDD5zGR51XqBh7FnNCdVNEHA==}
+  package-directory@8.2.0:
+    resolution: {integrity: sha512-qJSu5Mo6tHmRxCy2KCYYKYgcfBdUpy9dwReaZD/xwf608AUk/MoRtIOWzgDtUeGeC7n/55yC3MI1Q+MbSoektw==}
     engines: {node: '>=18'}
 
   package-json-from-dist@1.0.1:
@@ -4956,7 +4956,7 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-perfectionist@5.4.0(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3):
+  eslint-plugin-perfectionist@5.5.0(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.54.0(eslint@9.39.2(jiti@2.5.1))(typescript@5.9.3)
       eslint: 9.39.2(jiti@2.5.1)
@@ -4976,7 +4976,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-react-refresh@0.4.26(eslint@9.39.2(jiti@2.5.1)):
+  eslint-plugin-react-refresh@0.5.0(eslint@9.39.2(jiti@2.5.1)):
     dependencies:
       eslint: 9.39.2(jiti@2.5.1)
 
@@ -5258,7 +5258,7 @@ snapshots:
 
   globals@16.5.0: {}
 
-  globals@17.2.0: {}
+  globals@17.3.0: {}
 
   globalthis@1.0.4:
     dependencies:
@@ -5739,7 +5739,7 @@ snapshots:
 
   p-try@2.2.0: {}
 
-  package-directory@8.1.0:
+  package-directory@8.2.0:
     dependencies:
       find-up-simple: 1.0.1
 
