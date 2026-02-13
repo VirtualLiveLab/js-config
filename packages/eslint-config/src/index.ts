@@ -1,1 +1,1 @@
-export { compat } from "./lib/compat";
+export { compat } from "./v2/lib/compat";

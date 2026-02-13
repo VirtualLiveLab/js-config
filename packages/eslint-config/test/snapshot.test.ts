@@ -1,10 +1,10 @@
 import { loadESLint } from "eslint";
 import { describe, expect, it } from "vitest";
 
-import astro from "../src/presets/astro";
-import js from "../src/presets/js";
-import react from "../src/presets/react";
-import ts from "../src/presets/ts";
+import astro from "../src/v2/presets/astro";
+import js from "../src/v2/presets/js";
+import react from "../src/v2/presets/react";
+import ts from "../src/v2/presets/ts";
 
 describe("Test ESLint config with snapshot", async () => {
   const DefaultESLint = await loadESLint({

@@ -12,11 +12,11 @@
       "import": "./dist/index.mjs"
     },
     "./addons/*": {
-      "types": "./dist/addons/*.d.mts",
+      "types": "./dist/v2/addons/*.d.mts",
       "import": "./dist/addons/*.mjs"
     },
     "./presets/*": {
-      "types": "./dist/presets/*.d.mts",
+      "types": "./dist/v2/presets/*.d.mts",
       "import": "./dist/presets/*.mjs"
     }
   },
