@@ -14,7 +14,6 @@ describe("Test ESLint config with snapshot", async () => {
   describe("js preset", () => {
     it("matches snapshot", async () => {
       const eslint = new DefaultESLint({
-        // @ts-expect-error typescript-eslint config type is not compatible with eslint config type
         baseConfig: js,
         cwd: import.meta.dirname,
       });
@@ -29,7 +28,6 @@ describe("Test ESLint config with snapshot", async () => {
   describe("ts preset", () => {
     it("matches snapshot", async () => {
       const eslint = new DefaultESLint({
-        // @ts-expect-error typescript-eslint config type is not compatible with eslint config type
         baseConfig: ts,
         cwd: import.meta.dirname,
       });
@@ -44,7 +42,6 @@ describe("Test ESLint config with snapshot", async () => {
   describe("react preset", () => {
     it("matches snapshot", async () => {
       const eslint = new DefaultESLint({
-        // @ts-expect-error typescript-eslint config type is not compatible with eslint config type
         baseConfig: react,
         cwd: import.meta.dirname,
       });
@@ -59,7 +56,6 @@ describe("Test ESLint config with snapshot", async () => {
   describe("astro preset", () => {
     it("matches snapshot", async () => {
       const eslint = new DefaultESLint({
-        // @ts-expect-error typescript-eslint config type is not compatible with eslint config type
         baseConfig: astro,
         cwd: import.meta.dirname,
       });
