@@ -72,6 +72,5 @@
       "matchUpdateTypes": ["patch"],
       "automerge": true
     }
-
   ]
 }

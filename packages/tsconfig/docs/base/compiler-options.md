@@ -1,4 +1,3 @@
-
 # Compiler Optionsの設定
 
 このドキュメントでは、[base.json](../../base.json)の各オプションの設定意図を記録している。
@@ -105,7 +104,7 @@ interface GameSettings {
   // is a string.
   [key: string]: string;
 }
- ```
+```
 
 のようなInterfaceを継承するオブジェクトは、`speed`や`quality`以外にも存在が不確かなプロパティを持つことができる。
 存在が不確かなプロパティはindex記法でアクセスすることが一般的である。
@@ -176,9 +175,9 @@ interface GameSettings {
 通常これらはバンドラが`global`NameSpaceに下のような型を定義することで型エラーが発生しない。
 
 ```ts
-declare module '*.module.css' {
-  const classes: { readonly [key: string]: string }
-  export default classes
+declare module "*.module.css" {
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
 ```
 

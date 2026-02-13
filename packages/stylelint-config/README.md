@@ -93,21 +93,23 @@ Configs will be merged deeply.
 // stylelint.config.mjs
 import createConfig from "@virtual-live-lab/stylelint-config";
 
-export default createConfig({
-  tailwindcss: true,
-  astro: true,
-},
-{
-  // for example
-  overrides: [
-    {
-      files: ["*.css", "**/*.css"],
-      rules: {
-        "at-rule-no-unknown": null,
+export default createConfig(
+  {
+    tailwindcss: true,
+    astro: true,
+  },
+  {
+    // for example
+    overrides: [
+      {
+        files: ["*.css", "**/*.css"],
+        rules: {
+          "at-rule-no-unknown": null,
+        },
       },
-    },
-  ],
-});
+    ],
+  },
+);
 ```
 
 ## License
