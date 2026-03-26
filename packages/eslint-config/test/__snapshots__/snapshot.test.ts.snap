@@ -2637,6 +2637,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     "no-trailing-spaces": [
       0,
     ],
+    "no-unassigned-vars": [
+      2,
+    ],
     "no-undef": [
       0,
       {
@@ -2682,6 +2685,9 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "no-unused-vars": [
       0,
+    ],
+    "no-useless-assignment": [
+      2,
     ],
     "no-useless-backreference": [
       2,
@@ -2918,6 +2924,12 @@ exports[`Test ESLint config with snapshot > astro preset > matches snapshot 1`] 
     ],
     "prefer-spread": [
       2,
+    ],
+    "preserve-caught-error": [
+      2,
+      {
+        "requireCatchParameter": false,
+      },
     ],
     "prettier/prettier": [
       0,
@@ -4186,6 +4198,9 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
     "no-trailing-spaces": [
       0,
     ],
+    "no-unassigned-vars": [
+      2,
+    ],
     "no-undef": [
       2,
       {
@@ -4220,6 +4235,9 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
       2,
     ],
     "no-unused-vars": [
+      2,
+    ],
+    "no-useless-assignment": [
       2,
     ],
     "no-useless-backreference": [
@@ -4434,6 +4452,12 @@ exports[`Test ESLint config with snapshot > js preset > matches snapshot 1`] = `
       {
         "order": "asc",
         "type": "natural",
+      },
+    ],
+    "preserve-caught-error": [
+      2,
+      {
+        "requireCatchParameter": false,
       },
     ],
     "quote-props": [
