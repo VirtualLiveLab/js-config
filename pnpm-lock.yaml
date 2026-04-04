@@ -99,8 +99,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1(@astrojs/compiler@3.0.1)
       defu:
-        specifier: 6.1.4
-        version: 6.1.4
+        specifier: 6.1.5
+        version: 6.1.5
       eslint-config-flat-gitignore:
         specifier: 2.2.1
         version: 2.2.1(eslint@9.39.4(jiti@2.5.1))
@@ -172,8 +172,8 @@ importers:
   packages/prettier-config:
     dependencies:
       defu:
-        specifier: 6.1.4
-        version: 6.1.4
+        specifier: 6.1.5
+        version: 6.1.5
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -212,8 +212,8 @@ importers:
         specifier: 3.4.7
         version: 3.4.7(stylelint@16.26.1(typescript@5.9.3))
       defu:
-        specifier: 6.1.4
-        version: 6.1.4
+        specifier: 6.1.5
+        version: 6.1.5
       postcss-html:
         specifier: ^1.0.0
         version: 1.8.0
@@ -1548,8 +1548,8 @@ packages:
     resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==}
     engines: {node: '>= 0.4'}
 
-  defu@6.1.4:
-    resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
+  defu@6.1.5:
+    resolution: {integrity: sha512-pwdBJxJuJXmqrLO6s0VBmfbRz+G7FUzkjldAsdi9Yrv86mPyzq0ll1o8+8gB4Gsr6GJHbK1Lh3ngllgTInDCjA==}
 
   deprecation@2.3.1:
     resolution: {integrity: sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ==}
@@ -4736,7 +4736,7 @@ snapshots:
       has-property-descriptors: 1.0.2
       object-keys: 1.1.1
 
-  defu@6.1.4: {}
+  defu@6.1.5: {}
 
   deprecation@2.3.1: {}
 
@@ -6509,7 +6509,7 @@ snapshots:
     dependencies:
       ansis: 4.2.0
       cac: 7.0.0
-      defu: 6.1.4
+      defu: 6.1.5
       empathic: 2.0.0
       hookable: 6.1.0
       import-without-cache: 0.2.5
