@@ -53,6 +53,10 @@ jobs:
       - name: Setup Node.js and pnpm
         uses: ./.github/common/setup-node-pnpm
 
+      - name: Setup latest npm to use trusted publish
+        run: |
+          npm install -g npm@latest
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@6a0a831ff30acef54f2c6aa1cbbc1096b066edaf # v1.7.0
@@ -62,7 +66,6 @@ jobs:
           setupGitUser: false
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Label PR if not published
         if: steps.changesets.outputs.published != 'true' && steps.changesets.outputs.hasChangesets == 'true'
