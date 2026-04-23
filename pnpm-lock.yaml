@@ -172,8 +172,8 @@ importers:
   packages/prettier-config:
     dependencies:
       defu:
-        specifier: 6.1.6
-        version: 6.1.6
+        specifier: 6.1.7
+        version: 6.1.7
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -1553,6 +1553,9 @@ packages:
 
   defu@6.1.6:
     resolution: {integrity: sha512-f8mefEW4WIVg4LckePx3mALjQSPQgFlg9U8yaPdlsbdYcHQyj9n2zL2LJEA52smeYxOvmd/nB7TpMtHGMTHcug==}
+
+  defu@6.1.7:
+    resolution: {integrity: sha512-7z22QmUWiQ/2d0KkdYmANbRUVABpZ9SNYyH5vx6PZ+nE5bcC0l7uFvEfHlyld/HcGBFTL536ClDt3DEcSlEJAQ==}
 
   deprecation@2.3.1:
     resolution: {integrity: sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ==}
@@ -4742,6 +4745,8 @@ snapshots:
   defu@6.1.5: {}
 
   defu@6.1.6: {}
+
+  defu@6.1.7: {}
 
   deprecation@2.3.1: {}
 
