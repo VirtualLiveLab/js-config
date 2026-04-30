@@ -34,7 +34,7 @@
     "eslint": "^8.57.0 || ^9.0.0"
   },
   "dependencies": {
-    "@astrojs/compiler": "3.0.1",
+    "@astrojs/compiler": "4.0.0",
     "@eslint/compat": "2.0.4",
     "@eslint/config-helpers": "0.5.4",
     "@eslint/eslintrc": "3.3.5",
