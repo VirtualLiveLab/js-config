@@ -32,7 +32,7 @@
     }
   },
   "dependencies": {
-    "defu": "6.1.6"
+    "defu": "6.1.7"
   },
   "devDependencies": {
     "@types/node": "catalog:",
