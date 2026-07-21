@@ -28,6 +28,7 @@ on:
     paths:
       - "packages/**"
       - "package.json"
+      - "pnpm-lock.yaml"
       - ".github/workflows/update-snapshot.yml"
 
 concurrency:
