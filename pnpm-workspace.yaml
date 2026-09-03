@@ -6,6 +6,6 @@ catalog:
   typescript: 5.9.3
   vitest: 3.2.7
   # build tools
-  publint: 0.3.21
-  tsdown: 0.22.9
-  unplugin-unused: 0.5.7
+  publint: 0.3.24
+  tsdown: 0.22.14
+  unplugin-unused: 0.6.0
