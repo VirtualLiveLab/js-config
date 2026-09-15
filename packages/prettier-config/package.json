@@ -39,7 +39,7 @@
     "@virtual-live-lab/eslint-config": "workspace:*",
     "@virtual-live-lab/tsconfig": "workspace:*",
     "prettier": "3.9.5",
-    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-astro": "1.0.0",
     "publint": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
