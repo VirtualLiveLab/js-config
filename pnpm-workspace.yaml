@@ -2,8 +2,8 @@ packages:
   - packages/*
 
 catalog:
-  "@types/node": 22.20.1
-  typescript: 5.9.3
+  "@types/node": 24.13.4
+  typescript: 7.0.2
   vitest: 3.2.7
   # build tools
   publint: 0.3.21
