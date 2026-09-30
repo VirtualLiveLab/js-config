@@ -4,7 +4,7 @@ packages:
 catalog:
   "@types/node": 22.20.1
   typescript: 5.9.3
-  vitest: 3.2.7
+  vitest: 4.1.11
   # build tools
   publint: 0.3.21
   tsdown: 0.22.9
