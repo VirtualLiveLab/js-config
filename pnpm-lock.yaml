@@ -57,8 +57,8 @@ importers:
         specifier: 0.0.78
         version: 0.0.78
       pnpm:
-        specifier: 10.32.1
-        version: 10.32.1
+        specifier: 10.34.5
+        version: 10.34.5
       prettier:
         specifier: 3.9.5
         version: 3.9.5
@@ -1221,123 +1221,145 @@ packages:
     resolution: {integrity: sha512-Pb6J90oTOSsB25Ycb4K9Pm3VHs5uYGfZN7Biu3GHXtujB5arbU8+UaDfP94d/U4a4flRHGokkGe5DZ6Dso/QKA==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-darwin-x64@0.7.1':
     resolution: {integrity: sha512-It/Zi45onM7S2dRkjQV5RjIA34S66x2sjtdAIGR8w8uX3DmiJDvYXMqv/x7UUH/5CATYddryZ41FMr186hAbtQ==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-freebsd-x64@0.7.1':
     resolution: {integrity: sha512-bK1HXNU6NiwvW6nYM/KomsDgNk851ih/H/OMRewTWhlVxU0Kt6GdeRpcN6/qIor8L04W8a4/qwVrr5wlT3zIKQ==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-gnu@0.7.1':
     resolution: {integrity: sha512-aPr/HR2A9bzqOgBJrhhGJ3erjN1IS6+BDJRH46OZUmvjGDLrSTiyVIsDdukCWIhyVFNTDAquBi77JokFnP616w==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-musl@0.7.1':
     resolution: {integrity: sha512-phlcDeZXTqR58v7xKJ5BZ6jEQWisKky11bNCtE5xorrrS74+H9Q7fBVnzk7clvKS6kDBbWOjcnil30AXN0s5tQ==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-gnu@0.7.1':
     resolution: {integrity: sha512-EOAYP5GJc0Kr6/eEmImSuMjDdchcbQ7gmAj0CrxGOYkm9JYhCjd9RvPk2hQb2+gVlFLSwae1/FggOINqbeH9LQ==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-musl@0.7.1':
     resolution: {integrity: sha512-iAQYnkk2Wg+LincBFjqclgyW+OwlyFl/JJtfWoQ/gzgIUO3NKdc6meKWMeB4KAFtxPCkfKKp256H5hRv6BS5uQ==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-gnu@0.7.1':
     resolution: {integrity: sha512-rEoFMCppVv2VxOB1O76DtFk9+l5Bvmww+lDC/5vV04Bqwz/01LeX/tFvFMd3AH4PpfwR8ojulAm82u6Zt4GwSA==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-musl@0.7.1':
     resolution: {integrity: sha512-a8L3qmHyY87sVBVe1nQANJfR9GzsbwX7lbV511/8RXF2Oh7TyhyTlcemdiMreYWrRC3k9NT2QTF5A5EMURjRrw==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-arm64@0.7.1':
     resolution: {integrity: sha512-Bxpg358FF37XzXqPd466saijLSM7XeUjmEE4NrwGWyBccTQ3rDwzPm9UVVBbWeCmihCMxfMISg7V9/zJESnpUA==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-x64@0.7.1':
     resolution: {integrity: sha512-IwvpnVwCE4MJXTR5z1F04uJ60kq/rFpTH6zPQcK5x+K/NUtPEI1iTQooRKyX/8ltNEw3ZIdbw6JQl1XfS+/aRw==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-parser/binding-darwin-arm64@0.7.1':
     resolution: {integrity: sha512-0UkWwOElDhqLwuU8d0sLx/FwY3i48tenx3J9l8h3C8N9deeLSbTq1ahGpP43fkaYh17mRGAlidU2TyeQpIj1+A==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-darwin-x64@0.7.1':
     resolution: {integrity: sha512-f7BzFP65DaYBChSg5eRrYK1FMcJOSTJYCKzxzgMS+LDsVQnYyQFA2f1w/1wp59AYcpItFLn8014KSUBz0IuGuA==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-freebsd-x64@0.7.1':
     resolution: {integrity: sha512-G7y7Yj6uSWXTeGpm94BKh6tMwjlqA1mhHTNHt1/SYjN9nnTdPnMbGMSkIzrIrPTMVe7d3PQjXscZ3cmH7gQfDA==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-gnu@0.7.1':
     resolution: {integrity: sha512-q/xrOhyxpvEgcfDWCVI3iXDEqeBrEOKidpRB4B2oBfckymlPHQJgllUnY1OwpiDFOVzdBWEa63TSOYx7zxaDfQ==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-musl@0.7.1':
     resolution: {integrity: sha512-xUM1Oj9o2x3dyeStl8lNQKSMa1MI42UB87LqV0bwAv28JRIrzLVqAlToQHFo7sDMHkjaRdK9w8/DJtYSbwja1g==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-gnu@0.7.1':
     resolution: {integrity: sha512-0U1fXk5OeJUjEhNeH7EJi94161hVDxKbyn17hUXWw419fpMFRAOLwLtQXsop7M0EP6QP5afxCLaDDYaHmIjLVw==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-musl@0.7.1':
     resolution: {integrity: sha512-13wXBpS0RkiPpVNxQWZS8bVPdzBVG0G0wxGeZP6ALUl+3dv3SO+xFHf9g0BQDeQIpfG3LAIZc21xYG/ckU25bA==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-gnu@0.7.1':
     resolution: {integrity: sha512-PBmiWzzBUMuqzEZYUWOzMYQ7BVM9xG7eRTkNDhug4zIblgHgaVaodfCqSc+8NkcKCIYs9uTP2YbiZLnDN8aQ/A==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-musl@0.7.1':
     resolution: {integrity: sha512-GuXQm2oOqVSmeuELZf9NH9STXipwmmyCP+56WwfGsyOcoepibUM2CMwHoX2TmRdY+cpY4OIk3PmNqfOBW77q+g==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-arm64@0.7.1':
     resolution: {integrity: sha512-UKuxoJkgLBriNitkf19IAZrcAFtTqSEDXyG8wAUTj+GWVY54Zd4Y4d4xo3CoHo25mB8N5vIvJP+eiWE23+Pc/g==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-x64@0.7.1':
     resolution: {integrity: sha512-y4SPQ1f0t3QQ2Xfs74w2YoqgsvAN7uvI9dA5AWWi+x4L5AFLQfebwEDOCLHu5QXVSkfdbioi/njeWGJOEkVzWw==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-toolchain/types@0.7.0':
     resolution: {integrity: sha512-kKleXJmXcZnJ5LUDTeYvK350SB+BXdpoHUwT78GGyOXOhCZ0tWf+seDPAvVnCrjoJhf+FhqtR5HRUfWW+yILQw==}
@@ -1884,6 +1906,7 @@ packages:
   eslint@9.39.5:
     resolution: {integrity: sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2695,8 +2718,8 @@ packages:
   pkg-types@2.3.1:
     resolution: {integrity: sha512-y+ichcgc2LrADuhLNAx8DFjVfgz91pRxfZdI3UDhxHvcVEZsenLO+7XaU5vOp0u/7V/wZ+plyuQxtrDlZJ+yeg==}
 
-  pnpm@10.32.1:
-    resolution: {integrity: sha512-pwaTjw6JrBRWtlY+q07fHR+vM2jRGR/FxZeQ6W3JGORFarLmfWE94QQ9LoyB+HMD5rQNT/7KnfFe8a1Wc0jyvg==}
+  pnpm@10.34.5:
+    resolution: {integrity: sha512-pO4F8vc2WCVb1qiYWcBlpFwopX2u+uLIk6Fo7itzFow3uR6D5X6mdlStA/AwMXRkMOi84442LgQmBfuKvIAZLg==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -5948,7 +5971,7 @@ snapshots:
       exsolve: 1.1.0
       pathe: 2.0.3
 
-  pnpm@10.32.1: {}
+  pnpm@10.34.5: {}
 
   possible-typed-array-names@1.1.0: {}
 
