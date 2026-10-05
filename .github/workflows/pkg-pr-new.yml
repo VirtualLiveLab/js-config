@@ -23,7 +23,7 @@ defaults:
 jobs:
   paths-filter:
     name: Filter Changed Packages (Publish Preview Package)
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       pull-requests: read
     timeout-minutes: 5
@@ -55,7 +55,7 @@ jobs:
   publish:
     name: Publish to pkg-pr-new (Publish Preview Package)
     needs: paths-filter
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     permissions:
       contents: read

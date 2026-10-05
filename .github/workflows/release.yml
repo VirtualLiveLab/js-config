@@ -17,7 +17,7 @@ jobs:
   release:
     name: Test and Release (Release)
     if: github.repository == 'VirtualLiveLab/js-config'
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     permissions:
       id-token: write

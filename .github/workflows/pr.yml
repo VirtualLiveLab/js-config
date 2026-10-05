@@ -20,7 +20,7 @@ defaults:
 jobs:
   label:
     name: Auto PR Label
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 5
     permissions:
       contents: read
@@ -30,7 +30,7 @@ jobs:
 
   assign:
     name: Auto PR Assign
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 5
     permissions:
       pull-requests: write

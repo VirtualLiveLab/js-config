@@ -42,7 +42,7 @@ defaults:
 jobs:
   check-target-packages:
     name: Check Target Packages (Update Snapshot)
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.user.name, 'bot')  && contains(github.event.pull_request.labels.*.name, 'update-snapshot'))
     outputs:
       eslint: ${{ steps.target-packages.outputs.eslint }}
@@ -104,7 +104,7 @@ jobs:
     name: Update Snapshot (Update Snapshot)
     needs: check-target-packages
     if: (needs.check-target-packages.outputs.eslint == 'true' || needs.check-target-packages.outputs.prettier == 'true' || needs.check-target-packages.outputs.stylelint == 'true')
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       contents: write
       pull-requests: write
